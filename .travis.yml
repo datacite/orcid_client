@@ -1,0 +1,12 @@
+language: ruby
+rvm:
+- 2.3.1
+install:
+- travis_retry bundle install
+script: bundle exec rspec
+notifications:
+  slack: datacite:$SLACK_TOKEN
+  email: false
+deploy:
+  api_key:
+    secure: BUBfOBEZQXCiwqRZGvJYLgAVCFiIlmFVnJhH+lhfC828p+wLL448ArVHlzH4GCub0g/dTzm6794dq4gY1/OORA0pjepV/3k4efbhUFvxHAuPmsYsm8cXfh3v4Q31Wu88dIlud9yArrN01G65Xv2WZehsqS4hNmJCGO342Yn/E48mHtS+xuljdAA58cqxgPaL3fN5BEu5FQMI+paPN2GR/gLOsOyS1fj60TRd1AG81T0tpxFJvaMwWYmhS/s/Vo0KvM+idxcAihu4rXm5Sv2mdRSfQt/aImf/V/ax0wTAY0FZ8/CArTz44gvc9rD9J+tkAqK9cO41K6v03YIQr5aqTYmjdHiSsxzovgbSFoVMrRmx7Lzvst7pWziajTLbfiLxCuTxlTagh2NDeVt5ZqmRg0avtBbb9pXmcE869fsKEFG4aKfHKh8HcN6Uh/W4OKhR778hGcoMS3FJNqo2GZAMxnwUad9JhxQh5G5JBKSlv/TqHmG4SdAMif6I3rOmsJLdETr4pudgabR9pM2PXsPALv6uUfGWtwAmAyqwmdWthwQ1ooAhX+gwouVUNDKaaVrUU9RfTtrcHEtFi3PnfBPQD+UyNgKqbzg5dC9BPeFRBw7AeJ6jzCdrl5BPSdxWb5hD/mQk1nTNcAdeWr28SMy2z5Ym+gk7ipVJ1u4gC9fqBmA=
