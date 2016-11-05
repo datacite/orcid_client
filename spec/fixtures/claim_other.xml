@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<orcid-message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.orcid.org/ns/orcid" xsi:schemaLocation="http://www.orcid.org/ns/orcid https://raw.github.com/ORCID/ORCID-Source/master/orcid-model/src/main/resources/orcid-message-1.2.xsd">
+  <message-version>1.2</message-version>
+  <orcid-profile>
+    <orcid-activities>
+      <orcid-works>
+        <orcid-work>
+          <work-title>
+            <title>DOI Myths... busted</title>
+          </work-title>
+          <journal-title>Zenodo</journal-title>
+          <short-description>["&lt;p&gt;Presented at:&amp;nbsp;&lt;br /&gt;\\nPersistent Identifiers: Enabling Services for Data Intensive Research&lt;br /&gt;\\nDataCite and EPIC&lt;br /&gt;\\nMonday, September 21, 2015 from 1:00 PM to 6:00 PM (CEST)&lt;br /&gt;\\nParis, France&lt;/p&gt;"]</short-description>
+          <work-citation>
+            <work-citation-type>bibtex</work-citation-type>
+            <citation/>
+          </work-citation>
+          <work-type>other</work-type>
+          <publication-date>
+            <year>2015</year>
+          </publication-date>
+          <work-external-identifiers>
+            <work-external-identifier>
+              <work-external-identifier-type>doi</work-external-identifier-type>
+              <work-external-identifier-id>10.5281/ZENODO.31780</work-external-identifier-id>
+            </work-external-identifier>
+          </work-external-identifiers>
+          <work-contributors>
+            <contributor>
+              <credit-name>Geoffrey Bilder</credit-name>
+            </contributor>
+            <contributor>
+              <credit-name>Martin Fenner</credit-name>
+            </contributor>
+          </work-contributors>
+        </orcid-work>
+      </orcid-works>
+    </orcid-activities>
+  </orcid-profile>
+</orcid-message>

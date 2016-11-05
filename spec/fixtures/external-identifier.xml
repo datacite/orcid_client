@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<orcid-message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.orcid.org/ns/orcid" xsi:schemaLocation="http://www.orcid.org/ns/orcid https://raw.github.com/ORCID/ORCID-Source/master/orcid-model/src/main/resources/orcid-message-1.2.xsd">
+  <message-version>1.2</message-version>
+  <orcid-profile>
+    <orcid-bio>
+      <external-identifiers>
+        <external-identifier>
+          <external-id-common-name>GitHub</external-id-common-name>
+          <external-id-reference>mfenner</external-id-reference>
+          <external-id-url>https://github.com/mfenner</external-id-url>
+        </external-identifier>
+      </external-identifiers>
+    </orcid-bio>
+  </orcid-profile>
+</orcid-message>
