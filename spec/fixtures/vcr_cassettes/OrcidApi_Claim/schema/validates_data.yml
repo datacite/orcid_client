@@ -37,19 +37,19 @@ http_interactions:
       X-Geo-Block-List:
       - ''
       X-Github-Request-Id:
-      - B91F1114:5FAB:DA5E5C:581D8396
+      - B91F1114:5FAB:E0EA27:581D9284
       Content-Length:
       - '14182'
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 05 Nov 2016 07:00:39 GMT
+      - Sat, 05 Nov 2016 08:04:21 GMT
       Via:
       - 1.1 varnish
       Connection:
       - keep-alive
       X-Served-By:
-      - cache-fra1251-FRA
+      - cache-fra1242-FRA
       X-Cache:
       - HIT
       X-Cache-Hits:
@@ -59,9 +59,9 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Fastly-Request-Id:
-      - f94c8035e1c7eaf1c278444e039fd0a3208ef12b
+      - 5c28a9f7326959990a330c8b78135df13e336cda
       Expires:
-      - Sat, 05 Nov 2016 07:05:39 GMT
+      - Sat, 05 Nov 2016 08:09:21 GMT
       Source-Age:
       - '0'
     body:
@@ -2364,5 +2364,46 @@ http_interactions:
         PgoJCTwveHM6c2ltcGxlQ29udGVudD4KCTwveHM6Y29tcGxleFR5cGU+Cjwv
         eHM6c2NoZW1hPgo=
     http_version: 
-  recorded_at: Sat, 05 Nov 2016 07:00:39 GMT
+  recorded_at: Sat, 05 Nov 2016 08:04:21 GMT
+- request:
+    method: get
+    uri: http://search.datacite.org/api?fl=doi,creator,title,publisher,publicationYear,resourceTypeGeneral,description,datacentre,datacentre_symbol,prefix,relatedIdentifier,xml,minted,updated&q=doi:10.5281/zenodo.59983&rows=1&wt=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - https://github.com/datacite/maremma
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Server:
+      - openresty/1.11.2.1
+      Date:
+      - Sat, 05 Nov 2016 08:04:21 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":1,"start":0,"docs":[{"minted":"2016-08-11T04:47:51Z","datacentre_symbol":"CERN.ZENODO","xml":"PHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC0zL21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTI4MS96ZW5vZG8uNTk5ODM8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5NYXJ0aW4gRmVubmVyPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkRhdGFDaXRlPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+R3VkbXVuZHVyIEEuIFRob3Jpc3NvbjwvY3JlYXRvck5hbWU+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPkVsZWFub3IgS2llZmVsIEhhZ2dlcnR5PC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+QW51c2hhIFJhbmdhbmF0aGFuPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+b21uaWF1dGgtb3JjaWQ6IHYuMS4xLjU8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+WmVub2RvPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE2PC9wdWJsaWNhdGlvblllYXI+CiAgPGNvbnRyaWJ1dG9ycy8+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9Iklzc3VlZCI+MjAxNi0wOC0xMTwvZGF0ZT4KICA8L2RhdGVzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iU29mdHdhcmUiLz4KICA8YWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0iVVJMIj5odHRwOi8vemVub2RvLm9yZy9yZWNvcmQvNTk5ODM8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgPC9hbHRlcm5hdGVJZGVudGlmaWVycz4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0aW9uVHlwZT0iSXNTdXBwbGVtZW50VG8iIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iVVJMIj5odHRwczovL2dpdGh1Yi5jb20vZGF0YWNpdGUvb21uaWF1dGgtb3JjaWQvdHJlZS92LjEuMS41PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGlvblR5cGU9Ikhhc1BhcnQiIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iVVJMIj5odHRwczovL3plbm9kby5vcmcvcmVjb3JkLzU5OTgzL2ZpbGVzL29tbmlhdXRoLW9yY2lkLXYuMS4xLjUuemlwPC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8cmlnaHRzTGlzdD4KICAgIDxyaWdodHMgcmlnaHRzVVJJPSJpbmZvOmV1LXJlcG8vc2VtYW50aWNzL29wZW5BY2Nlc3MiPk9wZW4gQWNjZXNzPC9yaWdodHM+CiAgICA8cmlnaHRzIHJpZ2h0c1VSST0iIj5PdGhlciAoT3Blbik8L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij4mbHQ7cCZndDsmbHQ7YSBocmVmPSJodHRwczovL2dpdGh1Yi5jb20vZGF0YWNpdGUvb21uaWF1dGgtb3JjaWQvcmVsZWFzZXMvdGFnL3YuMS4xLjUiJmd0O29ubWlhdXRoLW9yY2lkIDEuMS41Jmx0Oy9hJmd0OyB3YXMgcmVsZWFzZWQgb24gQXVndXN0IDExLCAyMDE2IHdpdGggdGhlIGZvbGxvd2luZyBjaGFuZ2VzOiZsdDsvcCZndDsKCiZsdDt1bCZndDsKJmx0O2xpJmd0O2NvbXBhdGliaWxpdHkgd2l0aCBvbW5pYXV0aC1vYXV0aDIgMS40LjAuIFRoYW5rcyB0byBwdWxsIHJlcXVlc3QgJmx0O2EgaHJlZj0iaHR0cHM6Ly9naXRodWIuY29tL2RhdGFjaXRlL29tbmlhdXRoLW9yY2lkL3B1bGwvNyImZ3Q7IzcmbHQ7L2EmZ3Q7IGJ5ICZsdDthIGhyZWY9Imh0dHBzOi8vZ2l0aHViLmNvbS9lbGVhbm9yYWtoIiZndDtlbGVhbm9yYWtoJmx0Oy9hJmd0Oy4mbHQ7L2xpJmd0OwombHQ7L3VsJmd0OzwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+Cg==","datacentre":"CERN.ZENODO
+        - ZENODO - Research. Shared.","updated":"2016-08-11T04:47:51Z","prefix":"10.5281","doi":"10.5281/ZENODO.59983","relatedIdentifier":["IsSupplementTo:URL:https://github.com/datacite/omniauth-orcid/tree/v.1.1.5","HasPart:URL:https://zenodo.org/record/59983/files/omniauth-orcid-v.1.1.5.zip"],"creator":["Martin
+        Fenner","Gudmundur A. Thorisson","Eleanor Kiefel Haggerty","Anusha Ranganathan"],"publisher":"Zenodo","title":["omniauth-orcid:
+        v.1.1.5"],"description":["<p><a href=\"https://github.com/datacite/omniauth-orcid/releases/tag/v.1.1.5\">onmiauth-orcid
+        1.1.5</a> was released on August 11, 2016 with the following changes:</p>\n\n<ul>\n<li>compatibility
+        with omniauth-oauth2 1.4.0. Thanks to pull request <a href=\"https://github.com/datacite/omniauth-orcid/pull/7\">#7</a>
+        by <a href=\"https://github.com/eleanorakh\">eleanorakh</a>.</li>\n</ul>"],"publicationYear":"2016","resourceTypeGeneral":"Software"}]}}
+
+'
+    http_version: 
+  recorded_at: Sat, 05 Nov 2016 08:04:21 GMT
 recorded_with: VCR 3.0.3

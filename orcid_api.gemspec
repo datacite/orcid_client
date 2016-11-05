@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'nokogiri', '~> 1.6.8'
   s.add_dependency 'builder', '~> 3.2', '>= 3.2.2'
   s.add_dependency 'bibtex-ruby', '~> 4.2'
+  s.add_dependency 'namae', '~> 0.10.1'
   s.add_dependency 'activesupport', '~> 4.2', '>= 4.2.5'
   s.add_dependency 'omniauth-orcid', '~> 1.2'
   s.add_development_dependency 'bundler', '~> 1.0'

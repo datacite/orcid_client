@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<orcid-message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.orcid.org/ns/orcid" xsi:schemaLocation="http://www.orcid.org/ns/orcid https://raw.github.com/ORCID/ORCID-Source/master/orcid-model/src/main/resources/orcid-message-1.2.xsd">
+  <message-version>1.2</message-version>
+  <orcid-profile>
+    <orcid-activities>
+      <orcid-works>
+        <orcid-work>
+          <work-title>
+            <title>omniauth-orcid: v.1.1.5</title>
+          </work-title>
+          <journal-title>Zenodo</journal-title>
+          <short-description>&lt;p&gt;&lt;a href="https://github.com/datacite/omniauth-orcid/releases/tag/v.1.1.5"&gt;onmiauth-orcid 1.1.5&lt;/a&gt; was released on August 11, 2016 with the following changes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;compatibility with omniauth-oauth2 1.4.0. Thanks to pull request &lt;a href="https://github.com/datacite/omniauth-orcid/pull/7"&gt;#7&lt;/a&gt; by &lt;a href="https://github.com/eleanorakh"&gt;eleanorakh&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;</short-description>
+          <work-citation>
+            <work-citation-type>bibtex</work-citation-type>
+            <citation>@data{https://doi.org/10.5281/zenodo.59983, author = {Fenner, Martin and Thorisson, Gudmundur A. and Haggerty, Eleanor Kiefel and Ranganathan, Anusha}, title = {omniauth-orcid: v.1.1.5}, publisher = {Zenodo}, doi = {10.5281/zenodo.59983}, url = {https://doi.org/10.5281/zenodo.59983}, year = {2016}}</citation>
+          </work-citation>
+          <work-type>other</work-type>
+          <publication-date>
+            <year>2016</year>
+          </publication-date>
+          <work-external-identifiers>
+            <work-external-identifier>
+              <work-external-identifier-type>doi</work-external-identifier-type>
+              <work-external-identifier-id>10.5281/zenodo.59983</work-external-identifier-id>
+            </work-external-identifier>
+          </work-external-identifiers>
+          <work-contributors>
+            <contributor>
+              <credit-name>Martin Fenner</credit-name>
+            </contributor>
+            <contributor>
+              <credit-name>Gudmundur A. Thorisson</credit-name>
+            </contributor>
+            <contributor>
+              <credit-name>Eleanor Kiefel Haggerty</credit-name>
+            </contributor>
+            <contributor>
+              <credit-name>Anusha Ranganathan</credit-name>
+            </contributor>
+          </work-contributors>
+        </orcid-work>
+      </orcid-works>
+    </orcid-activities>
+  </orcid-profile>
+</orcid-message>

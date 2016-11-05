@@ -1,37 +1,23 @@
 require 'nokogiri'
 require 'bibtex'
 require 'oauth2'
+require 'active_support/all'
+
 require_relative 'metadata'
+require_relative 'author'
+require_relative 'date'
+require_relative 'work_type'
 require_relative 'oauth'
 
 module OrcidApi
   class Claim
     include OrcidApi::Metadata
+    include OrcidApi::Author
+    include OrcidApi::Date
+    include OrcidApi::WorkType
     include OrcidApi::Oauth
 
     attr_reader :doi, :orcid, :schema, :authentication_token, :validation_errors
-
-    # # include view helpers
-    # include ActionView::Helpers::TextHelper
-
-    # # include helper module for DOI resolution
-    # include Resolvable
-
-    # # include helper module for date and time calculations
-    # include Dateable
-
-    # # include helper module for author name parsing
-    # include Authorable
-
-    # # include helper module for work type
-    # include Typeable
-
-    # # include helper module for ORCID claims
-    # include Orcidable
-
-    # def create_uuid
-    #   write_attribute(:uuid, SecureRandom.uuid) if uuid.blank?
-    # end
 
     def initialize(doi:, orcid:, **options)
       @doi = doi
@@ -108,7 +94,7 @@ module OrcidApi
 
       Nokogiri::XML::Builder.new do |xml|
         xml.send(:'orcid-message', root_attributes) do
-          xml.send(:'message-version', ORCID_VERSION)
+          xml.send(:'message-version', API_VERSION)
           xml.send(:'orcid-profile') do
             xml.send(:'orcid-activities') do
               xml.send(:'orcid-works') do
@@ -145,7 +131,7 @@ module OrcidApi
     def insert_description(xml)
       return nil unless description.present?
 
-      xml.send(:'short-description', truncate(description, length: 2500, separator: ' '))
+      xml.send(:'short-description', description.truncate(2500, separator: ' '))
     end
 
     def insert_citation(xml)

@@ -1,3 +1,5 @@
+ENV['ORCID_API_URL'] = "https://api.sandbox.orcid.org"
+
 require 'bundler/setup'
 Bundler.setup
 

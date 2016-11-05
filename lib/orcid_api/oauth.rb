@@ -1,6 +1,6 @@
 module OrcidApi
   module Oauth
-    ORCID_VERSION = 1.2
+    API_VERSION = "1.2"
 
     def oauth_client
       OAuth2::Client.new(ENV['ORCID_CLIENT_ID'],
@@ -18,7 +18,7 @@ module OrcidApi
 
     def oauth_client_get(options={})
       options[:endpoint] ||= "orcid-works"
-      response = application_token.get "#{ENV['ORCID_API_URL']}/v#{ORCID_VERSION}/#{orcid}/#{options[:endpoint]}" do |request|
+      response = application_token.get "#{ENV['ORCID_API_URL']}/v#{API_VERSION}/#{orcid}/#{options[:endpoint]}" do |request|
         request.headers['Accept'] = 'application/json'
       end
 
@@ -31,7 +31,7 @@ module OrcidApi
 
     def oauth_client_post(data, options={})
       options[:endpoint] ||= "orcid-works"
-      response = user_token.post("#{ENV['ORCID_API_URL']}/v#{ORCID_VERSION}/#{orcid}/#{options[:endpoint]}") do |request|
+      response = user_token.post("#{ENV['ORCID_API_URL']}/v#{API_VERSION}/#{orcid}/#{options[:endpoint]}") do |request|
         request.headers['Content-Type'] = 'application/orcid+xml'
         request.body = data
       end
@@ -45,7 +45,7 @@ module OrcidApi
 
     def oauth_client_delete(options={})
       options[:endpoint] ||= "orcid-works/#{doi}"
-      response = user_token.delete("#{ENV['ORCID_API_URL']}/v#{ORCID_VERSION}/#{orcid}/#{options[:endpoint]}") do |request|
+      response = user_token.delete("#{ENV['ORCID_API_URL']}/v#{API_VERSION}/#{orcid}/#{options[:endpoint]}") do |request|
         request.headers['Accept'] = 'application/json'
       end
 

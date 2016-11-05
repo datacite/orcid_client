@@ -1,17 +1,21 @@
 require 'spec_helper'
 
-describe OrcidApi do
-  subject { OrcidApi::Claim.new }
+describe OrcidApi, vcr: true do
+  let(:doi) { "10.5281/zenodo.59983"}
+  let(:orcid) { "0000-0001-6528-2027" }
+  let(:fixture_path) { "spec/fixtures/" }
+
+  subject { OrcidApi::Claim.new(doi: doi, orcid: orcid) }
 
   describe 'push to ORCID' do
 
     describe 'token' do
       it 'should return the user_token' do
-        expect(subject.user_token.client.site).to eq("https://api.orcid.org")
+        expect(subject.user_token.client.site).to eq("https://api.sandbox.orcid.org")
       end
 
       it 'should return the application_token' do
-        expect(subject.application_token.client.site).to eq("https://api.orcid.org")
+        expect(subject.application_token.client.site).to eq("https://api.sandbox.orcid.org")
       end
     end
 
@@ -50,7 +54,7 @@ describe OrcidApi do
     end
 
     describe 'oauth_client_post invalid token' do
-      subject { OrcidApi::Claim.new(orcid: "0000-0003-1419-240x", doi: "10.5281/ZENODO.21429", source_id: "orcid_update") }
+      subject { OrcidApi::Claim.new(doi: doi, orcid: "0000-0003-1419-240x", source_id: "orcid_update") }
 
       it 'should post' do
         response = subject.oauth_client_post(subject.data)

@@ -1,11 +1,13 @@
 require 'spec_helper'
 
-describe OrcidApi::Claim do
-  subject { OrcidApi::Claim.new }
-
+describe OrcidApi::Claim, vcr: true do
+  let(:doi) { "10.5281/zenodo.59983"}
+  let(:orcid) { "0000-0001-6528-2027" }
   let(:fixture_path) { "spec/fixtures/" }
 
-  describe 'schema', vcr: true do
+  subject { OrcidApi::Claim.new(doi: doi, orcid: orcid) }
+
+  describe 'schema' do
     it 'exists' do
       expect(subject.schema.errors).to be_empty
     end
@@ -22,30 +24,33 @@ describe OrcidApi::Claim do
 
   describe 'contributors' do
     it 'valid' do
-      expect(subject.contributors).to eq([{:orcid=>nil, :credit_name=>"Heather A. Piwowar", :role=>nil}, {:orcid=>nil, :credit_name=>"Todd J. Vision", :role=>nil}])
+      expect(subject.contributors).to eq([{:orcid=>nil, :credit_name=>"Martin Fenner", :role=>nil},
+                                          {:orcid=>nil, :credit_name=>"Gudmundur A. Thorisson", :role=>nil},
+                                          {:orcid=>nil, :credit_name=>"Eleanor Kiefel Haggerty", :role=>nil},
+                                          {:orcid=>nil, :credit_name=>"Anusha Ranganathan", :role=>nil}])
     end
 
     it 'literal' do
-      #subject = FactoryGirl.create(:claim, user: user, orcid: "0000-0003-3235-5933", doi: "10.1594/PANGAEA.745083")
+      subject = OrcidApi::Claim.new(doi: "10.1594/PANGAEA.745083", orcid: "0000-0003-3235-5933")
       expect(subject.contributors).to eq([{:orcid=>nil, :credit_name=>"EPOCA Arctic experiment 2009 team", :role=>nil}])
     end
 
     it 'multiple titles' do
-      #subject = FactoryGirl.create(:claim, user: user, orcid: "0000-0003-0811-2536", doi: "10.6084/M9.FIGSHARE.1537331.V1")
+      subject = OrcidApi::Claim.new(doi: "10.6084/M9.FIGSHARE.1537331.V1", orcid: "0000-0003-0811-2536")
       expect(subject.contributors).to eq([{:orcid=>nil, :credit_name=>"Iosr journals", :role=>nil}, {:orcid=>nil, :credit_name=>"Dr. Rohit Arora, MDS", :role=>nil}, {:orcid=>nil, :credit_name=>"Shalya Raj*.MDS", :role=>nil}])
     end
   end
 
   it 'publication_date' do
-    expect(subject.publication_date).to eq("year" => 2013)
+    expect(subject.publication_date).to eq("year" => 2016)
   end
 
   it 'citation' do
-    expect(subject.citation).to eq("@data{http://doi.org/10.5061/DRYAD.781PV, author = {Piwowar, Heather A. and Vision, Todd J.}, title = {Data from: Data reuse and the open data citation advantage}, publisher = {Dryad Digital Repository}, doi = {10.5061/DRYAD.781PV}, url = {http://doi.org/10.5061/DRYAD.781PV}, year = {2013}}")
+    expect(subject.citation).to eq("@data{https://doi.org/10.5281/zenodo.59983, author = {Fenner, Martin and Thorisson, Gudmundur A. and Haggerty, Eleanor Kiefel and Ranganathan, Anusha}, title = {omniauth-orcid: v.1.1.5}, publisher = {Zenodo}, doi = {10.5281/zenodo.59983}, url = {https://doi.org/10.5281/zenodo.59983}, year = {2016}}")
   end
 
   it 'data' do
-    xml = File.read(fixture_path + 'claim.xml')
+    xml = File.read(fixture_path + 'orcid-work.xml')
     expect(subject.data).to eq(xml)
   end
 end

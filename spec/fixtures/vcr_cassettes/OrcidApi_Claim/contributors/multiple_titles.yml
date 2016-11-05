@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://search.datacite.org/api?fl=doi,creator,title,publisher,publicationYear,resourceTypeGeneral,description,datacentre,datacentre_symbol,prefix,relatedIdentifier,xml,minted,updated&q=doi:10.6084/M9.FIGSHARE.1537331.V1&rows=1&wt=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - https://github.com/datacite/maremma
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Server:
+      - openresty/1.11.2.1
+      Date:
+      - Sat, 05 Nov 2016 08:11:49 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS
+    body:
+      encoding: UTF-8
+      string: '{"responseHeader":{"status":0,"QTime":11},"response":{"numFound":1,"start":0,"docs":[{"minted":"2016-01-20T04:04:29Z","datacentre_symbol":"FIGSHARE.ARS","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC0zL21ldGFkYXRhLnhzZCI+PGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNjA4NC9NOS5GSUdTSEFSRS4xNTM3MzMxLlYxPC9pZGVudGlmaWVyPjx0aXRsZXM+PHRpdGxlPkJvbmUgUmVnZW5lcmF0aW9uIFVzaW5nIEh5ZHJveHlhcGF0aXRlIENyeXN0YWxzIGZvciBQZXJpYXBpY2FsIExlc2lvbjwvdGl0bGU+PC90aXRsZXM+PHB1Ymxpc2hlcj5GaWdzaGFyZTwvcHVibGlzaGVyPjxwdWJsaWNhdGlvblllYXI+MjAxNTwvcHVibGljYXRpb25ZZWFyPjxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+RGF0YXNldDwvcmVzb3VyY2VUeXBlPjxyaWdodHNMaXN0PjxyaWdodHMgcmlnaHRzVVJJPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS8zLjAvdXMvIj5DQy1CWTwvcmlnaHRzPjwvcmlnaHRzTGlzdD48Y3JlYXRvcnM+PGNyZWF0b3I+PGNyZWF0b3JOYW1lPklvc3Igam91cm5hbHM8L2NyZWF0b3JOYW1lPjwvY3JlYXRvcj48Y3JlYXRvcj48Y3JlYXRvck5hbWU+RHIuIFJvaGl0IEFyb3JhLCBNRFM8L2NyZWF0b3JOYW1lPjwvY3JlYXRvcj48Y3JlYXRvcj48Y3JlYXRvck5hbWU+RHIuIFNoYWx5YSBSYWoqLk1EUzwvY3JlYXRvck5hbWU+PC9jcmVhdG9yPjwvY3JlYXRvcnM+PC9yZXNvdXJjZT4=","datacentre":"FIGSHARE.ARS
+        - figshare Academic Research System","updated":"2016-01-20T04:04:29Z","prefix":"10.6084","doi":"10.6084/M9.FIGSHARE.1537331.V1","title":["Bone
+        Regeneration Using Hydroxyapatite Crystals for Periapical Lesion"],"publicationYear":"2015","resourceTypeGeneral":"Dataset","publisher":"Figshare","creator":["Iosr
+        journals","Dr. Rohit Arora, MDS","Dr. Shalya Raj*.MDS"]}]}}
+
+'
+    http_version: 
+  recorded_at: Sat, 05 Nov 2016 08:11:49 GMT
+recorded_with: VCR 3.0.3

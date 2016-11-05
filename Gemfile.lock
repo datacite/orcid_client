@@ -6,6 +6,7 @@ PATH
       bibtex-ruby (~> 4.2)
       builder (~> 3.2, >= 3.2.2)
       maremma (~> 2.3.1)
+      namae (~> 0.10.1)
       nokogiri (~> 1.6.8)
       omniauth-orcid (~> 1.2)
 
@@ -57,6 +58,7 @@ GEM
     multi_json (1.11.3)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    namae (0.10.2)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
     oauth2 (1.2.0)
