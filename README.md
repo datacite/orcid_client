@@ -7,6 +7,18 @@
 
 Ruby gem for integrating Ruby applications with the ORCID API.
 
+## Features
+
+The following functionality is supported:
+
+* get all works from an ORCID record, including those set to limited access
+* create work in an ORCID record
+
+## Requirements
+
+* [ORCID membership](https://orcid.org/about/membership), needed to create, update or delete content via the ORCID API
+* valid access tokens for ORCID user accounts, collected and safely stored in your application using for example the [omniauth-orcid](https://github.com/datacite/omniauth-orcid) gem.
+
 ## Installation
 
 The usual way with Bundler: add the following to your `Gemfile` to install the current version of the gem:
@@ -22,6 +34,10 @@ You can also install the gem system-wide in the usual way:
 ```bash
 gem install orcid_client
 ```
+
+## Use
+
+TBD.
 
 ## License
 

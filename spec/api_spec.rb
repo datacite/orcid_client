@@ -10,7 +10,7 @@ describe OrcidClient, vcr: true do
 
   describe 'get' do
     it 'should get works' do
-      response = subject.get_works
+      response = subject.get_works(sandbox: true)
       works = response.fetch("data", {}).fetch("group", {})
       expect(works.length).to eq(27)
       work = works.first
@@ -20,7 +20,7 @@ describe OrcidClient, vcr: true do
 
   describe 'post' do
     it 'should create work' do
-      response = subject.create_work
+      response = subject.create_work(sandbox: true)
       pp response
     end
   end
