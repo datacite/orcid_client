@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<work:work xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://www.orcid.org/ns/common" xmlns:work="http://www.orcid.org/ns/work" xsi:schemaLocation="http://www.orcid.org/ns/work ../work-2.0_rc3.xsd">
+  <work:title>
+    <common:title>omniauth-orcid: v.1.1.5</common:title>
+  </work:title>
+  <work:journal-title>Zenodo</work:journal-title>
+  <work:short-description>&lt;p&gt;&lt;a href="https://github.com/datacite/omniauth-orcid/releases/tag/v.1.1.5"&gt;onmiauth-orcid 1.1.5&lt;/a&gt; was released on August 11, 2016 with the following changes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;compatibility with omniauth-oauth2 1.4.0. Thanks to pull request &lt;a href="https://github.com/datacite/omniauth-orcid/pull/7"&gt;#7&lt;/a&gt; by &lt;a href="https://github.com/eleanorakh"&gt;eleanorakh&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;</work:short-description>
+  <work:citation>
+    <work:citation-type>bibtex</work:citation-type>
+    <work:citation-value>@data{https://doi.org/10.5281/zenodo.59983, author = {Fenner, Martin and Thorisson, Gudmundur A. and Haggerty, Eleanor Kiefel and Ranganathan, Anusha}, title = {omniauth-orcid: v.1.1.5}, publisher = {Zenodo}, doi = {10.5281/zenodo.59983}, url = {https://doi.org/10.5281/zenodo.59983}, year = {2016}}</work:citation-value>
+  </work:citation>
+  <work:type>other</work:type>
+  <common:publication-date>
+    <common:year>2016</common:year>
+  </common:publication-date>
+  <common:external-ids>
+    <common:external-id>
+      <common:external-id-type>doi</common:external-id-type>
+      <common:external-id-value>10.5281/zenodo.59983</common:external-id-value>
+    </common:external-id>
+  </common:external-ids>
+  <work:contributors>
+    <work:contributor>
+      <work:credit-name>Martin Fenner</work:credit-name>
+    </work:contributor>
+    <work:contributor>
+      <work:credit-name>Gudmundur A. Thorisson</work:credit-name>
+    </work:contributor>
+    <work:contributor>
+      <work:credit-name>Eleanor Kiefel Haggerty</work:credit-name>
+    </work:contributor>
+    <work:contributor>
+      <work:credit-name>Anusha Ranganathan</work:credit-name>
+    </work:contributor>
+  </work:contributors>
+</work:work>

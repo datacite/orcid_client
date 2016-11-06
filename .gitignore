@@ -35,3 +35,8 @@ build/
 .rvmrc
 
 coverage/
+
+.env
+.env.*
+!.env.example
+!.env.travis

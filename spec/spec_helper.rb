@@ -1,12 +1,10 @@
-ENV['ORCID_API_URL'] = "https://api.sandbox.orcid.org"
-
 require 'bundler/setup'
 Bundler.setup
 
 require 'simplecov'
 SimpleCov.start
 
-require 'orcid_api'
+require 'orcid_client'
 require 'maremma'
 require 'rspec'
 require 'rack/test'
@@ -26,5 +24,8 @@ VCR.configure do |c|
   c.hook_into :webmock
   c.ignore_localhost = true
   c.ignore_hosts 'codeclimate.com'
+  c.filter_sensitive_data("<ORCID_CLIENT_ID>") { ENV["ORCID_CLIENT_ID"] }
+  c.filter_sensitive_data("<ORCID_CLIENT_SECRET>") { ENV["ORCID_CLIENT_SECRET"] }
+  c.filter_sensitive_data("<AUTHENTICATION_TOKEN>") { ENV["AUTHENTICATION_TOKEN"] }
   c.configure_rspec_metadata!
 end
