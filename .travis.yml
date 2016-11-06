@@ -5,7 +5,7 @@ install:
 - travis_retry bundle install
 script: bundle exec rspec
 notifications:
-  slack: datacite:$SLACK_TOKEN
+  slack: $SLACK_TOKEN
   email: false
 deploy:
   api_key:
