@@ -1,6 +1,6 @@
 require 'namae'
 
-module OrcidApi
+module OrcidClient
   module Author
     # parse author string into CSL format
     def get_one_author(author)

@@ -1,4 +1,4 @@
-module OrcidApi
+module OrcidClient
   module Metadata
     def get_metadata(id, service, options = {})
       case service

@@ -1,6 +1,8 @@
-module OrcidApi
+require "uri"
+
+module OrcidClient
   module Oauth
-    API_VERSION = "1.2"
+    API_VERSION = "2.0_rc3"
 
     def oauth_client
       OAuth2::Client.new(ENV['ORCID_CLIENT_ID'],
@@ -9,11 +11,14 @@ module OrcidApi
     end
 
     def application_token
-      @application_token ||= oauth_client.client_credentials.get_token(scope: "/read-public")
+      scope = URI.escape("/read-limited /activities/update /person/update")
+      @application_token ||= oauth_client.client_credentials.get_token(scope: scope)
     end
 
     def user_token
-      OAuth2::AccessToken.new(oauth_client, authentication_token)
+      return nil unless access_token.present?
+
+      OAuth2::AccessToken.new(oauth_client, access_token)
     end
 
     def oauth_client_get(options={})
@@ -30,6 +35,8 @@ module OrcidApi
     end
 
     def oauth_client_post(data, options={})
+      return { "errors" => [{ "title" => "User token missing" }] } unless user_token.present?
+
       options[:endpoint] ||= "orcid-works"
       response = user_token.post("#{ENV['ORCID_API_URL']}/v#{API_VERSION}/#{orcid}/#{options[:endpoint]}") do |request|
         request.headers['Content-Type'] = 'application/orcid+xml'
@@ -44,6 +51,8 @@ module OrcidApi
     end
 
     def oauth_client_delete(options={})
+      return { "errors" => [{ "title" => "User token missing" }] } unless user_token.present?
+
       options[:endpoint] ||= "orcid-works/#{doi}"
       response = user_token.delete("#{ENV['ORCID_API_URL']}/v#{API_VERSION}/#{orcid}/#{options[:endpoint]}") do |request|
         request.headers['Accept'] = 'application/json'

@@ -1,4 +1,4 @@
-module OrcidApi
+module OrcidClient
   module Date
     def get_date_parts(iso8601_time)
       return { "date_parts" => [[]] } if iso8601_time.nil?

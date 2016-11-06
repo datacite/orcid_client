@@ -1,7 +1,30 @@
+# load ENV variables from .env file if it exists
+env_file = File.expand_path("../../../.env", __FILE__)
+if File.exist?(env_file)
+  require 'dotenv'
+  Dotenv.load! env_file
+end
+
+# load ENV variables from container environment if json file exists
+# see https://github.com/phusion/baseimage-docker#envvar_dumps
+env_json_file = "/etc/container_environment.json"
+if File.exist?(env_json_file)
+  env_vars = JSON.parse(File.read(env_json_file))
+  env_vars.each { |k, v| ENV[k] = v }
+end
+
+# default values for some ENV variables
+ENV['ORCID_API_URL'] = "https://api.sandbox.orcid.org"
+
+require 'active_support/all'
+
+# check that all required env variables are set
+env_vars = %w{ ORCID_API_URL ORCID_CLIENT_ID ORCID_CLIENT_SECRET }
+env_vars.each { |env| fail ArgumentError,  "ENV[#{env}] is not set" if ENV[env].blank? }
+
 require 'nokogiri'
 require 'bibtex'
 require 'oauth2'
-require 'active_support/all'
 
 require_relative 'metadata'
 require_relative 'author'
@@ -9,22 +32,22 @@ require_relative 'date'
 require_relative 'work_type'
 require_relative 'oauth'
 
-module OrcidApi
-  class Claim
-    include OrcidApi::Metadata
-    include OrcidApi::Author
-    include OrcidApi::Date
-    include OrcidApi::WorkType
-    include OrcidApi::Oauth
+module OrcidClient
+  class Work
+    include OrcidClient::Metadata
+    include OrcidClient::Author
+    include OrcidClient::Date
+    include OrcidClient::WorkType
+    include OrcidClient::Oauth
 
-    attr_reader :doi, :orcid, :schema, :authentication_token, :validation_errors
+    attr_reader :doi, :orcid, :schema, :access_token, :validation_errors
 
-    def initialize(doi:, orcid:, **options)
+    def initialize(doi:, orcid:, access_token:, **options)
       @doi = doi
       @orcid = orcid
     end
 
-    ORCID_SCHEMA = 'https://raw.githubusercontent.com/ORCID/ORCID-Source/master/orcid-model/src/main/resources/orcid-message-1.2.xsd'
+    SCHEMA = File.expand_path("../../../resources/record_#{API_VERSION}/work-#{API_VERSION}.xsd", __FILE__)
 
     def metadata
       @metadata ||= get_metadata(doi, 'datacite')
@@ -34,7 +57,7 @@ module OrcidApi
       Array(metadata.fetch('author', nil)).map do |contributor|
         { orcid: contributor.fetch('ORCID', nil),
           credit_name: get_credit_name(contributor),
-          role: nil }
+          role: nil }.compact
       end
     end
 
@@ -68,14 +91,16 @@ module OrcidApi
       orcid_work_type(metadata.fetch('type', nil), metadata.fetch('subtype', nil))
     end
 
+    def has_required_elements?
+      doi && contributors && title && container_title && publication_date
+    end
+
     def citation
-      return nil unless contributors && title && container_title && publication_date
+      return nil unless has_required_elements?
 
       url = "https://doi.org/#{doi}"
 
       # generate citation in bibtex format. Use the url as bibtex key.
-      # TODO set correct bibtex type
-
       BibTeX::Entry.new({
         bibtex_type: :data,
         bibtex_key: url,
@@ -89,21 +114,11 @@ module OrcidApi
     end
 
     def data
-      # check for DataCite required metadata
-      return nil unless doi && contributors && title && container_title && publication_date
+      return nil unless has_required_elements?
 
-      Nokogiri::XML::Builder.new do |xml|
-        xml.send(:'orcid-message', root_attributes) do
-          xml.send(:'message-version', API_VERSION)
-          xml.send(:'orcid-profile') do
-            xml.send(:'orcid-activities') do
-              xml.send(:'orcid-works') do
-                xml.send(:'orcid-work') do
-                  insert_work(xml)
-                end
-              end
-            end
-          end
+      Nokogiri::XML::Builder.new(:encoding => 'UTF-8') do |xml|
+        xml.send(:'work:work', root_attributes) do
+          insert_work(xml)
         end
       end.to_xml
     end
@@ -120,36 +135,36 @@ module OrcidApi
 
     def insert_titles(xml)
       if title
-        xml.send(:'work-title') do
-          xml.title(title)
+        xml.send(:'work:title') do
+          xml.send(:'common:title', title)
         end
       end
 
-      xml.send(:'journal-title', container_title) if container_title
+      xml.send(:'work:journal-title', container_title) if container_title
     end
 
     def insert_description(xml)
       return nil unless description.present?
 
-      xml.send(:'short-description', description.truncate(2500, separator: ' '))
+      xml.send(:'work:short-description', description.truncate(2500, separator: ' '))
     end
 
     def insert_citation(xml)
       return nil unless citation.present?
 
-      xml.send(:'work-citation') do
-        xml.send(:'work-citation-type', 'bibtex')
-        xml.citation(citation)
+      xml.send(:'work:citation') do
+        xml.send(:'work:citation-type', 'bibtex')
+        xml.send(:'work:citation-value', citation)
       end
     end
 
     def insert_type(xml)
-      xml.send(:'work-type', type)
+      xml.send(:'work:type', type)
     end
 
     def insert_pub_date(xml)
       if publication_date['year']
-        xml.send(:'publication-date') do
+        xml.send(:'common:publication-date') do
           xml.year(publication_date.fetch('year'))
           xml.month(publication_date.fetch('month', nil)) if publication_date['month']
           xml.day(publication_date.fetch('day', nil)) if publication_date['month'] && publication_date['day']
@@ -158,22 +173,22 @@ module OrcidApi
     end
 
     def insert_ids(xml)
-      xml.send(:'work-external-identifiers') do
+      xml.send(:'common:external-ids') do
         insert_id(xml, 'doi', doi)
       end
     end
 
     def insert_id(xml, id_type, value)
-      xml.send(:'work-external-identifier') do
-        xml.send(:'work-external-identifier-type', id_type)
-        xml.send(:'work-external-identifier-id', value)
+      xml.send(:'common:external-id') do
+        xml.send(:'common:external-id-type', id_type)
+        xml.send(:'common:external-id-value', value)
       end
     end
 
     def insert_contributors(xml)
       return nil unless contributors.present?
 
-      xml.send(:'work-contributors') do
+      xml.send(:'work:contributors') do
         contributors.each do |contributor|
           xml.contributor do
             insert_contributor(xml, contributor)
@@ -183,7 +198,13 @@ module OrcidApi
     end
 
     def insert_contributor(xml, contributor)
-      #xml.send(:'contributor-orcid', contributor[:orcid]) if contributor[:orcid]
+      if contributor[:orcid].present?
+        xml.send(:'common:contributor-orcid') do
+          xml.send(:'common:uri', contributor[:orcid])
+          xml.send(:'common:path', contributor[:orcid][17..-1])
+          xml.send(:'common:host', 'orcid.org')
+        end
+      end
       xml.send(:'credit-name', contributor[:credit_name])
       if contributor[:role]
         xml.send(:'contributor-attributes') do
@@ -204,12 +225,13 @@ module OrcidApi
 
     def root_attributes
       { :'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
-        :'xsi:schemaLocation' => 'http://www.orcid.org/ns/orcid https://raw.github.com/ORCID/ORCID-Source/master/orcid-model/src/main/resources/orcid-message-1.2.xsd',
-        :'xmlns' => 'http://www.orcid.org/ns/orcid' }
+        :'xsi:schemaLocation' => 'http://www.orcid.org/ns/work ../work-2.0_rc3.xsd',
+        :'xmlns:common' => 'http://www.orcid.org/ns/common',
+        :'xmlns:work' => 'http://www.orcid.org/ns/work' }
     end
 
     def schema
-      Nokogiri::XML::Schema(open(ORCID_SCHEMA))
+      Nokogiri::XML::Schema(open(SCHEMA))
     end
 
     def validation_errors

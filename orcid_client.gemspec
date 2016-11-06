@@ -1,16 +1,16 @@
 require "date"
-require File.expand_path("../lib/orcid_api/version", __FILE__)
+require File.expand_path("../lib/orcid_client/version", __FILE__)
 
 Gem::Specification.new do |s|
   s.authors       = "Martin Fenner"
   s.email         = "mfenner@datacite.org"
-  s.name          = "orcid_api"
-  s.homepage      = "https://github.com/datacite/orcid_api"
-  s.summary       = "Client library for the ORCID API"
+  s.name          = "orcid_client"
+  s.homepage      = "https://github.com/datacite/orcid_client"
+  s.summary       = "Ruby client library for the ORCID API"
   s.date          = Date.today
-  s.description   = "Client library for the ORCID API."
+  s.description   = "Ruby client library for the ORCID API."
   s.require_paths = ["lib"]
-  s.version       = OrcidApi::VERSION
+  s.version       = OrcidClient::VERSION
   s.extra_rdoc_files = ["README.md"]
   s.license       = 'MIT'
 
