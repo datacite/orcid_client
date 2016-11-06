@@ -2,7 +2,7 @@
 <work:work put-code="123" visibility="private"
 	xmlns:common="http://www.orcid.org/ns/common" xmlns:work="http://www.orcid.org/ns/work"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.orcid.org/ns/work ../work-2.0_rc3.xsd ">	
+	xsi:schemaLocation="http://www.orcid.org/ns/work ../work-2.0_rc3.xsd ">
 	<common:created-date>2001-12-31T12:00:00</common:created-date>
 	<common:last-modified-date>2001-12-31T12:00:00</common:last-modified-date>
 	<common:source>
@@ -12,7 +12,7 @@
 			<common:host>orcid.org</common:host>
 		</common:source-orcid>
 		<common:source-name />
-	</common:source>	
+	</common:source>
 	<work:title>
 		<common:title>common:title</common:title>
 		<common:subtitle />
@@ -22,7 +22,7 @@
 	<work:short-description>work:short-description</work:short-description>
 	<work:citation>
 		<work:citation-type>formatted-unspecified</work:citation-type>
-		<work:citation>work:citation</work:citation>
+		<work:citation-value>work:citation</work:citation-value>
 	</work:citation>
 	<work:type>artistic-performance</work:type>
 	<common:publication-date>
@@ -33,7 +33,7 @@
 	<common:external-ids>
 		<common:external-id>
 			<common:external-id-type>agr</common:external-id-type>
-			<common:external-id-value>work:external-identifier-id</common:external-id-value>			
+			<common:external-id-value>work:external-identifier-id</common:external-id-value>
 			<common:external-id-url>http://orcid.org</common:external-id-url>
 			<common:external-id-relationship>self</common:external-id-relationship>
 		</common:external-id>
@@ -55,5 +55,5 @@
 		</work:contributor>
 	</work:contributors>
 	<common:language-code>en</common:language-code>
-	<common:country visibility="private">AF</common:country>		
+	<common:country visibility="private">AF</common:country>
 </work:work>
