@@ -14,23 +14,17 @@ if File.exist?(env_json_file)
 end
 
 # default values for some ENV variables
-ENV['ORCID_API_URL'] = "https://api.sandbox.orcid.org"
+ENV['ORCID_API_URL'] ||= "https://api.sandbox.orcid.org"
 
 require 'active_support/all'
-
-# check that all required env variables are set
-env_vars = %w{ ORCID_API_URL ORCID_CLIENT_ID ORCID_CLIENT_SECRET }
-env_vars.each { |env| fail ArgumentError,  "ENV[#{env}] is not set" if ENV[env].blank? }
-
 require 'nokogiri'
 require 'bibtex'
-require 'oauth2'
 
 require_relative 'metadata'
 require_relative 'author'
 require_relative 'date'
 require_relative 'work_type'
-require_relative 'oauth'
+require_relative 'api'
 
 module OrcidClient
   class Work
@@ -38,13 +32,14 @@ module OrcidClient
     include OrcidClient::Author
     include OrcidClient::Date
     include OrcidClient::WorkType
-    include OrcidClient::Oauth
+    include OrcidClient::Api
 
     attr_reader :doi, :orcid, :schema, :access_token, :validation_errors
 
     def initialize(doi:, orcid:, access_token:, **options)
       @doi = doi
       @orcid = orcid
+      @access_token = access_token
     end
 
     SCHEMA = File.expand_path("../../../resources/record_#{API_VERSION}/work-#{API_VERSION}.xsd", __FILE__)
