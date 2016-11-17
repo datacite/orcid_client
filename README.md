@@ -13,6 +13,7 @@ The following functionality is supported:
 
 * get all works from an ORCID record, including those set to limited access
 * create work in an ORCID record
+* create notification for an ORCID record (needs special permissions)
 
 ## Requirements
 
