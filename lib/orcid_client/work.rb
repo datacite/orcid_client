@@ -1,45 +1,29 @@
-# load ENV variables from .env file if it exists
-env_file = File.expand_path("../../../.env", __FILE__)
-if File.exist?(env_file)
-  require 'dotenv'
-  Dotenv.load! env_file
-end
-
-# load ENV variables from container environment if json file exists
-# see https://github.com/phusion/baseimage-docker#envvar_dumps
-env_json_file = "/etc/container_environment.json"
-if File.exist?(env_json_file)
-  env_vars = JSON.parse(File.read(env_json_file))
-  env_vars.each { |k, v| ENV[k] = v }
-end
-
-# default values for some ENV variables
-ENV['ORCID_API_URL'] ||= "https://api.sandbox.orcid.org"
-
 require 'active_support/all'
 require 'nokogiri'
-require 'bibtex'
 
-require_relative 'metadata'
-require_relative 'author'
-require_relative 'date'
-require_relative 'work_type'
 require_relative 'api'
+require_relative 'author'
+require_relative 'base'
+require_relative 'date'
+require_relative 'metadata'
+require_relative 'work_type'
 
 module OrcidClient
   class Work
+    include OrcidClient::Base
     include OrcidClient::Metadata
     include OrcidClient::Author
     include OrcidClient::Date
     include OrcidClient::WorkType
     include OrcidClient::Api
 
-    attr_reader :doi, :orcid, :schema, :access_token, :validation_errors
+    attr_reader :doi, :orcid, :schema, :access_token, :put_code, :validation_errors
 
     def initialize(doi:, orcid:, access_token:, **options)
       @doi = doi
       @orcid = orcid
       @access_token = access_token
+      @put_code = options.fetch(:put_code, nil)
     end
 
     SCHEMA = File.expand_path("../../../resources/record_#{API_VERSION}/work-#{API_VERSION}.xsd", __FILE__)
@@ -90,24 +74,6 @@ module OrcidClient
       doi && contributors && title && container_title && publication_date
     end
 
-    def citation
-      return nil unless has_required_elements?
-
-      url = "https://doi.org/#{doi}"
-
-      # generate citation in bibtex format. Use the url as bibtex key.
-      BibTeX::Entry.new({
-        bibtex_type: :data,
-        bibtex_key: url,
-        author: author_string,
-        title: title,
-        publisher: container_title,
-        doi: doi,
-        url: url,
-        year: publication_date['year']
-      }).to_s.gsub("\n",'').gsub(/\s+/, ' ')
-    end
-
     def data
       return nil unless has_required_elements?
 
@@ -121,7 +87,6 @@ module OrcidClient
     def insert_work(xml)
       insert_titles(xml)
       insert_description(xml)
-      insert_citation(xml)
       insert_type(xml)
       insert_pub_date(xml)
       insert_ids(xml)
@@ -142,15 +107,6 @@ module OrcidClient
       return nil unless description.present?
 
       xml.send(:'work:short-description', description.truncate(2500, separator: ' '))
-    end
-
-    def insert_citation(xml)
-      return nil unless citation.present?
-
-      xml.send(:'work:citation') do
-        xml.send(:'work:citation-type', 'bibtex')
-        xml.send(:'work:citation-value', citation)
-      end
     end
 
     def insert_type(xml)

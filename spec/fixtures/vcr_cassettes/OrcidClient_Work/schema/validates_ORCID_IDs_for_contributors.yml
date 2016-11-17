@@ -19,19 +19,25 @@ http_interactions:
       Server:
       - openresty/1.11.2.1
       Date:
-      - Sun, 06 Nov 2016 08:29:43 GMT
+      - Sun, 06 Nov 2016 17:39:32 GMT
       Content-Type:
       - application/json;charset=UTF-8
-      Connection:
-      - keep-alive
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Methods:
       - GET, POST, OPTIONS
+      X-Cache:
+      - MISS from IMP-cache
+      X-Cache-Lookup:
+      - MISS from IMP-cache:3128
+      Via:
+      - 1.0 IMP-cache (squid/3.1.20)
+      Connection:
+      - close
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJyZXNwb25zZUhlYWRlciI6eyJzdGF0dXMiOjAsIlFUaW1lIjoxfSwicmVz
+        eyJyZXNwb25zZUhlYWRlciI6eyJzdGF0dXMiOjAsIlFUaW1lIjo0fSwicmVz
         cG9uc2UiOnsibnVtRm91bmQiOjEsInN0YXJ0IjowLCJkb2NzIjpbeyJtaW50
         ZWQiOiIyMDE0LTA1LTI2VDEyOjAxOjA5WiIsImRhdGFjZW50cmVfc3ltYm9s
         IjoiVElCLkhBTkRCVUNIIiwieG1sIjoiUEQ5NGJXd2dkbVZ5YzJsdmJqMG5N
@@ -147,5 +153,5 @@ http_interactions:
         YmxpY2F0aW9uWWVhciI6IjIwMTQiLCJyZXNvdXJjZVR5cGVHZW5lcmFsIjoi
         VGV4dCJ9XX19Cg==
     http_version: 
-  recorded_at: Sun, 06 Nov 2016 08:29:43 GMT
+  recorded_at: Sun, 06 Nov 2016 17:39:45 GMT
 recorded_with: VCR 3.0.3

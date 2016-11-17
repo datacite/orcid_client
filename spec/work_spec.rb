@@ -93,10 +93,6 @@ describe OrcidClient::Work, vcr: true do
     expect(subject.publication_date).to eq("year" => 2016)
   end
 
-  it 'citation' do
-    expect(subject.citation).to eq("@data{https://doi.org/10.5281/zenodo.59983, author = {Fenner, Martin and Thorisson, Gudmundur A. and Haggerty, Eleanor Kiefel and Ranganathan, Anusha}, title = {omniauth-orcid: v.1.1.5}, publisher = {Zenodo}, doi = {10.5281/zenodo.59983}, url = {https://doi.org/10.5281/zenodo.59983}, year = {2016}}")
-  end
-
   it 'data' do
     xml = File.read(fixture_path + 'work.xml')
     expect(subject.data).to eq(xml)

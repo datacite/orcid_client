@@ -19,23 +19,29 @@ http_interactions:
       Server:
       - openresty/1.11.2.1
       Date:
-      - Sun, 06 Nov 2016 08:29:43 GMT
+      - Sun, 06 Nov 2016 17:39:36 GMT
       Content-Type:
       - application/json;charset=UTF-8
-      Connection:
-      - keep-alive
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Methods:
       - GET, POST, OPTIONS
+      X-Cache:
+      - MISS from IMP-cache
+      X-Cache-Lookup:
+      - MISS from IMP-cache:3128
+      Via:
+      - 1.0 IMP-cache (squid/3.1.20)
+      Connection:
+      - close
     body:
       encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":5},"response":{"numFound":1,"start":0,"docs":[{"minted":"2010-10-21T01:06:41Z","datacentre_symbol":"TIB.PANGAEA","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cmVzb3VyY2UgeG1sbnM9Imh0dHA6Ly9kYXRhY2l0ZS5vcmcvc2NoZW1hL2tlcm5lbC0zIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4c2k6c2NoZW1hTG9jYXRpb249Imh0dHA6Ly9kYXRhY2l0ZS5vcmcvc2NoZW1hL2tlcm5lbC0zIGh0dHA6Ly9zY2hlbWEuZGF0YWNpdGUub3JnL21ldGEva2VybmVsLTMvbWV0YWRhdGEueHNkIj48aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4xNTk0L1BBTkdBRUEuNzQ1MDgzPC9pZGVudGlmaWVyPjxjcmVhdG9ycz48Y3JlYXRvcj48Y3JlYXRvck5hbWU+RVBPQ0EgQXJjdGljIGV4cGVyaW1lbnQgMjAwOSB0ZWFtPC9jcmVhdG9yTmFtZT48L2NyZWF0b3I+PC9jcmVhdG9ycz48dGl0bGVzPjx0aXRsZT5FUE9DQSAyMDA5IFN2YWxiYXJkIGJlbnRoaWMgZXhwZXJpbWVudDwvdGl0bGU+PC90aXRsZXM+PHB1Ymxpc2hlcj5QQU5HQUVBIC0gRGF0YSBQdWJsaXNoZXIgZm9yIEVhcnRoICZhbXA7IEVudmlyb25tZW50YWwgU2NpZW5jZTwvcHVibGlzaGVyPjxwdWJsaWNhdGlvblllYXI+MjAwOTwvcHVibGljYXRpb25ZZWFyPjxzdWJqZWN0cz48c3ViamVjdCBzdWJqZWN0U2NoZW1lPSJQcm9qZWN0Ij5FdXJvcGVhbiBQcm9qZWN0IG9uIE9jZWFuIEFjaWRpZmljYXRpb24gKEVQT0NBKTwvc3ViamVjdD48L3N1YmplY3RzPjxkYXRlcz48ZGF0ZSBkYXRlVHlwZT0iQ29sbGVjdGVkIj4yMDA5LTA1LTAyVDE0OjAwOjAwLzIwMDktMDYtMjhUMDA6MDA6MDA8L2RhdGU+PC9kYXRlcz48bGFuZ3VhZ2U+ZW5nPC9sYW5ndWFnZT48cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkNvbGxlY3Rpb24iPkNvbGxlY3Rpb24gb2YgRGF0YXNldHM8L3Jlc291cmNlVHlwZT48c2l6ZXM+PHNpemU+MTAgZGF0YXNldHM8L3NpemU+PC9zaXplcz48Zm9ybWF0cz48Zm9ybWF0PmFwcGxpY2F0aW9uL3ppcDwvZm9ybWF0PjwvZm9ybWF0cz48cmlnaHRzTGlzdD48cmlnaHRzIHJpZ2h0c1VSST0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbGljZW5zZXMvYnkvMy4wLyI+Q3JlYXRpdmUgQ29tbW9ucyBBdHRyaWJ1dGlvbiAzLjAgVW5wb3J0ZWQgKENDLUJZKTwvcmlnaHRzPjwvcmlnaHRzTGlzdD48Z2VvTG9jYXRpb25zPjxnZW9Mb2NhdGlvbj48Z2VvTG9jYXRpb25Cb3g+NzguOTQwMDAwMDAwMDAwMDEgMTEuOSA3OC45NjAwMDAwMDAwMDAwMSAxMi4wNzwvZ2VvTG9jYXRpb25Cb3g+PC9nZW9Mb2NhdGlvbj48L2dlb0xvY2F0aW9ucz48L3Jlc291cmNlPg==","datacentre":"TIB.PANGAEA
+      string: '{"responseHeader":{"status":0,"QTime":8},"response":{"numFound":1,"start":0,"docs":[{"minted":"2010-10-21T01:06:41Z","datacentre_symbol":"TIB.PANGAEA","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48cmVzb3VyY2UgeG1sbnM9Imh0dHA6Ly9kYXRhY2l0ZS5vcmcvc2NoZW1hL2tlcm5lbC0zIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4c2k6c2NoZW1hTG9jYXRpb249Imh0dHA6Ly9kYXRhY2l0ZS5vcmcvc2NoZW1hL2tlcm5lbC0zIGh0dHA6Ly9zY2hlbWEuZGF0YWNpdGUub3JnL21ldGEva2VybmVsLTMvbWV0YWRhdGEueHNkIj48aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4xNTk0L1BBTkdBRUEuNzQ1MDgzPC9pZGVudGlmaWVyPjxjcmVhdG9ycz48Y3JlYXRvcj48Y3JlYXRvck5hbWU+RVBPQ0EgQXJjdGljIGV4cGVyaW1lbnQgMjAwOSB0ZWFtPC9jcmVhdG9yTmFtZT48L2NyZWF0b3I+PC9jcmVhdG9ycz48dGl0bGVzPjx0aXRsZT5FUE9DQSAyMDA5IFN2YWxiYXJkIGJlbnRoaWMgZXhwZXJpbWVudDwvdGl0bGU+PC90aXRsZXM+PHB1Ymxpc2hlcj5QQU5HQUVBIC0gRGF0YSBQdWJsaXNoZXIgZm9yIEVhcnRoICZhbXA7IEVudmlyb25tZW50YWwgU2NpZW5jZTwvcHVibGlzaGVyPjxwdWJsaWNhdGlvblllYXI+MjAwOTwvcHVibGljYXRpb25ZZWFyPjxzdWJqZWN0cz48c3ViamVjdCBzdWJqZWN0U2NoZW1lPSJQcm9qZWN0Ij5FdXJvcGVhbiBQcm9qZWN0IG9uIE9jZWFuIEFjaWRpZmljYXRpb24gKEVQT0NBKTwvc3ViamVjdD48L3N1YmplY3RzPjxkYXRlcz48ZGF0ZSBkYXRlVHlwZT0iQ29sbGVjdGVkIj4yMDA5LTA1LTAyVDE0OjAwOjAwLzIwMDktMDYtMjhUMDA6MDA6MDA8L2RhdGU+PC9kYXRlcz48bGFuZ3VhZ2U+ZW5nPC9sYW5ndWFnZT48cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkNvbGxlY3Rpb24iPkNvbGxlY3Rpb24gb2YgRGF0YXNldHM8L3Jlc291cmNlVHlwZT48c2l6ZXM+PHNpemU+MTAgZGF0YXNldHM8L3NpemU+PC9zaXplcz48Zm9ybWF0cz48Zm9ybWF0PmFwcGxpY2F0aW9uL3ppcDwvZm9ybWF0PjwvZm9ybWF0cz48cmlnaHRzTGlzdD48cmlnaHRzIHJpZ2h0c1VSST0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbGljZW5zZXMvYnkvMy4wLyI+Q3JlYXRpdmUgQ29tbW9ucyBBdHRyaWJ1dGlvbiAzLjAgVW5wb3J0ZWQgKENDLUJZKTwvcmlnaHRzPjwvcmlnaHRzTGlzdD48Z2VvTG9jYXRpb25zPjxnZW9Mb2NhdGlvbj48Z2VvTG9jYXRpb25Cb3g+NzguOTQwMDAwMDAwMDAwMDEgMTEuOSA3OC45NjAwMDAwMDAwMDAwMSAxMi4wNzwvZ2VvTG9jYXRpb25Cb3g+PC9nZW9Mb2NhdGlvbj48L2dlb0xvY2F0aW9ucz48L3Jlc291cmNlPg==","datacentre":"TIB.PANGAEA
         - PANGAEA - Publishing Network for Geoscientific and Environmental Data","updated":"2016-04-01T18:28:38Z","prefix":"10.1594","doi":"10.1594/PANGAEA.745083","creator":["EPOCA
         Arctic experiment 2009 team"],"publisher":"PANGAEA - Data Publisher for Earth
         & Environmental Science","title":["EPOCA 2009 Svalbard benthic experiment"],"publicationYear":"2009","resourceTypeGeneral":"Collection"}]}}
 
 '
     http_version: 
-  recorded_at: Sun, 06 Nov 2016 08:29:44 GMT
+  recorded_at: Sun, 06 Nov 2016 17:39:46 GMT
 recorded_with: VCR 3.0.3

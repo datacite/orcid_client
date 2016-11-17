@@ -9,10 +9,6 @@
 &lt;ul&gt;
 &lt;li&gt;compatibility with omniauth-oauth2 1.4.0. Thanks to pull request &lt;a href="https://github.com/datacite/omniauth-orcid/pull/7"&gt;#7&lt;/a&gt; by &lt;a href="https://github.com/eleanorakh"&gt;eleanorakh&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;</work:short-description>
-  <work:citation>
-    <work:citation-type>bibtex</work:citation-type>
-    <work:citation-value>@data{https://doi.org/10.5281/zenodo.59983, author = {Fenner, Martin and Thorisson, Gudmundur A. and Haggerty, Eleanor Kiefel and Ranganathan, Anusha}, title = {omniauth-orcid: v.1.1.5}, publisher = {Zenodo}, doi = {10.5281/zenodo.59983}, url = {https://doi.org/10.5281/zenodo.59983}, year = {2016}}</work:citation-value>
-  </work:citation>
   <work:type>other</work:type>
   <common:publication-date>
     <common:year>2016</common:year>
