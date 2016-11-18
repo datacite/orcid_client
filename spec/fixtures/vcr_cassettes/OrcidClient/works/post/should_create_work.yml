@@ -19,7 +19,7 @@ http_interactions:
       Server:
       - openresty/1.11.2.1
       Date:
-      - Fri, 18 Nov 2016 09:56:48 GMT
+      - Fri, 18 Nov 2016 10:13:02 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
@@ -40,7 +40,7 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Fri, 18 Nov 2016 09:56:48 GMT
+  recorded_at: Fri, 18 Nov 2016 10:13:02 GMT
 - request:
     method: post
     uri: https://api.sandbox.orcid.org/v2.0_rc3/0000-0001-6528-2027/work
@@ -53,11 +53,7 @@ http_interactions:
             <common:title>omniauth-orcid: v.1.1.5</common:title>
           </work:title>
           <work:journal-title>Zenodo</work:journal-title>
-          <work:short-description>&lt;p&gt;&lt;a href="https://github.com/datacite/omniauth-orcid/releases/tag/v.1.1.5"&gt;onmiauth-orcid 1.1.5&lt;/a&gt; was released on August 11, 2016 with the following changes:&lt;/p&gt;
-
-        &lt;ul&gt;
-        &lt;li&gt;compatibility with omniauth-oauth2 1.4.0. Thanks to pull request &lt;a href="https://github.com/datacite/omniauth-orcid/pull/7"&gt;#7&lt;/a&gt; by &lt;a href="https://github.com/eleanorakh"&gt;eleanorakh&lt;/a&gt;.&lt;/li&gt;
-        &lt;/ul&gt;</work:short-description>
+          <work:short-description>onmiauth-orcid 1.1.5 was released on August 11, 2016 with the following changes: compatibility with omniauth-oauth2 1.4.0. Thanks to pull request #7 by eleanorakh.</work:short-description>
           <work:type>other</work:type>
           <common:publication-date>
             <common:year>2016</common:year>
@@ -101,7 +97,7 @@ http_interactions:
       Server:
       - nginx/1.4.6 (Ubuntu)
       Date:
-      - Fri, 18 Nov 2016 09:56:50 GMT
+      - Fri, 18 Nov 2016 10:13:04 GMT
       Content-Type:
       - application/vnd.orcid+xml; qs=5;charset=UTF-8
       Content-Length:
@@ -111,10 +107,10 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Location:
-      - http://api.sandbox.orcid.org:443/orcid-api-web/v2.0_rc3/0000-0001-6528-2027/work/740607
+      - http://api.sandbox.orcid.org:443/orcid-api-web/v2.0_rc3/0000-0001-6528-2027/work/740609
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 18 Nov 2016 09:56:50 GMT
+  recorded_at: Fri, 18 Nov 2016 10:13:04 GMT
 recorded_with: VCR 3.0.3

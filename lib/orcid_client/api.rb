@@ -10,7 +10,7 @@ module OrcidClient
       orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
 
       url = "#{orcid_api_url}/v#{API_VERSION}/#{orcid}/works"
-      response = Maremma.get(url, accept: 'json', bearer: access_token)
+      Maremma.get(url, accept: 'json', bearer: access_token)
     end
 
     def create_work(options={})
@@ -19,7 +19,7 @@ module OrcidClient
       orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
 
       url = "#{orcid_api_url}/v#{API_VERSION}/#{orcid}/work"
-      response = Maremma.post(url, content_type: 'application/vnd.orcid+xml', data: data, bearer: access_token)
+      Maremma.post(url, content_type: 'application/vnd.orcid+xml', data: data, bearer: access_token)
     end
 
     def update_work(options={})
@@ -29,7 +29,7 @@ module OrcidClient
       orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
 
       url = "#{orcid_api_url}/v#{API_VERSION}/#{orcid}/work/#{put_code}"
-      response = Maremma.put(url, content_type: 'application/vnd.orcid+xml', data: data, bearer: access_token)
+      Maremma.put(url, content_type: 'application/vnd.orcid+xml', data: data, bearer: access_token)
     end
 
     def delete_work(options={})
@@ -39,7 +39,7 @@ module OrcidClient
       orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
 
       url = "#{orcid_api_url}/v#{API_VERSION}/#{orcid}/work/#{put_code}"
-      response = Maremma.delete(url, content_type: 'application/vnd.orcid+xml', bearer: access_token)
+      Maremma.delete(url, content_type: 'application/vnd.orcid+xml', bearer: access_token)
     end
 
     def get_notification_access_token(client_id:, client_secret:, **options)
@@ -52,7 +52,7 @@ module OrcidClient
 
       url = "#{orcid_api_url}/oauth/token"
       data = URI.encode_www_form(params)
-      response = Maremma.post(url, content_type: 'application/x-www-form-urlencoded', data: data, accept: 'application/json')
+      Maremma.post(url, content_type: 'application/x-www-form-urlencoded', data: data, accept: 'application/json')
     end
 
     def create_notification(options={})
@@ -61,7 +61,7 @@ module OrcidClient
       orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
 
       url = "#{orcid_api_url}/v#{API_VERSION}/#{orcid}/notification-permission"
-      response = Maremma.post(url, content_type: 'application/vnd.orcid+xml', data: data, bearer: notification_access_token)
+      Maremma.post(url, content_type: 'application/vnd.orcid+xml', data: data, bearer: notification_access_token)
     end
   end
 end

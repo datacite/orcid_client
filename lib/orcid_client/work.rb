@@ -1,5 +1,6 @@
 require 'active_support/all'
 require 'nokogiri'
+require 'sanitize'
 
 require_relative 'api'
 require_relative 'author'
@@ -46,6 +47,10 @@ module OrcidClient
       end.join(" and ")
     end
 
+    def sanitize(string)
+      Sanitize.fragment(string).squish
+    end
+
     def title
       metadata.fetch('title', nil)
     end
@@ -63,7 +68,7 @@ module OrcidClient
     end
 
     def description
-      Array(metadata.fetch('description', nil)).first
+      sanitize(Array(metadata.fetch('description', nil)).first)
     end
 
     def type
