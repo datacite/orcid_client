@@ -19,7 +19,7 @@ http_interactions:
       Server:
       - openresty/1.11.2.1
       Date:
-      - Thu, 17 Nov 2016 15:37:24 GMT
+      - Fri, 18 Nov 2016 07:43:20 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
@@ -40,7 +40,7 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Thu, 17 Nov 2016 15:37:24 GMT
+  recorded_at: Fri, 18 Nov 2016 07:43:20 GMT
 - request:
     method: post
     uri: https://api.sandbox.orcid.org/v2.0_rc3/0000-0001-6528-2027/notification-permission
@@ -51,9 +51,8 @@ http_interactions:
         <notification:notification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://www.orcid.org/ns/common" xmlns:notification="http://www.orcid.org/ns/notification" xsi:schemaLocation="http://www.orcid.org/ns/notification ../notification-permission-2.0_rc3.xsd">
           <notification:notification-type>permission</notification:notification-type>
           <notification:authorization-url>
-            <notification:uri>https://orcid.org/oauth/authorize?client_id=<ORCID_CLIENT_ID>&amp;amp;response_type=code&amp;amp;scope=/orcid-works/create&amp;amp;redirect_uri=http://localhost:8080</notification:uri>
-            <notification:path>/oauth/authorize?client_id=<ORCID_CLIENT_ID>&amp;amp;response_type=code&amp;amp;scope=/orcid-works/create&amp;amp;redirect_uri=http://localhost:8080</notification:path>
-            <notification:host>orcid.org</notification:host>
+            <notification:path>/oauth/authorize?client_id=<ORCID_CLIENT_ID>&amp;response_type=code&amp;scope=/read-limited%20/activities/update%20/person/update&amp;redirect_uri=http://localhost:8080/users/auth/orcid/callback</notification:path>
+            <notification:host>sandbox.orcid.org</notification:host>
           </notification:authorization-url>
           <notification:notification-subject/>
           <notification:notification-intro/>
@@ -86,7 +85,7 @@ http_interactions:
       Server:
       - nginx/1.4.6 (Ubuntu)
       Date:
-      - Thu, 17 Nov 2016 15:37:25 GMT
+      - Fri, 18 Nov 2016 07:43:21 GMT
       Content-Type:
       - application/vnd.orcid+xml; qs=5;charset=UTF-8
       Content-Length:
@@ -96,10 +95,10 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Location:
-      - http://api.sandbox.orcid.org:443/orcid-api-web/v2.0_rc3/0000-0001-6528-2027/notification-permission/142844
+      - http://api.sandbox.orcid.org:443/orcid-api-web/v2.0_rc3/0000-0001-6528-2027/notification-permission/142895
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Thu, 17 Nov 2016 15:37:25 GMT
+  recorded_at: Fri, 18 Nov 2016 07:43:21 GMT
 recorded_with: VCR 3.0.3

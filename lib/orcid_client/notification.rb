@@ -17,7 +17,7 @@ module OrcidClient
     include OrcidClient::WorkType
     include OrcidClient::Api
 
-    attr_reader :doi, :orcid, :schema, :notification_access_token, :put_code, :subject, :intro, :validation_errors
+    attr_reader :doi, :orcid, :schema, :notification_access_token, :put_code, :subject, :intro, :notification_host, :validation_errors
 
     def initialize(doi:, orcid:, notification_access_token:, **options)
       @doi = doi
@@ -26,6 +26,7 @@ module OrcidClient
       @put_code = options.fetch(:put_code, nil)
       @subject = options.fetch(:subject, nil)
       @intro = options.fetch(:intro, nil)
+      @notification_host = options[:sandbox] ? 'sandbox.orcid.org' : 'orcid.org'
     end
 
     SCHEMA = File.expand_path("../../../resources/notification_#{API_VERSION}/notification-permission-#{API_VERSION}.xsd", __FILE__)
@@ -100,18 +101,13 @@ module OrcidClient
 
     def insert_authorization_url(xml)
       xml.send(:'notification:authorization-url') do
-        xml.send(:'notification:uri', work_notification_uri)
         xml.send(:'notification:path', work_notification_path)
-        xml.send(:'notification:host', "orcid.org")
+        xml.send(:'notification:host', notification_host)
       end
     end
 
-    def work_notification_uri
-      "https://orcid.org/oauth/authorize?client_id=#{ENV['ORCID_CLIENT_ID']}&amp;response_type=code&amp;scope=/orcid-works/create&amp;redirect_uri=#{ENV['REDIRECT_URI']}"
-    end
-
     def work_notification_path
-      "/oauth/authorize?client_id=#{ENV['ORCID_CLIENT_ID']}&amp;response_type=code&amp;scope=/orcid-works/create&amp;redirect_uri=#{ENV['REDIRECT_URI']}"
+      "/oauth/authorize?client_id=#{ENV['ORCID_CLIENT_ID']}&response_type=code&scope=/read-limited%20/activities/update%20/person/update&redirect_uri=#{ENV['REDIRECT_URI']}"
     end
 
     def insert_notification_subject(xml)

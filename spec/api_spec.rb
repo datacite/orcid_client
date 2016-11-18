@@ -41,7 +41,7 @@ describe OrcidClient, vcr: true do
   end
 
   describe "notifications" do
-    subject { OrcidClient::Notification.new(doi: doi, orcid: orcid, notification_access_token: notification_access_token) }
+    subject { OrcidClient::Notification.new(doi: doi, orcid: orcid, notification_access_token: notification_access_token, sandbox: true) }
 
     describe 'post' do
       it 'should create notification' do
