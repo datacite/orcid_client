@@ -6,7 +6,6 @@ require_relative 'author'
 require_relative 'base'
 require_relative 'date'
 require_relative 'metadata'
-require_relative 'work_type'
 
 module OrcidClient
   class Notification
@@ -14,7 +13,6 @@ module OrcidClient
     include OrcidClient::Metadata
     include OrcidClient::Author
     include OrcidClient::Date
-    include OrcidClient::WorkType
     include OrcidClient::Api
 
     attr_reader :doi, :orcid, :schema, :notification_access_token, :put_code, :subject, :intro, :notification_host, :validation_errors
@@ -35,38 +33,8 @@ module OrcidClient
       @metadata ||= get_metadata(doi, 'datacite')
     end
 
-    def contributors
-      Array(metadata.fetch('author', nil)).map do |contributor|
-        { orcid: contributor.fetch('ORCID', nil),
-          credit_name: get_credit_name(contributor),
-          role: nil }.compact
-      end
-    end
-
-    def author_string
-      Array(metadata.fetch('author', nil)).map do |contributor|
-        get_full_name(contributor)
-      end.join(" and ")
-    end
-
     def item_name
       metadata.fetch('title', nil)
-    end
-
-    def container_title
-      metadata.fetch('container-title', nil)
-    end
-
-    def publisher_id
-      metadata.fetch('publisher_id', nil)
-    end
-
-    def publication_date
-      get_year_month_day(metadata.fetch('published', nil))
-    end
-
-    def description
-      Array(metadata.fetch('description', nil)).first
     end
 
     def item_type
@@ -137,16 +105,6 @@ module OrcidClient
         xml.send(:'common:external-id-value', value)
         xml.send(:'common:external-id-relationship', relationship)
       end
-    end
-
-    def without_control(s)
-      r = ''
-      s.each_codepoint do |c|
-        if c >= 32
-          r << c
-        end
-      end
-      r
     end
 
     def root_attributes

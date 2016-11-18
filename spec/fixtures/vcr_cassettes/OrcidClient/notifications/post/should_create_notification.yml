@@ -19,7 +19,7 @@ http_interactions:
       Server:
       - openresty/1.11.2.1
       Date:
-      - Fri, 18 Nov 2016 07:43:20 GMT
+      - Fri, 18 Nov 2016 07:49:42 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
@@ -40,7 +40,7 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Fri, 18 Nov 2016 07:43:20 GMT
+  recorded_at: Fri, 18 Nov 2016 07:49:42 GMT
 - request:
     method: post
     uri: https://api.sandbox.orcid.org/v2.0_rc3/0000-0001-6528-2027/notification-permission
@@ -85,7 +85,7 @@ http_interactions:
       Server:
       - nginx/1.4.6 (Ubuntu)
       Date:
-      - Fri, 18 Nov 2016 07:43:21 GMT
+      - Fri, 18 Nov 2016 07:49:43 GMT
       Content-Type:
       - application/vnd.orcid+xml; qs=5;charset=UTF-8
       Content-Length:
@@ -95,10 +95,10 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Location:
-      - http://api.sandbox.orcid.org:443/orcid-api-web/v2.0_rc3/0000-0001-6528-2027/notification-permission/142895
+      - http://api.sandbox.orcid.org:443/orcid-api-web/v2.0_rc3/0000-0001-6528-2027/notification-permission/142896
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 18 Nov 2016 07:43:21 GMT
+  recorded_at: Fri, 18 Nov 2016 07:49:43 GMT
 recorded_with: VCR 3.0.3
