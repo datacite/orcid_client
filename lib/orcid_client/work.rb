@@ -181,10 +181,12 @@ module OrcidClient
     end
 
     def root_attributes
-      { :'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
+      { :'put-code' => put_code,
+        :'visibility' => 'public',
+        :'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
         :'xsi:schemaLocation' => 'http://www.orcid.org/ns/work ../work-2.0_rc3.xsd',
         :'xmlns:common' => 'http://www.orcid.org/ns/common',
-        :'xmlns:work' => 'http://www.orcid.org/ns/work' }
+        :'xmlns:work' => 'http://www.orcid.org/ns/work' }.compact
     end
 
     def schema

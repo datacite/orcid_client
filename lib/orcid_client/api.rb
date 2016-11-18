@@ -19,7 +19,9 @@ module OrcidClient
       orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
 
       url = "#{orcid_api_url}/v#{API_VERSION}/#{orcid}/work"
-      Maremma.post(url, content_type: 'application/vnd.orcid+xml', data: data, bearer: access_token)
+      response = Maremma.post(url, content_type: 'application/vnd.orcid+xml', data: data, bearer: access_token)
+      put_code = response.fetch("headers", {}).fetch("Location", "").split("/").last
+      response.merge("put_code" => put_code)
     end
 
     def update_work(options={})
@@ -29,7 +31,9 @@ module OrcidClient
       orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
 
       url = "#{orcid_api_url}/v#{API_VERSION}/#{orcid}/work/#{put_code}"
-      Maremma.put(url, content_type: 'application/vnd.orcid+xml', data: data, bearer: access_token)
+      response = Maremma.put(url, content_type: 'application/vnd.orcid+xml', data: data, bearer: access_token)
+      put_code = response.fetch("headers", {}).fetch("Location", "").split("/").last
+      response.merge("put_code" => put_code)
     end
 
     def delete_work(options={})
@@ -39,7 +43,9 @@ module OrcidClient
       orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
 
       url = "#{orcid_api_url}/v#{API_VERSION}/#{orcid}/work/#{put_code}"
-      Maremma.delete(url, content_type: 'application/vnd.orcid+xml', bearer: access_token)
+      response = Maremma.delete(url, content_type: 'application/vnd.orcid+xml', bearer: access_token)
+      put_code = response.fetch("headers", {}).fetch("Location", "").split("/").last
+      response.merge("put_code" => put_code)
     end
 
     def get_notification_access_token(client_id:, client_secret:, **options)
@@ -61,7 +67,9 @@ module OrcidClient
       orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
 
       url = "#{orcid_api_url}/v#{API_VERSION}/#{orcid}/notification-permission"
-      Maremma.post(url, content_type: 'application/vnd.orcid+xml', data: data, bearer: notification_access_token)
+      response = Maremma.post(url, content_type: 'application/vnd.orcid+xml', data: data, bearer: notification_access_token)
+      put_code = response.fetch("headers", {}).fetch("Location", "").split("/").last
+      response.merge("put_code" => put_code)
     end
   end
 end

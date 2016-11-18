@@ -5,11 +5,21 @@ describe OrcidClient, vcr: true do
   let(:orcid) { "0000-0001-6528-2027" }
   let(:access_token) { ENV['ACCESS_TOKEN'] }
   let(:notification_access_token) { ENV['NOTIFICATION_ACCESS_TOKEN'] }
+  let(:put_code) { "740616" }
   let(:fixture_path) { "spec/fixtures/" }
 
-  subject { OrcidClient::Work.new(doi: doi, orcid: orcid, access_token: access_token) }
+  subject { OrcidClient::Work.new(doi: doi, orcid: orcid, access_token: access_token, put_code: put_code) }
 
-  describe "works" do
+  describe "works", :order => :defined do
+    describe 'post' do
+      subject { OrcidClient::Work.new(doi: doi, orcid: orcid, access_token: access_token) }
+
+      it 'should create work' do
+        response = subject.create_work(sandbox: true)
+        expect(response["put_code"]).not_to be_blank
+      end
+    end
+
     describe 'get' do
       it 'should get works' do
         response = subject.get_works(sandbox: true)
@@ -20,22 +30,18 @@ describe OrcidClient, vcr: true do
       end
     end
 
-    describe 'post' do
-      it 'should create work' do
-        response = subject.create_work(sandbox: true)
-        expect(response["errors"]).to be nil
-      end
-    end
-
     describe 'put' do
       it 'should update work' do
         response = subject.update_work(sandbox: true)
+        expect(response.fetch("data", {}).fetch("work", {}).fetch("put_code", nil)).to eq(put_code)
       end
     end
 
     describe 'delete' do
       it 'should delete work' do
         response = subject.delete_work(sandbox: true)
+        expect(response["data"]).to be_blank
+        expect(response["errors"]).to be_nil
       end
     end
   end
@@ -46,7 +52,7 @@ describe OrcidClient, vcr: true do
     describe 'post' do
       it 'should create notification' do
         response = subject.create_notification(sandbox: true)
-        expect(response["errors"]).to be nil
+        expect(response["put_code"]).not_to be_blank
       end
     end
   end
