@@ -125,14 +125,15 @@ module OrcidClient
 
     def insert_ids(xml)
       xml.send(:'common:external-ids') do
-        insert_id(xml, 'doi', doi)
+        insert_id(xml, 'doi', doi, 'self')
       end
     end
 
-    def insert_id(xml, id_type, value)
+    def insert_id(xml, id_type, value, relationship)
       xml.send(:'common:external-id') do
         xml.send(:'common:external-id-type', id_type)
         xml.send(:'common:external-id-value', value)
+        xml.send(:'common:external-id-relationship', relationship)
       end
     end
 

@@ -18,7 +18,7 @@ module OrcidClient
 
       orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
 
-      url = "#{orcid_api_url}/v#{API_VERSION}/#{orcid}/works"
+      url = "#{orcid_api_url}/v#{API_VERSION}/#{orcid}/work"
       response = Maremma.post(url, content_type: 'application/vnd.orcid+xml', data: data, bearer: access_token)
     end
 
