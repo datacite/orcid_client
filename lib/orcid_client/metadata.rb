@@ -15,9 +15,9 @@ module OrcidClient
 
       url = "http://api.crossref.org/works/" + PostRank::URI.escape(doi)
       response = Maremma.get(url, options.merge(host: true))
-      return response if response["errors"]
+      return response if response.body["errors"]
 
-      metadata = response.fetch("data", {}).fetch("message", {})
+      metadata = response.body.fetch("data", {}).fetch("message", {})
       return { "errors" => [{ "title" => "Not found.", "status" => 404 }] } if metadata.blank?
 
       date_parts = metadata.fetch("issued", {}).fetch("date-parts", []).first
@@ -56,9 +56,9 @@ module OrcidClient
                  wt: "json" }
       url = "http://search.datacite.org/api?" + URI.encode_www_form(params)
       response = Maremma.get(url, options)
-      return response if response["errors"]
+      return response if response.body["errors"]
 
-      metadata = response.fetch("data", {}).fetch("response", {}).fetch("docs", []).first
+      metadata = response.body.fetch("data", {}).fetch("response", {}).fetch("docs", []).first
       return { "errors" => [{ "title" => "Not found.", "status" => 404 }] } if metadata.blank?
 
       doi = metadata.fetch("doi", nil)
@@ -88,9 +88,9 @@ module OrcidClient
 
       url = "http://pub.orcid.org/v1.2/#{orcid}/orcid-bio"
       response = Maremma.get(url, options)
-      return response if response["errors"]
+      return response if response.body["errors"]
 
-      metadata = response.fetch("data", {}).fetch("orcid_message", {}).fetch("orcid_profile", nil)
+      metadata = response.body.fetch("data", {}).fetch("orcid_message", {}).fetch("orcid_profile", nil)
       metadata.extend Hashie::Extensions::DeepFetch
 
       personal_details = metadata.deep_fetch("orcid_bio", "personal_details") { {} }
@@ -115,9 +115,9 @@ module OrcidClient
 
       url = "http://doi.crossref.org/doiRA/" + CGI.unescape(doi)
       response = Maremma.get(url, options.merge(host: true))
-      return response if response["errors"]
+      return response if response.body["errors"]
 
-      ra = response.fetch("data", {}).first.fetch("RA", nil)
+      ra = response.body.fetch("data", {}).first.fetch("RA", nil)
       if ra.present?
         ra.delete(' ').downcase
       else

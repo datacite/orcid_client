@@ -16,14 +16,15 @@ describe OrcidClient, vcr: true do
 
       it 'should create work' do
         response = subject.create_work(sandbox: true)
-        expect(response["put_code"]).not_to be_blank
+        expect(response.body["put_code"]).not_to be_blank
+        expect(response.status).to eq(201)
       end
     end
 
     describe 'get' do
       it 'should get works' do
         response = subject.get_works(sandbox: true)
-        works = response.fetch("data", {}).fetch("group", {})
+        works = response.body.fetch("data", {}).fetch("group", {})
         expect(works.length).to eq(27)
         work = works.first
         expect(work["external-ids"]).to eq("external-id"=>[{"external-id-type"=>"doi", "external-id-value"=>"10.5167/UZH-19531", "external-id-url"=>nil, "external-id-relationship"=>"SELF"}])
@@ -33,15 +34,17 @@ describe OrcidClient, vcr: true do
     describe 'put' do
       it 'should update work' do
         response = subject.update_work(sandbox: true)
-        expect(response.fetch("data", {}).fetch("work", {}).fetch("put_code", nil)).to eq(put_code)
+        expect(response.body.fetch("data", {}).fetch("work", {}).fetch("put_code", nil)).to eq(put_code)
+        expect(response.status).to eq(200)
       end
     end
 
     describe 'delete' do
       it 'should delete work' do
         response = subject.delete_work(sandbox: true)
-        expect(response["data"]).to be_blank
-        expect(response["errors"]).to be_nil
+        expect(response.body["data"]).to be_blank
+        expect(response.body["errors"]).to be_nil
+        expect(response.status).to eq(204)
       end
     end
   end
@@ -52,7 +55,8 @@ describe OrcidClient, vcr: true do
     describe 'post' do
       it 'should create notification' do
         response = subject.create_notification(sandbox: true)
-        expect(response["put_code"]).not_to be_blank
+        expect(response.body["put_code"]).not_to be_blank
+        expect(response.status).to eq(201)
       end
     end
   end
