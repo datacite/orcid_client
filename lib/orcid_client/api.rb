@@ -20,7 +20,7 @@ module OrcidClient
 
       url = "#{orcid_api_url}/v#{API_VERSION}/#{orcid}/work"
       response = Maremma.post(url, content_type: 'application/vnd.orcid+xml', data: data, bearer: access_token)
-      put_code = response.headers.fetch("Location", "").split("/").last
+      put_code = response.headers.present? ? response.headers.fetch("Location", "").split("/").last : nil
       response.body["put_code"] = put_code.present? ? put_code.to_i : nil
       response
     end
@@ -33,7 +33,7 @@ module OrcidClient
 
       url = "#{orcid_api_url}/v#{API_VERSION}/#{orcid}/work/#{put_code}"
       response = Maremma.put(url, content_type: 'application/vnd.orcid+xml', data: data, bearer: access_token)
-      put_code = response.headers.fetch("Location", "").split("/").last
+      put_code = response.headers.present? ? response.headers.fetch("Location", "").split("/").last : nil
       response.body["put_code"] = put_code.present? ? put_code.to_i : nil
       response
     end
@@ -68,7 +68,7 @@ module OrcidClient
 
       url = "#{orcid_api_url}/v#{API_VERSION}/#{orcid}/notification-permission"
       response = Maremma.post(url, content_type: 'application/vnd.orcid+xml', data: data, bearer: notification_access_token)
-      put_code = response.headers.fetch("Location", "").split("/").last
+      put_code = response.headers.present? ? response.headers.fetch("Location", "").split("/").last : nil
       response.body["put_code"] = put_code.present? ? put_code.to_i : nil
       response
     end
