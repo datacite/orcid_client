@@ -5,7 +5,8 @@ module OrcidClient
     API_VERSION = "2.0_rc3"
 
     def get_works(options={})
-      return { "errors" => [{ "title" => "Access token missing" }] } unless access_token.present?
+      response = OpenStruct.new(body: {})
+      return { response.body["errors"] => [{ "title" => "Access token missing" }] } unless access_token.present?
 
       orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
 
@@ -14,7 +15,8 @@ module OrcidClient
     end
 
     def create_work(options={})
-      return { "errors" => [{ "title" => "Access token missing" }] } unless access_token.present?
+      response = OpenStruct.new(body: {})
+      return { response.body["errors"] => [{ "title" => "Access token missing" }] } unless access_token.present?
 
       orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
 
@@ -26,8 +28,9 @@ module OrcidClient
     end
 
     def update_work(options={})
-      return { "errors" => [{ "title" => "Access token missing" }] } unless access_token.present?
-      return { "errors" => [{ "title" => "Put code missing" }] } unless put_code.present?
+      response = OpenStruct.new(body: {})
+      return { response.body["errors"] => [{ "title" => "Access token missing" }] } unless access_token.present?
+      return { response.body["errors"] => [{ "title" => "Put code missing" }] } unless put_code.present?
 
       orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
 
@@ -39,8 +42,9 @@ module OrcidClient
     end
 
     def delete_work(options={})
-      return { "errors" => [{ "title" => "Access token missing" }] } unless access_token.present?
-      return { "errors" => [{ "title" => "Put code missing" }] } unless put_code.present?
+      response = OpenStruct.new(body: {})
+      return { response.body["errors"] => [{ "title" => "Access token missing" }] } unless access_token.present?
+      return { response.body["errors"] => [{ "title" => "Put code missing" }] } unless put_code.present?
 
       orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
 
@@ -62,7 +66,8 @@ module OrcidClient
     end
 
     def create_notification(options={})
-      return { "errors" => [{ "title" => "Notification access token missing" }] } unless notification_access_token.present?
+      response = OpenStruct.new(body: {})
+      return { response.body["errors"] => [{ "title" => "Notification access token missing" }] } unless notification_access_token.present?
 
       orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
 
@@ -74,8 +79,9 @@ module OrcidClient
     end
 
     def delete_notification(options={})
-      return { "errors" => [{ "title" => "Notification access token missing" }] } unless notification_access_token.present?
-      return { "errors" => [{ "title" => "Put code missing" }] } unless put_code.present?
+      response = OpenStruct.new(body: {})
+      return { response.body["errors"] => [{ "title" => "Notification access token missing" }] } unless notification_access_token.present?
+      return { response.body["errors"] => [{ "title" => "Put code missing" }] } unless put_code.present?
 
       orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
 
@@ -84,8 +90,9 @@ module OrcidClient
     end
 
     def get_notification(options={})
-      return { "errors" => [{ "title" => "Notification access token missing" }] } unless notification_access_token.present?
-      return { "errors" => [{ "title" => "Put code missing" }] } unless put_code.present?
+      response = OpenStruct.new(body: {})
+      return { response.body["errors"] => [{ "title" => "Notification access token missing" }] } unless notification_access_token.present?
+      return { response.body["errors"] => [{ "title" => "Put code missing" }] } unless put_code.present?
 
       orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
 
