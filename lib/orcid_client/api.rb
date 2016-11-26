@@ -72,5 +72,25 @@ module OrcidClient
       response.body["put_code"] = put_code.present? ? put_code.to_i : nil
       response
     end
+
+    def delete_notification(options={})
+      return { "errors" => [{ "title" => "Notification access token missing" }] } unless notification_access_token.present?
+      return { "errors" => [{ "title" => "Put code missing" }] } unless put_code.present?
+
+      orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
+
+      url = "#{orcid_api_url}/v#{API_VERSION}/#{orcid}/notification-permission/#{put_code}"
+      response = Maremma.delete(url, content_type: 'application/vnd.orcid+xml', bearer: notification_access_token)
+    end
+
+    def get_notification(options={})
+      return { "errors" => [{ "title" => "Notification access token missing" }] } unless notification_access_token.present?
+      return { "errors" => [{ "title" => "Put code missing" }] } unless put_code.present?
+
+      orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
+
+      url = "#{orcid_api_url}/v#{API_VERSION}/#{orcid}/notification-permission/#{put_code}"
+      response = Maremma.get(url, content_type: 'application/vnd.orcid+xml', bearer: notification_access_token)
+    end
   end
 end

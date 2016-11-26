@@ -49,14 +49,36 @@ describe OrcidClient, vcr: true do
     end
   end
 
-  describe "notifications" do
-    subject { OrcidClient::Notification.new(doi: doi, orcid: orcid, notification_access_token: notification_access_token, subject: "Request to add a work", intro: "This is an intro", sandbox: true) }
+  describe "notifications", :order => :defined do
+    subject { OrcidClient::Notification.new(doi: doi, orcid: orcid, notification_access_token: notification_access_token, put_code: "144941", subject: "Request to add a work", intro: "This is an intro", sandbox: true) }
 
     describe 'post' do
+      subject { OrcidClient::Notification.new(doi: doi, orcid: orcid, notification_access_token: notification_access_token, subject: "Request to add a work", intro: "This is an intro", sandbox: true) }
+
       it 'should create notification' do
         response = subject.create_notification(sandbox: true)
         expect(response.body["put_code"]).not_to be_blank
         expect(response.status).to eq(201)
+      end
+    end
+
+    describe 'get' do
+      it 'should get notification' do
+        response = subject.get_notification(sandbox: true)
+        notification = response.body.fetch("data", {}).fetch("notification", {})
+        expect(notification["put_code"]).to eq("144941")
+        expect(notification["items"]["item"]).to eq("item_type"=>"work", "item_name"=>"omniauth-orcid: v.1.1.5", "external_id"=>{"external_id_type"=>"DOI", "external_id_value"=>"10.5281/zenodo.59983"})
+        expect(response.status).to eq(200)
+      end
+    end
+
+    describe 'delete' do
+      it 'should delete notification' do
+        response = subject.delete_notification(sandbox: true)
+        notification = response.body.fetch("data", {}).fetch("notification", {})
+        expect(notification["put_code"]).to eq("144941")
+        expect(notification["items"]["item"]).to eq("item_type"=>"work", "item_name"=>"omniauth-orcid: v.1.1.5", "external_id"=>{"external_id_type"=>"DOI", "external_id_value"=>"10.5281/zenodo.59983"})
+        expect(response.status).to eq(200)
       end
     end
   end
