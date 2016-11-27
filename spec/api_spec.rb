@@ -74,6 +74,8 @@ describe OrcidClient, vcr: true do
   end
 
   describe "external_identifier", :order => :defined do
+    subject { OrcidClient::ExternalIdentifier.new(type: "GitHub", value: "mfenner", url: "https://github.com/mfenner", orcid: orcid, access_token: access_token, put_code: "3316") }
+
     describe 'post' do
       subject { OrcidClient::ExternalIdentifier.new(type: "GitHub", value: "mfenner", url: "https://github.com/mfenner", orcid: orcid, access_token: access_token) }
 
@@ -86,6 +88,21 @@ describe OrcidClient, vcr: true do
       it 'access_token missing' do
         subject = OrcidClient::ExternalIdentifier.new(type: "GitHub", value: "mfenner", url: "https://github.com/mfenner", orcid: orcid, access_token: nil)
         response = subject.create_external_identifier(sandbox: true)
+        expect(response.body).to eq("errors"=>[{"title"=>"Access token missing"}])
+      end
+    end
+
+    describe 'delete' do
+      it 'should delete external_identifier' do
+        response = subject.delete_external_identifier(sandbox: true)
+        expect(response.body["data"]).to be_blank
+        expect(response.body["errors"]).to be_nil
+        expect(response.status).to eq(204)
+      end
+
+      it 'access_token missing' do
+        subject = OrcidClient::ExternalIdentifier.new(type: "GitHub", value: "mfenner", url: "https://github.com/mfenner", orcid: orcid, access_token: nil)
+        response = subject.delete_external_identifier(sandbox: true)
         expect(response.body).to eq("errors"=>[{"title"=>"Access token missing"}])
       end
     end

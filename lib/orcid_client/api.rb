@@ -60,6 +60,16 @@ module OrcidClient
       response
     end
 
+    def delete_external_identifier(options={})
+      return OpenStruct.new(body: { "errors" => [{ "title" => "Access token missing" }] }) unless access_token.present?
+      return OpenStruct.new(body: { "errors" => [{ "title" => "Put code missing" }] }) unless put_code.present?
+
+      orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
+
+      url = "#{orcid_api_url}/v#{API_VERSION}/#{orcid}/external-identifiers/#{put_code}"
+      response = Maremma.delete(url, content_type: 'application/vnd.orcid+xml', bearer: access_token)
+    end
+
     def get_notification_access_token(client_id:, client_secret:, **options)
       orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
 
