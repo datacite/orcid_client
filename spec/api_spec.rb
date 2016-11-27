@@ -73,6 +73,24 @@ describe OrcidClient, vcr: true do
     end
   end
 
+  describe "external_identifier", :order => :defined do
+    describe 'post' do
+      subject { OrcidClient::ExternalIdentifier.new(type: "GitHub", value: "mfenner", url: "https://github.com/mfenner", orcid: orcid, access_token: access_token) }
+
+      it 'should create external_identifier' do
+        response = subject.create_external_identifier(sandbox: true)
+        expect(response.body["put_code"]).not_to be_blank
+        expect(response.status).to eq(201)
+      end
+
+      it 'access_token missing' do
+        subject = OrcidClient::ExternalIdentifier.new(type: "GitHub", value: "mfenner", url: "https://github.com/mfenner", orcid: orcid, access_token: nil)
+        response = subject.create_external_identifier(sandbox: true)
+        expect(response.body).to eq("errors"=>[{"title"=>"Access token missing"}])
+      end
+    end
+  end
+
   describe "notifications", :order => :defined do
     subject { OrcidClient::Notification.new(doi: doi, orcid: orcid, notification_access_token: notification_access_token, put_code: "144941", subject: "Request to add a work", intro: "This is an intro", sandbox: true) }
 

@@ -48,6 +48,18 @@ module OrcidClient
       response = Maremma.delete(url, content_type: 'application/vnd.orcid+xml', bearer: access_token)
     end
 
+    def create_external_identifier(options={})
+      return OpenStruct.new(body: { "errors" => [{ "title" => "Access token missing" }] }) unless access_token.present?
+
+      orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
+
+      url = "#{orcid_api_url}/v#{API_VERSION}/#{orcid}/external-identifiers"
+      response = Maremma.post(url, content_type: 'application/vnd.orcid+xml', data: data, bearer: access_token)
+      put_code = response.headers.present? ? response.headers.fetch("Location", "").split("/").last : nil
+      response.body["put_code"] = put_code.present? ? put_code.to_i : nil
+      response
+    end
+
     def get_notification_access_token(client_id:, client_secret:, **options)
       orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
 
