@@ -101,7 +101,7 @@ module OrcidClient
     def insert_titles(xml)
       if title
         xml.send(:'work:title') do
-          xml.send(:'common:title', title.truncate(1000, separator: ' ')))
+          xml.send(:'common:title', title.truncate(1000, separator: ' '))
         end
       end
 

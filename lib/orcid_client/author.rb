@@ -2,6 +2,11 @@ require 'namae'
 
 module OrcidClient
   module Author
+    def validate_orcid(orcid)
+      orcid = Array(/\A(?:http:\/\/orcid\.org\/)?(\d{4}[[:space:]-]\d{4}[[:space:]-]\d{4}[[:space:]-]\d{3}[0-9X]+)\z/.match(orcid)).last
+      orcid.gsub(/[[:space:]]/, "-") if orcid.present?
+    end
+
     # parse author string into CSL format
     def get_one_author(author)
       return "" if author.blank?
@@ -38,7 +43,7 @@ module OrcidClient
     def get_name_identifier(author)
       name_identifier = author.fetch("nameIdentifier", nil)
       name_identifier_scheme = author.fetch("nameIdentifierScheme", "orcid").downcase
-      if name_identifier.present? && name_identifier_scheme == "orcid"
+      if name_identifier_scheme == "orcid" && name_identifier = validate_orcid(name_identifier)
         "http://orcid.org/#{name_identifier}"
       else
         nil
