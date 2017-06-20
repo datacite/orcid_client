@@ -5,13 +5,13 @@ describe OrcidClient::Work, vcr: true do
   let(:orcid) { "0000-0001-6528-2027" }
   let(:access_token) { ENV['ACCESS_TOKEN'] }
   let(:fixture_path) { "spec/fixtures/" }
-  let(:samples_path) { "resources/record_2.0_rc3/samples/" }
+  let(:samples_path) { "resources/record_2.0/samples/read_samples/" }
 
   subject { OrcidClient::Work.new(doi: doi, orcid: orcid, access_token: access_token) }
 
   describe 'schema' do
     it 'validates sample' do
-      validation_errors = subject.schema.validate(samples_path + 'work-full-2.0_rc3.xml').map { |error| error.to_s }
+      validation_errors = subject.schema.validate(samples_path + 'work-full-2.0.xml').map { |error| error.to_s }
       expect(validation_errors).to be_empty
     end
 
@@ -35,7 +35,7 @@ describe OrcidClient::Work, vcr: true do
     end
 
     it 'validates data with errors' do
-      allow(subject).to receive(:metadata) { {} }
+      allow(subject).to receive(:metadata) { OpenStruct.new }
       expect(subject.validation_errors).to eq(["The document has no document element."])
     end
   end
@@ -50,7 +50,7 @@ describe OrcidClient::Work, vcr: true do
 
     it 'literal' do
       subject = OrcidClient::Work.new(doi: "10.1594/PANGAEA.745083", orcid: "0000-0003-3235-5933", access_token: access_token)
-      expect(subject.contributors).to eq([{:credit_name=>"EPOCA Arctic experiment 2009 team"}])
+      expect(subject.contributors).to eq([{:credit_name=>"EPOCA Arctic Experiment 2009 Team"}])
     end
 
     it 'with ORCID IDs' do
@@ -85,12 +85,12 @@ describe OrcidClient::Work, vcr: true do
 
     it 'multiple titles' do
       subject = OrcidClient::Work.new(doi: "10.6084/M9.FIGSHARE.1537331.V1", orcid: "0000-0003-0811-2536", access_token: access_token)
-      expect(subject.contributors).to eq([{:credit_name=>"Iosr journals"}, {:credit_name=>"Dr. Rohit Arora, MDS"}, {:credit_name=>"Shalya Raj*.MDS"}])
+      expect(subject.contributors).to eq([{:credit_name=>"Iosr Journals"}, {:credit_name=>"Dr. Rohit Arora, MDS"}, {:credit_name=>"Dr. Shalya Raj*.MDS"}])
     end
   end
 
   it 'publication_date' do
-    expect(subject.publication_date).to eq("year" => 2016)
+    expect(subject.publication_date).to eq("year"=>"2016", "month"=>"08", "day"=>"11")
   end
 
   it 'data' do

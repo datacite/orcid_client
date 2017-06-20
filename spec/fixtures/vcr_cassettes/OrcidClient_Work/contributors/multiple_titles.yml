@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://search.datacite.org/api?fl=doi,creator,title,publisher,publicationYear,resourceTypeGeneral,description,datacentre,datacentre_symbol,prefix,relatedIdentifier,xml,minted,updated&q=doi:10.6084/M9.FIGSHARE.1537331.V1&rows=1&wt=json
+    uri: https://api.datacite.org/prefixes/10.6084
     body:
       encoding: US-ASCII
       string: ''
@@ -14,34 +14,86 @@ http_interactions:
   response:
     status:
       code: 200
-      message: ''
+      message: OK
     headers:
-      Server:
-      - openresty/1.11.2.1
-      Date:
-      - Sun, 06 Nov 2016 17:39:39 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Access-Control-Allow-Origin:
-      - "*"
+      Access-Control-Allow-Headers:
+      - Content-Type,Accept,Accept-Encoding,Origin,User-Agent,Cache-Control,Keep-Alive
       Access-Control-Allow-Methods:
       - GET, POST, OPTIONS
-      X-Cache:
-      - MISS from IMP-cache
-      X-Cache-Lookup:
-      - MISS from IMP-cache:3128
-      Via:
-      - 1.0 IMP-cache (squid/3.1.20)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1728000'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/vnd.api+json; charset=utf-8
+      Date:
+      - Tue, 20 Jun 2017 08:53:20 GMT
+      Etag:
+      - W/"58c74e33ab541adc084b3eaeb81a81fd"
+      Server:
+      - openresty/1.11.2.2
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Powered-By:
+      - Phusion Passenger 5.1.4
+      X-Request-Id:
+      - 7ca3b2a0-3a63-489f-bdb8-c69a4a72b17e
+      X-Runtime:
+      - '0.228316'
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '124'
       Connection:
-      - close
+      - keep-alive
     body:
       encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":9},"response":{"numFound":1,"start":0,"docs":[{"minted":"2016-01-20T04:04:29Z","datacentre_symbol":"FIGSHARE.ARS","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC0zL21ldGFkYXRhLnhzZCI+PGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNjA4NC9NOS5GSUdTSEFSRS4xNTM3MzMxLlYxPC9pZGVudGlmaWVyPjx0aXRsZXM+PHRpdGxlPkJvbmUgUmVnZW5lcmF0aW9uIFVzaW5nIEh5ZHJveHlhcGF0aXRlIENyeXN0YWxzIGZvciBQZXJpYXBpY2FsIExlc2lvbjwvdGl0bGU+PC90aXRsZXM+PHB1Ymxpc2hlcj5GaWdzaGFyZTwvcHVibGlzaGVyPjxwdWJsaWNhdGlvblllYXI+MjAxNTwvcHVibGljYXRpb25ZZWFyPjxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+RGF0YXNldDwvcmVzb3VyY2VUeXBlPjxyaWdodHNMaXN0PjxyaWdodHMgcmlnaHRzVVJJPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS8zLjAvdXMvIj5DQy1CWTwvcmlnaHRzPjwvcmlnaHRzTGlzdD48Y3JlYXRvcnM+PGNyZWF0b3I+PGNyZWF0b3JOYW1lPklvc3Igam91cm5hbHM8L2NyZWF0b3JOYW1lPjwvY3JlYXRvcj48Y3JlYXRvcj48Y3JlYXRvck5hbWU+RHIuIFJvaGl0IEFyb3JhLCBNRFM8L2NyZWF0b3JOYW1lPjwvY3JlYXRvcj48Y3JlYXRvcj48Y3JlYXRvck5hbWU+RHIuIFNoYWx5YSBSYWoqLk1EUzwvY3JlYXRvck5hbWU+PC9jcmVhdG9yPjwvY3JlYXRvcnM+PC9yZXNvdXJjZT4=","datacentre":"FIGSHARE.ARS
-        - figshare Academic Research System","updated":"2016-01-20T04:04:29Z","prefix":"10.6084","doi":"10.6084/M9.FIGSHARE.1537331.V1","title":["Bone
-        Regeneration Using Hydroxyapatite Crystals for Periapical Lesion"],"publicationYear":"2015","resourceTypeGeneral":"Dataset","publisher":"Figshare","creator":["Iosr
-        journals","Dr. Rohit Arora, MDS","Dr. Shalya Raj*.MDS"]}]}}
+      string: '{"data":{"id":"10.6084","type":"prefixes","attributes":{"registration-agency":"DataCite","updated":"2016-09-21T20:27:26Z"}}}'
+    http_version: 
+  recorded_at: Tue, 20 Jun 2017 08:53:20 GMT
+- request:
+    method: get
+    uri: https://search.datacite.org/api?fl=doi,xml,media,minted,updated&q=doi:10.6084/m9.figshare.1537331.v1&wt=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Maremma - https://github.com/datacite/maremma
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Tue, 20 Jun 2017 08:53:20 GMT
+      Server:
+      - openresty/1.11.2.2
+      Content-Length:
+      - '1402'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"responseHeader":{"status":0,"QTime":1},"response":{"numFound":1,"start":0,"docs":[{"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC0zL21ldGFkYXRhLnhzZCI+PGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNjA4NC9NOS5GSUdTSEFSRS4xNTM3MzMxLlYxPC9pZGVudGlmaWVyPjx0aXRsZXM+PHRpdGxlPkJvbmUgUmVnZW5lcmF0aW9uIFVzaW5nIEh5ZHJveHlhcGF0aXRlIENyeXN0YWxzIGZvciBQZXJpYXBpY2FsIExlc2lvbjwvdGl0bGU+PC90aXRsZXM+PHB1Ymxpc2hlcj5GaWdzaGFyZTwvcHVibGlzaGVyPjxwdWJsaWNhdGlvblllYXI+MjAxNTwvcHVibGljYXRpb25ZZWFyPjxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+RGF0YXNldDwvcmVzb3VyY2VUeXBlPjxyaWdodHNMaXN0PjxyaWdodHMgcmlnaHRzVVJJPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS8zLjAvdXMvIj5DQy1CWTwvcmlnaHRzPjwvcmlnaHRzTGlzdD48Y3JlYXRvcnM+PGNyZWF0b3I+PGNyZWF0b3JOYW1lPklvc3Igam91cm5hbHM8L2NyZWF0b3JOYW1lPjwvY3JlYXRvcj48Y3JlYXRvcj48Y3JlYXRvck5hbWU+RHIuIFJvaGl0IEFyb3JhLCBNRFM8L2NyZWF0b3JOYW1lPjwvY3JlYXRvcj48Y3JlYXRvcj48Y3JlYXRvck5hbWU+RHIuIFNoYWx5YSBSYWoqLk1EUzwvY3JlYXRvck5hbWU+PC9jcmVhdG9yPjwvY3JlYXRvcnM+PC9yZXNvdXJjZT4=","minted":"2016-01-20T04:04:29Z","updated":"2016-01-20T04:04:29Z","doi":"10.6084/M9.FIGSHARE.1537331.V1"}]}}
 
 '
     http_version: 
-  recorded_at: Sun, 06 Nov 2016 17:39:50 GMT
+  recorded_at: Tue, 20 Jun 2017 08:53:20 GMT
 recorded_with: VCR 3.0.3

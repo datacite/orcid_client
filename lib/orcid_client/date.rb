@@ -38,9 +38,9 @@ module OrcidClient
       month = iso8601_time[5..6]
       day = iso8601_time[8..9]
 
-      { 'year' => year.to_i,
-        'month' => month.to_i,
-        'day' => day.to_i }.delete_if { |key, value| value == 0 }
+      { 'year' => year,
+        'month' => month,
+        'day' => day }.compact
     end
 
     def get_iso8601_from_time(time)

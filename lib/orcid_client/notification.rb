@@ -5,12 +5,10 @@ require_relative 'api'
 require_relative 'author'
 require_relative 'base'
 require_relative 'date'
-require_relative 'metadata'
 
 module OrcidClient
   class Notification
     include OrcidClient::Base
-    include OrcidClient::Metadata
     include OrcidClient::Author
     include OrcidClient::Date
     include OrcidClient::Api
@@ -30,11 +28,11 @@ module OrcidClient
     SCHEMA = File.expand_path("../../../resources/notification_#{API_VERSION}/notification-permission-#{API_VERSION}.xsd", __FILE__)
 
     def metadata
-      @metadata ||= get_metadata(doi, 'datacite')
+      @metadata ||= Bolognese::Metadata.new(input: doi)
     end
 
     def item_name
-      metadata.fetch('title', nil)
+      parse_attributes(metadata.title, content: "text", first: true)
     end
 
     def item_type
@@ -109,7 +107,7 @@ module OrcidClient
 
     def root_attributes
       { :'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
-        :'xsi:schemaLocation' => 'http://www.orcid.org/ns/notification ../notification-permission-2.0_rc3.xsd',
+        :'xsi:schemaLocation' => 'http://www.orcid.org/ns/notification ../notification-permission-2.0.xsd',
         :'xmlns:common' => 'http://www.orcid.org/ns/common',
         :'xmlns:notification' => 'http://www.orcid.org/ns/notification' }
     end

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<work:work xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://www.orcid.org/ns/common" xmlns:work="http://www.orcid.org/ns/work" visibility="public" xsi:schemaLocation="http://www.orcid.org/ns/work ../work-2.0_rc3.xsd">
+<work:work xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://www.orcid.org/ns/common" xmlns:work="http://www.orcid.org/ns/work" visibility="public" xsi:schemaLocation="http://www.orcid.org/ns/work ../work-2.0.xsd">
   <work:title>
-    <common:title>omniauth-orcid: v.1.1.5</common:title>
+    <common:title>Omniauth-Orcid: V.1.1.5</common:title>
   </work:title>
   <work:journal-title>Zenodo</work:journal-title>
   <work:short-description>onmiauth-orcid 1.1.5 was released on August 11, 2016 with the following changes: compatibility with omniauth-oauth2 1.4.0. Thanks to pull request #7 by eleanorakh.</work:short-description>
   <work:type>other</work:type>
   <common:publication-date>
     <common:year>2016</common:year>
+    <common:month>08</common:month>
+    <common:day>11</common:day>
   </common:publication-date>
   <common:external-ids>
     <common:external-id>

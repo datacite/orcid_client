@@ -5,7 +5,7 @@ describe OrcidClient, vcr: true do
   let(:orcid) { "0000-0001-6528-2027" }
   let(:access_token) { ENV['ACCESS_TOKEN'] }
   let(:notification_access_token) { ENV['NOTIFICATION_ACCESS_TOKEN'] }
-  let(:put_code) { "740616" }
+  let(:put_code) { "837845" }
   let(:fixture_path) { "spec/fixtures/" }
 
   subject { OrcidClient::Work.new(doi: doi, orcid: orcid, access_token: access_token, put_code: put_code) }
@@ -33,7 +33,7 @@ describe OrcidClient, vcr: true do
         works = response.body.fetch("data", {}).fetch("group", {})
         expect(works.length).to eq(27)
         work = works.first
-        expect(work["external-ids"]).to eq("external-id"=>[{"external-id-type"=>"doi", "external-id-value"=>"10.5167/UZH-19531", "external-id-url"=>nil, "external-id-relationship"=>"SELF"}])
+        expect(work["external-ids"]).to eq("external-id"=>[{"external-id-type"=>"doi", "external-id-value"=>"10.5281/zenodo.59983", "external-id-url"=>nil, "external-id-relationship"=>"SELF"}])
       end
 
       it 'access_token missing' do
@@ -74,7 +74,7 @@ describe OrcidClient, vcr: true do
   end
 
   describe "external_identifier", :order => :defined do
-    subject { OrcidClient::ExternalIdentifier.new(type: "GitHub", value: "mfenner", url: "https://github.com/mfenner", orcid: orcid, access_token: access_token, put_code: "3316") }
+    subject { OrcidClient::ExternalIdentifier.new(type: "GitHub", value: "mfenner", url: "https://github.com/mfenner", orcid: orcid, access_token: access_token, put_code: "3824") }
 
     describe 'post' do
       subject { OrcidClient::ExternalIdentifier.new(type: "GitHub", value: "mfenner", url: "https://github.com/mfenner", orcid: orcid, access_token: access_token) }

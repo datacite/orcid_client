@@ -6,19 +6,19 @@ require_relative 'api'
 require_relative 'author'
 require_relative 'base'
 require_relative 'date'
-require_relative 'metadata'
 require_relative 'work_type'
 
 module OrcidClient
   class Work
     include OrcidClient::Base
-    include OrcidClient::Metadata
     include OrcidClient::Author
     include OrcidClient::Date
     include OrcidClient::WorkType
     include OrcidClient::Api
 
-    attr_reader :doi, :orcid, :schema, :access_token, :put_code, :validation_errors
+    include Bolognese::Utils
+
+    attr_reader :doi, :orcid, :schema, :access_token, :put_code, :validation_errors, :name_detector
 
     def initialize(doi:, orcid:, access_token:, **options)
       @doi = doi
@@ -28,51 +28,46 @@ module OrcidClient
     end
 
     SCHEMA = File.expand_path("../../../resources/record_#{API_VERSION}/work-#{API_VERSION}.xsd", __FILE__)
+    # recognize given name. Can be loaded once as ::NameDetector, e.g. in a Rails initializer
+    def name_detector
+      @name_detector ||= defined?(::NameDetector) ? ::NameDetector : GenderDetector.new
+    end
 
     def metadata
-      @metadata ||= get_metadata(doi, 'datacite')
+      @metadata ||= Bolognese::Metadata.new(input: doi)
     end
 
     def contributors
-      Array(metadata.fetch('author', nil)).map do |contributor|
-        { orcid: contributor.fetch('ORCID', nil),
-          credit_name: get_credit_name(contributor),
+      Array.wrap(metadata.author).map do |contributor|
+        orcid = validate_orcid(contributor.fetch('id', nil))
+        orcid = "http://orcid.org/#{orcid}" if orcid.present?
+
+        { orcid: orcid,
+          credit_name: contributor.fetch('name', nil),
           role: nil }.compact
       end
     end
 
-    def author_string
-      Array(metadata.fetch('author', nil)).map do |contributor|
-        get_full_name(contributor)
-      end.join(" and ")
-    end
-
-    def sanitize(string)
-      Sanitize.fragment(string).squish
-    end
-
     def title
-      metadata.fetch('title', nil)
+      parse_attributes(metadata.title, content: "text", first: true)
     end
 
+    # user publisher name as fallback
     def container_title
-      metadata.fetch('container-title', nil)
-    end
-
-    def publisher_id
-      metadata.fetch('publisher_id', nil)
+      metadata.container_title || metadata.publisher
     end
 
     def publication_date
-      get_year_month_day(metadata.fetch('published', nil))
+      get_year_month_day(metadata.date_published)
     end
 
     def description
-      sanitize(Array(metadata.fetch('description', nil)).first)
+      ct = parse_attributes(metadata.description, content: "text", first: true)
+      ct.squish if ct.present?
     end
 
     def type
-      orcid_work_type(metadata.fetch('type', nil), metadata.fetch('subtype', nil))
+      orcid_work_type(metadata.resource_type_general, metadata.additional_type)
     end
 
     def has_required_elements?
@@ -158,7 +153,7 @@ module OrcidClient
       if contributor[:orcid].present?
         xml.send(:'common:contributor-orcid') do
           xml.send(:'common:uri', contributor[:orcid])
-          xml.send(:'common:path', contributor[:orcid][17..-1])
+          xml.send(:'common:path', validate_orcid(contributor[:orcid]))
           xml.send(:'common:host', 'orcid.org')
         end
       end
@@ -184,7 +179,7 @@ module OrcidClient
       { :'put-code' => put_code,
         :'visibility' => 'public',
         :'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
-        :'xsi:schemaLocation' => 'http://www.orcid.org/ns/work ../work-2.0_rc3.xsd',
+        :'xsi:schemaLocation' => 'http://www.orcid.org/ns/work ../work-2.0.xsd',
         :'xmlns:common' => 'http://www.orcid.org/ns/common',
         :'xmlns:work' => 'http://www.orcid.org/ns/work' }.compact
     end

@@ -2,7 +2,7 @@ require "uri"
 
 module OrcidClient
   module Api
-    API_VERSION = "2.0_rc3"
+    API_VERSION = "2.0"
 
     def get_works(options={})
       return OpenStruct.new(body: { "errors" => [{ "title" => "Access token missing" }] }) unless access_token.present?
