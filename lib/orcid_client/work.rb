@@ -23,7 +23,7 @@ module OrcidClient
       @doi = doi
       @orcid = orcid
       @access_token = access_token
-      @search_url = options.fetch(:search_url, nil) || ENV['SEARCH_URL']
+      @search_url = options.fetch(:search_url, nil) || ENV['SOLR_URL']
       @put_code = options.fetch(:put_code, nil)
     end
 

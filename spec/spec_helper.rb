@@ -1,6 +1,8 @@
 require 'bundler/setup'
 Bundler.setup
 
+ENV['SOLR_URL'] = "https://search.datacite.org/api"
+
 require 'simplecov'
 SimpleCov.start
 
