@@ -29,6 +29,13 @@ describe OrcidClient::Work, vcr: true do
       expect(subject.validation_errors).to be_empty
     end
 
+    it 'validates work from DataCite test system' do
+      search_url = "https://search.test.datacite.org/api"
+      subject = OrcidClient::Work.new(doi: "10.5286/TOPCAT/ISIS/1/DATACOLLECTION/84974338", orcid: "0000-0003-1613-5981", access_token: access_token, search_url: search_url)
+      expect(subject.type).to eq("data-set")
+      expect(subject.validation_errors).to be_empty
+    end
+
     it 'validates ORCID IDs for contributors' do
       subject = OrcidClient::Work.new(doi: "10.2314/COSCV1", orcid: "0000-0001-6528-2027", access_token: access_token)
       expect(subject.validation_errors).to be_empty

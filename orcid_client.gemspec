@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
 
   # Declary dependencies here, rather than in the Gemfile
   s.add_dependency 'maremma', '~> 3.5', '>= 3.5.7'
-  s.add_dependency 'bolognese', '~> 0.9.26'
+  s.add_dependency 'bolognese', '~> 0.9.28'
   s.add_dependency 'nokogiri', '~> 1.6', '>= 1.6.8'
   s.add_dependency 'builder', '~> 3.2', '>= 3.2.2'
   s.add_dependency 'namae', '~> 0.11.3'

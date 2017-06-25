@@ -17,12 +17,13 @@ module OrcidClient
 
     include Bolognese::Utils
 
-    attr_reader :doi, :orcid, :schema, :access_token, :put_code, :validation_errors, :name_detector
+    attr_reader :doi, :orcid, :schema, :access_token, :search_url, :put_code, :validation_errors, :name_detector
 
     def initialize(doi:, orcid:, access_token:, **options)
       @doi = doi
       @orcid = orcid
       @access_token = access_token
+      @search_url = options.fetch(:search_url, nil) || ENV['SEARCH_URL']
       @put_code = options.fetch(:put_code, nil)
     end
 
@@ -33,7 +34,7 @@ module OrcidClient
     end
 
     def metadata
-      @metadata ||= Bolognese::Metadata.new(input: doi)
+      @metadata ||= Bolognese::Metadata.new(input: doi, search_url: search_url)
     end
 
     def contributors
