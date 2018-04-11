@@ -45,7 +45,7 @@ module OrcidClient
       { :'put-code' => put_code,
         :'visibility' => 'public',
         :'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
-        :'xsi:schemaLocation' => 'http://www.orcid.org/ns/external-identifier ../person-external-identifier-2.0.xsd',
+        :'xsi:schemaLocation' => 'http://www.orcid.org/ns/external-identifier ../person-external-identifier-2.1.xsd',
         :'xmlns:common' => 'http://www.orcid.org/ns/common',
         :'xmlns:external-identifier' => 'http://www.orcid.org/ns/external-identifier' }.compact
     end

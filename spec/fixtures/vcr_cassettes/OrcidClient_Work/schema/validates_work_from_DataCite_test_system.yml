@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.datacite.org/prefixes/10.5286
+    uri: https://app.datacite.org/prefixes/10.5286
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - https://github.com/datacite/maremma
+      - Maremma 4.0.5 - https://github.com/datacite/maremma
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -16,68 +16,45 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Headers:
-      - Content-Type,Accept,Accept-Encoding,Origin,User-Agent,Cache-Control,Keep-Alive
-      Access-Control-Allow-Methods:
-      - GET, POST, OPTIONS
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Max-Age:
-      - '1728000'
-      Cache-Control:
-      - max-age=0, private, must-revalidate
+      Date:
+      - Wed, 11 Apr 2018 14:51:15 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
-      Date:
-      - Sun, 25 Jun 2017 13:10:31 GMT
-      Etag:
-      - W/"be181a297e99f2daa28e8ee93e167f12"
-      Server:
-      - openresty/1.11.2.2
-      Status:
-      - 200 OK
-      Vary:
-      - Accept-Encoding
-      Via:
-      - kong/0.10.3
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Kong-Proxy-Latency:
-      - '0'
-      X-Kong-Upstream-Latency:
-      - '553'
-      X-Powered-By:
-      - Phusion Passenger 5.1.5
-      X-Ratelimit-Limit-Hour:
-      - '100000'
-      X-Ratelimit-Remaining-Hour:
-      - '99998'
-      X-Request-Id:
-      - 4f0d3a43-38e0-46ac-9106-b363d0837ef3
-      X-Runtime:
-      - '0.550820'
-      X-Xss-Protection:
-      - 1; mode=block
-      Content-Length:
-      - '124'
       Connection:
       - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      X-Request-Id:
+      - e6cc41c7-bb22-4af9-9cda-02709d956fc4
+      Etag:
+      - W/"94720642e667d66e06ebd2af0952766d"
+      X-Runtime:
+      - '0.014845'
+      X-Powered-By:
+      - Phusion Passenger 5.2.3
+      Server:
+      - nginx/1.12.2 + Phusion Passenger 5.2.3
     body:
-      encoding: UTF-8
-      string: '{"data":{"id":"10.5286","type":"prefixes","attributes":{"registration-agency":"DataCite","updated":"2016-09-21T20:27:14Z"}}}'
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkYXRhIjp7ImlkIjoiMTAuNTI4NiIsInR5cGUiOiJwcmVmaXhlcyIsImF0dHJpYnV0ZXMiOnsicmVnaXN0cmF0aW9uLWFnZW5jeSI6IkRhdGFDaXRlIiwiY3JlYXRlZCI6IjIwMTEtMDMtMDdUMTc6Mjg6MjQuMDAwWiIsInVwZGF0ZWQiOm51bGx9LCJyZWxhdGlvbnNoaXBzIjp7ImNsaWVudHMiOnsiZGF0YSI6W3siaWQiOiJibC5zdGZjIiwidHlwZSI6ImNsaWVudHMifV19LCJwcm92aWRlcnMiOnsiZGF0YSI6W3siaWQiOiJibCIsInR5cGUiOiJwcm92aWRlcnMifV19fX0sImluY2x1ZGVkIjpbeyJpZCI6ImJsLnN0ZmMiLCJ0eXBlIjoiY2xpZW50cyIsImF0dHJpYnV0ZXMiOnsibmFtZSI6IlNjaWVuY2UgYW5kIFRlY2hub2xvZ3kgRmFjaWxpdGllcyBDb3VuY2lsIiwic3ltYm9sIjoiQkwuU1RGQyIsInllYXIiOjIwMTEsImNvbnRhY3QtbmFtZSI6IkFudG9ueSBXaWxzb24iLCJjb250YWN0LWVtYWlsIjoiYW50b255LndpbHNvbkBzdGZjLmFjLnVrIiwiZG9tYWlucyI6InN0ZmMuYWMudWssbWFudGlkcHJvamVjdC5vcmcsaWNhdHByb2plY3Qub3JnLHJsLmFjLnVrIiwidXJsIjpudWxsLCJpcy1hY3RpdmUiOnRydWUsImhhcy1wYXNzd29yZCI6dHJ1ZSwiY3JlYXRlZCI6IjIwMTEtMDMtMDdUMTc6Mzc6MDFaIiwidXBkYXRlZCI6IjIwMTgtMDQtMTFUMDI6MzA6MDdaIn0sInJlbGF0aW9uc2hpcHMiOnsicHJlZml4ZXMiOnsibWV0YSI6e319LCJwcm92aWRlciI6eyJtZXRhIjp7fX0sInJlcG9zaXRvcnkiOnsibWV0YSI6e319fX0seyJpZCI6ImJsIiwidHlwZSI6InByb3ZpZGVycyIsImF0dHJpYnV0ZXMiOnsibmFtZSI6IkJyaXRpc2ggTGlicmFyeSIsInN5bWJvbCI6IkJMIiwid2Vic2l0ZSI6Imh0dHA6Ly93d3cuYmwudWsvZGF0YXNldHMiLCJjb250YWN0LW5hbWUiOiJSYWNoYWVsIEtvdGFyc2tpIiwiY29udGFjdC1lbWFpbCI6ImRhdGFzZXRzQGJsLnVrIiwicGhvbmUiOiIrNDQgKDApIDIwNyA0MTIgNzE2NyIsImRlc2NyaXB0aW9uIjoiVGhlIEJyaXRpc2ggTGlicmFyeSBpcyB0aGUgbmF0aW9uYWwgbGlicmFyeSBvZiB0aGUgVW5pdGVkIEtpbmdkb20gYW5kIGEgZm91bmRpbmcgbWVtYmVyIG9mIERhdGFDaXRlLiBBcyBEYXRhQ2l0ZeKAmXMgb25seSBtZW1iZXIgaW4gdGhlIFVuaXRlZCBLaW5nZG9tLCB3ZSBhcmUgd29ya2luZyB3aXRoIFVLIG9yZ2FuaXNhdGlvbnMgdG8gZW5zdXJlIHRoYXQgZGF0YSBnZW5lcmF0ZWQgYnkgcmVzZWFyY2hlcnMgaXMgZmluZGFibGUgYW5kIGNpdGFibGUgc28gdGhhdCBpdHMgaW1wYWN0IG9uIHRoZSBnbG9iYWwgcmVzZWFyY2ggbGFuZHNjYXBlIGlzIHJlY29nbmlzZWQuIFdlIHdvcmsgd2l0aCBhIHJhbmdlIG9mIG9yZ2FuaXNhdGlvbnMgd2hvIG1hbmFnZSBhbmQgYXJjaGl2ZSBkYXRhLCBmcm9tIGdvdmVybm1lbnQgYm9kaWVzIHRvIGNoYXJpdGllcywgdW5pdmVyc2l0aWVzIGFuZCBwdWJsaXNoZXJzLiBJZiB5b3UgbWFuYWdlIGRhdGEgaW4gdGhlIFVLIGFuZCB3b3VsZCBsaWtlIHRvIGZpbmQgb3V0IG1vcmUgYWJvdXQgRGF0YUNpdGUsIHBsZWFzZSBjb250YWN0IHVzIGRpcmVjdGx5LiIsImNvdW50cnkiOiJHQiIsImxvZ28tdXJsIjoiaHR0cHM6Ly9hc3NldHMuZGF0YWNpdGUub3JnL2ltYWdlcy9tZW1iZXJzL2JsLnBuZyIsImluc3RpdHV0aW9uLXR5cGUiOm51bGwsImlzLWFjdGl2ZSI6dHJ1ZSwiaGFzLXBhc3N3b3JkIjp0cnVlLCJqb2luZWQiOiIyMDA5LTEyLTAxIiwiY3JlYXRlZCI6IjIwMTAtMDEtMDFUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWQiOiIyMDE4LTA0LTExVDAyOjI1OjUxLjAwMFoifSwicmVsYXRpb25zaGlwcyI6eyJjbGllbnRzIjp7Im1ldGEiOnt9fSwicHJlZml4ZXMiOnsibWV0YSI6e319fX1dfQ==
     http_version: 
-  recorded_at: Sun, 25 Jun 2017 13:10:31 GMT
+  recorded_at: Wed, 11 Apr 2018 14:51:15 GMT
 - request:
     method: get
-    uri: https://search.test.datacite.org/api?fl=doi,xml,media,minted,updated&q=doi:10.5286/topcat/isis/1/datacollection/84974338&wt=json
+    uri: https://search.datacite.org/api?fl=doi,url,xml,state,allocator_symbol,datacentre_symbol,media,minted,updated&q=doi:10.5286/topcat/isis/1/datacollection/84974338&wt=json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - https://github.com/datacite/maremma
+      - Maremma 4.0.5 - https://github.com/datacite/maremma
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -85,23 +62,27 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Methods:
-      - GET, POST, OPTIONS
-      Access-Control-Allow-Origin:
-      - "*"
+      Date:
+      - Wed, 11 Apr 2018 14:51:15 GMT
       Content-Type:
       - application/json;charset=UTF-8
-      Date:
-      - Sun, 25 Jun 2017 13:10:31 GMT
-      Server:
-      - openresty/1.11.2.2
       Connection:
       - keep-alive
+      Server:
+      - nginx/1.10.3 (Ubuntu)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
+      Access-Control-Expose-Headers:
+      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
     body:
-      encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":1},"response":{"numFound":1,"start":0,"docs":[{"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+PGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTI4Ni90b3BjYXQvaXNpcy8xL0RhdGFDb2xsZWN0aW9uLzg0OTc0MzM4PC9pZGVudGlmaWVyPjx0aXRsZXM+PHRpdGxlIHhtbDpsYW5nPSJlbi1nYiI+RXhwbG9yaW5nIHRoZSBwb3RlbnRpYWwgb2YgZW5lcmd5LWRlcGVuZGVudCBuZXV0cm9uIGltYWdpbmcgPC90aXRsZT48L3RpdGxlcz48ZGVzY3JpcHRpb25zPjxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0IiB4bWw6bGFuZz0iZW4tZ2IiPldlIHdvdWxkIGxpa2UgdG8gZXhwbG9yZSB0aGUgcG90ZW50aWFsIG9mIGVuZXJneS1kZXBlbmRlbnQgbmV1dHJvbiBpbWFnaW5nLCBpbiB2aWV3IG9mIHRoZSBmdXR1cmUgQnJhZ2cgZWRnZSB0cmFuc21pc3Npb24gYW5hbHlzaXMgb3B0aW9ucyBvbiBJTUFUIGFuZCBMQVJNT1IuIFRoZSBleHBlcmltZW50cyB3aWxsIHVzZSB0aGUgbGF0ZXN0IG5ldXRyb24gc2Vuc2l0aXZlIG1pY3JvY2hhbm5lbCBwbGF0ZSAoTUNQKSBkZXRlY3Rpb24gc3lzdGVtLCBjaGFyYWN0ZXJpemUgaXRzIHBlcmZvcm1hbmNlIG9uIGEgVFMtMiBuZXV0cm9uIGJlYW0gYW5kIHByb2R1Y2UgZGF0YSBzZXRzIGZvciBkZXZlbG9waW5nIGRhdGEgcHJvY2Vzc2luZyBhbmQgY29ycmVjdGlvbnMgcHJvY2VkdXJlcyBmb3IgZW5lcmd5LXJlc29sdmVkIG5ldXRyb24gcmFkaW9ncmFwaHkgYW5kIHRvbW9ncmFwaHkuIERhdGEgc2V0cyB3aWxsIGJlIGNvbGxlY3RlZCBvbiBhIHJhbmdlIG9mIHN0YW5kYXJkIHNhbXBsZXMgYW5kIGVuZ2luZWVyaW5nIGFsbG95cyBvZiB2YXJ5aW5nIGNvbXBvc2l0aW9uIGFuZCBnZW9tZXRyeSwgdG8gdmVyaWZ5IHRoZSB1c2VmdWxuZXNzIG9mIG5ldXRyb24gaW1hZ2luZyBmb3IgcGhhc2UsIGdyYWluIGFuZCBzdHJhaW4gbWFwcGluZyBpbiBlbmdpbmVlcmluZyBhbGxveXMuIFdlIGFzayBmb3IgYSB0b3RhbCBvZiAxMiBkYXlzIG9uIExBUk1PUi48L2Rlc2NyaXB0aW9uPjwvZGVzY3JpcHRpb25zPjxjcmVhdG9ycz48Y3JlYXRvcj48Y3JlYXRvck5hbWU+RHIgV2luZnJpZWQgS29ja2VsbWFubjwvY3JlYXRvck5hbWU+PC9jcmVhdG9yPjxjcmVhdG9yPjxjcmVhdG9yTmFtZT5EciBSb2JlcnQgRGFsZ2xpZXNoPC9jcmVhdG9yTmFtZT48L2NyZWF0b3I+PGNyZWF0b3I+PGNyZWF0b3JOYW1lPkRyIFRyaWVzdGlubyBNaW5uaXRpPC9jcmVhdG9yTmFtZT48L2NyZWF0b3I+PGNyZWF0b3I+PGNyZWF0b3JOYW1lPlByb2Zlc3NvciBLZW5pY2hpIFdhdGFuYWJlPC9jcmVhdG9yTmFtZT48L2NyZWF0b3I+PGNyZWF0b3I+PGNyZWF0b3JOYW1lPk1yIFJhbmdnaSBSYW1hZGhhbjwvY3JlYXRvck5hbWU+PC9jcmVhdG9yPjxjcmVhdG9yPjxjcmVhdG9yTmFtZT5NciBUb20gR293bGFuZDwvY3JlYXRvck5hbWU+PC9jcmVhdG9yPjwvY3JlYXRvcnM+PGRhdGVzPjxkYXRlIGRhdGVUeXBlPSJBdmFpbGFibGUiPjIwMTctMDYtMjM8L2RhdGU+PC9kYXRlcz48cHVibGlzaGVyPklTSVM8L3B1Ymxpc2hlcj48cHVibGljYXRpb25ZZWFyPjIwMTc8L3B1YmxpY2F0aW9uWWVhcj48cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiPkV4cGVyaW1lbnQgRGF0YTwvcmVzb3VyY2VUeXBlPjxyaWdodHNMaXN0PjxyaWdodHMgcmlnaHRzVVJJPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS80LjAvIj5DcmVhdGl2ZSBDb21tb25zIC0gQXR0cmlidXRpb24gNC4wIEludGVybmF0aW9uYWw8L3JpZ2h0cz48L3JpZ2h0c0xpc3Q+PC9yZXNvdXJjZT4=","minted":"2017-06-23T14:30:35Z","updated":"2017-06-23T14:30:35Z","doi":"10.5286/TOPCAT/ISIS/1/DATACOLLECTION/84974338"}]}}
+      encoding: ASCII-8BIT
+      string: '{"responseHeader":{"status":0,"QTime":1},"response":{"numFound":0,"start":0,"docs":[]}}
 
 '
     http_version: 
-  recorded_at: Sun, 25 Jun 2017 13:10:31 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Wed, 11 Apr 2018 14:51:15 GMT
+recorded_with: VCR 4.0.0

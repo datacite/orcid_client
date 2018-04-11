@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<work:work xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://www.orcid.org/ns/common" xmlns:work="http://www.orcid.org/ns/work" visibility="public" xsi:schemaLocation="http://www.orcid.org/ns/work ../work-2.0.xsd">
+<work:work xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://www.orcid.org/ns/common" xmlns:work="http://www.orcid.org/ns/work" visibility="public" xsi:schemaLocation="http://www.orcid.org/ns/work ../work-2.1.xsd">
   <work:title>
     <common:title>Omniauth-Orcid: V.1.1.5</common:title>
   </work:title>

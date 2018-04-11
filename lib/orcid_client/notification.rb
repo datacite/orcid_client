@@ -107,7 +107,7 @@ module OrcidClient
 
     def root_attributes
       { :'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
-        :'xsi:schemaLocation' => 'http://www.orcid.org/ns/notification ../notification-permission-2.0.xsd',
+        :'xsi:schemaLocation' => 'http://www.orcid.org/ns/notification ../notification-permission-2.1.xsd',
         :'xmlns:common' => 'http://www.orcid.org/ns/common',
         :'xmlns:notification' => 'http://www.orcid.org/ns/notification' }
     end

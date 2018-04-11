@@ -40,7 +40,7 @@ module OrcidClient
     def contributors
       Array.wrap(metadata.author).map do |contributor|
         orcid = validate_orcid(contributor.fetch('id', nil))
-        orcid = "http://orcid.org/#{orcid}" if orcid.present?
+        orcid = "https://orcid.org/#{orcid}" if orcid.present?
 
         { orcid: orcid,
           credit_name: contributor.fetch('name', nil),
@@ -179,7 +179,7 @@ module OrcidClient
       { :'put-code' => put_code,
         :'visibility' => 'public',
         :'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
-        :'xsi:schemaLocation' => 'http://www.orcid.org/ns/work ../work-2.0.xsd',
+        :'xsi:schemaLocation' => 'http://www.orcid.org/ns/work ../work-2.1.xsd',
         :'xmlns:common' => 'http://www.orcid.org/ns/common',
         :'xmlns:work' => 'http://www.orcid.org/ns/work' }.compact
     end

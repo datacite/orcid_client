@@ -5,13 +5,13 @@ describe OrcidClient::Work, vcr: true do
   let(:orcid) { "0000-0001-6528-2027" }
   let(:access_token) { ENV['ACCESS_TOKEN'] }
   let(:fixture_path) { "spec/fixtures/" }
-  let(:samples_path) { "resources/record_2.0/samples/read_samples/" }
+  let(:samples_path) { "resources/record_2.1/samples/read_samples/" }
 
   subject { OrcidClient::Work.new(doi: doi, orcid: orcid, access_token: access_token) }
 
   describe 'schema' do
     it 'validates sample' do
-      validation_errors = subject.schema.validate(samples_path + 'work-full-2.0.xml').map { |error| error.to_s }
+      validation_errors = subject.schema.validate(samples_path + 'work-full-2.1.xml').map { |error| error.to_s }
       expect(validation_errors).to be_empty
     end
 
@@ -32,7 +32,7 @@ describe OrcidClient::Work, vcr: true do
     it 'validates work from DataCite test system' do
       search_url = "https://search.test.datacite.org/api"
       subject = OrcidClient::Work.new(doi: "10.5286/TOPCAT/ISIS/1/DATACOLLECTION/84974338", orcid: "0000-0003-1613-5981", access_token: access_token, search_url: search_url)
-      expect(subject.type).to eq("data-set")
+      expect(subject.type).to eq("other")
       expect(subject.validation_errors).to be_empty
     end
 
@@ -43,7 +43,7 @@ describe OrcidClient::Work, vcr: true do
 
     it 'validates data with errors' do
       allow(subject).to receive(:metadata) { OpenStruct.new }
-      expect(subject.validation_errors).to eq(["The document has no document element."])
+      expect(subject.validation_errors).to eq(["-1:0: ERROR: The document has no document element."])
     end
   end
 
@@ -62,31 +62,31 @@ describe OrcidClient::Work, vcr: true do
 
     it 'with ORCID IDs' do
       subject = OrcidClient::Work.new(doi: "10.2314/COSCV1", orcid: "0000-0001-6528-2027", access_token: access_token)
-      expect(subject.contributors).to eq([{:orcid=>"http://orcid.org/0000-0003-0232-7085",
+      expect(subject.contributors).to eq([{:orcid=>"https://orcid.org/0000-0003-0232-7085",
                                            :credit_name=>"Lambert Heller"},
-                                          {:orcid=>"http://orcid.org/0000-0002-3075-7640",
+                                          {:orcid=>"https://orcid.org/0000-0002-3075-7640",
                                            :credit_name=>"Ina Blümel"},
                                           {:credit_name=>"Stefan Dietze"},
-                                          {:orcid=>"http://orcid.org/0000-0003-1419-2405",
+                                          {:orcid=>"https://orcid.org/0000-0003-1419-2405",
                                            :credit_name=>"Martin Fenner"},
-                                          {:orcid=>"http://orcid.org/0000-0002-9314-5633",
+                                          {:orcid=>"https://orcid.org/0000-0002-9314-5633",
                                            :credit_name=>"Sascha Friesike"},
-                                          {:orcid=>"http://orcid.org/0000-0003-2499-7741",
+                                          {:orcid=>"https://orcid.org/0000-0003-2499-7741",
                                            :credit_name=>"Christian Hauschke"},
                                           {:credit_name=>"Christian Heise"},
-                                          {:orcid=>"http://orcid.org/0000-0003-3271-9653",
+                                          {:orcid=>"https://orcid.org/0000-0003-3271-9653",
                                            :credit_name=>"Robert Jäschke"},
-                                          {:orcid=>"http://orcid.org/0000-0002-9813-9208",
+                                          {:orcid=>"https://orcid.org/0000-0002-9813-9208",
                                            :credit_name=>"Ulrich Kleinwechter"},
-                                          {:orcid=>"http://orcid.org/0000-0002-8189-8574",
+                                          {:orcid=>"https://orcid.org/0000-0002-8189-8574",
                                            :credit_name=>"Mareike König"},
-                                          {:orcid=>"http://orcid.org/0000-0002-7177-9045",
+                                          {:orcid=>"https://orcid.org/0000-0002-7177-9045",
                                            :credit_name=>"Martin Mehlberg"},
-                                          {:orcid=>"http://orcid.org/0000-0002-0161-1888",
+                                          {:orcid=>"https://orcid.org/0000-0002-0161-1888",
                                            :credit_name=>"Janna Neumann"},
-                                          {:orcid=>"http://orcid.org/0000-0003-3334-2771",
+                                          {:orcid=>"https://orcid.org/0000-0003-3334-2771",
                                            :credit_name=>"Heinz Pampel"},
-                                          {:orcid=>"http://orcid.org/0000-0002-5111-2788",
+                                          {:orcid=>"https://orcid.org/0000-0002-5111-2788",
                                            :credit_name=>"Marco Tullney"}])
     end
 

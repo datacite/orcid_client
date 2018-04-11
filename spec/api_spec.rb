@@ -5,7 +5,7 @@ describe OrcidClient, vcr: true do
   let(:orcid) { "0000-0001-6528-2027" }
   let(:access_token) { ENV['ACCESS_TOKEN'] }
   let(:notification_access_token) { ENV['NOTIFICATION_ACCESS_TOKEN'] }
-  let(:put_code) { "837845" }
+  let(:put_code) { "921977" }
   let(:fixture_path) { "spec/fixtures/" }
 
   subject { OrcidClient::Work.new(doi: doi, orcid: orcid, access_token: access_token, put_code: put_code) }
@@ -31,9 +31,9 @@ describe OrcidClient, vcr: true do
       it 'should get works' do
         response = subject.get_works(sandbox: true)
         works = response.body.fetch("data", {}).fetch("group", {})
-        expect(works.length).to eq(27)
+        expect(works.length).to eq(23)
         work = works.first
-        expect(work["external-ids"]).to eq("external-id"=>[{"external-id-type"=>"doi", "external-id-value"=>"10.5281/zenodo.59983", "external-id-url"=>nil, "external-id-relationship"=>"SELF"}])
+        expect(work["external-ids"]).to eq("external-id"=>[{"external-id-type"=>"doi", "external-id-value"=>"10.5438/53NZ-N4G7", "external-id-url"=>nil, "external-id-relationship"=>"SELF"}])
       end
 
       it 'access_token missing' do
@@ -74,7 +74,7 @@ describe OrcidClient, vcr: true do
   end
 
   describe "external_identifier", :order => :defined do
-    subject { OrcidClient::ExternalIdentifier.new(type: "GitHub", value: "mfenner", url: "https://github.com/mfenner", orcid: orcid, access_token: access_token, put_code: "3824") }
+    subject { OrcidClient::ExternalIdentifier.new(type: "GitHub", value: "mfenner", url: "https://github.com/mfenner", orcid: orcid, access_token: access_token, put_code: "4833") }
 
     describe 'post' do
       subject { OrcidClient::ExternalIdentifier.new(type: "GitHub", value: "mfenner", url: "https://github.com/mfenner", orcid: orcid, access_token: access_token) }
@@ -109,7 +109,7 @@ describe OrcidClient, vcr: true do
   end
 
   describe "notifications", :order => :defined do
-    subject { OrcidClient::Notification.new(doi: doi, orcid: orcid, notification_access_token: notification_access_token, put_code: "144941", subject: "Request to add a work", intro: "This is an intro", sandbox: true) }
+    subject { OrcidClient::Notification.new(doi: doi, orcid: orcid, notification_access_token: notification_access_token, put_code: "292000", subject: "Request to add a work", intro: "This is an intro", sandbox: true) }
 
     describe 'post' do
       subject { OrcidClient::Notification.new(doi: doi, orcid: orcid, notification_access_token: notification_access_token, subject: "Request to add a work", intro: "This is an intro", sandbox: true) }
@@ -131,8 +131,8 @@ describe OrcidClient, vcr: true do
       it 'should get notification' do
         response = subject.get_notification(sandbox: true)
         notification = response.body.fetch("data", {}).fetch("notification", {})
-        expect(notification["put_code"]).to eq("144941")
-        expect(notification["items"]["item"]).to eq("item_type"=>"work", "item_name"=>"omniauth-orcid: v.1.1.5", "external_id"=>{"external_id_type"=>"DOI", "external_id_value"=>"10.5281/zenodo.59983"})
+        expect(notification["put_code"]).to eq("292000")
+        expect(notification["items"]["item"]).to eq("item_type"=>"work", "item_name"=>"Omniauth-Orcid: V.1.1.5", "external_id"=>nil)
         expect(response.status).to eq(200)
       end
 
@@ -147,8 +147,8 @@ describe OrcidClient, vcr: true do
       it 'should delete notification' do
         response = subject.delete_notification(sandbox: true)
         notification = response.body.fetch("data", {}).fetch("notification", {})
-        expect(notification["put_code"]).to eq("144941")
-        expect(notification["items"]["item"]).to eq("item_type"=>"work", "item_name"=>"omniauth-orcid: v.1.1.5", "external_id"=>{"external_id_type"=>"DOI", "external_id_value"=>"10.5281/zenodo.59983"})
+        expect(notification["put_code"]).to eq("292000")
+        expect(notification["items"]["item"]).to eq("item_type"=>"work", "item_name"=>"Omniauth-Orcid: V.1.1.5", "external_identifier"=>nil)
         expect(response.status).to eq(200)
       end
 

@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.datacite.org/prefixes/10.5281
+    uri: https://app.datacite.org/prefixes/10.5281
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - https://github.com/datacite/maremma
+      - Maremma 4.0.5 - https://github.com/datacite/maremma
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -16,58 +16,45 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Headers:
-      - Content-Type,Accept,Accept-Encoding,Origin,User-Agent,Cache-Control,Keep-Alive
-      Access-Control-Allow-Methods:
-      - GET, POST, OPTIONS
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Max-Age:
-      - '1728000'
-      Cache-Control:
-      - max-age=0, private, must-revalidate
+      Date:
+      - Wed, 11 Apr 2018 20:30:01 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
-      Date:
-      - Tue, 20 Jun 2017 08:46:53 GMT
-      Etag:
-      - W/"0411b3916b13b0c38e2c133d6e9905e2"
-      Server:
-      - openresty/1.11.2.2
-      Status:
-      - 200 OK
-      Vary:
-      - Accept-Encoding
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Powered-By:
-      - Phusion Passenger 5.1.4
-      X-Request-Id:
-      - 5ac41094-e926-4339-9f89-35f36ce47939
-      X-Runtime:
-      - '0.537038'
-      X-Xss-Protection:
-      - 1; mode=block
-      Content-Length:
-      - '124'
       Connection:
       - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      X-Request-Id:
+      - 02e4dec3-403b-48e8-9cd9-6b84166c2b46
+      Etag:
+      - W/"3b41a01c57187b7335cf5546198aa22b"
+      X-Runtime:
+      - '0.013116'
+      X-Powered-By:
+      - Phusion Passenger 5.2.3
+      Server:
+      - nginx/1.12.2 + Phusion Passenger 5.2.3
     body:
-      encoding: UTF-8
-      string: '{"data":{"id":"10.5281","type":"prefixes","attributes":{"registration-agency":"DataCite","updated":"2016-09-21T20:27:13Z"}}}'
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkYXRhIjp7ImlkIjoiMTAuNTI4MSIsInR5cGUiOiJwcmVmaXhlcyIsImF0dHJpYnV0ZXMiOnsicmVnaXN0cmF0aW9uLWFnZW5jeSI6IkRhdGFDaXRlIiwiY3JlYXRlZCI6IjIwMTAtMDEtMDFUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWQiOm51bGx9LCJyZWxhdGlvbnNoaXBzIjp7ImNsaWVudHMiOnsiZGF0YSI6W3siaWQiOiJjZXJuLnplbm9kbyIsInR5cGUiOiJjbGllbnRzIn1dfSwicHJvdmlkZXJzIjp7ImRhdGEiOlt7ImlkIjoiY2VybiIsInR5cGUiOiJwcm92aWRlcnMifV19fX0sImluY2x1ZGVkIjpbeyJpZCI6ImNlcm4uemVub2RvIiwidHlwZSI6ImNsaWVudHMiLCJhdHRyaWJ1dGVzIjp7Im5hbWUiOiJaRU5PRE8gLSBSZXNlYXJjaC4gU2hhcmVkLiIsInN5bWJvbCI6IkNFUk4uWkVOT0RPIiwieWVhciI6MjAxMywiY29udGFjdC1uYW1lIjoiTGFycyBIb2xtIE5pZWxzZW4iLCJjb250YWN0LWVtYWlsIjoibGFycy5ob2xtLm5pZWxzZW5AY2Vybi5jaCIsImRvbWFpbnMiOiJvcGVuYWlyZS5jZXJuLmNoLHplbm9kby5vcmciLCJ1cmwiOm51bGwsImlzLWFjdGl2ZSI6dHJ1ZSwiaGFzLXBhc3N3b3JkIjp0cnVlLCJjcmVhdGVkIjoiMjAxMy0wMS0yOFQxMjowNzo0OFoiLCJ1cGRhdGVkIjoiMjAxOC0wNC0xMVQwMjozMDoxNFoifSwicmVsYXRpb25zaGlwcyI6eyJwcmVmaXhlcyI6eyJtZXRhIjp7fX0sInByb3ZpZGVyIjp7Im1ldGEiOnt9fSwicmVwb3NpdG9yeSI6eyJtZXRhIjp7fX19fSx7ImlkIjoiY2VybiIsInR5cGUiOiJwcm92aWRlcnMiLCJhdHRyaWJ1dGVzIjp7Im5hbWUiOiJDRVJOIC0gRXVyb3BlYW4gT3JnYW5pemF0aW9uIGZvciBOdWNsZWFyIFJlc2VhcmNoIiwic3ltYm9sIjoiQ0VSTiIsIndlYnNpdGUiOiJodHRwOi8vZG9pLndlYi5jZXJuLmNoLyIsImNvbnRhY3QtbmFtZSI6IlPDvG5qZSBEYWxsbWVpZXItVGllc3NlbiIsImNvbnRhY3QtZW1haWwiOiJzdW5qZS5kYWxsbWVpZXItdGllc3NlbkBjZXJuLmNoIiwicGhvbmUiOm51bGwsImRlc2NyaXB0aW9uIjoiQ0VSTiwgdGhlIEV1cm9wZWFuIE9yZ2FuaXphdGlvbiBmb3IgTnVjbGVhciBSZXNlYXJjaCwgaXMgdGhlIHdvcmxkJ3MgbGFyZ2VzdCBwYXJ0aWNsZSBwaHlzaWNzIGxhYm9yYXRvcnkuIEZvdW5kZWQgaW4gMTk1NCBhbmQgYmFzZWQgb24gdGhlIEZyYW5jby1Td2lzcyBib3JkZXIgbmVhciBHZW5ldmEsIGl0IHdhcyBvbmUgb2YgRXVyb3BlJ3MgZmlyc3Qgam9pbnQgdmVudHVyZXMgYW5kIG5vdyBoYXMgMjEgbWVtYmVyIHN0YXRlcyBhbmQgbW9yZSB0aGFuIDUwIGNvb3BlcmF0aW9uIGFncmVlbWVudHMgYW5kIHNjaWVudGlmaWMgY29udGFjdHMgd2l0aCBvdGhlciBjb3VudHJpZXMuXG5cbkF0IENFUk4sIHBoeXNpY2lzdHMgYW5kIGVuZ2luZWVycyBwcm9iZSB0aGUgZnVuZGFtZW50YWwgc3RydWN0dXJlIG9mIHRoZSB1bml2ZXJzZS4gVGhleSB1c2UgdGhlIHdvcmxkJ3MgbGFyZ2VzdCBhbmQgbW9zdCBjb21wbGV4IHNjaWVudGlmaWMgaW5zdHJ1bWVudCwgdGhlIExhcmdlIEhhZHJvbiBDb2xsaWRlciAoTEhDKSwgdG8gc3R1ZHkgdGhlIGJhc2ljIGNvbnN0aXR1ZW50cyBvZiBtYXR0ZXIuIFRoZSByZXN1bHRzIG9mIHRoZWlyIGV4cGVyaW1lbnRhbCBhbmQgdGhlb3JldGljYWwgd29yayBhcmUgcHVibGljbHkgYXZhaWxhYmxlIGZvbGxvd2luZyBDRVJOJ3MgT3BlbiBBY2Nlc3MgUG9saWN5LlxuXG5DRVJOIHNlcnZpY2VzIGltcGxlbWVudGluZyBET0lzIGFyZSBpdHMgaW5zdGl0dXRpb25hbCByZXBvc2l0b3J5IChDRFMsIENFUk4gRG9jdW1lbnQgU2VydmVyKTsgSU5TUElSRS1IRVAsIGEgZGlnaXRhbCBsaWJyYXJ5IGZvciB0aGUgZmllbGQgb2YgSGlnaC1FbmVyZ3kgUGh5c2ljcyBydW4gaW4gY29sbGFib3JhdGlvbiB3aXRoIG90aGVyIGluc3RpdHV0aW9uczsgb3IgdGhlIENFUk4gT3BlbiBEYXRhIFBvcnRhbCwgd2hpY2ggcHJvdmlkZXMgaGlnaCBsZXZlbCBhbmQgYW5hbHl6YWJsZSBkYXRhIGFuZCBzb2Z0d2FyZSBmcm9tIHRoZSBMSEMgZXhwZXJpbWVudHMuXG5cbkZ1cnRoZXJtb3JlLCBDRVJOIGlzIGFsc28gcHJvdmlkaW5nIERPSXMgdG8gWkVOT0RPLCBhIG11bHRpZGlzY2lwbGluYXJ5IGRhdGEgcmVwb3NpdG9yeSBmb3IgdGhlIOKAnGxvbmcgdGFpbOKAnSBvZiByZXNlYXJjaCByZXN1bHRzLiBJdCBhbGxvd3MgcmVzZWFyY2hlcnMgdG8gc2hhcmUgYW5kIHByZXNlcnZlIHRoZWlyIG91dHB1dCBpbmRlcGVuZGVudCBvZiBzaXplLCB0eXBlIG9mIG1hdGVyaWFsIG9yIGRpc2NpcGxpbmUuIiwiY291bnRyeSI6IkNIIiwibG9nby11cmwiOiJodHRwczovL2Fzc2V0cy5kYXRhY2l0ZS5vcmcvaW1hZ2VzL21lbWJlcnMvY2Vybi5wbmciLCJpbnN0aXR1dGlvbi10eXBlIjpudWxsLCJpcy1hY3RpdmUiOnRydWUsImhhcy1wYXNzd29yZCI6dHJ1ZSwiam9pbmVkIjoiMjAxNC0wMy0yNSIsImNyZWF0ZWQiOiIyMDE0LTA0LTEwVDEzOjQxOjQ0LjAwMFoiLCJ1cGRhdGVkIjoiMjAxOC0wNC0xMVQwMjoyNTo1MS4wMDBaIn0sInJlbGF0aW9uc2hpcHMiOnsiY2xpZW50cyI6eyJtZXRhIjp7fX0sInByZWZpeGVzIjp7Im1ldGEiOnt9fX19XX0=
     http_version: 
-  recorded_at: Tue, 20 Jun 2017 08:46:53 GMT
+  recorded_at: Wed, 11 Apr 2018 20:30:01 GMT
 - request:
     method: get
-    uri: https://search.datacite.org/api?fl=doi,xml,media,minted,updated&q=doi:10.5281/zenodo.59983&wt=json
+    uri: https://search.datacite.org/api?fl=doi,url,xml,state,allocator_symbol,datacentre_symbol,media,minted,updated&q=doi:10.5281/zenodo.59983&wt=json
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - https://github.com/datacite/maremma
+      - Maremma 4.0.5 - https://github.com/datacite/maremma
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -75,35 +62,37 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Methods:
-      - GET, POST, OPTIONS
-      Access-Control-Allow-Origin:
-      - "*"
+      Date:
+      - Wed, 11 Apr 2018 20:30:01 GMT
       Content-Type:
       - application/json;charset=UTF-8
-      Date:
-      - Tue, 20 Jun 2017 08:46:54 GMT
-      Server:
-      - openresty/1.11.2.2
-      Content-Length:
-      - '2816'
       Connection:
       - keep-alive
+      Server:
+      - nginx/1.10.3 (Ubuntu)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
+      Access-Control-Expose-Headers:
+      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
     body:
-      encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":1,"start":0,"docs":[{"xml":"PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC0zL21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTI4MS96ZW5vZG8uNTk5ODM8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5NYXJ0aW4gRmVubmVyPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkRhdGFDaXRlPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+R3VkbXVuZHVyIEEuIFRob3Jpc3NvbjwvY3JlYXRvck5hbWU+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPkVsZWFub3IgS2llZmVsIEhhZ2dlcnR5PC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+QW51c2hhIFJhbmdhbmF0aGFuPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+T21uaWF1dGgtT3JjaWQ6IFYuMS4xLjU8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+WmVub2RvPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE2PC9wdWJsaWNhdGlvblllYXI+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9Iklzc3VlZCI+MjAxNi0wOC0xMTwvZGF0ZT4KICA8L2RhdGVzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iU29mdHdhcmUiLz4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iVVJMIiByZWxhdGlvblR5cGU9IklzU3VwcGxlbWVudFRvIj5odHRwczovL2dpdGh1Yi5jb20vZGF0YWNpdGUvb21uaWF1dGgtb3JjaWQvdHJlZS92LjEuMS41PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJJc1BhcnRPZiI+MTAuNTI4MS96ZW5vZG8uNTkzNzIyPC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8cmlnaHRzTGlzdD4KICAgIDxyaWdodHMgcmlnaHRzVVJJPSJpbmZvOmV1LXJlcG8vc2VtYW50aWNzL29wZW5BY2Nlc3MiPk9wZW4gQWNjZXNzPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+Jmx0O3AmZ3Q7Jmx0O2EgaHJlZj0iaHR0cHM6Ly9naXRodWIuY29tL2RhdGFjaXRlL29tbmlhdXRoLW9yY2lkL3JlbGVhc2VzL3RhZy92LjEuMS41IiZndDtvbm1pYXV0aC1vcmNpZCAxLjEuNSZsdDsvYSZndDsgd2FzIHJlbGVhc2VkIG9uIEF1Z3VzdCAxMSwgMjAxNiB3aXRoIHRoZSBmb2xsb3dpbmcgY2hhbmdlczombHQ7L3AmZ3Q7CgombHQ7dWwmZ3Q7CiZsdDtsaSZndDtjb21wYXRpYmlsaXR5IHdpdGggb21uaWF1dGgtb2F1dGgyIDEuNC4wLiBUaGFua3MgdG8gcHVsbCByZXF1ZXN0ICZsdDthIGhyZWY9Imh0dHBzOi8vZ2l0aHViLmNvbS9kYXRhY2l0ZS9vbW5pYXV0aC1vcmNpZC9wdWxsLzciJmd0OyM3Jmx0Oy9hJmd0OyBieSAmbHQ7YSBocmVmPSJodHRwczovL2dpdGh1Yi5jb20vZWxlYW5vcmFraCImZ3Q7ZWxlYW5vcmFraCZsdDsvYSZndDsuJmx0Oy9saSZndDsKJmx0Oy91bCZndDs8L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPgo=","minted":"2016-08-11T04:47:51Z","updated":"2017-05-30T02:43:22Z","doi":"10.5281/ZENODO.59983"}]}}
+      encoding: ASCII-8BIT
+      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":1,"start":0,"docs":[{"datacentre_symbol":"CERN.ZENODO","xml":"PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC0zL21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTI4MS96ZW5vZG8uNTk5ODM8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5NYXJ0aW4gRmVubmVyPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uPkRhdGFDaXRlPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+R3VkbXVuZHVyIEEuIFRob3Jpc3NvbjwvY3JlYXRvck5hbWU+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPkVsZWFub3IgS2llZmVsIEhhZ2dlcnR5PC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+QW51c2hhIFJhbmdhbmF0aGFuPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+T21uaWF1dGgtT3JjaWQ6IFYuMS4xLjU8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+WmVub2RvPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE2PC9wdWJsaWNhdGlvblllYXI+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9Iklzc3VlZCI+MjAxNi0wOC0xMTwvZGF0ZT4KICA8L2RhdGVzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iU29mdHdhcmUiLz4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iVVJMIiByZWxhdGlvblR5cGU9IklzU3VwcGxlbWVudFRvIj5odHRwczovL2dpdGh1Yi5jb20vZGF0YWNpdGUvb21uaWF1dGgtb3JjaWQvdHJlZS92LjEuMS41PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJJc1BhcnRPZiI+MTAuNTI4MS96ZW5vZG8uNTkzNzIyPC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8cmlnaHRzTGlzdD4KICAgIDxyaWdodHMgcmlnaHRzVVJJPSJpbmZvOmV1LXJlcG8vc2VtYW50aWNzL29wZW5BY2Nlc3MiPk9wZW4gQWNjZXNzPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+Jmx0O3AmZ3Q7Jmx0O2EgaHJlZj0iaHR0cHM6Ly9naXRodWIuY29tL2RhdGFjaXRlL29tbmlhdXRoLW9yY2lkL3JlbGVhc2VzL3RhZy92LjEuMS41IiZndDtvbm1pYXV0aC1vcmNpZCAxLjEuNSZsdDsvYSZndDsgd2FzIHJlbGVhc2VkIG9uIEF1Z3VzdCAxMSwgMjAxNiB3aXRoIHRoZSBmb2xsb3dpbmcgY2hhbmdlczombHQ7L3AmZ3Q7CgombHQ7dWwmZ3Q7CiZsdDtsaSZndDtjb21wYXRpYmlsaXR5IHdpdGggb21uaWF1dGgtb2F1dGgyIDEuNC4wLiBUaGFua3MgdG8gcHVsbCByZXF1ZXN0ICZsdDthIGhyZWY9Imh0dHBzOi8vZ2l0aHViLmNvbS9kYXRhY2l0ZS9vbW5pYXV0aC1vcmNpZC9wdWxsLzciJmd0OyM3Jmx0Oy9hJmd0OyBieSAmbHQ7YSBocmVmPSJodHRwczovL2dpdGh1Yi5jb20vZWxlYW5vcmFraCImZ3Q7ZWxlYW5vcmFraCZsdDsvYSZndDsuJmx0Oy9saSZndDsKJmx0Oy91bCZndDs8L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPgo=","allocator_symbol":"CERN","minted":"2016-08-11T04:47:51Z","state":"findable","updated":"2017-05-30T02:43:22Z","doi":"10.5281/ZENODO.59983"}]}}
 
 '
     http_version: 
-  recorded_at: Tue, 20 Jun 2017 08:46:54 GMT
+  recorded_at: Wed, 11 Apr 2018 20:30:02 GMT
 - request:
     method: put
-    uri: https://api.sandbox.orcid.org/v2.0/0000-0001-6528-2027/work/837845
+    uri: https://api.sandbox.orcid.org/v2.1/0000-0001-6528-2027/work/921977
     body:
       encoding: UTF-8
       string: |
         <?xml version="1.0" encoding="UTF-8"?>
-        <work:work xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://www.orcid.org/ns/common" xmlns:work="http://www.orcid.org/ns/work" put-code="837845" visibility="public" xsi:schemaLocation="http://www.orcid.org/ns/work ../work-2.0.xsd">
+        <work:work xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://www.orcid.org/ns/common" xmlns:work="http://www.orcid.org/ns/work" put-code="921977" visibility="public" xsi:schemaLocation="http://www.orcid.org/ns/work ../work-2.1.xsd">
           <work:title>
             <common:title>Omniauth-Orcid: V.1.1.5</common:title>
           </work:title>
@@ -139,7 +128,7 @@ http_interactions:
         </work:work>
     headers:
       User-Agent:
-      - Maremma - https://github.com/datacite/maremma
+      - Maremma 4.0.5 - https://github.com/datacite/maremma
       Content-Type:
       - application/vnd.orcid+xml
       Accept:
@@ -154,7 +143,7 @@ http_interactions:
       Server:
       - nginx/1.10.0
       Date:
-      - Tue, 20 Jun 2017 08:46:55 GMT
+      - Wed, 11 Apr 2018 20:30:03 GMT
       Content-Type:
       - application/vnd.orcid+xml; qs=5;charset=UTF-8
       Connection:
@@ -174,15 +163,15 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: |
         <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-        <work:work put-code="837845" visibility="public" xmlns:internal="http://www.orcid.org/ns/internal" xmlns:funding="http://www.orcid.org/ns/funding" xmlns:preferences="http://www.orcid.org/ns/preferences" xmlns:address="http://www.orcid.org/ns/address" xmlns:education="http://www.orcid.org/ns/education" xmlns:work="http://www.orcid.org/ns/work" xmlns:deprecated="http://www.orcid.org/ns/deprecated" xmlns:other-name="http://www.orcid.org/ns/other-name" xmlns:history="http://www.orcid.org/ns/history" xmlns:employment="http://www.orcid.org/ns/employment" xmlns:error="http://www.orcid.org/ns/error" xmlns:common="http://www.orcid.org/ns/common" xmlns:person="http://www.orcid.org/ns/person" xmlns:activities="http://www.orcid.org/ns/activities" xmlns:record="http://www.orcid.org/ns/record" xmlns:researcher-url="http://www.orcid.org/ns/researcher-url" xmlns:peer-review="http://www.orcid.org/ns/peer-review" xmlns:personal-details="http://www.orcid.org/ns/personal-details" xmlns:bulk="http://www.orcid.org/ns/bulk" xmlns:keyword="http://www.orcid.org/ns/keyword" xmlns:email="http://www.orcid.org/ns/email" xmlns:external-identifier="http://www.orcid.org/ns/external-identifier">
-            <common:created-date>2017-06-20T08:44:34.973Z</common:created-date>
-            <common:last-modified-date>2017-06-20T08:44:34.973Z</common:last-modified-date>
+        <work:work put-code="921977" visibility="public" xmlns:internal="http://www.orcid.org/ns/internal" xmlns:funding="http://www.orcid.org/ns/funding" xmlns:preferences="http://www.orcid.org/ns/preferences" xmlns:address="http://www.orcid.org/ns/address" xmlns:education="http://www.orcid.org/ns/education" xmlns:work="http://www.orcid.org/ns/work" xmlns:deprecated="http://www.orcid.org/ns/deprecated" xmlns:other-name="http://www.orcid.org/ns/other-name" xmlns:history="http://www.orcid.org/ns/history" xmlns:employment="http://www.orcid.org/ns/employment" xmlns:error="http://www.orcid.org/ns/error" xmlns:common="http://www.orcid.org/ns/common" xmlns:person="http://www.orcid.org/ns/person" xmlns:activities="http://www.orcid.org/ns/activities" xmlns:record="http://www.orcid.org/ns/record" xmlns:researcher-url="http://www.orcid.org/ns/researcher-url" xmlns:peer-review="http://www.orcid.org/ns/peer-review" xmlns:personal-details="http://www.orcid.org/ns/personal-details" xmlns:bulk="http://www.orcid.org/ns/bulk" xmlns:keyword="http://www.orcid.org/ns/keyword" xmlns:email="http://www.orcid.org/ns/email" xmlns:external-identifier="http://www.orcid.org/ns/external-identifier">
+            <common:created-date>2018-04-11T20:26:55.131Z</common:created-date>
+            <common:last-modified-date>2018-04-11T20:26:55.131Z</common:last-modified-date>
             <common:source>
                 <common:source-client-id>
-                    <common:uri>http://sandbox.orcid.org/client/<ORCID_CLIENT_ID></common:uri>
+                    <common:uri>https://sandbox.orcid.org/client/<ORCID_CLIENT_ID></common:uri>
                     <common:path><ORCID_CLIENT_ID></common:path>
                     <common:host>sandbox.orcid.org</common:host>
                 </common:source-client-id>
@@ -222,5 +211,5 @@ http_interactions:
             </work:contributors>
         </work:work>
     http_version: 
-  recorded_at: Tue, 20 Jun 2017 08:46:55 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Wed, 11 Apr 2018 20:30:03 GMT
+recorded_with: VCR 4.0.0

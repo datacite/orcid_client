@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://api.sandbox.orcid.org/v2.0/0000-0001-6528-2027/external-identifiers/3824
+    uri: https://api.sandbox.orcid.org/v2.1/0000-0001-6528-2027/external-identifiers/4833
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma - https://github.com/datacite/maremma
+      - Maremma 4.0.5 - https://github.com/datacite/maremma
       Content-Type:
       - application/vnd.orcid+xml
       Accept:
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx/1.10.0
       Date:
-      - Tue, 20 Jun 2017 08:52:46 GMT
+      - Wed, 11 Apr 2018 20:42:38 GMT
       Content-Type:
       - application/vnd.orcid+xml; qs=5;charset=UTF-8
       Connection:
@@ -43,8 +43,8 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     http_version: 
-  recorded_at: Tue, 20 Jun 2017 08:52:46 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Wed, 11 Apr 2018 20:42:38 GMT
+recorded_with: VCR 4.0.0

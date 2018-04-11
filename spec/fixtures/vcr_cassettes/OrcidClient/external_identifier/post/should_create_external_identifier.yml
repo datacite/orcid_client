@@ -2,12 +2,12 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.sandbox.orcid.org/v2.0/0000-0001-6528-2027/external-identifiers
+    uri: https://api.sandbox.orcid.org/v2.1/0000-0001-6528-2027/external-identifiers
     body:
       encoding: UTF-8
       string: |
         <?xml version="1.0" encoding="UTF-8"?>
-        <external-identifier:external-identifier xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://www.orcid.org/ns/common" xmlns:external-identifier="http://www.orcid.org/ns/external-identifier" visibility="public" xsi:schemaLocation="http://www.orcid.org/ns/external-identifier ../person-external-identifier-2.0.xsd">
+        <external-identifier:external-identifier xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://www.orcid.org/ns/common" xmlns:external-identifier="http://www.orcid.org/ns/external-identifier" visibility="public" xsi:schemaLocation="http://www.orcid.org/ns/external-identifier ../person-external-identifier-2.1.xsd">
           <common:external-id-type>GitHub</common:external-id-type>
           <common:external-id-value>mfenner</common:external-id-value>
           <common:external-id-url>https://github.com/mfenner</common:external-id-url>
@@ -15,7 +15,7 @@ http_interactions:
         </external-identifier:external-identifier>
     headers:
       User-Agent:
-      - Maremma - https://github.com/datacite/maremma
+      - Maremma 4.0.5 - https://github.com/datacite/maremma
       Content-Type:
       - application/vnd.orcid+xml
       Accept:
@@ -30,7 +30,7 @@ http_interactions:
       Server:
       - nginx/1.10.0
       Date:
-      - Tue, 20 Jun 2017 08:49:26 GMT
+      - Wed, 11 Apr 2018 20:30:55 GMT
       Content-Type:
       - application/vnd.orcid+xml; qs=5;charset=UTF-8
       Content-Length:
@@ -52,10 +52,10 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Location:
-      - http://api.sandbox.orcid.org:443/orcid-api-web/v2.0/0000-0001-6528-2027/external-identifiers/3824
+      - http://api.sandbox.orcid.org:443/orcid-api-web/v2.1/0000-0001-6528-2027/external-identifiers/4833
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     http_version: 
-  recorded_at: Tue, 20 Jun 2017 08:49:27 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Wed, 11 Apr 2018 20:30:55 GMT
+recorded_with: VCR 4.0.0
