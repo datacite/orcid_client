@@ -30,9 +30,8 @@ describe OrcidClient::Work, vcr: true do
     end
 
     it 'validates work from DataCite test system' do
-      search_url = "https://search.test.datacite.org/api"
-      subject = OrcidClient::Work.new(doi: "10.5286/TOPCAT/ISIS/1/DATACOLLECTION/84974338", orcid: "0000-0003-1613-5981", access_token: access_token, search_url: search_url)
-      expect(subject.type).to eq("other")
+      subject = OrcidClient::Work.new(doi: "10.4124/ccnjcm4", orcid: "0000-0003-1613-5981", access_token: access_token, sandbox: true)
+      expect(subject.type).to eq("data-set")
       expect(subject.validation_errors).to be_empty
     end
 

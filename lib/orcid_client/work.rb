@@ -17,24 +17,25 @@ module OrcidClient
 
     include Bolognese::Utils
 
-    attr_reader :doi, :orcid, :schema, :access_token, :search_url, :put_code, :validation_errors, :name_detector
+    attr_reader :doi, :orcid, :schema, :access_token, :sandbox, :put_code, :validation_errors, :name_detector
 
     def initialize(doi:, orcid:, access_token:, **options)
       @doi = doi
       @orcid = orcid
       @access_token = access_token
-      @search_url = options.fetch(:search_url, nil) || ENV['SOLR_URL']
+      @sandbox = options.fetch(:sandbox, nil) || ENV['SOLR_URL'] == "https://search.test.datacite.org/api"
       @put_code = options.fetch(:put_code, nil)
     end
 
     SCHEMA = File.expand_path("../../../resources/record_#{API_VERSION}/work-#{API_VERSION}.xsd", __FILE__)
+
     # recognize given name. Can be loaded once as ::NameDetector, e.g. in a Rails initializer
     def name_detector
       @name_detector ||= defined?(::NameDetector) ? ::NameDetector : GenderDetector.new
     end
 
     def metadata
-      @metadata ||= Bolognese::Metadata.new(input: doi, search_url: search_url)
+      @metadata ||= Bolognese::Metadata.new(input: doi, sandbox: sandbox)
     end
 
     def contributors

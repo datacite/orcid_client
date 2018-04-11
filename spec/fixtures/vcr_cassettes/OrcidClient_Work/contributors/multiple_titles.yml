@@ -17,7 +17,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 11 Apr 2018 14:51:17 GMT
+      - Wed, 11 Apr 2018 21:28:18 GMT
       Content-Type:
       - application/vnd.api+json; charset=utf-8
       Connection:
@@ -31,11 +31,11 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 0bf3de59-c636-4cde-a50a-3a01b1d9a97c
+      - b4618b2a-236c-46f9-a1bb-ccb74b112ade
       Etag:
       - W/"037620475cb95b310294968ab16bc87d"
       X-Runtime:
-      - '0.011954'
+      - '0.012611'
       X-Powered-By:
       - Phusion Passenger 5.2.3
       Server:
@@ -55,7 +55,7 @@ http_interactions:
         publishing with the improved dissemination and discoverability and reusability
         of all scholarly research.","country":"GB","logo-url":"https://assets.datacite.org/images/members/figshare.png","institution-type":null,"is-active":true,"has-password":true,"joined":"2016-09-12","created":"2016-10-04T12:19:14.000Z","updated":"2018-04-11T02:25:51.000Z"},"relationships":{"clients":{"meta":{}},"prefixes":{"meta":{}}}}]}'
     http_version: 
-  recorded_at: Wed, 11 Apr 2018 14:51:17 GMT
+  recorded_at: Wed, 11 Apr 2018 21:28:18 GMT
 - request:
     method: get
     uri: https://search.datacite.org/api?fl=doi,url,xml,state,allocator_symbol,datacentre_symbol,media,minted,updated&q=doi:10.6084/m9.figshare.1537331.v1&wt=json
@@ -73,7 +73,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 11 Apr 2018 14:51:17 GMT
+      - Wed, 11 Apr 2018 21:28:19 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
@@ -90,9 +90,9 @@ http_interactions:
       - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
     body:
       encoding: ASCII-8BIT
-      string: '{"responseHeader":{"status":0,"QTime":6},"response":{"numFound":1,"start":0,"docs":[{"datacentre_symbol":"FIGSHARE.ARS","url":"https://figshare.com/articles/Bone_Regeneration_Using_Hydroxyapatite_Crystals_for_Periapical_Lesion/1537331/1","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC0zL21ldGFkYXRhLnhzZCI+PGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNjA4NC9NOS5GSUdTSEFSRS4xNTM3MzMxLlYxPC9pZGVudGlmaWVyPjx0aXRsZXM+PHRpdGxlPkJvbmUgUmVnZW5lcmF0aW9uIFVzaW5nIEh5ZHJveHlhcGF0aXRlIENyeXN0YWxzIGZvciBQZXJpYXBpY2FsIExlc2lvbjwvdGl0bGU+PC90aXRsZXM+PHB1Ymxpc2hlcj5GaWdzaGFyZTwvcHVibGlzaGVyPjxwdWJsaWNhdGlvblllYXI+MjAxNTwvcHVibGljYXRpb25ZZWFyPjxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+RGF0YXNldDwvcmVzb3VyY2VUeXBlPjxyaWdodHNMaXN0PjxyaWdodHMgcmlnaHRzVVJJPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS8zLjAvdXMvIj5DQy1CWTwvcmlnaHRzPjwvcmlnaHRzTGlzdD48Y3JlYXRvcnM+PGNyZWF0b3I+PGNyZWF0b3JOYW1lPklvc3Igam91cm5hbHM8L2NyZWF0b3JOYW1lPjwvY3JlYXRvcj48Y3JlYXRvcj48Y3JlYXRvck5hbWU+RHIuIFJvaGl0IEFyb3JhLCBNRFM8L2NyZWF0b3JOYW1lPjwvY3JlYXRvcj48Y3JlYXRvcj48Y3JlYXRvck5hbWU+RHIuIFNoYWx5YSBSYWoqLk1EUzwvY3JlYXRvck5hbWU+PC9jcmVhdG9yPjwvY3JlYXRvcnM+PC9yZXNvdXJjZT4=","allocator_symbol":"FIGSHARE","minted":"2016-01-20T04:04:29Z","state":"findable","updated":"2016-01-20T04:04:29Z","doi":"10.6084/M9.FIGSHARE.1537331.V1"}]}}
+      string: '{"responseHeader":{"status":0,"QTime":2},"response":{"numFound":1,"start":0,"docs":[{"datacentre_symbol":"FIGSHARE.ARS","url":"https://figshare.com/articles/Bone_Regeneration_Using_Hydroxyapatite_Crystals_for_Periapical_Lesion/1537331/1","xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC0zL21ldGFkYXRhLnhzZCI+PGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNjA4NC9NOS5GSUdTSEFSRS4xNTM3MzMxLlYxPC9pZGVudGlmaWVyPjx0aXRsZXM+PHRpdGxlPkJvbmUgUmVnZW5lcmF0aW9uIFVzaW5nIEh5ZHJveHlhcGF0aXRlIENyeXN0YWxzIGZvciBQZXJpYXBpY2FsIExlc2lvbjwvdGl0bGU+PC90aXRsZXM+PHB1Ymxpc2hlcj5GaWdzaGFyZTwvcHVibGlzaGVyPjxwdWJsaWNhdGlvblllYXI+MjAxNTwvcHVibGljYXRpb25ZZWFyPjxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+RGF0YXNldDwvcmVzb3VyY2VUeXBlPjxyaWdodHNMaXN0PjxyaWdodHMgcmlnaHRzVVJJPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS8zLjAvdXMvIj5DQy1CWTwvcmlnaHRzPjwvcmlnaHRzTGlzdD48Y3JlYXRvcnM+PGNyZWF0b3I+PGNyZWF0b3JOYW1lPklvc3Igam91cm5hbHM8L2NyZWF0b3JOYW1lPjwvY3JlYXRvcj48Y3JlYXRvcj48Y3JlYXRvck5hbWU+RHIuIFJvaGl0IEFyb3JhLCBNRFM8L2NyZWF0b3JOYW1lPjwvY3JlYXRvcj48Y3JlYXRvcj48Y3JlYXRvck5hbWU+RHIuIFNoYWx5YSBSYWoqLk1EUzwvY3JlYXRvck5hbWU+PC9jcmVhdG9yPjwvY3JlYXRvcnM+PC9yZXNvdXJjZT4=","allocator_symbol":"FIGSHARE","minted":"2016-01-20T04:04:29Z","state":"findable","updated":"2016-01-20T04:04:29Z","doi":"10.6084/M9.FIGSHARE.1537331.V1"}]}}
 
 '
     http_version: 
-  recorded_at: Wed, 11 Apr 2018 14:51:17 GMT
+  recorded_at: Wed, 11 Apr 2018 21:28:19 GMT
 recorded_with: VCR 4.0.0
