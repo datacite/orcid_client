@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.sandbox.orcid.org/v2.1/0000-0001-6528-2027/external-identifiers
+    uri: https://api.sandbox.orcid.org/v2.1/0000-0001-6827-8074/external-identifiers
     body:
       encoding: UTF-8
       string: |
@@ -15,7 +15,7 @@ http_interactions:
         </external-identifier:external-identifier>
     headers:
       User-Agent:
-      - Maremma 4.0.5 - https://github.com/datacite/maremma
+      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
       Content-Type:
       - application/vnd.orcid+xml
       Accept:
@@ -24,17 +24,15 @@ http_interactions:
       - Bearer <ACCESS_TOKEN>
   response:
     status:
-      code: 201
-      message: Created
+      code: 409
+      message: Conflict
     headers:
       Server:
       - nginx/1.10.0
       Date:
-      - Wed, 11 Apr 2018 20:30:55 GMT
+      - Tue, 11 Dec 2018 14:09:13 GMT
       Content-Type:
       - application/vnd.orcid+xml; qs=5;charset=UTF-8
-      Content-Length:
-      - '0'
       Connection:
       - keep-alive
       Access-Control-Allow-Origin:
@@ -51,11 +49,17 @@ http_interactions:
       - DENY
       X-Content-Type-Options:
       - nosniff
-      Location:
-      - http://api.sandbox.orcid.org:443/orcid-api-web/v2.1/0000-0001-6528-2027/external-identifiers/4833
     body:
       encoding: ASCII-8BIT
-      string: ''
+      string: |
+        <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+        <error xmlns="http://www.orcid.org/ns/error">
+            <response-code>409</response-code>
+            <developer-message>The element 'https://github.com/mfenner' of type 'external-identifier' is duplicated. </developer-message>
+            <user-message>The element 'https://github.com/mfenner' of type 'external-identifier' is duplicated. </user-message>
+            <error-code>9030</error-code>
+            <more-info>https://members.orcid.org/api/resources/troubleshooting</more-info>
+        </error>
     http_version: 
-  recorded_at: Wed, 11 Apr 2018 20:30:55 GMT
+  recorded_at: Tue, 11 Dec 2018 14:09:13 GMT
 recorded_with: VCR 4.0.0

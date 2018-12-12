@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://api.sandbox.orcid.org/v2.1/0000-0001-6528-2027/work/921977
+    uri: https://api.sandbox.orcid.org/v2.1/0000-0001-6827-8074/work/921977
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Maremma 4.0.5 - https://github.com/datacite/maremma
+      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
       Content-Type:
       - application/vnd.orcid+xml
       Accept:
@@ -17,13 +17,13 @@ http_interactions:
       - Bearer <ACCESS_TOKEN>
   response:
     status:
-      code: 204
-      message: No Content
+      code: 404
+      message: Not Found
     headers:
       Server:
       - nginx/1.10.0
       Date:
-      - Wed, 11 Apr 2018 20:30:04 GMT
+      - Tue, 11 Dec 2018 14:09:12 GMT
       Content-Type:
       - application/vnd.orcid+xml; qs=5;charset=UTF-8
       Connection:
@@ -44,7 +44,15 @@ http_interactions:
       - nosniff
     body:
       encoding: ASCII-8BIT
-      string: ''
+      string: |
+        <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+        <error xmlns="http://www.orcid.org/ns/error">
+            <response-code>404</response-code>
+            <developer-message>404 Not Found: The resource was not found. Full validation error: No entity found for query</developer-message>
+            <user-message>The resource was not found.</user-message>
+            <error-code>9016</error-code>
+            <more-info>https://members.orcid.org/api/resources/troubleshooting</more-info>
+        </error>
     http_version: 
-  recorded_at: Wed, 11 Apr 2018 20:30:04 GMT
+  recorded_at: Tue, 11 Dec 2018 14:09:13 GMT
 recorded_with: VCR 4.0.0
