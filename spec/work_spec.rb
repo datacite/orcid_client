@@ -25,8 +25,6 @@ describe OrcidClient::Work, vcr: true do
 
     it 'validates work type data-set' do
       subject = OrcidClient::Work.new(doi: "10.5061/DRYAD.781PV", orcid: "0000-0003-1613-5981", access_token: access_token)
-      puts subject.metadata.inspect
-      puts subject.data
       expect(subject.type).to eq("data-set")
       expect(subject.validation_errors).to be_empty
     end
@@ -103,7 +101,6 @@ describe OrcidClient::Work, vcr: true do
 
   it 'data' do
     xml = File.read(fixture_path + 'work.xml')
-    puts subject.data 
     expect(subject.data).to eq(xml)
   end
 
@@ -115,7 +112,7 @@ describe OrcidClient::Work, vcr: true do
       it 'valid' do
         subject = OrcidClient::Work.new(doi: doi, orcid: orcid, access_token: access_token, sandbox: false)
 
-        expect(subject.contributors).to eq([{:credit_name=>"Harbich, Ronny"}, {:credit_name=>"Truthe, Bianca"}])
+        expect(subject.contributors).to eq([{:credit_name=>"Ronny Harbich"}, {:credit_name=>"Bianca Truthe"}])
       end
     end
   end

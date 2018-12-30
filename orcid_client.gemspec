@@ -19,9 +19,9 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # Declary dependencies here, rather than in the Gemfile
-  s.add_dependency 'maremma', '>= 3.5.7', '< 5'
+  s.add_dependency 'maremma', '>= 4.1'
   s.add_dependency 'nokogiri', '~> 1.8.1'
-  s.add_dependency 'bolognese', '~> 0.15.9'
+  s.add_dependency 'bolognese', '~> 1.0'
   s.add_dependency 'builder', '~> 3.2', '>= 3.2.2'
   s.add_dependency 'namae', '~> 1.0.1'
   s.add_dependency 'activesupport', '>= 4.2.5', '< 6'

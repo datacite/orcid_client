@@ -2,7 +2,51 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.datacite.org/prefixes/10.5281
+    uri: https://doi.org/ra/10.5281
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Sun, 30 Dec 2018 13:18:49 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '54'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=df1ddc288750984247ebb4f3c3eb69ff71546175929; expires=Mon, 30-Dec-19
+        13:18:49 GMT; path=/; domain=.doi.org; HttpOnly
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 4914cb64c85c40ee-HAM
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [
+          {
+            "DOI": "10.5281",
+            "RA": "DataCite"
+          }
+        ]
+    http_version: 
+  recorded_at: Sun, 30 Dec 2018 13:18:49 GMT
+- request:
+    method: get
+    uri: https://api.datacite.org/dois/10.5281/zenodo.59983
     body:
       encoding: US-ASCII
       string: ''
@@ -17,7 +61,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 11 Dec 2018 13:09:21 GMT
+      - Sun, 30 Dec 2018 13:18:49 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -31,134 +75,27 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 73acb601-cd3c-4be7-be82-b1aaf9d9389b
+      - 796a51dc-4ac9-4451-b58b-c648642e3902
       Etag:
-      - W/"9baea65eeb9d3d5c44b98e7664393b3b"
+      - W/"ba35a497076edf514f248a9210b99839"
       X-Runtime:
-      - '0.029008'
+      - '0.017922'
       X-Powered-By:
       - Phusion Passenger 6.0.0
       Server:
       - nginx/1.15.7 + Phusion Passenger 6.0.0
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        eyJkYXRhIjp7ImlkIjoiMTAuNTI4MSIsInR5cGUiOiJwcmVmaXhlcyIsImF0
-        dHJpYnV0ZXMiOnsicmVnaXN0cmF0aW9uLWFnZW5jeSI6IkRhdGFDaXRlIiwi
-        Y3JlYXRlZCI6IjIwMTAtMDEtMDFUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWQi
-        Om51bGx9LCJyZWxhdGlvbnNoaXBzIjp7ImNsaWVudHMiOnsiZGF0YSI6W3si
-        aWQiOiJjZXJuLnplbm9kbyIsInR5cGUiOiJjbGllbnRzIn1dfSwicHJvdmlk
-        ZXJzIjp7ImRhdGEiOlt7ImlkIjoiY2VybiIsInR5cGUiOiJwcm92aWRlcnMi
-        fV19fX0sImluY2x1ZGVkIjpbeyJpZCI6ImNlcm4uemVub2RvIiwidHlwZSI6
-        ImNsaWVudHMiLCJhdHRyaWJ1dGVzIjp7Im5hbWUiOiJaRU5PRE8gLSBSZXNl
-        YXJjaC4gU2hhcmVkLiIsInN5bWJvbCI6IkNFUk4uWkVOT0RPIiwieWVhciI6
-        MjAxMywiY29udGFjdC1uYW1lIjoiTGFycyBIb2xtIE5pZWxzZW4iLCJjb250
-        YWN0LWVtYWlsIjoibGFycy5ob2xtLm5pZWxzZW5AY2Vybi5jaCIsImRvbWFp
-        bnMiOiJvcGVuYWlyZS5jZXJuLmNoLHplbm9kby5vcmciLCJ1cmwiOm51bGws
-        ImNyZWF0ZWQiOiIyMDEzLTAxLTI4VDEyOjA3OjQ4LjAwMFoiLCJ1cGRhdGVk
-        IjoiMjAxOC0wOS0yMVQyMjowMjo1Ny4wMDBaIiwiaXMtYWN0aXZlIjp0cnVl
-        LCJoYXMtcGFzc3dvcmQiOnRydWV9LCJyZWxhdGlvbnNoaXBzIjp7InByb3Zp
-        ZGVyIjp7ImRhdGEiOnsiaWQiOiJjZXJuIiwidHlwZSI6InByb3ZpZGVycyJ9
-        fSwicmVwb3NpdG9yeSI6eyJkYXRhIjp7ImlkIjoicjNkMTAwMDEwNDY4Iiwi
-        dHlwZSI6InJlcG9zaXRvcmllcyJ9fSwicHJlZml4ZXMiOnsiZGF0YSI6W3si
-        aWQiOiIxMC41MjgxIiwidHlwZSI6InByZWZpeGVzIn0seyJpZCI6IjEwLjUw
-        NzIiLCJ0eXBlIjoicHJlZml4ZXMifV19fX0seyJpZCI6ImNlcm4iLCJ0eXBl
-        IjoicHJvdmlkZXJzIiwiYXR0cmlidXRlcyI6eyJuYW1lIjoiQ0VSTiAtIEV1
-        cm9wZWFuIE9yZ2FuaXphdGlvbiBmb3IgTnVjbGVhciBSZXNlYXJjaCIsInN5
-        bWJvbCI6IkNFUk4iLCJ3ZWJzaXRlIjoiaHR0cDovL2RvaS53ZWIuY2Vybi5j
-        aC8iLCJjb250YWN0LW5hbWUiOiJTw7xuamUgRGFsbG1laWVyLVRpZXNzZW4i
-        LCJjb250YWN0LWVtYWlsIjoic3VuamUuZGFsbG1laWVyLXRpZXNzZW5AY2Vy
-        bi5jaCIsInBob25lIjpudWxsLCJkZXNjcmlwdGlvbiI6IkNFUk4sIHRoZSBF
-        dXJvcGVhbiBPcmdhbml6YXRpb24gZm9yIE51Y2xlYXIgUmVzZWFyY2gsIGlz
-        IHRoZSB3b3JsZCdzIGxhcmdlc3QgcGFydGljbGUgcGh5c2ljcyBsYWJvcmF0
-        b3J5LiBGb3VuZGVkIGluIDE5NTQgYW5kIGJhc2VkIG9uIHRoZSBGcmFuY28t
-        U3dpc3MgYm9yZGVyIG5lYXIgR2VuZXZhLCBpdCB3YXMgb25lIG9mIEV1cm9w
-        ZSdzIGZpcnN0IGpvaW50IHZlbnR1cmVzIGFuZCBub3cgaGFzIDIxIG1lbWJl
-        ciBzdGF0ZXMgYW5kIG1vcmUgdGhhbiA1MCBjb29wZXJhdGlvbiBhZ3JlZW1l
-        bnRzIGFuZCBzY2llbnRpZmljIGNvbnRhY3RzIHdpdGggb3RoZXIgY291bnRy
-        aWVzLlxuXG5BdCBDRVJOLCBwaHlzaWNpc3RzIGFuZCBlbmdpbmVlcnMgcHJv
-        YmUgdGhlIGZ1bmRhbWVudGFsIHN0cnVjdHVyZSBvZiB0aGUgdW5pdmVyc2Uu
-        IFRoZXkgdXNlIHRoZSB3b3JsZCdzIGxhcmdlc3QgYW5kIG1vc3QgY29tcGxl
-        eCBzY2llbnRpZmljIGluc3RydW1lbnQsIHRoZSBMYXJnZSBIYWRyb24gQ29s
-        bGlkZXIgKExIQyksIHRvIHN0dWR5IHRoZSBiYXNpYyBjb25zdGl0dWVudHMg
-        b2YgbWF0dGVyLiBUaGUgcmVzdWx0cyBvZiB0aGVpciBleHBlcmltZW50YWwg
-        YW5kIHRoZW9yZXRpY2FsIHdvcmsgYXJlIHB1YmxpY2x5IGF2YWlsYWJsZSBm
-        b2xsb3dpbmcgQ0VSTidzIE9wZW4gQWNjZXNzIFBvbGljeS5cblxuQ0VSTiBz
-        ZXJ2aWNlcyBpbXBsZW1lbnRpbmcgRE9JcyBhcmUgaXRzIGluc3RpdHV0aW9u
-        YWwgcmVwb3NpdG9yeSAoQ0RTLCBDRVJOIERvY3VtZW50IFNlcnZlcik7IElO
-        U1BJUkUtSEVQLCBhIGRpZ2l0YWwgbGlicmFyeSBmb3IgdGhlIGZpZWxkIG9m
-        IEhpZ2gtRW5lcmd5IFBoeXNpY3MgcnVuIGluIGNvbGxhYm9yYXRpb24gd2l0
-        aCBvdGhlciBpbnN0aXR1dGlvbnM7IG9yIHRoZSBDRVJOIE9wZW4gRGF0YSBQ
-        b3J0YWwsIHdoaWNoIHByb3ZpZGVzIGhpZ2ggbGV2ZWwgYW5kIGFuYWx5emFi
-        bGUgZGF0YSBhbmQgc29mdHdhcmUgZnJvbSB0aGUgTEhDIGV4cGVyaW1lbnRz
-        LlxuXG5GdXJ0aGVybW9yZSwgQ0VSTiBpcyBhbHNvIHByb3ZpZGluZyBET0lz
-        IHRvIFpFTk9ETywgYSBtdWx0aWRpc2NpcGxpbmFyeSBkYXRhIHJlcG9zaXRv
-        cnkgZm9yIHRoZSDigJxsb25nIHRhaWzigJ0gb2YgcmVzZWFyY2ggcmVzdWx0
-        cy4gSXQgYWxsb3dzIHJlc2VhcmNoZXJzIHRvIHNoYXJlIGFuZCBwcmVzZXJ2
-        ZSB0aGVpciBvdXRwdXQgaW5kZXBlbmRlbnQgb2Ygc2l6ZSwgdHlwZSBvZiBt
-        YXRlcmlhbCBvciBkaXNjaXBsaW5lLiIsInJlZ2lvbiI6IkVNRUEiLCJjb3Vu
-        dHJ5IjoiQ0giLCJsb2dvLXVybCI6Imh0dHBzOi8vYXNzZXRzLmRhdGFjaXRl
-        Lm9yZy9pbWFnZXMvbWVtYmVycy9jZXJuLnBuZyIsIm9yZ2FuaXphdGlvbi10
-        eXBlIjoicmVzZWFyY2hfaW5zdGl0dXRpb24iLCJmb2N1cy1hcmVhIjoicGh5
-        c2ljYWxfc2NpZW5jZXNfYW5kX2VuZ2luZWVyaW5nIiwiaXMtYWN0aXZlIjp0
-        cnVlLCJoYXMtcGFzc3dvcmQiOnRydWUsImpvaW5lZCI6IjIwMTQtMDMtMjUi
-        LCJjcmVhdGVkIjoiMjAxNC0wNC0xMFQxMzo0MTo0NC4wMDBaIiwidXBkYXRl
-        ZCI6IjIwMTgtMTAtMjRUMjA6NTQ6NTEuMDAwWiJ9LCJyZWxhdGlvbnNoaXBz
-        Ijp7InByZWZpeGVzIjp7ImRhdGEiOlt7ImlkIjoiMTAuNTI4MSIsInR5cGUi
-        OiJwcmVmaXhlcyJ9LHsiaWQiOiIxMC41MTcwIiwidHlwZSI6InByZWZpeGVz
-        In0seyJpZCI6IjEwLjUwNzIiLCJ0eXBlIjoicHJlZml4ZXMifSx7ImlkIjoi
-        MTAuNzQ4MyIsInR5cGUiOiJwcmVmaXhlcyJ9LHsiaWQiOiIxMC43NDg0Iiwi
-        dHlwZSI6InByZWZpeGVzIn0seyJpZCI6IjEwLjE3MTgxIiwidHlwZSI6InBy
-        ZWZpeGVzIn0seyJpZCI6IjEwLjE3MTgyIiwidHlwZSI6InByZWZpeGVzIn0s
-        eyJpZCI6IjEwLjE4NDIzIiwidHlwZSI6InByZWZpeGVzIn0seyJpZCI6IjEw
-        LjE4NDI5IiwidHlwZSI6InByZWZpeGVzIn0seyJpZCI6IjEwLjIzNzMyIiwi
-        dHlwZSI6InByZWZpeGVzIn0seyJpZCI6IjEwLjIzNzMwIiwidHlwZSI6InBy
-        ZWZpeGVzIn0seyJpZCI6IjEwLjIzNzMxIiwidHlwZSI6InByZWZpeGVzIn0s
-        eyJpZCI6IjEwLjIzNzI2IiwidHlwZSI6InByZWZpeGVzIn0seyJpZCI6IjEw
-        LjIzNzI3IiwidHlwZSI6InByZWZpeGVzIn0seyJpZCI6IjEwLjI1MzI0Iiwi
-        dHlwZSI6InByZWZpeGVzIn0seyJpZCI6IjEwLjI1MzIzIiwidHlwZSI6InBy
-        ZWZpeGVzIn0seyJpZCI6IjEwLjI1MzIyIiwidHlwZSI6InByZWZpeGVzIn0s
-        eyJpZCI6IjEwLjI1MzIxIiwidHlwZSI6InByZWZpeGVzIn0seyJpZCI6IjEw
-        LjI1MzI1IiwidHlwZSI6InByZWZpeGVzIn1dfX19XX0=
+      string: '{"data":{"id":"10.5281/zenodo.59983","type":"dois","attributes":{"doi":"10.5281/zenodo.59983","prefix":"10.5281","suffix":"zenodo.59983","identifiers":[{"identifier":"https://doi.org/10.5281/zenodo.59983","identifierType":"DOI"},{"identifier":"https://zenodo.org/record/59983","identifierType":"URL"}],"creators":[{"name":"Fenner,
+        Martin","nameType":"Personal","givenName":"Martin","familyName":"Fenner","affiliation":"DataCite"},{"name":"Gudmundur
+        A. Thorisson"},{"name":"Haggerty, Eleanor Kiefel","nameType":"Personal","givenName":"Eleanor
+        Kiefel","familyName":"Haggerty"},{"name":"Anusha Ranganathan"}],"titles":[{"title":"Omniauth-Orcid:
+        V.1.1.5"}],"publisher":"Zenodo","container":{},"publicationYear":2016,"subjects":[],"contributors":[],"dates":[{"date":"2016-08-11","dateType":"Issued"}],"language":null,"types":{"ris":"COMP","bibtex":"misc","citeproc":"article","schemaOrg":"SoftwareSourceCode","resourceTypeGeneral":"Software"},"relatedIdentifiers":[{"relationType":"IsSupplementTo","relatedIdentifier":"https://github.com/datacite/omniauth-orcid/tree/v.1.1.5","relatedIdentifierType":"URL"},{"relationType":"IsVersionOf","relatedIdentifier":"10.5281/zenodo.593722","relatedIdentifierType":"DOI"}],"sizes":[],"formats":[],"version":null,"rightsList":[{"rights":"Open
+        Access","rightsUri":"info:eu-repo/semantics/openAccess"}],"descriptions":[{"description":"onmiauth-orcid
+        1.1.5 was released on August 11, 2016 with the following changes:\n\n\ncompatibility
+        with omniauth-oauth2 1.4.0. Thanks to pull request #7 by eleanorakh.","descriptionType":"Abstract"}],"geoLocations":[],"fundingReferences":[],"xml":"PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjEvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC41MjgxL3plbm9kby41OTk4MzwvaWRlbnRpZmllcj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPk1hcnRpbiBGZW5uZXI8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24+RGF0YUNpdGU8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5HdWRtdW5kdXIgQS4gVGhvcmlzc29uPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+RWxlYW5vciBLaWVmZWwgSGFnZ2VydHk8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5BbnVzaGEgUmFuZ2FuYXRoYW48L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5PbW5pYXV0aC1PcmNpZDogVi4xLjEuNTwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5aZW5vZG88L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTY8L3B1YmxpY2F0aW9uWWVhcj4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iSXNzdWVkIj4yMDE2LTA4LTExPC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJTb2Z0d2FyZSIvPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJ1cmwiPmh0dHBzOi8vemVub2RvLm9yZy9yZWNvcmQvNTk5ODM8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgPC9hbHRlcm5hdGVJZGVudGlmaWVycz4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iVVJMIiByZWxhdGlvblR5cGU9IklzU3VwcGxlbWVudFRvIj5odHRwczovL2dpdGh1Yi5jb20vZGF0YWNpdGUvb21uaWF1dGgtb3JjaWQvdHJlZS92LjEuMS41PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJJc1ZlcnNpb25PZiI+MTAuNTI4MS96ZW5vZG8uNTkzNzIyPC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8dmVyc2lvbj52LjEuMS41PC92ZXJzaW9uPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9ImluZm86ZXUtcmVwby9zZW1hbnRpY3Mvb3BlbkFjY2VzcyI+T3BlbiBBY2Nlc3M8L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij4mbHQ7cCZndDsmbHQ7YSBocmVmPSJodHRwczovL2dpdGh1Yi5jb20vZGF0YWNpdGUvb21uaWF1dGgtb3JjaWQvcmVsZWFzZXMvdGFnL3YuMS4xLjUiJmd0O29ubWlhdXRoLW9yY2lkIDEuMS41Jmx0Oy9hJmd0OyB3YXMgcmVsZWFzZWQgb24gQXVndXN0IDExLCAyMDE2IHdpdGggdGhlIGZvbGxvd2luZyBjaGFuZ2VzOiZsdDsvcCZndDsKCiZsdDt1bCZndDsKJmx0O2xpJmd0O2NvbXBhdGliaWxpdHkgd2l0aCBvbW5pYXV0aC1vYXV0aDIgMS40LjAuIFRoYW5rcyB0byBwdWxsIHJlcXVlc3QgJmx0O2EgaHJlZj0iaHR0cHM6Ly9naXRodWIuY29tL2RhdGFjaXRlL29tbmlhdXRoLW9yY2lkL3B1bGwvNyImZ3Q7IzcmbHQ7L2EmZ3Q7IGJ5ICZsdDthIGhyZWY9Imh0dHBzOi8vZ2l0aHViLmNvbS9lbGVhbm9yYWtoIiZndDtlbGVhbm9yYWtoJmx0Oy9hJmd0Oy4mbHQ7L2xpJmd0OwombHQ7L3VsJmd0OzwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+Cg==","url":"https://zenodo.org/record/59983","contentUrl":null,"metadataVersion":2,"schemaVersion":"http://datacite.org/schema/kernel-4","source":null,"isActive":true,"state":"findable","reason":null,"created":"2016-08-11T04:47:51.000Z","registered":"2016-08-11T04:47:51.000Z","updated":"2018-05-05T09:01:38.000Z"},"relationships":{"client":{"data":{"id":"cern.zenodo","type":"clients"}},"media":{"data":[]}}},"included":[{"id":"cern.zenodo","type":"clients","attributes":{"name":"ZENODO
+        - Research. Shared.","symbol":"CERN.ZENODO","year":2013,"contactName":"Lars
+        Holm Nielsen","contactEmail":"lars.holm.nielsen@cern.ch","description":null,"domains":"openaire.cern.ch,zenodo.org","url":"https://zenodo.org/","created":"2013-01-28T12:07:48.000Z","updated":"2018-12-26T10:38:09.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"cern","type":"providers"}},"repository":{"data":{"id":"10.17616/R3QP53","type":"repositories"}},"prefixes":{"data":[{"id":"10.5281","type":"prefixes"},{"id":"10.5072","type":"prefixes"}]}}}]}'
     http_version: 
-  recorded_at: Tue, 11 Dec 2018 13:09:21 GMT
-- request:
-    method: get
-    uri: https://search.datacite.org/api?fl=doi,url,xml,state,allocator_symbol,datacentre_symbol,media,minted,updated&q=doi:10.5281/zenodo.59983&wt=json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 11 Dec 2018 13:09:21 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Connection:
-      - keep-alive
-      Server:
-      - nginx/1.10.3 (Ubuntu)
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, DELETE, OPTIONS
-      Access-Control-Allow-Headers:
-      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
-      Access-Control-Expose-Headers:
-      - DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range,Authorization
-    body:
-      encoding: ASCII-8BIT
-      string: '{"responseHeader":{"status":0,"QTime":0},"response":{"numFound":1,"start":0,"docs":[{"datacentre_symbol":"CERN.ZENODO","url":"https://zenodo.org/record/59983","xml":"PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjEvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC41MjgxL3plbm9kby41OTk4MzwvaWRlbnRpZmllcj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPk1hcnRpbiBGZW5uZXI8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24+RGF0YUNpdGU8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5HdWRtdW5kdXIgQS4gVGhvcmlzc29uPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+RWxlYW5vciBLaWVmZWwgSGFnZ2VydHk8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5BbnVzaGEgUmFuZ2FuYXRoYW48L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5PbW5pYXV0aC1PcmNpZDogVi4xLjEuNTwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5aZW5vZG88L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTY8L3B1YmxpY2F0aW9uWWVhcj4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iSXNzdWVkIj4yMDE2LTA4LTExPC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJTb2Z0d2FyZSIvPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJ1cmwiPmh0dHBzOi8vemVub2RvLm9yZy9yZWNvcmQvNTk5ODM8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgPC9hbHRlcm5hdGVJZGVudGlmaWVycz4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iVVJMIiByZWxhdGlvblR5cGU9IklzU3VwcGxlbWVudFRvIj5odHRwczovL2dpdGh1Yi5jb20vZGF0YWNpdGUvb21uaWF1dGgtb3JjaWQvdHJlZS92LjEuMS41PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJJc1ZlcnNpb25PZiI+MTAuNTI4MS96ZW5vZG8uNTkzNzIyPC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8dmVyc2lvbj52LjEuMS41PC92ZXJzaW9uPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9ImluZm86ZXUtcmVwby9zZW1hbnRpY3Mvb3BlbkFjY2VzcyI+T3BlbiBBY2Nlc3M8L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij4mbHQ7cCZndDsmbHQ7YSBocmVmPSJodHRwczovL2dpdGh1Yi5jb20vZGF0YWNpdGUvb21uaWF1dGgtb3JjaWQvcmVsZWFzZXMvdGFnL3YuMS4xLjUiJmd0O29ubWlhdXRoLW9yY2lkIDEuMS41Jmx0Oy9hJmd0OyB3YXMgcmVsZWFzZWQgb24gQXVndXN0IDExLCAyMDE2IHdpdGggdGhlIGZvbGxvd2luZyBjaGFuZ2VzOiZsdDsvcCZndDsKCiZsdDt1bCZndDsKJmx0O2xpJmd0O2NvbXBhdGliaWxpdHkgd2l0aCBvbW5pYXV0aC1vYXV0aDIgMS40LjAuIFRoYW5rcyB0byBwdWxsIHJlcXVlc3QgJmx0O2EgaHJlZj0iaHR0cHM6Ly9naXRodWIuY29tL2RhdGFjaXRlL29tbmlhdXRoLW9yY2lkL3B1bGwvNyImZ3Q7IzcmbHQ7L2EmZ3Q7IGJ5ICZsdDthIGhyZWY9Imh0dHBzOi8vZ2l0aHViLmNvbS9lbGVhbm9yYWtoIiZndDtlbGVhbm9yYWtoJmx0Oy9hJmd0Oy4mbHQ7L2xpJmd0OwombHQ7L3VsJmd0OzwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+Cg==","allocator_symbol":"CERN","minted":"2016-08-11T04:47:51Z","state":"findable","updated":"2018-05-05T09:01:38Z","doi":"10.5281/ZENODO.59983"}]}}
-
-'
-    http_version: 
-  recorded_at: Tue, 11 Dec 2018 13:09:21 GMT
+  recorded_at: Sun, 30 Dec 2018 13:18:49 GMT
 recorded_with: VCR 4.0.0

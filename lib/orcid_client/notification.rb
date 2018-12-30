@@ -32,7 +32,7 @@ module OrcidClient
     end
 
     def item_name
-      parse_attributes(metadata.title, content: "text", first: true)
+      parse_attributes(metadata.titles, content: "title", first: true)
     end
 
     def item_type

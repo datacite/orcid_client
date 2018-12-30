@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe OrcidClient, vcr: true do
   let(:doi) { "10.5281/zenodo.59983"}
-  let(:orcid) { "0000-0001-6827-8074" }
+  let(:orcid) { "0000-0001-6528-2027" }
   let(:access_token) { ENV["ACCESS_TOKEN"] }
   let(:notification_access_token) { ENV["NOTIFICATION_ACCESS_TOKEN"] }
   let(:put_code) { "921977" }
@@ -31,9 +31,9 @@ describe OrcidClient, vcr: true do
       it 'should get works' do
         response = subject.get_works(sandbox: true)
         works = response.body.fetch("data", {}).fetch("group", {})
-        expect(works.length).to eq(1)
+        expect(works.length).to eq(24)
         work = works.first
-        expect(work["external-ids"]).to eq("external-id"=>[{"external-id-type"=>"doi", "external-id-value"=>"10.5281/zenodo.59983", "external-id-url"=>nil, "external-id-relationship"=>"SELF"}])
+        expect(work["external-ids"]).to eq("external-id"=>[{"external-id-relationship"=>"SELF", "external-id-type"=>"doi", "external-id-url"=>nil, "external-id-value"=>"10.5256/f1000research.67475.r16884"}])
       end
 
       it 'access_token missing' do

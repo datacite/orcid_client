@@ -39,18 +39,18 @@ module OrcidClient
     end
 
     def contributors
-      Array.wrap(metadata.author).map do |contributor|
-        orcid = validate_orcid(contributor.fetch('id', nil))
-        orcid = "https://orcid.org/#{orcid}" if orcid.present?
-
+      Array.wrap(metadata.creators).map do |contributor|
+        orcid = Array.wrap(contributor["nameIdentifiers"]).find { |c| c["nameIdentifierScheme"] == "ORCID" }.to_h.fetch("nameIdentifier", nil)
+        credit_name = contributor["familyName"].present? ? [contributor["givenName"], contributor["familyName"]].join(" ") : contributor["name"]
+        
         { orcid: orcid,
-          credit_name: contributor.fetch('name', nil),
+          credit_name: credit_name,
           role: nil }.compact
       end
     end
 
     def title
-      parse_attributes(metadata.title, content: "text", first: true)
+      parse_attributes(metadata.titles, content: "title", first: true)
     end
 
     # user publisher name as fallback
@@ -59,16 +59,17 @@ module OrcidClient
     end
 
     def publication_date
-      get_year_month_day(metadata.date_published)
+      pd = get_date(metadata.dates, "Issued") || metadata.publication_year
+      get_year_month_day(pd)
     end
 
     def description
-      ct = parse_attributes(metadata.description, content: "text", first: true)
+      ct = parse_attributes(metadata.descriptions, content: "description", first: true)
       ct.squish if ct.present?
     end
 
     def type
-      orcid_work_type(metadata.resource_type_general, metadata.additional_type)
+      orcid_work_type(metadata.types["resourceTypeGeneral"], metadata.types["resourceType"])
     end
 
     def has_required_elements?
