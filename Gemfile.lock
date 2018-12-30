@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    orcid_client (0.5)
+    orcid_client (0.5.1)
       activesupport (>= 4.2.5, < 6)
       bolognese (~> 1.0)
       builder (~> 3.2, >= 3.2.2)
