@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.3; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,22 +17,22 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sun, 30 Dec 2018 13:18:52 GMT
+      - Sat, 14 Sep 2019 15:33:33 GMT
       Content-Type:
       - application/json;charset=UTF-8
-      Content-Length:
-      - '54'
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d4d76d8e347b53918d0249a5ca693b0ac1546175932; expires=Mon, 30-Dec-19
-        13:18:52 GMT; path=/; domain=.doi.org; HttpOnly
+      - __cfduid=d5bc5b0e86e75187ed75b7a2ef821d6371568475213; expires=Sun, 13-Sep-20
+        15:33:33 GMT; path=/; domain=.doi.org; HttpOnly
+      Strict-Transport-Security:
+      - max-age=604800; includeSubDomains
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 4914cb792e3b406a-HAM
+      - 51636b81e908dfb1-FRA
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -43,7 +43,7 @@ http_interactions:
           }
         ]
     http_version: 
-  recorded_at: Sun, 30 Dec 2018 13:18:52 GMT
+  recorded_at: Sat, 14 Sep 2019 15:33:33 GMT
 - request:
     method: get
     uri: https://api.datacite.org/dois/10.6084/m9.figshare.1537331.v1
@@ -52,7 +52,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.3; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -61,7 +61,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 30 Dec 2018 13:18:52 GMT
+      - Sat, 14 Sep 2019 15:33:33 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -75,27 +75,26 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - '0996e17d-d66c-420a-a372-51fff33e636b'
+      - 2965e851-9984-4a86-a659-38a44ab0ca87
       Etag:
-      - W/"a1e02357abd9d9d9917d474d108e8f60"
+      - W/"bac727ea0cd819f483c1d67312884204"
       X-Runtime:
-      - '0.033010'
+      - '0.019990'
       X-Powered-By:
-      - Phusion Passenger 6.0.0
+      - Phusion Passenger 6.0.3
       Server:
-      - nginx/1.15.7 + Phusion Passenger 6.0.0
+      - nginx/1.17.3 + Phusion Passenger 6.0.3
     body:
       encoding: ASCII-8BIT
       string: '{"data":{"id":"10.6084/m9.figshare.1537331.v1","type":"dois","attributes":{"doi":"10.6084/m9.figshare.1537331.v1","prefix":"10.6084","suffix":"m9.figshare.1537331.v1","identifiers":[{"identifier":"https://doi.org/10.6084/m9.figshare.1537331.v1","identifierType":"DOI"}],"creators":[{"name":"Iosr
-        Journals"},{"name":"Dr. Rohit Arora, MDS","nameType":"Personal"},{"name":"Dr.
-        Shalya Raj*.MDS"}],"titles":[{"title":"Bone Regeneration Using Hydroxyapatite
-        Crystals for Periapical Lesion"}],"publisher":"Figshare","container":{},"publicationYear":2015,"subjects":[],"contributors":[],"dates":[{"date":"2015","dateType":"Issued"}],"language":null,"types":{"ris":"DATA","bibtex":"misc","citeproc":"dataset","schemaOrg":"Dataset","resourceType":"Dataset","resourceTypeGeneral":"Dataset"},"relatedIdentifiers":[],"sizes":[],"formats":[],"version":null,"rightsList":[{"rights":"CC-BY","rightsUri":"http://creativecommons.org/licenses/by/3.0/us"}],"descriptions":[],"geoLocations":[],"fundingReferences":[],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC0zL21ldGFkYXRhLnhzZCI+PGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNjA4NC9NOS5GSUdTSEFSRS4xNTM3MzMxLlYxPC9pZGVudGlmaWVyPjx0aXRsZXM+PHRpdGxlPkJvbmUgUmVnZW5lcmF0aW9uIFVzaW5nIEh5ZHJveHlhcGF0aXRlIENyeXN0YWxzIGZvciBQZXJpYXBpY2FsIExlc2lvbjwvdGl0bGU+PC90aXRsZXM+PHB1Ymxpc2hlcj5GaWdzaGFyZTwvcHVibGlzaGVyPjxwdWJsaWNhdGlvblllYXI+MjAxNTwvcHVibGljYXRpb25ZZWFyPjxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+RGF0YXNldDwvcmVzb3VyY2VUeXBlPjxyaWdodHNMaXN0PjxyaWdodHMgcmlnaHRzVVJJPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS8zLjAvdXMvIj5DQy1CWTwvcmlnaHRzPjwvcmlnaHRzTGlzdD48Y3JlYXRvcnM+PGNyZWF0b3I+PGNyZWF0b3JOYW1lPklvc3Igam91cm5hbHM8L2NyZWF0b3JOYW1lPjwvY3JlYXRvcj48Y3JlYXRvcj48Y3JlYXRvck5hbWU+RHIuIFJvaGl0IEFyb3JhLCBNRFM8L2NyZWF0b3JOYW1lPjwvY3JlYXRvcj48Y3JlYXRvcj48Y3JlYXRvck5hbWU+RHIuIFNoYWx5YSBSYWoqLk1EUzwvY3JlYXRvck5hbWU+PC9jcmVhdG9yPjwvY3JlYXRvcnM+PC9yZXNvdXJjZT4=","url":"https://figshare.com/articles/Bone_Regeneration_Using_Hydroxyapatite_Crystals_for_Periapical_Lesion/1537331/1","contentUrl":null,"metadataVersion":0,"schemaVersion":"http://datacite.org/schema/kernel-3","source":null,"isActive":true,"state":"findable","reason":null,"created":"2016-01-20T04:04:28.000Z","registered":"2016-01-20T04:04:29.000Z","updated":"2016-01-20T04:04:29.000Z"},"relationships":{"client":{"data":{"id":"figshare.ars","type":"clients"}},"media":{"data":[]}}},"included":[{"id":"figshare.ars","type":"clients","attributes":{"name":"figshare
-        Academic Research System","symbol":"FIGSHARE.ARS","year":2016,"contactName":"Daniel
-        Gavrila","contactEmail":"danielduduta@figshare.com","description":"figshare
+        Journals","affiliation":[]},{"name":"Dr. Rohit Arora, MDS","nameType":"Personal","affiliation":[]},{"name":"Dr.
+        Shalya Raj*.MDS","affiliation":[]}],"titles":[{"title":"Bone Regeneration
+        Using Hydroxyapatite Crystals for Periapical Lesion"}],"publisher":"Figshare","container":{},"publicationYear":2015,"subjects":[],"contributors":[],"dates":[{"date":"2015","dateType":"Issued"}],"language":null,"types":{"ris":"DATA","bibtex":"misc","citeproc":"dataset","schemaOrg":"Dataset","resourceType":"Dataset","resourceTypeGeneral":"Dataset"},"relatedIdentifiers":[],"sizes":[],"formats":[],"version":null,"rightsList":[{"rights":"CC-BY","rightsUri":"http://creativecommons.org/licenses/by/3.0/us"}],"descriptions":[],"geoLocations":[],"fundingReferences":[],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC0zL21ldGFkYXRhLnhzZCI+PGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNjA4NC9NOS5GSUdTSEFSRS4xNTM3MzMxLlYxPC9pZGVudGlmaWVyPjx0aXRsZXM+PHRpdGxlPkJvbmUgUmVnZW5lcmF0aW9uIFVzaW5nIEh5ZHJveHlhcGF0aXRlIENyeXN0YWxzIGZvciBQZXJpYXBpY2FsIExlc2lvbjwvdGl0bGU+PC90aXRsZXM+PHB1Ymxpc2hlcj5GaWdzaGFyZTwvcHVibGlzaGVyPjxwdWJsaWNhdGlvblllYXI+MjAxNTwvcHVibGljYXRpb25ZZWFyPjxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+RGF0YXNldDwvcmVzb3VyY2VUeXBlPjxyaWdodHNMaXN0PjxyaWdodHMgcmlnaHRzVVJJPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS8zLjAvdXMvIj5DQy1CWTwvcmlnaHRzPjwvcmlnaHRzTGlzdD48Y3JlYXRvcnM+PGNyZWF0b3I+PGNyZWF0b3JOYW1lPklvc3Igam91cm5hbHM8L2NyZWF0b3JOYW1lPjwvY3JlYXRvcj48Y3JlYXRvcj48Y3JlYXRvck5hbWU+RHIuIFJvaGl0IEFyb3JhLCBNRFM8L2NyZWF0b3JOYW1lPjwvY3JlYXRvcj48Y3JlYXRvcj48Y3JlYXRvck5hbWU+RHIuIFNoYWx5YSBSYWoqLk1EUzwvY3JlYXRvck5hbWU+PC9jcmVhdG9yPjwvY3JlYXRvcnM+PC9yZXNvdXJjZT4=","url":"https://figshare.com/articles/Bone_Regeneration_Using_Hydroxyapatite_Crystals_for_Periapical_Lesion/1537331/1","contentUrl":null,"metadataVersion":0,"schemaVersion":"http://datacite.org/schema/kernel-3","source":null,"isActive":true,"state":"findable","reason":null,"created":"2016-01-20T04:04:28.000Z","registered":"2016-01-20T04:04:29.000Z","published":"2015","updated":"2019-08-02T10:39:24.000Z"},"relationships":{"client":{"data":{"id":"figshare.ars","type":"clients"}},"media":{"data":{"id":"10.6084/m9.figshare.1537331.v1","type":"media"}}}},"included":[{"id":"figshare.ars","type":"clients","attributes":{"name":"figshare
+        Academic Research System","symbol":"FIGSHARE.ARS","year":2016,"contactEmail":"danielduduta@figshare.com","alternateName":null,"description":"figshare
         allows researchers to publish all of their research outputs in an easily citable,
         sharable and discoverable manner. All file formats can be published, including
         videos and datasets. Optional peer review process. figshare uses creative
-        commons licensing.","domains":"figshare.com","url":"http://figshare.com/","created":"2016-10-12T13:42:35.000Z","updated":"2018-12-20T22:58:16.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"figshare","type":"providers"}},"repository":{"data":{"id":"10.17616/R3PK5R","type":"repositories"}},"prefixes":{"data":[{"id":"10.5072","type":"prefixes"},{"id":"10.6084","type":"prefixes"}]}}}]}'
+        commons licensing.","language":null,"clientType":"repository","domains":"figshare.com","issn":null,"url":"http://figshare.com/","created":"2016-10-12T13:42:35.000Z","updated":"2019-07-27T07:15:48.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"figshare","type":"providers"}},"prefixes":{"data":[{"id":"10.6084","type":"prefixes"}]}}}]}'
     http_version: 
-  recorded_at: Sun, 30 Dec 2018 13:18:52 GMT
-recorded_with: VCR 4.0.0
+  recorded_at: Sat, 14 Sep 2019 15:33:33 GMT
+recorded_with: VCR 5.0.0

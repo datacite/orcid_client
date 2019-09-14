@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.3; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,22 +17,22 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sun, 30 Dec 2018 13:18:51 GMT
+      - Sat, 14 Sep 2019 15:33:32 GMT
       Content-Type:
       - application/json;charset=UTF-8
-      Content-Length:
-      - '54'
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d049de8ce8caecda2e00d266c290cff4f1546175931; expires=Mon, 30-Dec-19
-        13:18:51 GMT; path=/; domain=.doi.org; HttpOnly
+      - __cfduid=d8fca66762a67e0976bbc5a57240333741568475212; expires=Sun, 13-Sep-20
+        15:33:32 GMT; path=/; domain=.doi.org; HttpOnly
+      Strict-Transport-Security:
+      - max-age=604800; includeSubDomains
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 4914cb73c9ca40b2-HAM
+      - 51636b7d9d0996aa-FRA
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -43,7 +43,7 @@ http_interactions:
           }
         ]
     http_version: 
-  recorded_at: Sun, 30 Dec 2018 13:18:51 GMT
+  recorded_at: Sat, 14 Sep 2019 15:33:32 GMT
 - request:
     method: get
     uri: https://api.datacite.org/dois/10.1594/pangaea.745083
@@ -52,7 +52,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.1.1; +https://github.com/datacite/maremma)
+      - Mozilla/5.0 (compatible; Maremma/4.3; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -61,7 +61,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 30 Dec 2018 13:18:51 GMT
+      - Sat, 14 Sep 2019 15:33:32 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -75,26 +75,32 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 1fc877b6-d96d-4f75-87ee-478245021b45
+      - ea0dddba-4bc6-44f2-8aa1-09e4e37ea299
       Etag:
-      - W/"1dff47df05b0b2d054a8c6cc7ce58b1a"
+      - W/"5c9aa4ff0ef0de7849b289eecc28c7b9"
       X-Runtime:
-      - '0.030454'
+      - '0.021294'
       X-Powered-By:
-      - Phusion Passenger 6.0.0
+      - Phusion Passenger 6.0.3
       Server:
-      - nginx/1.15.7 + Phusion Passenger 6.0.0
+      - nginx/1.17.3 + Phusion Passenger 6.0.3
     body:
       encoding: ASCII-8BIT
       string: '{"data":{"id":"10.1594/pangaea.745083","type":"dois","attributes":{"doi":"10.1594/pangaea.745083","prefix":"10.1594","suffix":"pangaea.745083","identifiers":[{"identifier":"https://doi.org/10.1594/pangaea.745083","identifierType":"DOI"}],"creators":[{"name":"EPOCA
-        Arctic Experiment 2009 Team"}],"titles":[{"title":"EPOCA 2009 Svalbard benthic
-        experiment"}],"publisher":"PANGAEA - Data Publisher for Earth & Environmental
-        Science","container":{},"publicationYear":2009,"subjects":[{"subject":"European
+        Arctic Experiment 2009 Team","affiliation":[]}],"titles":[{"title":"EPOCA
+        2009 Svalbard benthic experiment"}],"publisher":"PANGAEA - Data Publisher
+        for Earth & Environmental Science","container":{},"publicationYear":2009,"subjects":[{"subject":"European
         Project on Ocean Acidification (EPOCA)","subjectScheme":"Project"}],"contributors":[],"dates":[{"date":"2009-05-02T14:00:00/2009-06-28T00:00:00","dateType":"Collected"},{"date":"2009","dateType":"Issued"}],"language":"en","types":{"ris":"GEN","bibtex":"misc","citeproc":"article","schemaOrg":"Collection","resourceType":"Collection
         of Datasets","resourceTypeGeneral":"Collection"},"relatedIdentifiers":[],"sizes":["10
         datasets"],"formats":["application/zip"],"version":null,"rightsList":[{"rights":"Creative
-        Commons Attribution 3.0 Unported (CC-BY-3.0)","rightsUri":"https://creativecommons.org/licenses/by/3.0"}],"descriptions":[],"geoLocations":[{"geoLocationBox":{"eastBoundLongitude":"12.07","northBoundLatitude":"78.96000000000001","southBoundLatitude":"78.94000000000001","westBoundLongitude":"11.9"}}],"fundingReferences":[],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjEvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4xNTk0L1BBTkdBRUEuNzQ1MDgzPC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+RVBPQ0EgQXJjdGljIGV4cGVyaW1lbnQgMjAwOSB0ZWFtPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+RVBPQ0EgMjAwOSBTdmFsYmFyZCBiZW50aGljIGV4cGVyaW1lbnQ8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+UEFOR0FFQSAtIERhdGEgUHVibGlzaGVyIGZvciBFYXJ0aCAmYW1wOyBFbnZpcm9ubWVudGFsIFNjaWVuY2U8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMDk8L3B1YmxpY2F0aW9uWWVhcj4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdCBzdWJqZWN0U2NoZW1lPSJQcm9qZWN0Ij5FdXJvcGVhbiBQcm9qZWN0IG9uIE9jZWFuIEFjaWRpZmljYXRpb24gKEVQT0NBKTwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJDb2xsZWN0ZWQiPjIwMDktMDUtMDJUMTQ6MDA6MDAvMjAwOS0wNi0yOFQwMDowMDowMDwvZGF0ZT4KICA8L2RhdGVzPgogIDxsYW5ndWFnZT5lbjwvbGFuZ3VhZ2U+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJDb2xsZWN0aW9uIj5Db2xsZWN0aW9uIG9mIERhdGFzZXRzPC9yZXNvdXJjZVR5cGU+CiAgPHNpemVzPgogICAgPHNpemU+MTAgZGF0YXNldHM8L3NpemU+CiAgPC9zaXplcz4KICA8Zm9ybWF0cz4KICAgIDxmb3JtYXQ+YXBwbGljYXRpb24vemlwPC9mb3JtYXQ+CiAgPC9mb3JtYXRzPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9Imh0dHBzOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS8zLjAvIj5DcmVhdGl2ZSBDb21tb25zIEF0dHJpYnV0aW9uIDMuMCBVbnBvcnRlZCAoQ0MtQlktMy4wKTwvcmlnaHRzPgogIDwvcmlnaHRzTGlzdD4KICA8Z2VvTG9jYXRpb25zPgogICAgPGdlb0xvY2F0aW9uPgogICAgICA8Z2VvTG9jYXRpb25Cb3g+CiAgICAgICAgPHdlc3RCb3VuZExvbmdpdHVkZT4xMS45PC93ZXN0Qm91bmRMb25naXR1ZGU+CiAgICAgICAgPGVhc3RCb3VuZExvbmdpdHVkZT4xMi4wNzwvZWFzdEJvdW5kTG9uZ2l0dWRlPgogICAgICAgIDxzb3V0aEJvdW5kTGF0aXR1ZGU+NzguOTQwMDAwMDAwMDAwMDE8L3NvdXRoQm91bmRMYXRpdHVkZT4KICAgICAgICA8bm9ydGhCb3VuZExhdGl0dWRlPjc4Ljk2MDAwMDAwMDAwMDAxPC9ub3J0aEJvdW5kTGF0aXR1ZGU+CiAgICAgIDwvZ2VvTG9jYXRpb25Cb3g+CiAgICA8L2dlb0xvY2F0aW9uPgogIDwvZ2VvTG9jYXRpb25zPgo8L3Jlc291cmNlPg==","url":"https://doi.pangaea.de/10.1594/PANGAEA.745083","contentUrl":null,"metadataVersion":2,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"mds","isActive":true,"state":"findable","reason":null,"created":"2011-12-03T15:56:15.000Z","registered":"2010-10-21T01:06:41.000Z","updated":"2018-10-01T21:02:19.000Z"},"relationships":{"client":{"data":{"id":"tib.pangaea","type":"clients"}},"media":{"data":[]}}},"included":[{"id":"tib.pangaea","type":"clients","attributes":{"name":"PANGAEA","symbol":"TIB.PANGAEA","year":2011,"contactName":"Uwe
-        Schindler","contactEmail":"uschindler@pangaea.de","description":null,"domains":"pangaea.de","url":"https://www.pangaea.de/","created":"2011-01-17T07:41:51.000Z","updated":"2018-12-19T15:38:51.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"tib","type":"providers"}},"repository":{"data":{"id":"10.17616/R3XS37","type":"repositories"}},"prefixes":{"data":[{"id":"10.1594","type":"prefixes"},{"id":"10.5072","type":"prefixes"},{"id":"10.25594","type":"prefixes"}]}}}]}'
+        Commons Attribution 3.0 Unported (CC-BY-3.0)","rightsUri":"https://creativecommons.org/licenses/by/3.0"}],"descriptions":[],"geoLocations":[{"geoLocationBox":{"eastBoundLongitude":"12.07","northBoundLatitude":"78.96000000000001","southBoundLatitude":"78.94000000000001","westBoundLongitude":"11.9"}}],"fundingReferences":[{"awardUri":"https://cordis.europa.eu/project/rcn/87798/factsheet/en","awardTitle":"European
+        Project on Ocean Acidification (EPOCA)","funderName":"Seventh Framework Programme","awardNumber":"211384","funderIdentifier":"https://doi.org/10.13039/100011102","funderIdentifierType":"Crossref
+        Funder ID"}],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjEvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4xNTk0L1BBTkdBRUEuNzQ1MDgzPC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+RVBPQ0EgQXJjdGljIGV4cGVyaW1lbnQgMjAwOSB0ZWFtPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+RVBPQ0EgMjAwOSBTdmFsYmFyZCBiZW50aGljIGV4cGVyaW1lbnQ8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+UEFOR0FFQSAtIERhdGEgUHVibGlzaGVyIGZvciBFYXJ0aCAmYW1wOyBFbnZpcm9ubWVudGFsIFNjaWVuY2U8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMDk8L3B1YmxpY2F0aW9uWWVhcj4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdCBzdWJqZWN0U2NoZW1lPSJQcm9qZWN0Ij5FdXJvcGVhbiBQcm9qZWN0IG9uIE9jZWFuIEFjaWRpZmljYXRpb24gKEVQT0NBKTwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJDb2xsZWN0ZWQiPjIwMDktMDUtMDJUMTQ6MDA6MDAvMjAwOS0wNi0yOFQwMDowMDowMDwvZGF0ZT4KICA8L2RhdGVzPgogIDxsYW5ndWFnZT5lbjwvbGFuZ3VhZ2U+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJDb2xsZWN0aW9uIj5Db2xsZWN0aW9uIG9mIERhdGFzZXRzPC9yZXNvdXJjZVR5cGU+CiAgPHNpemVzPgogICAgPHNpemU+MTAgZGF0YXNldHM8L3NpemU+CiAgPC9zaXplcz4KICA8Zm9ybWF0cz4KICAgIDxmb3JtYXQ+YXBwbGljYXRpb24vemlwPC9mb3JtYXQ+CiAgPC9mb3JtYXRzPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9Imh0dHBzOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS8zLjAvIj5DcmVhdGl2ZSBDb21tb25zIEF0dHJpYnV0aW9uIDMuMCBVbnBvcnRlZCAoQ0MtQlktMy4wKTwvcmlnaHRzPgogIDwvcmlnaHRzTGlzdD4KICA8Z2VvTG9jYXRpb25zPgogICAgPGdlb0xvY2F0aW9uPgogICAgICA8Z2VvTG9jYXRpb25Cb3g+CiAgICAgICAgPHdlc3RCb3VuZExvbmdpdHVkZT4xMS45PC93ZXN0Qm91bmRMb25naXR1ZGU+CiAgICAgICAgPGVhc3RCb3VuZExvbmdpdHVkZT4xMi4wNzwvZWFzdEJvdW5kTG9uZ2l0dWRlPgogICAgICAgIDxzb3V0aEJvdW5kTGF0aXR1ZGU+NzguOTQwMDAwMDAwMDAwMDE8L3NvdXRoQm91bmRMYXRpdHVkZT4KICAgICAgICA8bm9ydGhCb3VuZExhdGl0dWRlPjc4Ljk2MDAwMDAwMDAwMDAxPC9ub3J0aEJvdW5kTGF0aXR1ZGU+CiAgICAgIDwvZ2VvTG9jYXRpb25Cb3g+CiAgICA8L2dlb0xvY2F0aW9uPgogIDwvZ2VvTG9jYXRpb25zPgogIDxmdW5kaW5nUmVmZXJlbmNlcz4KICAgIDxmdW5kaW5nUmVmZXJlbmNlPgogICAgICA8ZnVuZGVyTmFtZT5TZXZlbnRoIEZyYW1ld29yayBQcm9ncmFtbWU8L2Z1bmRlck5hbWU+CiAgICAgIDxmdW5kZXJJZGVudGlmaWVyIGZ1bmRlcklkZW50aWZpZXJUeXBlPSJDcm9zc3JlZiBGdW5kZXIgSUQiPmh0dHBzOi8vZG9pLm9yZy8xMC4xMzAzOS8xMDAwMTExMDI8L2Z1bmRlcklkZW50aWZpZXI+CiAgICAgIDxhd2FyZE51bWJlciBhd2FyZFVSST0iaHR0cHM6Ly9jb3JkaXMuZXVyb3BhLmV1L3Byb2plY3QvcmNuLzg3Nzk4L2ZhY3RzaGVldC9lbiI+MjExMzg0PC9hd2FyZE51bWJlcj4KICAgICAgPGF3YXJkVGl0bGU+RXVyb3BlYW4gUHJvamVjdCBvbiBPY2VhbiBBY2lkaWZpY2F0aW9uIChFUE9DQSk8L2F3YXJkVGl0bGU+CiAgICA8L2Z1bmRpbmdSZWZlcmVuY2U+CiAgPC9mdW5kaW5nUmVmZXJlbmNlcz4KPC9yZXNvdXJjZT4=","url":"https://doi.pangaea.de/10.1594/PANGAEA.745083","contentUrl":null,"metadataVersion":3,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"mds","isActive":true,"state":"findable","reason":null,"created":"2011-12-03T15:56:15.000Z","registered":"2010-10-21T01:06:41.000Z","published":"2009","updated":"2019-08-02T00:16:10.000Z"},"relationships":{"client":{"data":{"id":"tib.pangaea","type":"clients"}},"media":{"data":{"id":"10.1594/pangaea.745083","type":"media"}}}},"included":[{"id":"tib.pangaea","type":"clients","attributes":{"name":"PANGAEA","symbol":"TIB.PANGAEA","year":2011,"contactEmail":"uschindler@pangaea.de","alternateName":"Data
+        Publisher for Earth and Environmental Science","description":"The information
+        system PANGAEA is operated as an Open Access library aimed at archiving, publishing
+        and distributing georeferenced data from earth system research. The system
+        guarantees long-term availability of its content through a commitment  of
+        the operating institutions.","language":["en"],"clientType":"repository","domains":"pangaea.de","issn":{},"url":"https://www.pangaea.de/","created":"2011-01-17T07:41:51.000Z","updated":"2019-08-29T16:43:40.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"tib","type":"providers"}},"prefixes":{"data":[{"id":"10.1594","type":"prefixes"},{"id":"10.25594","type":"prefixes"}]}}}]}'
     http_version: 
-  recorded_at: Sun, 30 Dec 2018 13:18:51 GMT
-recorded_with: VCR 4.0.0
+  recorded_at: Sat, 14 Sep 2019 15:33:32 GMT
+recorded_with: VCR 5.0.0

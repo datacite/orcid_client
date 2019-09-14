@@ -9,14 +9,14 @@ module OrcidClient
     include OrcidClient::Base
     include OrcidClient::Api
 
-    attr_reader :type, :value, :url, :orcid, :schema, :access_token, :put_code, :validation_errors
+    attr_reader :type, :value, :url, :orcid, :schema, :orcid_token, :put_code, :validation_errors
 
-    def initialize(type:, value:, url:, orcid:, access_token:, **options)
+    def initialize(type:, value:, url:, orcid:, orcid_token:, **options)
       @type = type
       @value = value
       @url = url
       @orcid = orcid
-      @access_token = access_token
+      @orcid_token = orcid_token
       @put_code = options.fetch(:put_code, nil)
     end
 

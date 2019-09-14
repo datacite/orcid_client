@@ -17,12 +17,12 @@ module OrcidClient
 
     include Bolognese::Utils
 
-    attr_reader :doi, :orcid, :schema, :access_token, :sandbox, :put_code, :validation_errors, :name_detector
+    attr_reader :doi, :orcid, :schema, :orcid_token, :sandbox, :put_code, :validation_errors, :name_detector
 
-    def initialize(doi:, orcid:, access_token:, **options)
+    def initialize(doi:, orcid:, orcid_token:, **options)
       @doi = doi
       @orcid = orcid
-      @access_token = access_token
+      @orcid_token = orcid_token
       @sandbox = options.fetch(:sandbox, nil) || ENV['API_URL'] == "https://api.test.datacite.org"
       @put_code = options.fetch(:put_code, nil)
     end

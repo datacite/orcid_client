@@ -3,16 +3,16 @@ require 'spec_helper'
 describe OrcidClient, vcr: true do
   let(:doi) { "10.5281/zenodo.59983"}
   let(:orcid) { "0000-0001-6528-2027" }
-  let(:access_token) { ENV["ACCESS_TOKEN"] }
+  let(:orcid_token) { ENV["ACCESS_TOKEN"] }
   let(:notification_access_token) { ENV["NOTIFICATION_ACCESS_TOKEN"] }
   let(:put_code) { "921977" }
   let(:fixture_path) { "spec/fixtures/" }
 
-  subject { OrcidClient::Work.new(doi: doi, orcid: orcid, access_token: access_token, put_code: put_code) }
+  subject { OrcidClient::Work.new(doi: doi, orcid: orcid, orcid_token: orcid_token, put_code: put_code) }
 
   describe "works", :order => :defined do
     describe 'post' do
-      subject { OrcidClient::Work.new(doi: doi, orcid: orcid, access_token: access_token) }
+      subject { OrcidClient::Work.new(doi: doi, orcid: orcid, orcid_token: orcid_token) }
 
       it 'should create work' do
         response = subject.create_work(sandbox: true)
@@ -20,10 +20,10 @@ describe OrcidClient, vcr: true do
         expect(response.status).to eq(201)
       end
 
-      it 'access_token missing' do
-        subject = OrcidClient::Work.new(doi: doi, orcid: orcid, access_token: nil)
+      it 'orcid_token missing' do
+        subject = OrcidClient::Work.new(doi: doi, orcid: orcid, orcid_token: nil)
         response = subject.create_work(sandbox: true)
-        expect(response.body).to eq("errors"=>[{"title"=>"Access token missing"}])
+        expect(response.body).to eq("errors"=>[{"title"=>"ORCID access token missing"}])
       end
     end
 
@@ -31,15 +31,15 @@ describe OrcidClient, vcr: true do
       it 'should get works' do
         response = subject.get_works(sandbox: true)
         works = response.body.fetch("data", {}).fetch("group", {})
-        expect(works.length).to eq(24)
+        expect(works.length).to eq(23)
         work = works.first
         expect(work["external-ids"]).to eq("external-id"=>[{"external-id-relationship"=>"SELF", "external-id-type"=>"doi", "external-id-url"=>nil, "external-id-value"=>"10.5256/f1000research.67475.r16884"}])
       end
 
-      it 'access_token missing' do
-        subject = OrcidClient::Work.new(doi: doi, orcid: orcid, access_token: nil)
+      it 'orcid_token missing' do
+        subject = OrcidClient::Work.new(doi: doi, orcid: orcid, orcid_token: nil)
         response = subject.get_works(sandbox: true)
-        expect(response.body).to eq("errors"=>[{"title"=>"Access token missing"}])
+        expect(response.body).to eq("errors"=>[{"title"=>"ORCID access token missing"}])
       end
     end
 
@@ -50,10 +50,10 @@ describe OrcidClient, vcr: true do
       #   expect(response.status).to eq(200)
       # end
 
-      it 'access_token missing' do
-        subject = OrcidClient::Work.new(doi: doi, orcid: orcid, access_token: nil)
+      it 'orcid_token missing' do
+        subject = OrcidClient::Work.new(doi: doi, orcid: orcid, orcid_token: nil)
         response = subject.update_work(sandbox: true)
-        expect(response.body).to eq("errors"=>[{"title"=>"Access token missing"}])
+        expect(response.body).to eq("errors"=>[{"title"=>"ORCID access token missing"}])
       end
     end
 
@@ -65,19 +65,19 @@ describe OrcidClient, vcr: true do
       #   expect(response.status).to eq(204)
       # end
 
-      it 'access_token missing' do
-        subject = OrcidClient::Work.new(doi: doi, orcid: orcid, access_token: nil)
+      it 'orcid_token missing' do
+        subject = OrcidClient::Work.new(doi: doi, orcid: orcid, orcid_token: nil)
         response = subject.delete_work(sandbox: true)
-        expect(response.body).to eq("errors"=>[{"title"=>"Access token missing"}])
+        expect(response.body).to eq("errors"=>[{"title"=>"ORCID access token missing"}])
       end
     end
   end
 
   describe "external_identifier", :order => :defined do
-    subject { OrcidClient::ExternalIdentifier.new(type: "GitHub", value: "mfenner", url: "https://github.com/mfenner", orcid: orcid, access_token: access_token, put_code: "4833") }
+    subject { OrcidClient::ExternalIdentifier.new(type: "GitHub", value: "mfenner", url: "https://github.com/mfenner", orcid: orcid, orcid_token: orcid_token, put_code: "4833") }
 
     describe 'post' do
-      subject { OrcidClient::ExternalIdentifier.new(type: "GitHub", value: "mfenner", url: "https://github.com/mfenner", orcid: orcid, access_token: access_token) }
+      subject { OrcidClient::ExternalIdentifier.new(type: "GitHub", value: "mfenner", url: "https://github.com/mfenner", orcid: orcid, orcid_token: orcid_token) }
 
       # it 'should create external_identifier' do
       #   response = subject.create_external_identifier(sandbox: true)
@@ -85,10 +85,10 @@ describe OrcidClient, vcr: true do
       #   expect(response.status).to eq(201)
       # end
 
-      it 'access_token missing' do
-        subject = OrcidClient::ExternalIdentifier.new(type: "GitHub", value: "mfenner", url: "https://github.com/mfenner", orcid: orcid, access_token: nil)
+      it 'orcid_token missing' do
+        subject = OrcidClient::ExternalIdentifier.new(type: "GitHub", value: "mfenner", url: "https://github.com/mfenner", orcid: orcid, orcid_token: nil)
         response = subject.create_external_identifier(sandbox: true)
-        expect(response.body).to eq("errors"=>[{"title"=>"Access token missing"}])
+        expect(response.body).to eq("errors"=>[{"title"=>"ORCID access token missing"}])
       end
     end
 
@@ -100,10 +100,10 @@ describe OrcidClient, vcr: true do
       #   expect(response.status).to eq(204)
       # end
 
-      it 'access_token missing' do
-        subject = OrcidClient::ExternalIdentifier.new(type: "GitHub", value: "mfenner", url: "https://github.com/mfenner", orcid: orcid, access_token: nil)
+      it 'orcid_token missing' do
+        subject = OrcidClient::ExternalIdentifier.new(type: "GitHub", value: "mfenner", url: "https://github.com/mfenner", orcid: orcid, orcid_token: nil)
         response = subject.delete_external_identifier(sandbox: true)
-        expect(response.body).to eq("errors"=>[{"title"=>"Access token missing"}])
+        expect(response.body).to eq("errors"=>[{"title"=>"ORCID access token missing"}])
       end
     end
   end

@@ -3,11 +3,11 @@ require 'spec_helper'
 describe OrcidClient::Work, vcr: true do
   let(:doi) { "10.5281/zenodo.59983"}
   let(:orcid) { "0000-0001-6528-2027" }
-  let(:access_token) { ENV['ACCESS_TOKEN'] }
+  let(:orcid_token) { ENV['ACCESS_TOKEN'] }
   let(:fixture_path) { "spec/fixtures/" }
   let(:samples_path) { "resources/record_2.1/samples/read_samples/" }
 
-  subject { OrcidClient::Work.new(doi: doi, orcid: orcid, access_token: access_token) }
+  subject { OrcidClient::Work.new(doi: doi, orcid: orcid, orcid_token: orcid_token) }
 
   describe 'schema' do
     it 'validates sample' do
@@ -24,19 +24,19 @@ describe OrcidClient::Work, vcr: true do
     end
 
     it 'validates work type data-set' do
-      subject = OrcidClient::Work.new(doi: "10.5061/DRYAD.781PV", orcid: "0000-0003-1613-5981", access_token: access_token)
+      subject = OrcidClient::Work.new(doi: "10.5061/DRYAD.781PV", orcid: "0000-0003-1613-5981", orcid_token: orcid_token)
       expect(subject.type).to eq("data-set")
       expect(subject.validation_errors).to be_empty
     end
 
     it 'validates work from DataCite test system' do
-      subject = OrcidClient::Work.new(doi: "10.4124/ccnjcm4", orcid: "0000-0003-1613-5981", access_token: access_token, sandbox: true)
+      subject = OrcidClient::Work.new(doi: "10.4124/ccnjcm4", orcid: "0000-0003-1613-5981", orcid_token: orcid_token, sandbox: true)
       expect(subject.type).to eq("data-set")
       expect(subject.validation_errors).to be_empty
     end
 
     it 'validates ORCID IDs for contributors' do
-      subject = OrcidClient::Work.new(doi: "10.2314/COSCV1", orcid: "0000-0001-6528-2027", access_token: access_token)
+      subject = OrcidClient::Work.new(doi: "10.2314/COSCV1", orcid: "0000-0001-6528-2027", orcid_token: orcid_token)
       expect(subject.validation_errors).to be_empty
     end
 
@@ -55,12 +55,12 @@ describe OrcidClient::Work, vcr: true do
     end
 
     it 'literal' do
-      subject = OrcidClient::Work.new(doi: "10.1594/PANGAEA.745083", orcid: "0000-0003-3235-5933", access_token: access_token)
+      subject = OrcidClient::Work.new(doi: "10.1594/PANGAEA.745083", orcid: "0000-0003-3235-5933", orcid_token: orcid_token)
       expect(subject.contributors).to eq([{:credit_name=>"EPOCA Arctic Experiment 2009 Team"}])
     end
 
     it 'with ORCID IDs' do
-      subject = OrcidClient::Work.new(doi: "10.2314/COSCV1", orcid: "0000-0001-6528-2027", access_token: access_token)
+      subject = OrcidClient::Work.new(doi: "10.2314/COSCV1", orcid: "0000-0001-6528-2027", orcid_token: orcid_token)
       expect(subject.contributors).to eq([{:orcid=>"https://orcid.org/0000-0003-0232-7085",
                                            :credit_name=>"Lambert Heller"},
                                           {:orcid=>"https://orcid.org/0000-0002-3075-7640",
@@ -90,7 +90,7 @@ describe OrcidClient::Work, vcr: true do
     end
 
     it 'multiple titles' do
-      subject = OrcidClient::Work.new(doi: "10.6084/M9.FIGSHARE.1537331.V1", orcid: "0000-0003-0811-2536", access_token: access_token)
+      subject = OrcidClient::Work.new(doi: "10.6084/M9.FIGSHARE.1537331.V1", orcid: "0000-0003-0811-2536", orcid_token: orcid_token)
       expect(subject.contributors).to eq([{:credit_name=>"Iosr Journals"}, {:credit_name=>"Dr. Rohit Arora, MDS"}, {:credit_name=>"Dr. Shalya Raj*.MDS"}])
     end
   end
@@ -110,7 +110,7 @@ describe OrcidClient::Work, vcr: true do
     
     context "fail" do
       it 'valid' do
-        subject = OrcidClient::Work.new(doi: doi, orcid: orcid, access_token: access_token, sandbox: false)
+        subject = OrcidClient::Work.new(doi: doi, orcid: orcid, orcid_token: orcid_token, sandbox: false)
 
         expect(subject.contributors).to eq([{:credit_name=>"Ronny Harbich"}, {:credit_name=>"Bianca Truthe"}])
       end
