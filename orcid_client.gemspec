@@ -19,19 +19,19 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # Declary dependencies here, rather than in the Gemfile
-  s.add_dependency 'maremma', '>= 4.1'
-  s.add_dependency 'nokogiri', '~> 1.10.4'
-  s.add_dependency 'bolognese', '~> 1.0'
-  s.add_dependency 'builder', '~> 3.2', '>= 3.2.2'
-  s.add_dependency 'namae', '~> 1.0.1'
   s.add_dependency 'activesupport', '>= 4.2.5', '< 6'
+  s.add_dependency 'bolognese', '~> 1.3'
+  s.add_dependency 'builder', '~> 3.2', '>= 3.2.2'
   s.add_dependency 'dotenv', '~> 2.1', '>= 2.1.1'
+  s.add_dependency 'maremma', '>= 4.1'
+  s.add_dependency 'namae', '~> 1.0.1'
+  s.add_dependency 'nokogiri', '~> 1.10.4'
   s.add_development_dependency 'bundler', '~> 1.0'
-  s.add_development_dependency 'rspec', '~> 3.4'
-  s.add_development_dependency 'rake'
+  s.add_development_dependency 'codeclimate-test-reporter', '~> 1.0.0'
   s.add_development_dependency 'rack-test', '~> 0'
+  s.add_development_dependency 'rake'
+  s.add_development_dependency 'rspec', '~> 3.4'
+  s.add_development_dependency 'simplecov'
   s.add_development_dependency 'vcr'
   s.add_development_dependency 'webmock', '~> 3.0', '>= 3.0.1'
-  s.add_development_dependency 'codeclimate-test-reporter', "~> 1.0.0"
-  s.add_development_dependency 'simplecov'
 end
