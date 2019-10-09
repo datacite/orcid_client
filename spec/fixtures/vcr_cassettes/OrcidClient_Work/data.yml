@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.3; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,22 +17,24 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 14 Sep 2019 15:33:30 GMT
+      - Wed, 09 Oct 2019 06:24:28 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=de56194a4139d6cf3a0880fb55698cc321568475210; expires=Sun, 13-Sep-20
-        15:33:30 GMT; path=/; domain=.doi.org; HttpOnly
+      - __cfduid=dad19026f05351233a224dea3eaa4cf071570602268; expires=Thu, 08-Oct-20
+        06:24:28 GMT; path=/; domain=.doi.org; HttpOnly
+      Cf-Cache-Status:
+      - DYNAMIC
       Strict-Transport-Security:
-      - max-age=604800; includeSubDomains
+      - max-age=2592000; includeSubDomains
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 51636b6fd890d6f5-FRA
+      - 522e4590b84cc2a4-FRA
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -43,7 +45,7 @@ http_interactions:
           }
         ]
     http_version: 
-  recorded_at: Sat, 14 Sep 2019 15:33:30 GMT
+  recorded_at: Wed, 09 Oct 2019 06:24:28 GMT
 - request:
     method: get
     uri: https://api.datacite.org/dois/10.5281/zenodo.59983
@@ -52,7 +54,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.3; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -61,7 +63,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 14 Sep 2019 15:33:30 GMT
+      - Wed, 09 Oct 2019 06:24:28 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -74,16 +76,16 @@ http_interactions:
       - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
-      X-Request-Id:
-      - b8e5d278-3b18-4859-8324-710168aaa2c5
       Etag:
       - W/"ad8b7fc0ee9188f0a60453d1980925b4"
       X-Runtime:
-      - '0.018860'
+      - '0.014979'
+      X-Request-Id:
+      - 070c092e-5390-4c66-bbdb-65c8be314dfe
       X-Powered-By:
-      - Phusion Passenger 6.0.3
+      - Phusion Passenger 6.0.4
       Server:
-      - nginx/1.17.3 + Phusion Passenger 6.0.3
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
     body:
       encoding: ASCII-8BIT
       string: '{"data":{"id":"10.5281/zenodo.59983","type":"dois","attributes":{"doi":"10.5281/zenodo.59983","prefix":"10.5281","suffix":"zenodo.59983","identifiers":[{"identifier":"https://doi.org/10.5281/zenodo.59983","identifierType":"DOI"},{"identifier":"https://zenodo.org/record/59983","identifierType":"URL"}],"creators":[{"name":"Fenner,
@@ -106,5 +108,5 @@ http_interactions:
         them into existing reporting lines to funding agencies like the European Commission.\r\neasily
         access and reuse shared research results.","language":["en"],"clientType":"repository","domains":"openaire.cern.ch,zenodo.org","issn":[],"url":"https://zenodo.org/","created":"2013-01-28T12:07:48.000Z","updated":"2019-08-02T17:08:53.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"cern","type":"providers"}},"prefixes":{"data":[{"id":"10.5281","type":"prefixes"}]}}}]}'
     http_version: 
-  recorded_at: Sat, 14 Sep 2019 15:33:30 GMT
+  recorded_at: Wed, 09 Oct 2019 06:24:28 GMT
 recorded_with: VCR 5.0.0

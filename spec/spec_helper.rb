@@ -26,7 +26,7 @@ VCR.configure do |c|
   c.ignore_hosts 'codeclimate.com'
   c.filter_sensitive_data("<ORCID_CLIENT_ID>") { ENV["ORCID_CLIENT_ID"] }
   c.filter_sensitive_data("<ORCID_CLIENT_SECRET>") { ENV["ORCID_CLIENT_SECRET"] }
-  c.filter_sensitive_data("<ACCESS_TOKEN>") { ENV["ACCESS_TOKEN"] }
+  c.filter_sensitive_data("<ORCID_TOKEN>") { ENV["ORCID_TOKEN"] }
   c.filter_sensitive_data("<NOTIFICATION_ACCESS_TOKEN>") { ENV["NOTIFICATION_ACCESS_TOKEN"] }
   c.configure_rspec_metadata!
 end

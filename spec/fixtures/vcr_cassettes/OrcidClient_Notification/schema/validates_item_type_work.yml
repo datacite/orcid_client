@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.3; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,22 +17,24 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 14 Sep 2019 15:31:21 GMT
+      - Wed, 09 Oct 2019 06:24:19 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d556b1b0a03464b536f5d45a4f1f38cf51568475081; expires=Sun, 13-Sep-20
-        15:31:21 GMT; path=/; domain=.doi.org; HttpOnly
+      - __cfduid=d82d253a6b2a138a0c6299d912c2fa4af1570602259; expires=Thu, 08-Oct-20
+        06:24:19 GMT; path=/; domain=.doi.org; HttpOnly
+      Cf-Cache-Status:
+      - DYNAMIC
       Strict-Transport-Security:
-      - max-age=604800; includeSubDomains
+      - max-age=2592000; includeSubDomains
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 516368488afee013-FRA
+      - 522e4557eae3c303-FRA
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -43,7 +45,7 @@ http_interactions:
           }
         ]
     http_version: 
-  recorded_at: Sat, 14 Sep 2019 15:31:21 GMT
+  recorded_at: Wed, 09 Oct 2019 06:24:19 GMT
 - request:
     method: get
     uri: https://api.datacite.org/dois/10.5061/dryad.781pv
@@ -52,7 +54,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.3; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -61,7 +63,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 14 Sep 2019 15:31:21 GMT
+      - Wed, 09 Oct 2019 06:24:19 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -75,15 +77,15 @@ http_interactions:
       Vary:
       - Accept-Encoding, Origin
       X-Request-Id:
-      - 04060afc-294b-4bea-a846-c5cfcdf6499f
+      - 790af1cb-24a1-4343-bf18-391915e3bba7
       Etag:
       - W/"d8b1a13f365dcde50bea407dfed02597"
       X-Runtime:
-      - '0.024085'
+      - '0.018198'
       X-Powered-By:
-      - Phusion Passenger 6.0.3
+      - Phusion Passenger 6.0.4
       Server:
-      - nginx/1.17.3 + Phusion Passenger 6.0.3
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
     body:
       encoding: ASCII-8BIT
       string: '{"data":{"id":"10.5061/dryad.781pv","type":"dois","attributes":{"doi":"10.5061/dryad.781pv","prefix":"10.5061","suffix":"dryad.781pv","identifiers":[{"identifier":"https://doi.org/10.5061/dryad.781pv","identifierType":"DOI"},{"identifier":"Piwowar
@@ -103,5 +105,5 @@ http_interactions:
         is considered to be integral to the published research. All material in Dryad
         is associated with a scholarly publication","language":null,"clientType":"repository","domains":"*","issn":null,"url":"https://datadryad.org","created":"2018-04-24T20:59:15.000Z","updated":"2019-06-02T22:47:19.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"dryad","type":"providers"}},"prefixes":{"data":[{"id":"10.5061","type":"prefixes"},{"id":"10.15146","type":"prefixes"}]}}}]}'
     http_version: 
-  recorded_at: Sat, 14 Sep 2019 15:31:21 GMT
+  recorded_at: Wed, 09 Oct 2019 06:24:19 GMT
 recorded_with: VCR 5.0.0

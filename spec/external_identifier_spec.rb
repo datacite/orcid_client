@@ -5,7 +5,7 @@ describe OrcidClient::ExternalIdentifier, vcr: true do
   let(:value) { "mfenner" }
   let(:url) { "https://github.com/#{value}" }
   let(:orcid) { "0000-0001-6528-2027" }
-  let(:orcid_token) { ENV['ACCESS_TOKEN'] }
+  let(:orcid_token) { ENV['ORCID_TOKEN'] }
   let(:fixture_path) { "spec/fixtures/" }
   let(:samples_path) { "resources/record_2.1/samples/read_samples/" }
 

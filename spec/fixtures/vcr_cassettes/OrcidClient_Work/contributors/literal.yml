@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.3; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -17,22 +17,24 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 14 Sep 2019 15:33:32 GMT
+      - Wed, 09 Oct 2019 06:24:38 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d8fca66762a67e0976bbc5a57240333741568475212; expires=Sun, 13-Sep-20
-        15:33:32 GMT; path=/; domain=.doi.org; HttpOnly
+      - __cfduid=de2daa5e7f85df0675ea5d03ca11695a81570602278; expires=Thu, 08-Oct-20
+        06:24:38 GMT; path=/; domain=.doi.org; HttpOnly
+      Cf-Cache-Status:
+      - DYNAMIC
       Strict-Transport-Security:
-      - max-age=604800; includeSubDomains
+      - max-age=2592000; includeSubDomains
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 51636b7d9d0996aa-FRA
+      - 522e45cdbd02977e-FRA
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -43,7 +45,7 @@ http_interactions:
           }
         ]
     http_version: 
-  recorded_at: Sat, 14 Sep 2019 15:33:32 GMT
+  recorded_at: Wed, 09 Oct 2019 06:24:38 GMT
 - request:
     method: get
     uri: https://api.datacite.org/dois/10.1594/pangaea.745083
@@ -52,7 +54,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.3; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.4; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
   response:
@@ -61,7 +63,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 14 Sep 2019 15:33:32 GMT
+      - Wed, 09 Oct 2019 06:24:38 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -74,16 +76,16 @@ http_interactions:
       - max-age=0, private, must-revalidate
       Vary:
       - Accept-Encoding, Origin
-      X-Request-Id:
-      - ea0dddba-4bc6-44f2-8aa1-09e4e37ea299
       Etag:
       - W/"5c9aa4ff0ef0de7849b289eecc28c7b9"
       X-Runtime:
-      - '0.021294'
+      - '0.023660'
+      X-Request-Id:
+      - 9f496c75-305e-4c71-8897-f2bb92dc7268
       X-Powered-By:
-      - Phusion Passenger 6.0.3
+      - Phusion Passenger 6.0.4
       Server:
-      - nginx/1.17.3 + Phusion Passenger 6.0.3
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
     body:
       encoding: ASCII-8BIT
       string: '{"data":{"id":"10.1594/pangaea.745083","type":"dois","attributes":{"doi":"10.1594/pangaea.745083","prefix":"10.1594","suffix":"pangaea.745083","identifiers":[{"identifier":"https://doi.org/10.1594/pangaea.745083","identifierType":"DOI"}],"creators":[{"name":"EPOCA
@@ -102,5 +104,5 @@ http_interactions:
         guarantees long-term availability of its content through a commitment  of
         the operating institutions.","language":["en"],"clientType":"repository","domains":"pangaea.de","issn":{},"url":"https://www.pangaea.de/","created":"2011-01-17T07:41:51.000Z","updated":"2019-08-29T16:43:40.000Z","isActive":true,"hasPassword":true},"relationships":{"provider":{"data":{"id":"tib","type":"providers"}},"prefixes":{"data":[{"id":"10.1594","type":"prefixes"},{"id":"10.25594","type":"prefixes"}]}}}]}'
     http_version: 
-  recorded_at: Sat, 14 Sep 2019 15:33:32 GMT
+  recorded_at: Wed, 09 Oct 2019 06:24:38 GMT
 recorded_with: VCR 5.0.0
