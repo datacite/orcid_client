@@ -17,6 +17,8 @@ jobs:
         ruby-version: 2.6.x
 
     - name: Build and test
+      env:
+        ORCID_TOKEN: ${{ secrets.ORCID_TOKEN }}
       run: |
         gem install bundler
         bundle install
