@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    orcid_client (0.9)
+    orcid_client (0.9.1)
       activesupport (>= 4.2.5, < 6)
       bolognese (~> 1.3, >= 1.3.19)
       builder (~> 3.2, >= 3.2.2)
@@ -55,8 +55,6 @@ GEM
     citeproc-ruby (1.1.13)
       citeproc (~> 1.0, >= 1.0.9)
       csl (~> 1.5)
-    codeclimate-test-reporter (1.0.9)
-      simplecov (<= 0.13)
     colorize (0.8.1)
     concurrent-ruby (1.1.8)
     crack (0.4.5)
@@ -67,7 +65,7 @@ GEM
     csl-styles (1.0.1.11)
       csl (~> 1.0)
     diff-lcs (1.4.4)
-    docile (1.1.5)
+    docile (1.4.0)
     dotenv (2.7.6)
     ebnf (2.1.3)
       amazing_print (~> 1.2)
@@ -97,7 +95,6 @@ GEM
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     iso8601 (0.9.1)
-    json (2.5.1)
     json-canonicalization (0.2.1)
     json-ld (3.1.9)
       htmlentities (~> 4.3)
@@ -189,11 +186,12 @@ GEM
       rspec-support (~> 3.10.0)
     rspec-support (3.10.2)
     scanf (1.0.0)
-    simplecov (0.13.0)
-      docile (~> 1.1.0)
-      json (>= 1.8, < 3)
-      simplecov-html (~> 0.10.0)
-    simplecov-html (0.10.2)
+    simplecov (0.21.2)
+      docile (~> 1.1)
+      simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
+    simplecov-html (0.12.3)
+    simplecov_json_formatter (0.1.3)
     sxp (1.1.0)
       rdf (~> 3.1)
     temple (0.8.2)
@@ -214,8 +212,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.0)
-  codeclimate-test-reporter (~> 1.0.0)
+  bundler (>= 2.2.10)
   orcid_client!
   rack-test (~> 0)
   rake
@@ -225,4 +222,4 @@ DEPENDENCIES
   webmock (~> 3.0, >= 3.0.1)
 
 BUNDLED WITH
-   1.17.3
+   2.2.19
