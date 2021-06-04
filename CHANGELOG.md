@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/datacite/orcid_client/tree/HEAD)
+## [0.9.1](https://github.com/datacite/orcid_client/tree/0.9.1) (2021-06-04)
 
-[Full Changelog](https://github.com/datacite/orcid_client/compare/0.9...HEAD)
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.9...0.9.1)
 
 **Implemented enhancements:**
 
