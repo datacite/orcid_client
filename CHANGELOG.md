@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/datacite/orcid_client/tree/HEAD)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.9...HEAD)
+
+**Implemented enhancements:**
+
+- Upgrade to ORCID schema 3.0 [\#12](https://github.com/datacite/orcid_client/issues/12)
+
 ## [0.9](https://github.com/datacite/orcid_client/tree/0.9) (2021-06-04)
 
 [Full Changelog](https://github.com/datacite/orcid_client/compare/v.0.8...0.9)
