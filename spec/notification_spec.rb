@@ -5,13 +5,13 @@ describe OrcidClient::Notification, vcr: true do
   let(:orcid) { "0000-0001-6528-2027" }
   let(:notification_access_token) { ENV['NOTIFICATION_ACCESS_TOKEN'] }
   let(:fixture_path) { "spec/fixtures/" }
-  let(:samples_path) { "resources/notification_2.1/samples/" }
+  let(:samples_path) { "resources/notification_3.0/samples/" }
 
   subject { OrcidClient::Notification.new(doi: doi, orcid: orcid, notification_access_token: notification_access_token) }
 
   describe 'schema' do
     it 'validates sample' do
-      validation_errors = subject.schema.validate(samples_path + 'notification-permission-2.1.xml').map { |error| error.to_s }
+      validation_errors = subject.schema.validate(samples_path + 'notification-permission-3.0.xml').map { |error| error.to_s }
       expect(validation_errors).to be_empty
     end
 

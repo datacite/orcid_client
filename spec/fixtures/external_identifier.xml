@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<external-identifier:external-identifier xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://www.orcid.org/ns/common" xmlns:external-identifier="http://www.orcid.org/ns/external-identifier" visibility="public" xsi:schemaLocation="http://www.orcid.org/ns/external-identifier ../person-external-identifier-2.1.xsd">
+<external-identifier:external-identifier xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://www.orcid.org/ns/common" xmlns:external-identifier="http://www.orcid.org/ns/external-identifier" visibility="public" xsi:schemaLocation="http://www.orcid.org/ns/external-identifier ../person-external-identifier-3.0.xsd">
   <common:external-id-type>GitHub</common:external-id-type>
   <common:external-id-value>mfenner</common:external-id-value>
   <common:external-id-url>https://github.com/mfenner</common:external-id-url>

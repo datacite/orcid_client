@@ -5,13 +5,13 @@ describe OrcidClient::Work, vcr: true do
   let(:orcid) { "0000-0001-6528-2027" }
   let(:orcid_token) { ENV['ORCID_TOKEN'] }
   let(:fixture_path) { "spec/fixtures/" }
-  let(:samples_path) { "resources/record_2.1/samples/read_samples/" }
+  let(:samples_path) { "resources/record_3.0/samples/read_samples/" }
 
   subject { OrcidClient::Work.new(doi: doi, orcid: orcid, orcid_token: orcid_token) }
 
   describe 'schema' do
     it 'validates sample' do
-      validation_errors = subject.schema.validate(samples_path + 'work-full-2.1.xml').map { |error| error.to_s }
+      validation_errors = subject.schema.validate(samples_path + 'work-full-3.0.xml').map { |error| error.to_s }
       expect(validation_errors).to be_empty
     end
 

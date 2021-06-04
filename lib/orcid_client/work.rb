@@ -181,7 +181,7 @@ module OrcidClient
       { :'put-code' => put_code,
         :'visibility' => 'public',
         :'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
-        :'xsi:schemaLocation' => 'http://www.orcid.org/ns/work ../work-2.1.xsd',
+        :'xsi:schemaLocation' => 'http://www.orcid.org/ns/work ../work-3.0.xsd',
         :'xmlns:common' => 'http://www.orcid.org/ns/common',
         :'xmlns:work' => 'http://www.orcid.org/ns/work' }.compact
     end
