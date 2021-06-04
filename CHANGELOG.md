@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.9.3](https://github.com/datacite/orcid_client/tree/0.9.3) (2021-06-04)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.9.2...0.9.3)
+
 ## [0.9.2](https://github.com/datacite/orcid_client/tree/0.9.2) (2021-06-04)
 
 [Full Changelog](https://github.com/datacite/orcid_client/compare/0.9.1...0.9.2)
