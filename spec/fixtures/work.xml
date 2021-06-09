@@ -1,35 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <work:work xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://www.orcid.org/ns/common" xmlns:work="http://www.orcid.org/ns/work" visibility="public" xsi:schemaLocation="http://www.orcid.org/ns/work ../work-3.0.xsd">
   <work:title>
-    <common:title>Omniauth-Orcid: V.1.1.5</common:title>
+    <common:title>Cool DOI's</common:title>
   </work:title>
-  <work:journal-title>Zenodo</work:journal-title>
-  <work:short-description>onmiauth-orcid 1.1.5 was released on August 11, 2016 with the following changes: compatibility with omniauth-oauth2 1.4.0. Thanks to pull request #7 by eleanorakh.</work:short-description>
+  <work:journal-title>DataCite</work:journal-title>
+  <work:short-description>In 1998 Tim Berners-Lee coined the term cool URIs (1998), that is URIs that don’t change. We know that URLs referenced in the scholarly literature are often not cool, leading to link rot (Klein et al., 2014) and making it hard or impossible to find the information that people want. Now I'm just writing another sentence to test how much text the description field allows. Testing testing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis leo quis sem varius euismod. Vestibulum nibh mi, vehicula ut dui ut, elementum blandit purus. Aliquam justo libero, faucibus non lacinia nec, tempus sit amet magna. Fusce id odio eu eros dictum aliquet. Etiam lacinia ex et mi luctus cursus. Proin blandit mi a turpis posuere viverra. Nullam pharetra turpis eget ante ullamcorper aliquet. Curabitur rhoncus dolor et elit aliquet, vel tincidunt sem varius. Proin eleifend, massa faucibus ullamcorper dignissim, magna augue ornare erat, non cursus nisl nisi sed nunc. Donec scelerisque consectetur posuere. Pellentesque consequat massa erat, at condimentum neque consectetur non. Suspendisse rutrum tincidunt purus, eleifend posuere justo dapibus vitae. Nunc at mauris at quam bibendum pharetra eget ac massa. Mauris dui mi, convallis vel dignissim sed, mattis vitae tellus. Quisque id metus ac lacus ullamcorper bibendum. Duis nec aliquam dolor. Sed vel tristique purus. Proin hendrerit euismod neque, at pretium lectus auctor maximus. Sed accumsan aliquet molestie. Sed pharetra tristique viverra. Nunc sem augue, dapibus ut enim id, vulputate fermentum leo. Duis ante justo, tincidunt nec ultricies quis, sagittis non nulla. Donec nisl enim, ultrices iaculis congue sed, rutrum vitae odio. Duis suscipit placerat nunc, quis lobortis odio fermentum eu. Aliquam a dolor malesuada augue molestie interdum. Nam pulvinar ligula et magna interdum, in interdum eros consequat. Proin urna mi, consequat vitae velit ac, tincidunt feugiat dolor. Morbi iaculis mollis suscipit. Mauris dapibus tristique mauris, et interdum massa ultrices sit amet. Praesent id erat ipsum. Ut mattis massa vel mi mollis tristique. Nunc commodo mauris urna, sed facilisis elit venenatis non. Phasellus sed risus felis. Morbi fringilla fringilla erat, eget porttitor nisi iaculis in. Cras convallis nibh ac arcu pellentesque tristique. Integer ut tincidunt enim. In at eros id mi mattis porta quis eu tortor. Sed a purus in massa ultrices interdum. Integer pulvinar mauris sed viverra vestibulum. Aliquam magna...</work:short-description>
   <work:type>other</work:type>
   <common:publication-date>
     <common:year>2016</common:year>
-    <common:month>08</common:month>
-    <common:day>11</common:day>
+    <common:month>12</common:month>
+    <common:day>15</common:day>
   </common:publication-date>
   <common:external-ids>
     <common:external-id>
       <common:external-id-type>doi</common:external-id-type>
-      <common:external-id-value>10.5281/zenodo.59983</common:external-id-value>
+      <common:external-id-value>10.5438/h5xp-x178</common:external-id-value>
       <common:external-id-relationship>self</common:external-id-relationship>
     </common:external-id>
   </common:external-ids>
   <work:contributors>
     <work:contributor>
+      <common:contributor-orcid>
+        <common:uri>https://orcid.org/0000-0003-1419-2405</common:uri>
+        <common:path>0000-0003-1419-2405</common:path>
+        <common:host>orcid.org</common:host>
+      </common:contributor-orcid>
       <work:credit-name>Martin Fenner</work:credit-name>
-    </work:contributor>
-    <work:contributor>
-      <work:credit-name>Gudmundur A. Thorisson</work:credit-name>
-    </work:contributor>
-    <work:contributor>
-      <work:credit-name>Eleanor Kiefel Haggerty</work:credit-name>
-    </work:contributor>
-    <work:contributor>
-      <work:credit-name>Anusha Ranganathan</work:credit-name>
     </work:contributor>
   </work:contributors>
 </work:work>

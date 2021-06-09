@@ -23,7 +23,7 @@ module OrcidClient
       @doi = doi
       @orcid = orcid
       @orcid_token = orcid_token
-      @sandbox = options.fetch(:sandbox, nil) || ENV['API_URL'] == "https://api.test.datacite.org"
+      @sandbox = options.fetch(:sandbox, nil) || ENV['API_URL'] == "https://api.stage.datacite.org"
       @put_code = options.fetch(:put_code, nil)
     end
 

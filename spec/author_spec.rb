@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe OrcidClient, vcr: true do
-  let(:doi) { "10.5281/zenodo.59983"}
+  let(:doi) { "10.5438/h5xp-x178"}
   let(:orcid) { "0000-0001-6528-2027" }
   let(:orcid_token) { ENV['ORCID_TOKEN'] }
   let(:notification_access_token) { ENV['NOTIFICATION_ACCESS_TOKEN'] }

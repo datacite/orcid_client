@@ -8,28 +8,32 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.7.2; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.9.4; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
   response:
     status:
       code: 200
       message: ''
     headers:
       Date:
-      - Fri, 04 Jun 2021 17:46:39 GMT
+      - Tue, 08 Jun 2021 05:34:48 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
       - keep-alive
+      Content-Encoding:
+      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Cf-Request-Id:
-      - 0a79bb6d4f0000c2f9892af000000001
+      - 0a8bb6d766000005d84295f000000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v2?s=SqORtYS6dFNHeAjC%2BxlcJXopBMaRVquE1hdyp4xsZdEBMu2FVGsSeexhg%2FVLWJlgyoALj1YMGnsDmiDfzXWzAAdY8hxgMrk2wABmdrAwE5pbCuolSAGoB8K8Ygvw4Q4b"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v2?s=1WQIB0ojqsu1GJeJRuUN5Ftk%2FxQE8Vy2da%2B0uVzoejuO4K6%2FmGbtVy0OYPOSwkCiFT0WtzvrXyesQ6MxZejjtkWU%2BKWOKzKA8fKAinudROtpHL6uKmAN2NEc8BITJ5OZ"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -37,56 +41,51 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 65a2fb5bbedac2f9-FRA
+      - 65bfc0d23bee05d8-FRA
       Alt-Svc:
       - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400, h3=":443";
         ma=86400
     body:
       encoding: ASCII-8BIT
-      string: |-
-        [
-          {
-            "DOI": "10.1594",
-            "RA": "DataCite"
-          }
-        ]
-  recorded_at: Fri, 04 Jun 2021 17:46:38 GMT
+      string: !binary |-
+        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9Q1NLEyUdiGiQI0jQJbEk0TmzJFUJKFjLFQsAYsL1lzYAAAA=
+  recorded_at: Tue, 08 Jun 2021 05:34:48 GMT
 - request:
     method: get
-    uri: https://api.datacite.org/dois/10.1594/pangaea.745083?include=media,client
+    uri: https://api.stage.datacite.org/dois/10.1594/pangaea.745083?include=media,client
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.7.2; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.9.4; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Date:
-      - Fri, 04 Jun 2021 17:46:41 GMT
+      - Tue, 08 Jun 2021 05:34:48 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
       - keep-alive
       Status:
-      - 200 OK
-      X-Anonymous-Consumer:
-      - 'true'
+      - 404 Not Found
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       Vary:
       - Accept-Encoding, Origin
+      Content-Encoding:
+      - gzip
       X-Request-Id:
-      - 9150bcca-c73e-41f1-9e27-ca97855b6fd8
-      Etag:
-      - W/"3d9a4c71b172ad2f66e448298b58d34b"
+      - 790fe5cd-6eca-48b8-b4fd-e9a0f09c0d2f
       X-Runtime:
-      - '1.371086'
+      - '0.036047'
       X-Rack-Cors:
       - miss; no-origin
       X-Powered-By:
@@ -95,27 +94,7 @@ http_interactions:
       - nginx/1.14.0 + Phusion Passenger(R) 6.0.8
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":"10.1594/pangaea.745083","type":"dois","attributes":{"doi":"10.1594/pangaea.745083","prefix":"10.1594","suffix":"pangaea.745083","identifiers":[],"alternateIdentifiers":[],"creators":[{"name":"EPOCA
-        Arctic Experiment 2009 Team","affiliation":[],"nameIdentifiers":[]}],"titles":[{"title":"EPOCA
-        2009 Svalbard benthic experiment"}],"publisher":"PANGAEA - Data Publisher
-        for Earth & Environmental Science","container":{},"publicationYear":2009,"subjects":[{"subject":"European
-        Project on Ocean Acidification (EPOCA)","subjectScheme":"Project"}],"contributors":[],"dates":[{"date":"2009","dateType":"Issued"}],"language":"en","types":{"ris":"GEN","bibtex":"misc","citeproc":"article","schemaOrg":"Collection","resourceType":"Collection
-        of Datasets","resourceTypeGeneral":"Collection"},"relatedIdentifiers":[],"sizes":["10
-        datasets"],"formats":["application/zip"],"version":null,"rightsList":[{"rights":"Creative
-        Commons Attribution 3.0 Unported","rightsUri":"https://creativecommons.org/licenses/by/3.0/legalcode","schemeUri":"https://spdx.org/licenses/","rightsIdentifier":"cc-by-3.0","rightsIdentifierScheme":"SPDX"}],"descriptions":[],"geoLocations":[{"geoLocationBox":{"eastBoundLongitude":"12.07","northBoundLatitude":"78.96000000000001","southBoundLatitude":"78.94000000000001","westBoundLongitude":"11.9"}}],"fundingReferences":[{"awardUri":"https://cordis.europa.eu/project/rcn/87798/factsheet/en","awardTitle":"European
-        Project on Ocean Acidification (EPOCA)","funderName":"Seventh Framework Programme","awardNumber":"211384","funderIdentifier":"https://doi.org/10.13039/100011102","funderIdentifierType":"Crossref
-        Funder ID"}],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4xNTk0L1BBTkdBRUEuNzQ1MDgzPC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+RVBPQ0EgQXJjdGljIGV4cGVyaW1lbnQgMjAwOSB0ZWFtPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+RVBPQ0EgMjAwOSBTdmFsYmFyZCBiZW50aGljIGV4cGVyaW1lbnQ8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+UEFOR0FFQSAtIERhdGEgUHVibGlzaGVyIGZvciBFYXJ0aCAmYW1wOyBFbnZpcm9ubWVudGFsIFNjaWVuY2U8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMDk8L3B1YmxpY2F0aW9uWWVhcj4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdCBzdWJqZWN0U2NoZW1lPSJQcm9qZWN0Ij5FdXJvcGVhbiBQcm9qZWN0IG9uIE9jZWFuIEFjaWRpZmljYXRpb24gKEVQT0NBKTwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJDb2xsZWN0ZWQiPjIwMDktMDUtMDJUMTQ6MDA6MDAvMjAwOS0wNi0yOFQwMDowMDowMDwvZGF0ZT4KICA8L2RhdGVzPgogIDxsYW5ndWFnZT5lbjwvbGFuZ3VhZ2U+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJDb2xsZWN0aW9uIj5Db2xsZWN0aW9uIG9mIERhdGFzZXRzPC9yZXNvdXJjZVR5cGU+CiAgPHNpemVzPgogICAgPHNpemU+MTAgZGF0YXNldHM8L3NpemU+CiAgPC9zaXplcz4KICA8Zm9ybWF0cz4KICAgIDxmb3JtYXQ+YXBwbGljYXRpb24vemlwPC9mb3JtYXQ+CiAgPC9mb3JtYXRzPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9Imh0dHBzOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS8zLjAvIiBzY2hlbWVVUkk9Imh0dHBzOi8vc3BkeC5vcmcvbGljZW5zZXMvIiByaWdodHNJZGVudGlmaWVyU2NoZW1lPSJTUERYIiByaWdodHNJZGVudGlmaWVyPSJDQy1CWS0zLjAiPkNyZWF0aXZlIENvbW1vbnMgQXR0cmlidXRpb24gMy4wIFVucG9ydGVkPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxnZW9Mb2NhdGlvbnM+CiAgICA8Z2VvTG9jYXRpb24+CiAgICAgIDxnZW9Mb2NhdGlvbkJveD4KICAgICAgICA8d2VzdEJvdW5kTG9uZ2l0dWRlPjExLjk8L3dlc3RCb3VuZExvbmdpdHVkZT4KICAgICAgICA8ZWFzdEJvdW5kTG9uZ2l0dWRlPjEyLjA3PC9lYXN0Qm91bmRMb25naXR1ZGU+CiAgICAgICAgPHNvdXRoQm91bmRMYXRpdHVkZT43OC45NDAwMDAwMDAwMDAwMTwvc291dGhCb3VuZExhdGl0dWRlPgogICAgICAgIDxub3J0aEJvdW5kTGF0aXR1ZGU+NzguOTYwMDAwMDAwMDAwMDE8L25vcnRoQm91bmRMYXRpdHVkZT4KICAgICAgPC9nZW9Mb2NhdGlvbkJveD4KICAgIDwvZ2VvTG9jYXRpb24+CiAgPC9nZW9Mb2NhdGlvbnM+CiAgPGZ1bmRpbmdSZWZlcmVuY2VzPgogICAgPGZ1bmRpbmdSZWZlcmVuY2U+CiAgICAgIDxmdW5kZXJOYW1lPlNldmVudGggRnJhbWV3b3JrIFByb2dyYW1tZTwvZnVuZGVyTmFtZT4KICAgICAgPGZ1bmRlcklkZW50aWZpZXIgZnVuZGVySWRlbnRpZmllclR5cGU9IkNyb3NzcmVmIEZ1bmRlciBJRCI+aHR0cHM6Ly9kb2kub3JnLzEwLjEzMDM5LzEwMDAxMTEwMjwvZnVuZGVySWRlbnRpZmllcj4KICAgICAgPGF3YXJkTnVtYmVyIGF3YXJkVVJJPSJodHRwczovL2NvcmRpcy5ldXJvcGEuZXUvcHJvamVjdC9yY24vODc3OTgvZmFjdHNoZWV0L2VuIj4yMTEzODQ8L2F3YXJkTnVtYmVyPgogICAgICA8YXdhcmRUaXRsZT5FdXJvcGVhbiBQcm9qZWN0IG9uIE9jZWFuIEFjaWRpZmljYXRpb24gKEVQT0NBKTwvYXdhcmRUaXRsZT4KICAgIDwvZnVuZGluZ1JlZmVyZW5jZT4KICA8L2Z1bmRpbmdSZWZlcmVuY2VzPgo8L3Jlc291cmNlPg==","url":"https://doi.pangaea.de/10.1594/PANGAEA.745083","contentUrl":null,"metadataVersion":4,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"mds","isActive":true,"state":"findable","reason":null,"viewCount":0,"viewsOverTime":[],"downloadCount":0,"downloadsOverTime":[],"referenceCount":0,"citationCount":0,"citationsOverTime":[],"partCount":0,"partOfCount":0,"versionCount":0,"versionOfCount":0,"created":"2011-12-03T15:56:15.000Z","registered":"2010-10-21T01:06:41.000Z","published":"2009","updated":"2020-09-23T12:39:48.000Z"},"relationships":{"client":{"data":{"id":"pangaea.repository","type":"clients"}},"provider":{"data":{"id":"pangaea","type":"providers"}},"media":{"data":{"id":"10.1594/pangaea.745083","type":"media"}},"references":{"data":[]},"citations":{"data":[]},"parts":{"data":[]},"partOf":{"data":[]},"versions":{"data":[]},"versionOf":{"data":[]}}},"included":[{"id":"pangaea.repository","type":"clients","attributes":{"name":"PANGAEA","symbol":"PANGAEA.REPOSITORY","year":2020,"alternateName":"Data
-        Publisher for Earth and Environmental Science","description":"PANGAEA is a
-        data publisher for earth and environmental sciences. PANGAEA currently keeps
-        billions of data items comprised in hundred of thousands trans-disciplinary
-        data sets from all over the world. Since more than 25 years, PANGAEA is one
-        of the leading data centers for data curation, long-term data archiving and
-        publication. In contrast to generic data repositories, data curation at PANGAEA
-        includes editing of deposited data for accuracy by well-trained data editors
-        from the geological and biological domains. Since more than 10 years PANGAEA
-        assigns Digital Object Identifiers (DOI) to datasets. The PANGAEA team support
-        the further development of services for cross-linking data and paper publications
-        as well as evaluating the FAIR-ness of repositories according to the FAIR
-        principles.","language":["en"],"clientType":"repository","domains":"pangaea.de,doi.pangaea.de","re3data":"https://doi.org/10.17616/R3XS37","opendoar":null,"issn":{},"url":"https://www.pangaea.de/","created":"2020-03-11T13:58:41.000Z","updated":"2020-10-19T07:37:14.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"pangaea","type":"providers"}},"prefixes":{"data":[{"id":"10.1594","type":"prefixes"},{"id":"10.25594","type":"prefixes"}]}}}]}'
-  recorded_at: Fri, 04 Jun 2021 17:46:40 GMT
+      string: !binary |-
+        H4sIAHgBv2AAAwzHMQqAMAwF0KuELC4iDp08h5s4FP1qsTSQpKCId9ftvYehKmo8TA+bR68/OfSBW/bkGf/GA6QwqbqAbqkUFZRFzlR22kRpFVhpnHAl847f+f0AAAD//wMArpOW4VcAAAA=
+  recorded_at: Tue, 08 Jun 2021 05:34:49 GMT
 recorded_with: VCR 6.0.0

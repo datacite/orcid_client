@@ -18,6 +18,6 @@ module OrcidClient
 
     # default values for some ENV variables
     ENV['ORCID_API_URL'] ||= "https://api.sandbox.orcid.org"
-    ENV['API_URL'] ||= "https://api.datacite.org"
+    ENV['API_URL'] ||= "https://api.stage.datacite.org"
   end
 end

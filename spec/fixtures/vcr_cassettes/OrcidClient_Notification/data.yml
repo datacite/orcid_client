@@ -2,34 +2,38 @@
 http_interactions:
 - request:
     method: get
-    uri: https://doi.org/ra/10.5281
+    uri: https://doi.org/ra/10.5438
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.7.2; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.9.4; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
   response:
     status:
       code: 200
       message: ''
     headers:
       Date:
-      - Fri, 04 Jun 2021 17:46:28 GMT
+      - Tue, 08 Jun 2021 05:34:37 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
       - keep-alive
+      Content-Encoding:
+      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Cf-Request-Id:
-      - 0a79bb43f90000c2aecbafc000000001
+      - 0a8bb6ab3500004a5552068000000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v2?s=RdUr%2FxKhD14q7rJnv4Sub1T81hJI2ckE%2BfJjrQAALXHz%2FesAaFNTtXsTV8vBAJprbg0marqLbdsBmTgS6B4fDk%2BKWgXH8VE%2BPWp2lJ19%2FAXlaqS9N8UbPHMkxTQlBJk%2F"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v2?s=1C97SrDTDutP4LRxIi6AtpVmhySwLs3oyrKHzsAvjqZJ0tJUUcLAC3TV0a640Xs3XNjCduufhRmERzkOPyPvxs5sFVqcCZ5FQHY%2BKT0xQ25XRfwgkrPkQZ%2BuNy8xu8p9"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -37,83 +41,60 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 65a2fb198ad3c2ae-FRA
+      - 65bfc08b8c944a55-FRA
       Alt-Svc:
       - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400, h3=":443";
         ma=86400
     body:
       encoding: ASCII-8BIT
-      string: |-
-        [
-          {
-            "DOI": "10.5281",
-            "RA": "DataCite"
-          }
-        ]
-  recorded_at: Fri, 04 Jun 2021 17:46:28 GMT
+      string: !binary |-
+        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9UxNjCyUdiGiQI0jQJbEk0TmzJFUJKFjLFQsAD4HgHjYAAAA=
+  recorded_at: Tue, 08 Jun 2021 05:34:37 GMT
 - request:
     method: get
-    uri: https://api.datacite.org/dois/10.5281/zenodo.59983?include=media,client
+    uri: https://api.datacite.org/dois/10.5438/h5xp-x178?include=media,client
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.7.2; mailto:info@datacite.org)
+      - Mozilla/5.0 (compatible; Maremma/4.9.4; mailto:info@datacite.org)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Date:
-      - Fri, 04 Jun 2021 17:46:29 GMT
+      - Tue, 08 Jun 2021 05:34:41 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
       - keep-alive
       Status:
-      - 200 OK
-      X-Anonymous-Consumer:
-      - 'true'
+      - 404 Not Found
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       Vary:
       - Accept-Encoding, Origin
-      Etag:
-      - W/"2c798b5a263f82ba368db34b355c53c7"
+      Content-Encoding:
+      - gzip
+      X-Request-Id:
+      - 539ca4f1-65b2-458c-88e0-9cddf7b821c8
       X-Runtime:
-      - '0.260535'
+      - '0.477527'
       X-Rack-Cors:
       - miss; no-origin
-      X-Request-Id:
-      - 2122e71d-b493-4fb9-ac6b-dd2d37ee205f
       X-Powered-By:
       - Phusion Passenger(R) 6.0.8
       Server:
       - nginx/1.14.0 + Phusion Passenger(R) 6.0.8
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"id":"10.5281/zenodo.59983","type":"dois","attributes":{"doi":"10.5281/zenodo.59983","prefix":"10.5281","suffix":"zenodo.59983","identifiers":[],"alternateIdentifiers":[],"creators":[{"name":"Fenner,
-        Martin","nameType":"Personal","givenName":"Martin","familyName":"Fenner","affiliation":["DataCite"],"nameIdentifiers":[]},{"name":"Gudmundur
-        A. Thorisson","affiliation":[],"nameIdentifiers":[]},{"name":"Haggerty, Eleanor
-        Kiefel","nameType":"Personal","givenName":"Eleanor Kiefel","familyName":"Haggerty","affiliation":[],"nameIdentifiers":[]},{"name":"Anusha
-        Ranganathan","affiliation":[],"nameIdentifiers":[]}],"titles":[{"title":"Omniauth-Orcid:
-        V.1.1.5"}],"publisher":"Zenodo","container":{},"publicationYear":2016,"subjects":[],"contributors":[],"dates":[{"date":"2016-08-11","dateType":"Issued"}],"language":null,"types":{"ris":"COMP","bibtex":"misc","citeproc":"article","schemaOrg":"SoftwareSourceCode","resourceTypeGeneral":"Software"},"relatedIdentifiers":[{"relationType":"IsSupplementTo","relatedIdentifier":"https://github.com/datacite/omniauth-orcid/tree/v.1.1.5","relatedIdentifierType":"URL"},{"relationType":"IsVersionOf","relatedIdentifier":"10.5281/zenodo.593722","relatedIdentifierType":"DOI"}],"sizes":[],"formats":[],"version":null,"rightsList":[{"rights":"Open
-        Access","rightsUri":"info:eu-repo/semantics/openAccess"}],"descriptions":[{"description":"onmiauth-orcid
-        1.1.5 was released on August 11, 2016 with the following changes:\n\n\ncompatibility
-        with omniauth-oauth2 1.4.0. Thanks to pull request #7 by eleanorakh.","descriptionType":"Abstract"}],"geoLocations":[],"fundingReferences":[],"xml":"PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjEvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC41MjgxL3plbm9kby41OTk4MzwvaWRlbnRpZmllcj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPk1hcnRpbiBGZW5uZXI8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24+RGF0YUNpdGU8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5HdWRtdW5kdXIgQS4gVGhvcmlzc29uPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+RWxlYW5vciBLaWVmZWwgSGFnZ2VydHk8L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5BbnVzaGEgUmFuZ2FuYXRoYW48L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5PbW5pYXV0aC1PcmNpZDogVi4xLjEuNTwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5aZW5vZG88L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMTY8L3B1YmxpY2F0aW9uWWVhcj4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iSXNzdWVkIj4yMDE2LTA4LTExPC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJTb2Z0d2FyZSIvPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJ1cmwiPmh0dHBzOi8vemVub2RvLm9yZy9yZWNvcmQvNTk5ODM8L2FsdGVybmF0ZUlkZW50aWZpZXI+CiAgPC9hbHRlcm5hdGVJZGVudGlmaWVycz4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iVVJMIiByZWxhdGlvblR5cGU9IklzU3VwcGxlbWVudFRvIj5odHRwczovL2dpdGh1Yi5jb20vZGF0YWNpdGUvb21uaWF1dGgtb3JjaWQvdHJlZS92LjEuMS41PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJJc1ZlcnNpb25PZiI+MTAuNTI4MS96ZW5vZG8uNTkzNzIyPC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8dmVyc2lvbj52LjEuMS41PC92ZXJzaW9uPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9ImluZm86ZXUtcmVwby9zZW1hbnRpY3Mvb3BlbkFjY2VzcyI+T3BlbiBBY2Nlc3M8L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij4mbHQ7cCZndDsmbHQ7YSBocmVmPSJodHRwczovL2dpdGh1Yi5jb20vZGF0YWNpdGUvb21uaWF1dGgtb3JjaWQvcmVsZWFzZXMvdGFnL3YuMS4xLjUiJmd0O29ubWlhdXRoLW9yY2lkIDEuMS41Jmx0Oy9hJmd0OyB3YXMgcmVsZWFzZWQgb24gQXVndXN0IDExLCAyMDE2IHdpdGggdGhlIGZvbGxvd2luZyBjaGFuZ2VzOiZsdDsvcCZndDsKCiZsdDt1bCZndDsKJmx0O2xpJmd0O2NvbXBhdGliaWxpdHkgd2l0aCBvbW5pYXV0aC1vYXV0aDIgMS40LjAuIFRoYW5rcyB0byBwdWxsIHJlcXVlc3QgJmx0O2EgaHJlZj0iaHR0cHM6Ly9naXRodWIuY29tL2RhdGFjaXRlL29tbmlhdXRoLW9yY2lkL3B1bGwvNyImZ3Q7IzcmbHQ7L2EmZ3Q7IGJ5ICZsdDthIGhyZWY9Imh0dHBzOi8vZ2l0aHViLmNvbS9lbGVhbm9yYWtoIiZndDtlbGVhbm9yYWtoJmx0Oy9hJmd0Oy4mbHQ7L2xpJmd0OwombHQ7L3VsJmd0OzwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+Cg==","url":"https://zenodo.org/record/59983","contentUrl":null,"metadataVersion":2,"schemaVersion":"http://datacite.org/schema/kernel-4","source":null,"isActive":true,"state":"findable","reason":null,"viewCount":0,"viewsOverTime":[],"downloadCount":0,"downloadsOverTime":[],"referenceCount":1,"citationCount":0,"citationsOverTime":[],"partCount":0,"partOfCount":0,"versionCount":0,"versionOfCount":1,"created":"2016-08-11T04:47:51.000Z","registered":"2016-08-11T04:47:51.000Z","published":"2016","updated":"2020-09-20T10:25:35.000Z"},"relationships":{"client":{"data":{"id":"cern.zenodo","type":"clients"}},"provider":{"data":{"id":"cern","type":"providers"}},"media":{"data":{"id":"10.5281/zenodo.59983","type":"media"}},"references":{"data":[]},"citations":{"data":[]},"parts":{"data":[]},"partOf":{"data":[]},"versions":{"data":[]},"versionOf":{"data":[{"id":"10.5281/zenodo.593722","type":"dois"}]}}},"included":[{"id":"cern.zenodo","type":"clients","attributes":{"name":"Zenodo","symbol":"CERN.ZENODO","year":2013,"alternateName":"Research.
-        Shared","description":"ZENODO builds and operates a simple and innovative
-        service that enables researchers, scientists, EU projects and institutions
-        to share and showcase multidisciplinary research results (data and publications)
-        that are not part of the existing institutional or subject-based repositories
-        of the research communities.\r\nZENODO enables researchers, scientists, EU
-        projects and institutions to:\r\neasily share the long tail of small research
-        results in a wide variety of formats including text, spreadsheets, audio,
-        video, and images across all fields of science.\r\ndisplay their research
-        results and get credited by making the research results citable and integrate
-        them into existing reporting lines to funding agencies like the European Commission.\r\neasily
-        access and reuse shared research results.","language":["en"],"clientType":"repository","domains":"openaire.cern.ch,zenodo.org","re3data":"https://doi.org/10.17616/R3QP53","opendoar":null,"issn":{},"url":"https://zenodo.org/","created":"2013-01-28T12:07:48.000Z","updated":"2020-06-26T12:22:29.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"cern","type":"providers"}},"prefixes":{"data":[{"id":"10.5281","type":"prefixes"}]}}}]}'
-  recorded_at: Fri, 04 Jun 2021 17:46:28 GMT
+      string: !binary |-
+        H4sIAHEBv2AAAwzHMQqAMAwF0KuELC4iDp08h5s4FP1qsTSQpKCId9ftvYehKmo8TA+bR68/OfSBW/bkGf/GA6QwqbqAbqkUFZRFzlR22kRpFVhpnHAl847f+f0AAAD//wMArpOW4VcAAAA=
+  recorded_at: Tue, 08 Jun 2021 05:34:41 GMT
 recorded_with: VCR 6.0.0

@@ -1,11 +1,11 @@
 require 'spec_helper'
 
 describe OrcidClient, vcr: true do
-  let(:doi) { "10.5281/zenodo.59983"}
+  let(:doi) { "10.5438/h5xp-x178"}
   let(:orcid) { "0000-0001-6528-2027" }
   let(:orcid_token) { ENV["ORCID_TOKEN"] }
   let(:notification_access_token) { ENV["NOTIFICATION_ACCESS_TOKEN"] }
-  let(:put_code) { "921977" }
+  let(:put_code) { "1256188" }
   let(:fixture_path) { "spec/fixtures/" }
 
   subject { OrcidClient::Work.new(doi: doi, orcid: orcid, orcid_token: orcid_token, put_code: put_code) }
@@ -31,7 +31,7 @@ describe OrcidClient, vcr: true do
       it 'should get works' do
         response = subject.get_works(sandbox: true)
         works = response.body.fetch("data", {}).fetch("group", {})
-        expect(works.length).to eq(22)
+        expect(works.length).to eq(23)
         work = works.first
         expect(work["external-ids"]).to eq("external-id" => [{"external-id-normalized"=>{"transient"=>true, "value"=>"10.5256/f1000research.67475.r16884"}, "external-id-normalized-error"=>nil, "external-id-relationship"=>"self", "external-id-type"=>"doi", "external-id-url"=>nil, "external-id-value"=>"10.5256/f1000research.67475.r16884"}])
       end
