@@ -17,7 +17,9 @@ module OrcidClient
 
     include Bolognese::Utils
 
-    attr_reader :doi, :orcid, :schema, :orcid_token, :sandbox, :put_code, :validation_errors, :name_detector
+    attr_reader :doi, :orcid, :schema, :orcid_token, :sandbox, :put_code, :visibility, :validation_errors, :name_detector
+
+    attr_writer :visibility
 
     def initialize(doi:, orcid:, orcid_token:, **options)
       @doi = doi
@@ -25,6 +27,7 @@ module OrcidClient
       @orcid_token = orcid_token
       @sandbox = options.fetch(:sandbox, nil) || ENV['API_URL'] == "https://api.stage.datacite.org"
       @put_code = options.fetch(:put_code, nil)
+      @visibility = options.fetch(:visibility, 'public')
     end
 
     SCHEMA = File.expand_path("../../../resources/record_#{API_VERSION}/work-#{API_VERSION}.xsd", __FILE__)
@@ -42,7 +45,7 @@ module OrcidClient
       Array.wrap(metadata.creators).map do |contributor|
         orcid = Array.wrap(contributor["nameIdentifiers"]).find { |c| c["nameIdentifierScheme"] == "ORCID" }.to_h.fetch("nameIdentifier", nil)
         credit_name = contributor["familyName"].present? ? [contributor["givenName"], contributor["familyName"]].join(" ") : contributor["name"]
-        
+
         { orcid: orcid,
           credit_name: credit_name,
           role: nil }.compact
@@ -179,7 +182,7 @@ module OrcidClient
 
     def root_attributes
       { :'put-code' => put_code,
-        :'visibility' => 'public',
+        :'visibility' => visibility,
         :'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
         :'xsi:schemaLocation' => 'http://www.orcid.org/ns/work ../work-3.0.xsd',
         :'xmlns:common' => 'http://www.orcid.org/ns/common',
