@@ -29,7 +29,7 @@ module OrcidClient
       return OpenStruct.new(body: { "errors" => [{ "title" => "ORCID access token missing" }] }) unless orcid_token.present?
       return OpenStruct.new(body: { "errors" => [{ "title" => "Put code missing" }] }) unless put_code.present?
 
-      visibility = nil
+      self.visibility = nil
       orcid_api_url = options[:sandbox] ? 'https://api.sandbox.orcid.org' : 'https://api.orcid.org'
 
       url = "#{orcid_api_url}/v#{API_VERSION}/#{orcid}/work/#{put_code}"
