@@ -17,7 +17,7 @@ module OrcidClient
 
     include Bolognese::Utils
 
-    attr_reader :doi, :orcid, :schema, :orcid_token, :sandbox, :put_code, :visibility, :validation_errors, :name_detector
+    attr_reader :doi, :orcid, :schema, :orcid_token, :sandbox, :put_code, :agency, :visibility, :validation_errors, :name_detector
 
     attr_writer :visibility
 
@@ -27,6 +27,7 @@ module OrcidClient
       @orcid_token = orcid_token
       @sandbox = options.fetch(:sandbox, nil) || ENV['API_URL'] == "https://api.stage.datacite.org"
       @put_code = options.fetch(:put_code, nil)
+      @agency = options.fetch(:agency, nil)
       @visibility = options.fetch(:visibility, 'public')
     end
 
@@ -38,7 +39,7 @@ module OrcidClient
     end
 
     def metadata
-      @metadata ||= Bolognese::Metadata.new(input: doi, sandbox: sandbox)
+      @metadata ||= Bolognese::Metadata.new(input: doi, sandbox: sandbox, from: agency)
     end
 
     def contributors
