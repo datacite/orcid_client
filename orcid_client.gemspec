@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'dotenv', '~> 2.1', '>= 2.1.1'
   s.add_dependency 'maremma', '>= 4.4'
   s.add_dependency 'namae', '~> 1.0.1'
-  s.add_dependency 'nokogiri', '>= 1.10.4', '< 1.12.0'
+  s.add_dependency 'nokogiri', '>= 1.10.4', '< 1.14.0'
   s.add_development_dependency "bundler", ">= 2.2.10"
   s.add_development_dependency 'rack-test', '~> 0'
   s.add_development_dependency 'rake'
