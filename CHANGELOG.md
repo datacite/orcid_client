@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/datacite/orcid_client/tree/HEAD)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.9.8...HEAD)
+
+**Merged pull requests:**
+
+- Update Github Actions [\#19](https://github.com/datacite/orcid_client/pull/19) ([jrhoads](https://github.com/jrhoads))
+
 ## [0.9.8](https://github.com/datacite/orcid_client/tree/0.9.8) (2021-10-08)
 
 [Full Changelog](https://github.com/datacite/orcid_client/compare/0.9.7.1...0.9.8)
