@@ -1,0 +1,26 @@
+name: Run Tests
+on:
+  workflow_call:
+    secrets:
+      ORCID_TOKEN:
+        required: true
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby: ["2.6", "2.7", "3.0", "3.1"]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Ruby ${{matrix.ruby}}
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{matrix.ruby}}
+        bundler-cache: true
+
+    - name: Run tests
+      env:
+        ORCID_TOKEN: ${{ secrets.ORCID_TOKEN }}
+      run: |
+        bundle exec rspec
