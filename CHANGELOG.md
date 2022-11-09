@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Update Dependencies [\#20](https://github.com/datacite/orcid_client/pull/20) ([jrhoads](https://github.com/jrhoads))
 - Update Github Actions [\#19](https://github.com/datacite/orcid_client/pull/19) ([jrhoads](https://github.com/jrhoads))
 
 ## [0.9.8](https://github.com/datacite/orcid_client/tree/0.9.8) (2021-10-08)
