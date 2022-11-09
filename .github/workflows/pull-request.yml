@@ -1,0 +1,10 @@
+name: Pull Request - Run Tests
+
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  ci:
+    uses: ./.github/workflows/ci.yml
+    secrets: inherit
