@@ -45,7 +45,7 @@ module OrcidClient
                 case internal_work_subtype
                 when /^(Article|Articles|Journal Article|JournalArticle)$/i
                   'journal-article'
-                when /^(Book|ebook|Monografie|Monograph\w*|)$/i
+                when /^(Book|ebook|Monografie|Monograph\w*)$/i
                   'book'
                 when /^(chapter|chapters)$/i
                   'book-chapter'
