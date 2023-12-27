@@ -55,6 +55,11 @@ describe OrcidClient::Work, vcr: true do
       subject.metadata.types["resourceType"] = "working paper"
       expect(subject.type).to eq("working-paper")
     end
+    it "Text, preprint" do
+      subject.metadata.types["resourceTypeGeneral"] = "Text"
+      subject.metadata.types["resourceType"] = "preprint"
+      expect(subject.type).to eq("preprint")
+    end
     it "Text, dataset" do
       subject.metadata.types["resourceTypeGeneral"] = "Text"
       subject.metadata.types["resourceType"] = "dataset"

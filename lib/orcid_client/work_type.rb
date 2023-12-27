@@ -59,8 +59,10 @@ module OrcidClient
                   'conference-paper'
                 when /^(poster|Conference poster)$/i
                   'conference-poster'
-                when /^(working paper|workingpaper|preprint)$/i
+                when /^(working paper|workingpaper)$/i
                   'working-paper'
+                when /^(preprint)$/i
+                  'preprint'
                 when /^(dataset$)/i
                   'data-set'
                 end
