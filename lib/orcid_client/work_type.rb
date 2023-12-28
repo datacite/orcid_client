@@ -5,16 +5,28 @@ module OrcidClient
     TYPE_OF_WORK = {
 
       'Audiovisual' => 'other',
+      'Book' => 'book',
+      'BookChapter' => 'book-chapter',
       'Collection' => 'other',
+      'ComputationalNotebook' => 'software',
+      'ConferencePaper' => 'conference-paper',
       'Dataset' =>  'data-set',
+      'Dissertation' => 'dissertation-thesis',
       'Event' => 'other',
       'Image' => 'other',
-      'InteractiveResource' => 'online-resource',
+      'InteractiveResource' => 'other',
+      'Journal' => 'other',
+      'JournalArticle' => 'journal-article',
       'Model' => 'other',
-      'PhysicalObject' => 'other',
+      'OutputManagementPlan' => 'data-management-plan',
+      'PeerReview' => 'review',
+      'Preprint' => 'preprint',
+      'PhysicalObject' => 'physical-object',
+      'Report' => 'report',
       'Service' => 'other',
-      'Software' => 'other',
+      'Software' => 'software',
       'Sound' => 'other',
+      'Standard' => 'standards-and-policy',
       'Text' => 'other',
       'Workflow' => 'other',
       'Other' => 'other',
@@ -33,22 +45,24 @@ module OrcidClient
                 case internal_work_subtype
                 when /^(Article|Articles|Journal Article|JournalArticle)$/i
                   'journal-article'
-                when /^(Book|ebook|Monografie|Monograph\w*|)$/i
+                when /^(Book|ebook|Monografie|Monograph\w*)$/i
                   'book'
                 when /^(chapter|chapters)$/i
                   'book-chapter'
                 when /^(Project report|Report|Research report|Technical Report|TechnicalReport|Text\/Report|XFEL.EU Annual Report|XFEL.EU Technical Report)$/i
                   'report'
                 when /^(Dissertation|thesis|Doctoral thesis|Academic thesis|Master thesis|Masterthesis|Postdoctoral thesis)$/i
-                  'dissertation'
+                  'dissertation-thesis'
                 when /^(Conference Abstract|Conference extended abstract)$/i
                   'conference-abstract'
                 when /^(Conference full text|Conference paper|ConferencePaper)$/i
                   'conference-paper'
                 when /^(poster|Conference poster)$/i
                   'conference-poster'
-                when /^(working paper|workingpaper|preprint)$/i
+                when /^(working paper|workingpaper)$/i
                   'working-paper'
+                when /^(preprint)$/i
+                  'preprint'
                 when /^(dataset$)/i
                   'data-set'
                 end
@@ -56,7 +70,7 @@ module OrcidClient
               when 'Collection'
                 case internal_work_subtype
                 when /^(Collection of Datasets|Data Files|Dataset|Supplementary Collection of Datasets)$/i
-                  'data-set'
+                  'other'
                 when 'Report'
                   'report'
                 end
