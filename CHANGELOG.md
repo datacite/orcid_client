@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Version update [\#27](https://github.com/datacite/orcid_client/pull/27) ([codycooperross](https://github.com/codycooperross))
 - Work type mapping updates [\#26](https://github.com/datacite/orcid_client/pull/26) ([codycooperross](https://github.com/codycooperross))
 - Update Dependencies [\#20](https://github.com/datacite/orcid_client/pull/20) ([jrhoads](https://github.com/jrhoads))
 - Update Github Actions [\#19](https://github.com/datacite/orcid_client/pull/19) ([jrhoads](https://github.com/jrhoads))
