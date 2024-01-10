@@ -1,9 +1,9 @@
 PATH
   remote: .
   specs:
-    orcid_client (0.10.0)
+    orcid_client (0.10.1)
       activesupport (>= 4.2.5, < 6)
-      bolognese (~> 1.3, >= 1.9.8)
+      bolognese (~> 2.1.0)
       builder (~> 3.2, >= 3.2.2)
       dotenv (~> 2.1, >= 2.1.1)
       maremma (>= 4.4)
@@ -24,7 +24,7 @@ GEM
     benchmark_methods (0.7)
     bibtex-ruby (6.0.0)
       latex-decode (~> 0.0)
-    bolognese (1.11.0)
+    bolognese (2.1.0)
       activesupport (>= 4.2.5)
       benchmark_methods (~> 0.7)
       bibtex-ruby (>= 5.1.0)
@@ -234,4 +234,4 @@ DEPENDENCIES
   webmock (~> 3.0, >= 3.0.1)
 
 BUNDLED WITH
-   2.4.10
+   2.4.22
