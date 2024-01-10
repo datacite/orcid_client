@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/datacite/orcid_client/tree/HEAD)
+## [0.10.1](https://github.com/datacite/orcid_client/tree/0.10.1) (2024-01-10)
 
-[Full Changelog](https://github.com/datacite/orcid_client/compare/0.10.0...HEAD)
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.10.0...0.10.1)
 
 **Merged pull requests:**
 
@@ -109,19 +109,19 @@
 
 ## [v.0.4.3](https://github.com/datacite/orcid_client/tree/v.0.4.3) (2018-12-12)
 
-[Full Changelog](https://github.com/datacite/orcid_client/compare/v.0.4.1...v.0.4.3)
+[Full Changelog](https://github.com/datacite/orcid_client/compare/v.0.4.2...v.0.4.3)
 
 **Merged pull requests:**
 
 - Chore update Bolognese [\#3](https://github.com/datacite/orcid_client/pull/3) ([kjgarza](https://github.com/kjgarza))
 
-## [v.0.4.1](https://github.com/datacite/orcid_client/tree/v.0.4.1) (2018-04-11)
-
-[Full Changelog](https://github.com/datacite/orcid_client/compare/v.0.4.2...v.0.4.1)
-
 ## [v.0.4.2](https://github.com/datacite/orcid_client/tree/v.0.4.2) (2018-04-11)
 
-[Full Changelog](https://github.com/datacite/orcid_client/compare/v.0.4...v.0.4.2)
+[Full Changelog](https://github.com/datacite/orcid_client/compare/v.0.4.1...v.0.4.2)
+
+## [v.0.4.1](https://github.com/datacite/orcid_client/tree/v.0.4.1) (2018-04-11)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/v.0.4...v.0.4.1)
 
 ## [v.0.4](https://github.com/datacite/orcid_client/tree/v.0.4) (2018-04-11)
 
