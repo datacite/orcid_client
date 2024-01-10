@@ -59,7 +59,7 @@ module OrcidClient
 
     # user publisher name as fallback
     def container_title
-      metadata.container_title || metadata.publisher
+      metadata.container_title || metadata.publisher.present? ? metadata.publisher["name"] : nil
     end
 
     def publication_date
