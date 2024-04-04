@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # Declary dependencies here, rather than in the Gemfile
-  s.add_dependency 'activesupport', '>= 4.2.5', '< 6'
+  s.add_dependency 'activesupport', '>= 6', '< 7'
   s.add_dependency 'bolognese', '~> 2.1.0'
   s.add_dependency 'builder', '~> 3.2', '>= 3.2.2'
   s.add_dependency 'dotenv', '~> 2.1', '>= 2.1.1'
