@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/datacite/orcid_client/tree/HEAD)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.10.1...HEAD)
+
+**Merged pull requests:**
+
+- Upgrade activesupport [\#29](https://github.com/datacite/orcid_client/pull/29) ([richardhallett](https://github.com/richardhallett))
+
 ## [0.10.1](https://github.com/datacite/orcid_client/tree/0.10.1) (2024-01-10)
 
 [Full Changelog](https://github.com/datacite/orcid_client/compare/0.10.0...0.10.1)
