@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/datacite/orcid_client/tree/HEAD)
+## [0.11.0](https://github.com/datacite/orcid_client/tree/0.11.0) (2024-04-05)
 
-[Full Changelog](https://github.com/datacite/orcid_client/compare/0.10.1...HEAD)
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.10.1...0.11.0)
 
 **Merged pull requests:**
 
