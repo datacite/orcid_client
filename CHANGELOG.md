@@ -1,5 +1,17 @@
 # Changelog
 
+## [Unreleased](https://github.com/datacite/orcid_client/tree/HEAD)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.11.0...HEAD)
+
+**Closed issues:**
+
+- Add Rails 7.x support [\#30](https://github.com/datacite/orcid_client/issues/30)
+
+**Merged pull requests:**
+
+- upgrade to support activesupport 7 [\#31](https://github.com/datacite/orcid_client/pull/31) ([wendelfabianchinsamy](https://github.com/wendelfabianchinsamy))
+
 ## [0.11.0](https://github.com/datacite/orcid_client/tree/0.11.0) (2024-04-05)
 
 [Full Changelog](https://github.com/datacite/orcid_client/compare/0.10.1...0.11.0)
