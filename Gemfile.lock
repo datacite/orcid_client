@@ -1,31 +1,37 @@
 PATH
   remote: .
   specs:
-    orcid_client (0.11.0)
-      activesupport (>= 6, < 7)
-      bolognese (~> 2.1.0)
+    orcid_client (0.12.0)
+      activesupport (>= 7, < 8)
+      bolognese (~> 2.2)
       builder (~> 3.2, >= 3.2.2)
       dotenv (~> 2.1, >= 2.1.1)
-      maremma (>= 4.4)
+      maremma (>= 5.0)
       namae (~> 1.0.1)
-      nokogiri (>= 1.13.9)
+      nokogiri (>= 1.16.4)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.1.7.7)
+    activesupport (7.1.3.2)
+      base64
+      bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
+      connection_pool (>= 2.2.5)
+      drb
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
+      mutex_m
       tzinfo (~> 2.0)
-      zeitwerk (~> 2.3)
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
     amazing_print (1.4.0)
+    base64 (0.2.0)
     benchmark_methods (0.7)
     bibtex-ruby (6.0.0)
       latex-decode (~> 0.0)
-    bolognese (2.1.0)
+    bigdecimal (3.1.7)
+    bolognese (2.2.0)
       activesupport (>= 4.2.5)
       benchmark_methods (~> 0.7)
       bibtex-ruby (>= 5.1.0)
@@ -40,9 +46,9 @@ GEM
       json-ld-preloaded (~> 3.1, >= 3.1.3)
       jsonlint (~> 0.3.0)
       loofah (~> 2.0, >= 2.0.3)
-      maremma (>= 4.9.4, < 5)
+      maremma (~> 5.0)
       namae (~> 1.0)
-      nokogiri (>= 1.13.2, < 1.14)
+      nokogiri (~> 1.16, >= 1.16.2)
       oj (~> 3.10)
       oj_mimic_json (~> 1.0, >= 1.0.1)
       postrank-uri (~> 1.0, >= 1.0.18)
@@ -57,6 +63,7 @@ GEM
       csl (~> 1.6)
     colorize (0.8.1)
     concurrent-ruby (1.2.3)
+    connection_pool (2.4.1)
     crack (0.4.5)
       rexml
     crass (1.0.6)
@@ -68,6 +75,7 @@ GEM
     diff-lcs (1.5.0)
     docile (1.4.0)
     dotenv (2.8.1)
+    drb (2.2.1)
     ebnf (2.3.1)
       amazing_print (~> 1.4)
       htmlentities (~> 4.3)
@@ -123,7 +131,7 @@ GEM
     loofah (2.19.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    maremma (4.9.9)
+    maremma (5.0.0)
       activesupport (>= 4.2.5)
       addressable (>= 2.3.6)
       builder (~> 3.2, >= 3.2.2)
@@ -134,15 +142,18 @@ GEM
       faraday-follow_redirects (~> 0.3.0)
       faraday-gzip (~> 0.1.0)
       faraday-multipart (~> 1.0.4)
-      nokogiri (>= 1.13.1, < 1.14.0)
+      nokogiri (~> 1.16, >= 1.16.2)
       oj (>= 2.8.3)
       oj_mimic_json (~> 1.0, >= 1.0.1)
     matrix (0.4.2)
     minitest (5.22.3)
     multi_json (1.15.0)
     multipart-post (2.2.3)
+    mutex_m (0.2.0)
     namae (1.0.2)
-    nokogiri (1.13.9-x86_64-linux)
+    nokogiri (1.16.4-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.16.4-x86_64-linux)
       racc (~> 1.4)
     oj (3.13.23)
     oj_mimic_json (1.0.1)
@@ -218,10 +229,10 @@ GEM
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
-    zeitwerk (2.6.13)
     zlib (2.1.1)
 
 PLATFORMS
+  arm64-darwin-23
   x86_64-linux
 
 DEPENDENCIES
@@ -235,4 +246,4 @@ DEPENDENCIES
   webmock (~> 3.0, >= 3.0.1)
 
 BUNDLED WITH
-   2.4.22
+   2.5.5
