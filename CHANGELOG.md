@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/datacite/orcid_client/tree/HEAD)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.12.0...HEAD)
+
+**Merged pull requests:**
+
+- Update latest bolognese gem version [\#32](https://github.com/datacite/orcid_client/pull/32) ([ashwinisukale](https://github.com/ashwinisukale))
+
 ## [0.12.0](https://github.com/datacite/orcid_client/tree/0.12.0) (2024-04-25)
 
 [Full Changelog](https://github.com/datacite/orcid_client/compare/0.11.0...0.12.0)
