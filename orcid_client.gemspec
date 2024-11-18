@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
 
   # Declary dependencies here, rather than in the Gemfile
   s.add_dependency 'activesupport', '>= 7', '< 8'
-  s.add_dependency 'bolognese', '~> 2.2'
+  s.add_dependency 'bolognese', '~> 2.3'
   s.add_dependency 'builder', '~> 3.2', '>= 3.2.2'
   s.add_dependency 'dotenv', '~> 2.1', '>= 2.1.1'
   s.add_dependency 'maremma', '>= 5.0'
