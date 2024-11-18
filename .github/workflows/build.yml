@@ -8,17 +8,4 @@ jobs:
   test:
     uses: ./.github/workflows/ci.yml
     secrets: inherit
-  notify:
-    needs: test
-    runs-on: ubuntu-latest
-    env:
-      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-    steps:
-    - name: Notify Slack
-      uses: adamkdean/simple-slack-notify@1.0.4
-      with:
-        channel: '#ops'
-        username: 'GitHub Actions'
-        color: 'good'
-        text: 'A new version of the orcid_client gem has been built.'
 
