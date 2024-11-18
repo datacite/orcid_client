@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Remove notify slack [\#33](https://github.com/datacite/orcid_client/pull/33) ([ashwinisukale](https://github.com/ashwinisukale))
 - Update latest bolognese gem version [\#32](https://github.com/datacite/orcid_client/pull/32) ([ashwinisukale](https://github.com/ashwinisukale))
 
 ## [0.12.0](https://github.com/datacite/orcid_client/tree/0.12.0) (2024-04-25)
