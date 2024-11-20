@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/datacite/orcid_client/tree/HEAD)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.13.0...HEAD)
+
+**Merged pull requests:**
+
+- Update version [\#37](https://github.com/datacite/orcid_client/pull/37) ([ashwinisukale](https://github.com/ashwinisukale))
+
 ## [0.13.0](https://github.com/datacite/orcid_client/tree/0.13.0) (2024-11-20)
 
 [Full Changelog](https://github.com/datacite/orcid_client/compare/0.12.0...0.13.0)
