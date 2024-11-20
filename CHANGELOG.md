@@ -4,8 +4,13 @@
 
 [Full Changelog](https://github.com/datacite/orcid_client/compare/0.12.0...HEAD)
 
+**Closed issues:**
+
+- Remove slack notification from git action as its already broken [\#36](https://github.com/datacite/orcid_client/issues/36)
+
 **Merged pull requests:**
 
+- Update version number [\#34](https://github.com/datacite/orcid_client/pull/34) ([ashwinisukale](https://github.com/ashwinisukale))
 - Remove notify slack [\#33](https://github.com/datacite/orcid_client/pull/33) ([ashwinisukale](https://github.com/ashwinisukale))
 - Update latest bolognese gem version [\#32](https://github.com/datacite/orcid_client/pull/32) ([ashwinisukale](https://github.com/ashwinisukale))
 
