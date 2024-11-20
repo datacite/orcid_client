@@ -1,12 +1,13 @@
 # Changelog
 
-## [Unreleased](https://github.com/datacite/orcid_client/tree/HEAD)
+## [0.13.0](https://github.com/datacite/orcid_client/tree/0.13.0) (2024-11-20)
 
-[Full Changelog](https://github.com/datacite/orcid_client/compare/0.12.0...HEAD)
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.12.0...0.13.0)
 
 **Closed issues:**
 
 - Remove slack notification from git action as its already broken [\#36](https://github.com/datacite/orcid_client/issues/36)
+- Update bolognese gem version and release changes with new version [\#35](https://github.com/datacite/orcid_client/issues/35)
 
 **Merged pull requests:**
 
