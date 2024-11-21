@@ -1,9 +1,9 @@
 PATH
   remote: .
   specs:
-    orcid_client (0.15.0)
+    orcid_client (0.16.0)
       activesupport (>= 7, < 8)
-      bolognese (~> 2.3)
+      bolognese (~> 2.3.2)
       builder (~> 3.2, >= 3.2.2)
       dotenv (~> 2.1, >= 2.1.1)
       maremma (>= 5.0)
@@ -31,7 +31,7 @@ GEM
     bibtex-ruby (6.0.0)
       latex-decode (~> 0.0)
     bigdecimal (3.1.7)
-    bolognese (2.3.0)
+    bolognese (2.3.2)
       activesupport (>= 4.2.5)
       benchmark_methods (~> 0.7)
       bibtex-ruby (>= 5.1.0)
