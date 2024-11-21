@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/datacite/orcid_client/tree/HEAD)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.15.0...HEAD)
+
+**Merged pull requests:**
+
+- Bolognese update [\#39](https://github.com/datacite/orcid_client/pull/39) ([ashwinisukale](https://github.com/ashwinisukale))
+
 ## [0.15.0](https://github.com/datacite/orcid_client/tree/0.15.0) (2024-11-20)
 
 [Full Changelog](https://github.com/datacite/orcid_client/compare/0.14.0...0.15.0)
