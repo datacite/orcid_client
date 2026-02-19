@@ -20,7 +20,9 @@ module OrcidClient
       'Model' => 'other',
       'OutputManagementPlan' => 'data-management-plan',
       'PeerReview' => 'review',
+      'Poster' => 'conference-poster',
       'Preprint' => 'preprint',
+      'Presentation' => 'conference-presentation',
       'PhysicalObject' => 'physical-object',
       'Report' => 'report',
       'Service' => 'other',
@@ -59,6 +61,8 @@ module OrcidClient
                   'conference-paper'
                 when /^(poster|Conference poster)$/i
                   'conference-poster'
+                when /^(presentation|Conference presentation)$/i
+                  'conference-presentation'
                 when /^(working paper|workingpaper)$/i
                   'working-paper'
                 when /^(preprint)$/i
