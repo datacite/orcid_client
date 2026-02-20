@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/datacite/orcid_client/tree/HEAD)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.16.0...HEAD)
+
+**Merged pull requests:**
+
+- Metadata 4.7 updates for orcid\_client [\#41](https://github.com/datacite/orcid_client/pull/41) ([svogt0511](https://github.com/svogt0511))
+
 ## [0.16.0](https://github.com/datacite/orcid_client/tree/0.16.0) (2024-11-21)
 
 [Full Changelog](https://github.com/datacite/orcid_client/compare/0.15.0...0.16.0)
