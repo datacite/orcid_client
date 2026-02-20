@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/datacite/orcid_client/tree/HEAD)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.17.0...HEAD)
+
+**Merged pull requests:**
+
+- Forgot to update the gem version. [\#42](https://github.com/datacite/orcid_client/pull/42) ([svogt0511](https://github.com/svogt0511))
+
 ## [0.17.0](https://github.com/datacite/orcid_client/tree/0.17.0) (2026-02-20)
 
 [Full Changelog](https://github.com/datacite/orcid_client/compare/0.16.0...0.17.0)
