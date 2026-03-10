@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
   # s.add_dependency 'maremma', '>= 5.0'
   s.add_dependency 'namae', '~> 1.2'
   s.add_dependency 'nokogiri', '>= 1.19', '>= 1.19.1'
-  s.add_development_dependency "bundler", "~> 4.0", ">= 4.0.7"
+  s.add_development_dependency "bundler", ">= 2.2.10"
   s.add_development_dependency 'rack-test', '~> 2.2'
   s.add_development_dependency 'rake', '~> 13.3', '>= 13.3.1'
   s.add_development_dependency 'rspec', '~> 3.4'
