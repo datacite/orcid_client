@@ -20,17 +20,17 @@ Gem::Specification.new do |s|
 
   # Declary dependencies here, rather than in the Gemfile
   s.add_dependency 'activesupport', '~> 8.1', '>= 8.1.2'
-  # s.add_dependency 'bolognese', '~> 2.5.1'
+  s.add_dependency 'bolognese', '~> 2.6.0'
   s.add_dependency 'builder', '~> 3.3'
   s.add_dependency 'dotenv', '~> 3.2'
-  # s.add_dependency 'maremma', '>= 5.0'
+  s.add_dependency 'maremma', '~> 6.0'
   s.add_dependency 'namae', '~> 1.2'
   s.add_dependency 'nokogiri', '>= 1.19', '>= 1.19.1'
-  s.add_development_dependency "bundler", ">= 2.2.10"
+  s.add_development_dependency 'bundler', '>= 2.2.10'
   s.add_development_dependency 'rack-test', '~> 2.2'
   s.add_development_dependency 'rake', '~> 13.3', '>= 13.3.1'
-  s.add_development_dependency 'rspec', '~> 3.4'
-  s.add_development_dependency 'simplecov'
+  s.add_development_dependency 'rspec', '~> 3.13', '>= 3.13.2'
+  s.add_development_dependency 'simplecov', '~> 0.22.0'
   s.add_development_dependency 'vcr', '~> 6.4'
   s.add_development_dependency 'webmock', '~> 3.26', '>= 3.26.1'
 end

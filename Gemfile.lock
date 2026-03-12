@@ -1,58 +1,12 @@
-GIT
-  remote: https://github.com/datacite/bolognese.git
-  revision: 132dcfa574bf95a1365cf86a6f539c2296d5ac03
-  branch: ks-ruby-4-upgrade
-  specs:
-    bolognese (2.6.0)
-      activesupport (~> 8.1, >= 8.1.2)
-      bibtex-ruby (>= 5.1.0)
-      builder (~> 3.2, >= 3.2.2)
-      citeproc-ruby (~> 2.1, >= 2.1.8)
-      colorize (~> 0.8.1)
-      concurrent-ruby (~> 1.3, >= 1.3.6)
-      csl-styles (~> 2.0, >= 2.0.2)
-      csv (~> 3.3, >= 3.3.5)
-      edtf (~> 3.0, >= 3.0.4)
-      gender_detector (~> 0.1.2)
-      iso8601 (~> 0.9.1)
-      json-ld-preloaded (~> 3.1, >= 3.1.3)
-      jsonlint (~> 0.3.0)
-      loofah (~> 2.0, >= 2.0.3)
-      namae (~> 1.0)
-      nokogiri (~> 1.16, >= 1.16.2)
-      oj (~> 3.10)
-      oj_mimic_json (~> 1.0, >= 1.0.1)
-      rdf-rdfxml (~> 3.1)
-      rdf-turtle (~> 3.1)
-      thor (>= 0.19)
-
-GIT
-  remote: https://github.com/datacite/maremma.git
-  revision: f578f98e3fa39a5a990baaaf48bc70c699ac2880
-  branch: ks-ruby-4-upgrade
-  specs:
-    maremma (5.0.0)
-      activesupport (~> 8.1, >= 8.1.2)
-      addressable (~> 2.8, >= 2.8.9)
-      builder (~> 3.2, >= 3.2.2)
-      excon (~> 1.3, >= 1.3.2)
-      faraday (>= 2.0)
-      faraday-encoding (~> 0.0.6)
-      faraday-excon (~> 2.4.0)
-      faraday-follow_redirects (~> 0.5.0)
-      faraday-gzip (~> 3.1.0)
-      faraday-multipart (~> 1.2.0)
-      nokogiri (~> 1.19, >= 1.19.1)
-      oj (~> 3.16, >= 3.16.15)
-      oj_mimic_json (~> 1.0, >= 1.0.1)
-
 PATH
   remote: .
   specs:
     orcid_client (0.18.0)
       activesupport (~> 8.1, >= 8.1.2)
+      bolognese (~> 2.6.0)
       builder (~> 3.3)
       dotenv (~> 3.2)
+      maremma (~> 6.0)
       namae (~> 1.2)
       nokogiri (>= 1.19.1, >= 1.19)
 
@@ -81,6 +35,27 @@ GEM
       logger (~> 1.7)
       racc (~> 1.7)
     bigdecimal (3.3.1)
+    bolognese (2.6.0)
+      activesupport (~> 8.1, >= 8.1.2)
+      bibtex-ruby (~> 6.2)
+      builder (~> 3.3)
+      citeproc-ruby (~> 2.1, >= 2.1.8)
+      concurrent-ruby (~> 1.3, >= 1.3.6)
+      csl-styles (~> 2.0, >= 2.0.2)
+      csv (~> 3.3, >= 3.3.5)
+      edtf (~> 3.2)
+      gender_detector (~> 2.1)
+      iso8601 (~> 0.13.0)
+      json-ld-preloaded (~> 3.3, >= 3.3.2)
+      jsonlint (~> 0.4.0)
+      loofah (~> 2.25)
+      maremma (~> 6.0)
+      namae (~> 1.2)
+      nokogiri (~> 1.19, >= 1.19.1)
+      oj (~> 3.16, >= 3.16.15)
+      rdf-rdfxml (~> 3.3)
+      rdf-turtle (~> 3.3, >= 3.3.1)
+      thor (~> 1.5)
     builder (3.3.0)
     citeproc (1.1.0)
       date
@@ -93,7 +68,6 @@ GEM
       citeproc (~> 1.0, >= 1.0.9)
       csl (~> 2.0)
       observer (< 1.0)
-    colorize (0.8.1)
     concurrent-ruby (1.3.6)
     connection_pool (3.0.2)
     crack (1.0.1)
@@ -146,14 +120,13 @@ GEM
     faraday-net_http (3.4.2)
       net-http (~> 0.5)
     forwardable (1.4.0)
-    gender_detector (0.1.2)
-      unicode_utils (>= 1.3.0)
+    gender_detector (2.1.0)
     hashdiff (1.2.1)
     htmlentities (4.4.2)
     i18n (1.14.8)
       concurrent-ruby (~> 1.0)
     io-console (0.8.2)
-    iso8601 (0.9.1)
+    iso8601 (0.13.0)
     json (2.19.1)
     json-canonicalization (1.0.0)
     json-ld (3.3.2)
@@ -167,7 +140,7 @@ GEM
     json-ld-preloaded (3.3.2)
       json-ld (~> 3.3)
       rdf (~> 3.3)
-    jsonlint (0.3.0)
+    jsonlint (0.4.0)
       oj (~> 3)
       optimist (~> 3)
     latex-decode (0.4.2)
@@ -176,6 +149,20 @@ GEM
     loofah (2.25.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
+    maremma (6.0.0)
+      activesupport (~> 8.1, >= 8.1.2)
+      addressable (~> 2.8, >= 2.8.9)
+      builder (~> 3.2, >= 3.2.2)
+      excon (~> 1.3, >= 1.3.2)
+      faraday (>= 2.0)
+      faraday-encoding (~> 0.0.6)
+      faraday-excon (~> 2.4.0)
+      faraday-follow_redirects (~> 0.5.0)
+      faraday-gzip (~> 3.1.0)
+      faraday-multipart (~> 1.2.0)
+      nokogiri (~> 1.19, >= 1.19.1)
+      oj (~> 3.16, >= 3.16.15)
+      oj_mimic_json (~> 1.0, >= 1.0.1)
     matrix (0.4.3)
     minitest (6.0.2)
       drb (~> 2.0)
@@ -278,7 +265,6 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-types (1.11.0)
-    unicode_utils (1.4.0)
     uri (1.1.1)
     vcr (6.4.0)
     webmock (3.26.1)
@@ -298,14 +284,12 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  bolognese (~> 2.6.0)!
   bundler (>= 2.2.10)
-  maremma (~> 5.0)!
   orcid_client!
   rack-test (~> 2.2)
   rake (~> 13.3, >= 13.3.1)
-  rspec (~> 3.4)
-  simplecov
+  rspec (~> 3.13, >= 3.13.2)
+  simplecov (~> 0.22.0)
   vcr (~> 6.4)
   webmock (~> 3.26, >= 3.26.1)
 
@@ -316,11 +300,10 @@ CHECKSUMS
   bcp47_spec (0.2.1) sha256=3fd62edf96c126bd9624e4319ac74082a966081859d1ee0ef3c3041640a37810
   bibtex-ruby (6.2.0) sha256=d610eba78d6adf503a843daf144644449fb34e7c3f4a75e9ab67fae5dfd7c69a
   bigdecimal (3.3.1) sha256=eaa01e228be54c4f9f53bf3cc34fe3d5e845c31963e7fcc5bedb05a4e7d52218
-  bolognese (2.6.0)
+  bolognese (2.6.0) sha256=d967e23d7acb316f2df8dbfb94c0adfd6d217967b91ac2a8f285f8d33316d8f3
   builder (3.3.0) sha256=497918d2f9dca528fdca4b88d84e4ef4387256d984b8154e9d5d3fe5a9c8835f
   citeproc (1.1.0) sha256=278e6b8948133e82bef1c8204a1f88ca7adaa8744b9a283fe73e8f4cd0b53b95
   citeproc-ruby (2.1.8) sha256=192ce6525235adaa60d1dbc3f1b10b0839e86d98a94278736b807e234b3572e9
-  colorize (0.8.1) sha256=0ba0c2a58232f9b706dc30621ea6aa6468eeea120eb6f1ccc400105b90c4798c
   concurrent-ruby (1.3.6) sha256=6b56837e1e7e5292f9864f34b69c5a2cbc75c0cf5338f1ce9903d10fa762d5ab
   connection_pool (3.0.2) sha256=33fff5ba71a12d2aa26cb72b1db8bba2a1a01823559fb01d29eb74c286e62e0a
   crack (1.0.1) sha256=ff4a10390cd31d66440b7524eb1841874db86201d5b70032028553130b6d4c7e
@@ -344,22 +327,22 @@ CHECKSUMS
   faraday-multipart (1.2.0) sha256=7d89a949693714176f612323ca13746a2ded204031a6ba528adee788694ef757
   faraday-net_http (3.4.2) sha256=f147758260d3526939bf57ecf911682f94926a3666502e24c69992765875906c
   forwardable (1.4.0) sha256=f1cd40cc9812937980e1c76f1aa053660990a7c9b6a98fc37d945468afcce838
-  gender_detector (0.1.2) sha256=caf7ef85d56640f9e0ac29465c2b53a8b876709227e5265f7761783faa27e3f3
+  gender_detector (2.1.0) sha256=4aa9361933c556d84f4ccab695b3a3b1cc54c355f52cdcaf0c70e56825c4d457
   hashdiff (1.2.1) sha256=9c079dbc513dfc8833ab59c0c2d8f230fa28499cc5efb4b8dd276cf931457cd1
   htmlentities (4.4.2) sha256=bbafbdf69f2eca9262be4efef7e43e6a1de54c95eb600f26984f71d2fe96c5c3
   i18n (1.14.8) sha256=285778639134865c5e0f6269e0b818256017e8cde89993fdfcbfb64d088824a5
   io-console (0.8.2) sha256=d6e3ae7a7cc7574f4b8893b4fca2162e57a825b223a177b7afa236c5ef9814cc
-  iso8601 (0.9.1) sha256=d71744eb89b586368df1a98955038034dcc45645ad36af5555b2769a5cc62a36
+  iso8601 (0.13.0) sha256=298c2b15b7be5fa95a1372813d36a2257656cd8e906dfbc1f5cb409851425aa2
   json (2.19.1) sha256=dd94fdc59e48bff85913829a32350b3148156bc4fd2a95a2568a78b11344082d
   json-canonicalization (1.0.0) sha256=d4848a8cca7534455c6721f2d9fc9e5e9adca49486864a898810024f67d59446
   json-ld (3.3.2) sha256=b9531893bf5bdc01db428e96953845a23adb1097125ce918ae0f97c4a6e1ab27
   json-ld-preloaded (3.3.2) sha256=46294327eaf3bf95d48877222a70dd79740917adff94d5f0d380a4c492131ee1
-  jsonlint (0.3.0) sha256=cdf1248d066cf6ada793ecc1254b6f4be33530f446b80dc8688dc1936ab13daf
+  jsonlint (0.4.0) sha256=cadc3bf7b76fcb506080482f2789fb61be84abc79dac23e51c373defde266ea4
   latex-decode (0.4.2) sha256=e85633406e315e348e0ca6de231dee1bf45a22496b0866059c635f7502c2a592
   link_header (0.0.8) sha256=15c65ce43b29f739b30d05e5f25c22c23797e89cf6f905dbb595fb4c70cb55f9
   logger (1.7.0) sha256=196edec7cc44b66cfb40f9755ce11b392f21f7967696af15d274dde7edff0203
   loofah (2.25.0) sha256=df5ed7ac3bac6a4ec802df3877ee5cc86d027299f8952e6243b3dac446b060e6
-  maremma (5.0.0)
+  maremma (6.0.0) sha256=0d55d961c15a41dd9988845c7c66ce795d82143a6427ac08fd2132e6c5b68bee
   matrix (0.4.3) sha256=a0d5ab7ddcc1973ff690ab361b67f359acbb16958d1dc072b8b956a286564c5b
   minitest (6.0.2) sha256=db6e57956f6ecc6134683b4c87467d6dd792323c7f0eea7b93f66bd284adbc3d
   multi_json (1.19.1) sha256=7aefeff8f2c854bf739931a238e4aea64592845e0c0395c8a7d2eea7fdd631b7
@@ -412,7 +395,6 @@ CHECKSUMS
   time (0.4.2) sha256=f324e498c3bde9471d45a7d18f874c27980e9867aa5cfca61bebf52262bc3dab
   tzinfo (2.0.6) sha256=8daf828cc77bcf7d63b0e3bdb6caa47e2272dcfaf4fbfe46f8c3a9df087a829b
   unicode-types (1.11.0) sha256=81d1201273260fa89b85471e7eebb93a51bb4e5f078a525508dcae7835d176f9
-  unicode_utils (1.4.0) sha256=b922d0cf2313b6b7136ada6645ce7154ffc86418ca07d53b058efe9eb72f2a40
   uri (1.1.1) sha256=379fa58d27ffb1387eaada68c749d1426738bd0f654d812fcc07e7568f5c57c6
   vcr (6.4.0) sha256=077ac92cc16efc5904eb90492a18153b5e6ca5398046d8a249a7c96a9ea24ae6
   webmock (3.26.1) sha256=4f696fb57c90a827c20aadb2d4f9058bbff10f7f043bd0d4c3f58791143b1cd7
