@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/datacite/orcid_client/tree/HEAD)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.17.1...HEAD)
+
+**Merged pull requests:**
+
+- upgrade ruby to 4.x [\#43](https://github.com/datacite/orcid_client/pull/43) ([kaysiz](https://github.com/kaysiz))
+
 ## [0.17.1](https://github.com/datacite/orcid_client/tree/0.17.1) (2026-02-20)
 
 [Full Changelog](https://github.com/datacite/orcid_client/compare/0.17.0...0.17.1)
