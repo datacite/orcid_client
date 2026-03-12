@@ -1,3 +1,3 @@
 module OrcidClient
-  VERSION = "0.9.8"
+  VERSION = "0.18.0"
 end
