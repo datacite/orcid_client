@@ -1,0 +1,174 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://doi.org/ra/10.5438
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/5.0.0; mailto:info@datacite.org)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 Mar 2026 12:59:08 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Connection:
+      - keep-alive
+      Server:
+      - cloudflare
+      Vary:
+      - Origin, accept-encoding
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Content-Encoding:
+      - ''
+      Cf-Cache-Status:
+      - DYNAMIC
+      Nel:
+      - '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Report-To:
+      - '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=BX2htMksvUL6BSDOx086QXvpsTG3ceaaSu7jh0U%2BPKZ6vsJDM91RBeHpKBs6v79A9MeSQIYEfnQ0AfMDBc%2FMdAjpEDBzPotTg3fJQyP4xVI%2FkA%3D%3D"}]}'
+      Cf-Ray:
+      - 9da27eaf1b2ccf59-DUS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.5438",
+            "RA": "DataCite"
+          }
+        ]
+  recorded_at: Tue, 10 Mar 2026 12:59:08 GMT
+- request:
+    method: get
+    uri: https://api.stage.datacite.org/dois/10.5438/h5xp-x178?include=media,client
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/5.0.0; mailto:info@datacite.org)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 Mar 2026 12:59:08 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - ''
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      X-Request-Id:
+      - 5d7a7cc0-bda2-4a10-9f04-6fe1e443d85c
+      Etag:
+      - W/"0cd37270e5f42f58493546fcb4bd67cb"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.033694'
+      X-Content-Type-Options:
+      - nosniff
+      X-Powered-By:
+      - Phusion Passenger(R) 6.1.2
+      Server:
+      - nginx/1.24.0 + Phusion Passenger(R) 6.1.2
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Access-Control-Allow-Origin,Access-Control-Expose-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Headers,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      Access-Control-Expose-Headers:
+      - Authorization
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10.5438/h5xp-x178","type":"dois","attributes":{"doi":"10.5438/h5xp-x178","prefix":"10.5438","suffix":"h5xp-x178","identifiers":[],"alternateIdentifiers":[],"creators":[{"name":"Fenner,
+        Martin","nameType":"Personal","givenName":"Martin","familyName":"Fenner","affiliation":["Crossref"],"nameIdentifiers":[{"schemeUri":"https://orcid.org","nameIdentifier":"https://orcid.org/0000-0003-1419-2405","nameIdentifierScheme":"ORCID"}]}],"titles":[{"lang":"en","title":"Cool
+        DOI''s","titleType":null}],"publisher":"DataCite","container":{"type":"Series","identifier":"10.5438/0000-00ss","identifierType":"DOI"},"publicationYear":2016,"subjects":[{"subject":"doi"},{"subject":"featured"},{"subject":"FOS:
+        Computer and information sciences","subjectScheme":"Fields of Science and
+        Technology (FOS)"}],"contributors":[],"dates":[{"date":"2016-12-15","dateType":"Issued","dateInformation":null},{"date":"2016-12-15","dateType":"Created","dateInformation":null},{"date":"2016-12-15","dateType":"Updated","dateInformation":null}],"language":"en","types":{"ris":"RPRT","bibtex":"article","citeproc":"article-journal","schemaOrg":"ScholarlyArticle","resourceType":"BlogPosting","resourceTypeGeneral":"Text"},"relatedIdentifiers":[{"schemeUri":null,"schemeType":null,"relationType":"IsPartOf","relatedIdentifier":"10.5438/0000-00ss","resourceTypeGeneral":"Text","relatedIdentifierType":"DOI","relatedMetadataScheme":null},{"schemeUri":null,"schemeType":null,"relationType":"References","relatedIdentifier":"https://www.w3.org/Provider/Style/URI","resourceTypeGeneral":null,"relatedIdentifierType":"URL","relatedMetadataScheme":null},{"schemeUri":null,"schemeType":null,"relationType":"References","relatedIdentifier":"10.1371/journal.pone.0115253","resourceTypeGeneral":null,"relatedIdentifierType":"DOI","relatedMetadataScheme":null}],"relatedItems":[],"sizes":[],"formats":["application/pdf"],"version":"1.0","rightsList":[],"descriptions":[{"lang":null,"description":"In
+        1998 Tim Berners-Lee coined the term cool URIs (1998), that is URIs that don’t
+        change. We know that URLs referenced in the scholarly literature are often
+        not cool, leading to link rot (Klein et al., 2014) and making it hard or impossible
+        to find the information that people want. Now I''m just writing another sentence
+        to test how much text the description field allows. Testing testing. Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis leo quis
+        sem varius euismod. Vestibulum nibh mi, vehicula ut dui ut, elementum blandit
+        purus. Aliquam justo libero, faucibus non lacinia nec, tempus sit amet magna.
+        Fusce id odio eu eros dictum aliquet. Etiam lacinia ex et mi luctus cursus.
+        Proin blandit mi a turpis posuere viverra. Nullam pharetra turpis eget ante
+        ullamcorper aliquet. Curabitur rhoncus dolor et elit aliquet, vel tincidunt
+        sem varius. Proin eleifend, massa faucibus ullamcorper dignissim, magna augue
+        ornare erat, non cursus nisl nisi sed nunc. Donec scelerisque consectetur
+        posuere. Pellentesque consequat massa erat, at condimentum neque consectetur
+        non. Suspendisse rutrum tincidunt purus, eleifend posuere justo dapibus vitae.
+        Nunc at mauris at quam bibendum pharetra eget ac massa. Mauris dui mi, convallis
+        vel dignissim sed, mattis vitae tellus. Quisque id metus ac lacus ullamcorper
+        bibendum. Duis nec aliquam dolor. Sed vel tristique purus. Proin hendrerit
+        euismod neque, at pretium lectus auctor maximus. Sed accumsan aliquet molestie.
+        Sed pharetra tristique viverra. Nunc sem augue, dapibus ut enim id, vulputate
+        fermentum leo. Duis ante justo, tincidunt nec ultricies quis, sagittis non
+        nulla. Donec nisl enim, ultrices iaculis congue sed, rutrum vitae odio. Duis
+        suscipit placerat nunc, quis lobortis odio fermentum eu. Aliquam a dolor malesuada
+        augue molestie interdum. Nam pulvinar ligula et magna interdum, in interdum
+        eros consequat. Proin urna mi, consequat vitae velit ac, tincidunt feugiat
+        dolor. Morbi iaculis mollis suscipit. Mauris dapibus tristique mauris, et
+        interdum massa ultrices sit amet. Praesent id erat ipsum. Ut mattis massa
+        vel mi mollis tristique. Nunc commodo mauris urna, sed facilisis elit venenatis
+        non. Phasellus sed risus felis. Morbi fringilla fringilla erat, eget porttitor
+        nisi iaculis in. Cras convallis nibh ac arcu pellentesque tristique. Integer
+        ut tincidunt enim. In at eros id mi mattis porta quis eu tortor. Sed a purus
+        in massa ultrices interdum. Integer pulvinar mauris sed viverra vestibulum.
+        Aliquam magna lectus, tempor sed laoreet sed, tincidunt a sapien. Maecenas
+        magna nibh, faucibus et sollicitudin eget, scelerisque a libero. Donec et
+        arcu dignissim, scelerisque augue non, feugiat eros. Aenean ullamcorper lectus
+        ac diam fringilla convallis. Vivamus suscipit, nisi in volutpat consectetur,
+        metus velit porttitor elit, eget convallis ante velit ac nunc. Donec ex leo,
+        suscipit non est eget, finibus varius elit. In porta pretium tellus, id consectetur
+        lectus varius id. Phasellus vel dui ullamcorper, condimentum sapien ut, lobortis
+        purus. Donec eu felis a dolor faucibus hendrerit non eu nulla. Aliquam erat
+        volutpat. Donec vel risus enim. Aenean ex nulla, varius id feugiat at, condimentum
+        et nisi. Etiam laoreet nisl sit amet felis facilisis consequat. In sit amet
+        felis nunc. Proin suscipit neque non lacus scelerisque, vel aliquet urna suscipit.
+        Praesent lectus eros, pellentesque sed sodales id, tempor et arcu.","descriptionType":"Abstract"}],"geoLocations":[],"fundingReferences":[{"awardUri":null,"awardTitle":null,"funderName":"National
+        Science Foundation","awardNumber":null,"funderIdentifier":"https://doi.org/10.13039/100000001","funderIdentifierType":"Crossref
+        Funder ID"}],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTQzOC9INVhQLVgxNzg8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkZlbm5lciwgTWFydGluPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5NYXJ0aW48L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+RmVubmVyPC9mYW1pbHlOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIiBzY2hlbWVVUkk9Imh0dHBzOi8vb3JjaWQub3JnIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDMtMTQxOS0yNDA1PC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uIGFmZmlsaWF0aW9uSWRlbnRpZmllcj0iaHR0cHM6Ly9yb3Iub3JnLzAydHdjZnAzMiIgYWZmaWxpYXRpb25JZGVudGlmaWVyU2NoZW1lPSJST1IiIHNjaGVtZVVSST0iaHR0cHM6Ly9yb3Iub3JnIj5Dcm9zc3JlZjwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlIHhtbDpsYW5nPSJlbiI+Q29vbCBET0knczwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5EYXRhQ2l0ZTwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAxNjwvcHVibGljYXRpb25ZZWFyPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iVGV4dCI+QmxvZ1Bvc3Rpbmc8L3Jlc291cmNlVHlwZT4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD5kb2k8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5mZWF0dXJlZDwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHN1YmplY3RTY2hlbWU9IkZpZWxkcyBvZiBTY2llbmNlIGFuZCBUZWNobm9sb2d5IChGT1MpIiBzY2hlbWVVUkk9Imh0dHA6Ly93d3cub2VjZC5vcmcvc2NpZW5jZS9pbm5vIiB2YWx1ZVVSST0iaHR0cDovL3d3dy5vZWNkLm9yZy9zY2llbmNlL2lubm8vMzgyMzUxNDcucGRmIj5GT1M6IENvbXB1dGVyIGFuZCBpbmZvcm1hdGlvbiBzY2llbmNlczwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJJc3N1ZWQiPjIwMTYtMTItMTU8L2RhdGU+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iQ3JlYXRlZCI+MjAxNi0xMi0xNTwvZGF0ZT4KICAgIDxkYXRlIGRhdGVUeXBlPSJVcGRhdGVkIj4yMDE2LTEyLTE1PC9kYXRlPgogIDwvZGF0ZXM+CiAgPGxhbmd1YWdlPmVuPC9sYW5ndWFnZT4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzUGFydE9mIiByZXNvdXJjZVR5cGVHZW5lcmFsPSJUZXh0Ij4xMC41NDM4LzAwMDAtMDBzczwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJVUkwiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+aHR0cHM6Ly93d3cudzMub3JnL1Byb3ZpZGVyL1N0eWxlL1VSSTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iUmVmZXJlbmNlcyI+MTAuMTM3MS9qb3VybmFsLnBvbmUuMDExNTI1MzwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPHNpemVzLz4KICA8Zm9ybWF0cz4KICAgIDxmb3JtYXQ+YXBwbGljYXRpb24vcGRmPC9mb3JtYXQ+CiAgPC9mb3JtYXRzPgogIDx2ZXJzaW9uPjEuMDwvdmVyc2lvbj4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPkluIDE5OTggVGltIEJlcm5lcnMtTGVlIGNvaW5lZCB0aGUgdGVybSBjb29sIFVSSXMgKDE5OTgpLCB0aGF0IGlzIFVSSXMgdGhhdCBkb27igJl0IGNoYW5nZS4gV2Uga25vdyB0aGF0IFVSTHMgcmVmZXJlbmNlZCBpbiB0aGUgc2Nob2xhcmx5IGxpdGVyYXR1cmUgYXJlIG9mdGVuIG5vdCBjb29sLCBsZWFkaW5nIHRvIGxpbmsgcm90IChLbGVpbiBldCBhbC4sIDIwMTQpIGFuZCBtYWtpbmcgaXQgaGFyZCBvciBpbXBvc3NpYmxlIHRvIGZpbmQgdGhlIGluZm9ybWF0aW9uIHRoYXQgcGVvcGxlIHdhbnQuIE5vdyBJJ20ganVzdCB3cml0aW5nIGFub3RoZXIgc2VudGVuY2UgdG8gdGVzdCBob3cgbXVjaCB0ZXh0IHRoZSBkZXNjcmlwdGlvbiBmaWVsZCBhbGxvd3MuIFRlc3RpbmcgdGVzdGluZy4gTG9yZW0gaXBzdW0gZG9sb3Igc2l0IGFtZXQsIGNvbnNlY3RldHVyIGFkaXBpc2NpbmcgZWxpdC4gU3VzcGVuZGlzc2UgcXVpcyBsZW8gcXVpcyBzZW0gdmFyaXVzIGV1aXNtb2QuIFZlc3RpYnVsdW0gbmliaCBtaSwgdmVoaWN1bGEgdXQgZHVpIHV0LCBlbGVtZW50dW0gYmxhbmRpdCBwdXJ1cy4gQWxpcXVhbSBqdXN0byBsaWJlcm8sIGZhdWNpYnVzIG5vbiBsYWNpbmlhIG5lYywgdGVtcHVzIHNpdCBhbWV0IG1hZ25hLiBGdXNjZSBpZCBvZGlvIGV1IGVyb3MgZGljdHVtIGFsaXF1ZXQuIEV0aWFtIGxhY2luaWEgZXggZXQgbWkgbHVjdHVzIGN1cnN1cy4gUHJvaW4gYmxhbmRpdCBtaSBhIHR1cnBpcyBwb3N1ZXJlIHZpdmVycmEuIE51bGxhbSBwaGFyZXRyYSB0dXJwaXMgZWdldCBhbnRlIHVsbGFtY29ycGVyIGFsaXF1ZXQuIEN1cmFiaXR1ciByaG9uY3VzIGRvbG9yIGV0IGVsaXQgYWxpcXVldCwgdmVsIHRpbmNpZHVudCBzZW0gdmFyaXVzLiBQcm9pbiBlbGVpZmVuZCwgbWFzc2EgZmF1Y2lidXMgdWxsYW1jb3JwZXIgZGlnbmlzc2ltLCBtYWduYSBhdWd1ZSBvcm5hcmUgZXJhdCwgbm9uIGN1cnN1cyBuaXNsIG5pc2kgc2VkIG51bmMuIERvbmVjIHNjZWxlcmlzcXVlIGNvbnNlY3RldHVyIHBvc3VlcmUuIFBlbGxlbnRlc3F1ZSBjb25zZXF1YXQgbWFzc2EgZXJhdCwgYXQgY29uZGltZW50dW0gbmVxdWUgY29uc2VjdGV0dXIgbm9uLiBTdXNwZW5kaXNzZSBydXRydW0gdGluY2lkdW50IHB1cnVzLCBlbGVpZmVuZCBwb3N1ZXJlIGp1c3RvIGRhcGlidXMgdml0YWUuIE51bmMgYXQgbWF1cmlzIGF0IHF1YW0gYmliZW5kdW0gcGhhcmV0cmEgZWdldCBhYyBtYXNzYS4gTWF1cmlzIGR1aSBtaSwgY29udmFsbGlzIHZlbCBkaWduaXNzaW0gc2VkLCBtYXR0aXMgdml0YWUgdGVsbHVzLiBRdWlzcXVlIGlkIG1ldHVzIGFjIGxhY3VzIHVsbGFtY29ycGVyIGJpYmVuZHVtLiBEdWlzIG5lYyBhbGlxdWFtIGRvbG9yLiBTZWQgdmVsIHRyaXN0aXF1ZSBwdXJ1cy4gUHJvaW4gaGVuZHJlcml0IGV1aXNtb2QgbmVxdWUsIGF0IHByZXRpdW0gbGVjdHVzIGF1Y3RvciBtYXhpbXVzLiBTZWQgYWNjdW1zYW4gYWxpcXVldCBtb2xlc3RpZS4gU2VkIHBoYXJldHJhIHRyaXN0aXF1ZSB2aXZlcnJhLiBOdW5jIHNlbSBhdWd1ZSwgZGFwaWJ1cyB1dCBlbmltIGlkLCB2dWxwdXRhdGUgZmVybWVudHVtIGxlby4gRHVpcyBhbnRlIGp1c3RvLCB0aW5jaWR1bnQgbmVjIHVsdHJpY2llcyBxdWlzLCBzYWdpdHRpcyBub24gbnVsbGEuIERvbmVjIG5pc2wgZW5pbSwgdWx0cmljZXMgaWFjdWxpcyBjb25ndWUgc2VkLCBydXRydW0gdml0YWUgb2Rpby4gRHVpcyBzdXNjaXBpdCBwbGFjZXJhdCBudW5jLCBxdWlzIGxvYm9ydGlzIG9kaW8gZmVybWVudHVtIGV1LiBBbGlxdWFtIGEgZG9sb3IgbWFsZXN1YWRhIGF1Z3VlIG1vbGVzdGllIGludGVyZHVtLiBOYW0gcHVsdmluYXIgbGlndWxhIGV0IG1hZ25hIGludGVyZHVtLCBpbiBpbnRlcmR1bSBlcm9zIGNvbnNlcXVhdC4gUHJvaW4gdXJuYSBtaSwgY29uc2VxdWF0IHZpdGFlIHZlbGl0IGFjLCB0aW5jaWR1bnQgZmV1Z2lhdCBkb2xvci4gTW9yYmkgaWFjdWxpcyBtb2xsaXMgc3VzY2lwaXQuIE1hdXJpcyBkYXBpYnVzIHRyaXN0aXF1ZSBtYXVyaXMsIGV0IGludGVyZHVtIG1hc3NhIHVsdHJpY2VzIHNpdCBhbWV0LiBQcmFlc2VudCBpZCBlcmF0IGlwc3VtLiBVdCBtYXR0aXMgbWFzc2EgdmVsIG1pIG1vbGxpcyB0cmlzdGlxdWUuIE51bmMgY29tbW9kbyBtYXVyaXMgdXJuYSwgc2VkIGZhY2lsaXNpcyBlbGl0IHZlbmVuYXRpcyBub24uIFBoYXNlbGx1cyBzZWQgcmlzdXMgZmVsaXMuIE1vcmJpIGZyaW5naWxsYSBmcmluZ2lsbGEgZXJhdCwgZWdldCBwb3J0dGl0b3IgbmlzaSBpYWN1bGlzIGluLiBDcmFzIGNvbnZhbGxpcyBuaWJoIGFjIGFyY3UgcGVsbGVudGVzcXVlIHRyaXN0aXF1ZS4gSW50ZWdlciB1dCB0aW5jaWR1bnQgZW5pbS4gSW4gYXQgZXJvcyBpZCBtaSBtYXR0aXMgcG9ydGEgcXVpcyBldSB0b3J0b3IuIFNlZCBhIHB1cnVzIGluIG1hc3NhIHVsdHJpY2VzIGludGVyZHVtLiBJbnRlZ2VyIHB1bHZpbmFyIG1hdXJpcyBzZWQgdml2ZXJyYSB2ZXN0aWJ1bHVtLiBBbGlxdWFtIG1hZ25hIGxlY3R1cywgdGVtcG9yIHNlZCBsYW9yZWV0IHNlZCwgdGluY2lkdW50IGEgc2FwaWVuLiBNYWVjZW5hcyBtYWduYSBuaWJoLCBmYXVjaWJ1cyBldCBzb2xsaWNpdHVkaW4gZWdldCwgc2NlbGVyaXNxdWUgYSBsaWJlcm8uIERvbmVjIGV0IGFyY3UgZGlnbmlzc2ltLCBzY2VsZXJpc3F1ZSBhdWd1ZSBub24sIGZldWdpYXQgZXJvcy4gQWVuZWFuIHVsbGFtY29ycGVyIGxlY3R1cyBhYyBkaWFtIGZyaW5naWxsYSBjb252YWxsaXMuIFZpdmFtdXMgc3VzY2lwaXQsIG5pc2kgaW4gdm9sdXRwYXQgY29uc2VjdGV0dXIsIG1ldHVzIHZlbGl0IHBvcnR0aXRvciBlbGl0LCBlZ2V0IGNvbnZhbGxpcyBhbnRlIHZlbGl0IGFjIG51bmMuIERvbmVjIGV4IGxlbywgc3VzY2lwaXQgbm9uIGVzdCBlZ2V0LCBmaW5pYnVzIHZhcml1cyBlbGl0LiBJbiBwb3J0YSBwcmV0aXVtIHRlbGx1cywgaWQgY29uc2VjdGV0dXIgbGVjdHVzIHZhcml1cyBpZC4gUGhhc2VsbHVzIHZlbCBkdWkgdWxsYW1jb3JwZXIsIGNvbmRpbWVudHVtIHNhcGllbiB1dCwgbG9ib3J0aXMgcHVydXMuIERvbmVjIGV1IGZlbGlzIGEgZG9sb3IgZmF1Y2lidXMgaGVuZHJlcml0IG5vbiBldSBudWxsYS4gQWxpcXVhbSBlcmF0IHZvbHV0cGF0LiBEb25lYyB2ZWwgcmlzdXMgZW5pbS4gQWVuZWFuIGV4IG51bGxhLCB2YXJpdXMgaWQgZmV1Z2lhdCBhdCwgY29uZGltZW50dW0gZXQgbmlzaS4gRXRpYW0gbGFvcmVldCBuaXNsIHNpdCBhbWV0IGZlbGlzIGZhY2lsaXNpcyBjb25zZXF1YXQuIEluIHNpdCBhbWV0IGZlbGlzIG51bmMuIFByb2luIHN1c2NpcGl0IG5lcXVlIG5vbiBsYWN1cyBzY2VsZXJpc3F1ZSwgdmVsIGFsaXF1ZXQgdXJuYSBzdXNjaXBpdC4gUHJhZXNlbnQgbGVjdHVzIGVyb3MsIHBlbGxlbnRlc3F1ZSBzZWQgc29kYWxlcyBpZCwgdGVtcG9yIGV0IGFyY3UuPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KICA8ZnVuZGluZ1JlZmVyZW5jZXM+CiAgICA8ZnVuZGluZ1JlZmVyZW5jZT4KICAgICAgPGZ1bmRlck5hbWU+TmF0aW9uYWwgU2NpZW5jZSBGb3VuZGF0aW9uPC9mdW5kZXJOYW1lPgogICAgICA8ZnVuZGVySWRlbnRpZmllciBmdW5kZXJJZGVudGlmaWVyVHlwZT0iQ3Jvc3NyZWYgRnVuZGVyIElEIj5odHRwczovL2RvaS5vcmcvMTAuMTMwMzkvMTAwMDAwMDAxPC9mdW5kZXJJZGVudGlmaWVyPgogICAgPC9mdW5kaW5nUmVmZXJlbmNlPgogIDwvZnVuZGluZ1JlZmVyZW5jZXM+CjwvcmVzb3VyY2U+Cg==","url":"https://www.example.org","contentUrl":null,"metadataVersion":6,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"fabricaForm","isActive":true,"state":"findable","reason":null,"viewCount":0,"viewsOverTime":[],"downloadCount":0,"downloadsOverTime":[],"referenceCount":1,"citationCount":0,"citationsOverTime":[],"partCount":0,"partOfCount":1,"versionCount":0,"versionOfCount":0,"created":"2020-07-17T15:57:14.000Z","registered":"2020-07-17T15:57:14.000Z","published":"2016","updated":"2020-07-17T16:14:51.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"media":{"data":{"id":"10.5438/h5xp-x178","type":"media"}},"references":{"data":[{"id":"10.1371/journal.pone.0115253","type":"dois"}]},"citations":{"data":[]},"parts":{"data":[]},"partOf":{"data":[{"id":"10.5438/0000-00ss","type":"dois"}]},"versions":{"data":[]},"versionOf":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite
+        Repositories","symbol":"DATACITE.DATACITE","year":2011,"alternateName":null,"description":null,"language":["en","fr"],"clientType":"periodical","domains":"*.datacite.org,figshare.com","re3data":null,"opendoar":null,"issn":{"issnl":null,"print":"1545-7885","electronic":"1544-9173"},"url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2021-03-29T09:16:25.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"consortium":{"data":{"id":"DC","type":"providers"}},"prefixes":{"data":[{"id":"10.5438","type":"prefixes"},{"id":"10.70002","type":"prefixes"},{"id":"10.70001","type":"prefixes"}]}}}]}'
+  recorded_at: Tue, 10 Mar 2026 12:59:08 GMT
+recorded_with: VCR 6.4.0
