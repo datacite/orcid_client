@@ -2,10 +2,103 @@
 
 ## [Unreleased](https://github.com/datacite/orcid_client/tree/HEAD)
 
-[Full Changelog](https://github.com/datacite/orcid_client/compare/0.9.8...HEAD)
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.17.1...HEAD)
 
 **Merged pull requests:**
 
+- upgrade ruby to 4.x [\#43](https://github.com/datacite/orcid_client/pull/43) ([kaysiz](https://github.com/kaysiz))
+
+## [0.17.1](https://github.com/datacite/orcid_client/tree/0.17.1) (2026-02-20)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.17.0...0.17.1)
+
+**Merged pull requests:**
+
+- Forgot to update the gem version. [\#42](https://github.com/datacite/orcid_client/pull/42) ([svogt0511](https://github.com/svogt0511))
+
+## [0.17.0](https://github.com/datacite/orcid_client/tree/0.17.0) (2026-02-20)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.16.0...0.17.0)
+
+**Merged pull requests:**
+
+- Metadata 4.7 updates for orcid\_client [\#41](https://github.com/datacite/orcid_client/pull/41) ([svogt0511](https://github.com/svogt0511))
+
+## [0.16.0](https://github.com/datacite/orcid_client/tree/0.16.0) (2024-11-21)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.15.0...0.16.0)
+
+**Merged pull requests:**
+
+- Bolognese update [\#39](https://github.com/datacite/orcid_client/pull/39) ([ashwinisukale](https://github.com/ashwinisukale))
+
+## [0.15.0](https://github.com/datacite/orcid_client/tree/0.15.0) (2024-11-20)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.14.0...0.15.0)
+
+**Merged pull requests:**
+
+- Remove slack notification from release [\#38](https://github.com/datacite/orcid_client/pull/38) ([ashwinisukale](https://github.com/ashwinisukale))
+
+## [0.14.0](https://github.com/datacite/orcid_client/tree/0.14.0) (2024-11-20)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.13.0...0.14.0)
+
+**Merged pull requests:**
+
+- Update version [\#37](https://github.com/datacite/orcid_client/pull/37) ([ashwinisukale](https://github.com/ashwinisukale))
+
+## [0.13.0](https://github.com/datacite/orcid_client/tree/0.13.0) (2024-11-20)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.12.0...0.13.0)
+
+**Closed issues:**
+
+- Remove slack notification from git action as its already broken [\#36](https://github.com/datacite/orcid_client/issues/36)
+- Update bolognese gem version and release changes with new version [\#35](https://github.com/datacite/orcid_client/issues/35)
+
+**Merged pull requests:**
+
+- Update version number [\#34](https://github.com/datacite/orcid_client/pull/34) ([ashwinisukale](https://github.com/ashwinisukale))
+- Remove notify slack [\#33](https://github.com/datacite/orcid_client/pull/33) ([ashwinisukale](https://github.com/ashwinisukale))
+- Update latest bolognese gem version [\#32](https://github.com/datacite/orcid_client/pull/32) ([ashwinisukale](https://github.com/ashwinisukale))
+
+## [0.12.0](https://github.com/datacite/orcid_client/tree/0.12.0) (2024-04-25)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.11.0...0.12.0)
+
+**Closed issues:**
+
+- Add Rails 7.x support [\#30](https://github.com/datacite/orcid_client/issues/30)
+
+**Merged pull requests:**
+
+- upgrade to support activesupport 7 [\#31](https://github.com/datacite/orcid_client/pull/31) ([wendelfabianchinsamy](https://github.com/wendelfabianchinsamy))
+
+## [0.11.0](https://github.com/datacite/orcid_client/tree/0.11.0) (2024-04-05)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.10.1...0.11.0)
+
+**Merged pull requests:**
+
+- Upgrade activesupport [\#29](https://github.com/datacite/orcid_client/pull/29) ([richardhallett](https://github.com/richardhallett))
+
+## [0.10.1](https://github.com/datacite/orcid_client/tree/0.10.1) (2024-01-10)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.10.0...0.10.1)
+
+**Merged pull requests:**
+
+- Update bolognese gem. [\#28](https://github.com/datacite/orcid_client/pull/28) ([svogt0511](https://github.com/svogt0511))
+
+## [0.10.0](https://github.com/datacite/orcid_client/tree/0.10.0) (2024-01-05)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.9.8...0.10.0)
+
+**Merged pull requests:**
+
+- Version update [\#27](https://github.com/datacite/orcid_client/pull/27) ([codycooperross](https://github.com/codycooperross))
+- Work type mapping updates [\#26](https://github.com/datacite/orcid_client/pull/26) ([codycooperross](https://github.com/codycooperross))
 - Update Dependencies [\#20](https://github.com/datacite/orcid_client/pull/20) ([jrhoads](https://github.com/jrhoads))
 - Update Github Actions [\#19](https://github.com/datacite/orcid_client/pull/19) ([jrhoads](https://github.com/jrhoads))
 
@@ -99,19 +192,19 @@
 
 ## [v.0.4.3](https://github.com/datacite/orcid_client/tree/v.0.4.3) (2018-12-12)
 
-[Full Changelog](https://github.com/datacite/orcid_client/compare/v.0.4.1...v.0.4.3)
+[Full Changelog](https://github.com/datacite/orcid_client/compare/v.0.4.2...v.0.4.3)
 
 **Merged pull requests:**
 
 - Chore update Bolognese [\#3](https://github.com/datacite/orcid_client/pull/3) ([kjgarza](https://github.com/kjgarza))
 
-## [v.0.4.1](https://github.com/datacite/orcid_client/tree/v.0.4.1) (2018-04-11)
-
-[Full Changelog](https://github.com/datacite/orcid_client/compare/v.0.4.2...v.0.4.1)
-
 ## [v.0.4.2](https://github.com/datacite/orcid_client/tree/v.0.4.2) (2018-04-11)
 
-[Full Changelog](https://github.com/datacite/orcid_client/compare/v.0.4...v.0.4.2)
+[Full Changelog](https://github.com/datacite/orcid_client/compare/v.0.4.1...v.0.4.2)
+
+## [v.0.4.1](https://github.com/datacite/orcid_client/tree/v.0.4.1) (2018-04-11)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/v.0.4...v.0.4.1)
 
 ## [v.0.4](https://github.com/datacite/orcid_client/tree/v.0.4) (2018-04-11)
 
