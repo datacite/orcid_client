@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- bump version to `1.18.1` [\#52](https://github.com/datacite/orcid_client/pull/52) ([bklaing2](https://github.com/bklaing2))
 - upgrade bolognese to `2.7` [\#51](https://github.com/datacite/orcid_client/pull/51) ([bklaing2](https://github.com/bklaing2))
 
 ## [0.18.0](https://github.com/datacite/orcid_client/tree/0.18.0) (2026-03-12)
