@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/datacite/orcid_client/tree/HEAD)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.18.0...HEAD)
+
+**Merged pull requests:**
+
+- upgrade bolognese to `2.7` [\#51](https://github.com/datacite/orcid_client/pull/51) ([bklaing2](https://github.com/bklaing2))
+
 ## [0.18.0](https://github.com/datacite/orcid_client/tree/0.18.0) (2026-03-12)
 
 [Full Changelog](https://github.com/datacite/orcid_client/compare/0.17.1...0.18.0)
