@@ -62,6 +62,21 @@ describe OrcidClient::Work, vcr: true do
     expect(subject.publication_date).to eq("year"=>"2016", "month"=>"12", "day"=>"15")
   end
 
+  it 'part_of_dois' do
+    subject = OrcidClient::Work.new(doi: "10.82597/xfzk-pg27", orcid: orcid, orcid_token: orcid_token)
+    expect(subject.part_of_dois).to eq(["10.60950/9cd9199b-cc15-45ef-b0dc-4b40586ee003", "10.60950/ee"])
+    expect(subject.data).to include("10.60950/9cd9199b-cc15-45ef-b0dc-4b40586ee003")
+    expect(subject.validation_errors).to be_empty
+    p subject.data
+  end
+
+  it 'version_of_dois' do
+    subject = OrcidClient::Work.new(doi: "10.82597/xfzk-pg27", orcid: orcid, orcid_token: orcid_token)
+    expect(subject.version_of_dois).to eq(["10.60950/xx", "10.60950/yy", "10.60950/zz", "10.60950/ww"])
+    expect(subject.data).to include("10.60950/xx")
+    expect(subject.validation_errors).to be_empty
+  end
+
   it 'data' do
     xml = File.read(fixture_path + 'work.xml')
     expect(subject.data).to eq(xml)

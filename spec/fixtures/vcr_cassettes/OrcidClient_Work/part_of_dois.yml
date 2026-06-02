@@ -1,0 +1,167 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://doi.org/ra/10.82597
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/6.0.0; mailto:info@datacite.org)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Jun 2026 13:40:53 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Connection:
+      - keep-alive
+      Server:
+      - cloudflare
+      Vary:
+      - Origin, accept-encoding
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Content-Encoding:
+      - ''
+      Cf-Cache-Status:
+      - DYNAMIC
+      Nel:
+      - '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Report-To:
+      - '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=K9riHP7wnliQU%2Fytux7rUSMOM3MNmiH4wG0ieyR5%2BF%2BZL2pPb8bel7q6ax%2FYI6ITSEPoNkslel%2Fv03%2FZ27okZMF917JzcSSMojsECyc2c%2FByrFSoDYDb4NubDhPs2jwGGdxY714%3D"}]}'
+      Cf-Ray:
+      - a056df57592e6cae-BOS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.82597",
+            "RA": "DataCite"
+          }
+        ]
+  recorded_at: Tue, 02 Jun 2026 13:40:52 GMT
+- request:
+    method: get
+    uri: https://api.stage.datacite.org/dois/10.82597/xfzk-pg27?include=media,client
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/6.0.0; mailto:info@datacite.org)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Jun 2026 13:40:53 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - ''
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      X-Request-Id:
+      - 90618b10-fde5-43c7-91b3-0604b0e5847f
+      X-Runtime:
+      - '0.025562'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      X-Powered-By:
+      - Phusion Passenger(R) 6.1.2
+      Server:
+      - nginx/1.24.0 + Phusion Passenger(R) 6.1.2
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Access-Control-Allow-Origin,Access-Control-Expose-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Headers,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      Access-Control-Expose-Headers:
+      - Authorization
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10.82597/xfzk-pg27","type":"dois","attributes":{"doi":"10.82597/xfzk-pg27","prefix":"10.82597","suffix":"xfzk-pg27","identifiers":[],"alternateIdentifiers":[],"creators":[{"name":"Wallace,
+        Aaron","nameType":"Personal","givenName":"Aaron","familyName":"Wallace","affiliation":["University
+        of California, Berkeley"],"nameIdentifiers":[]}],"titles":[{"lang":"en","title":"Spatial
+        distribution and succession of epiphytes on Coco nucifera in Moorea, French
+        Polynesia","titleType":null}],"publisher":"University of California, Berkeley","container":{},"publicationYear":2000,"subjects":[{"subject":"Moorea"},{"subject":"French
+        Polynesia"},{"subject":"epiphytes"},{"subject":"Cocos nucifera"},{"subject":"coconut"},{"subject":"distribution"},{"subject":"fern"},{"subject":"cyanobacteria"},{"subject":"algae"},{"subject":"lichen"},{"subject":"bryophyte"},{"subject":"plant","subjectScheme":"organism"},{"subject":":unkn","subjectScheme":"organism"}],"contributors":[{"name":"Wallace,
+        Aaron","nameType":"Personal","givenName":"Aaron","familyName":"Wallace","affiliation":["University
+        of California, Berkeley"],"contributorType":"RightsHolder","nameIdentifiers":[{"schemeUri":"https://orcid.org","nameIdentifier":null,"nameIdentifierScheme":"ORCID"}]},{"name":"Gump
+        South Pacific Research Station","nameType":"Organizational","givenName":null,"familyName":null,"affiliation":["Gump
+        South Pacific Research Station"],"contributorType":"Sponsor","nameIdentifiers":[{"schemeUri":"https://ror.org","nameIdentifier":"https://ror.org/04sk0et52","nameIdentifierScheme":"ROR"}]}],"dates":[{"date":"2000","dateType":"Copyrighted","dateInformation":null},{"date":"2000-08/2000-12","dateType":"Coverage","dateInformation":null},{"date":"2000","dateType":"Issued","dateInformation":null}],"language":null,"types":{"ris":"RPRT","bibtex":"article","citeproc":"article-journal","schemaOrg":"ScholarlyArticle","resourceType":"Student
+        paper from Biology and Geology of Tropical Islands class at University of
+        California, Berkeley","resourceTypeGeneral":"Text"},"relatedIdentifiers":[{"schemeUri":null,"schemeType":null,"relationType":"Cites","relatedIdentifier":"10.60950/956fad7b-311c-4250-bebc-4e43f0c2ffdc","resourceTypeGeneral":"Project","relatedIdentifierType":"DOI","relatedMetadataScheme":null,"relationTypeInformation":null},{"schemeUri":null,"schemeType":null,"relationType":"IsPartOf","relatedIdentifier":"10.60950/9cd9199b-cc15-45ef-b0dc-4b40586ee003","resourceTypeGeneral":"Project","relatedIdentifierType":"DOI","relatedMetadataScheme":null,"relationTypeInformation":null},{"schemeUri":null,"schemeType":null,"relationType":"HasVersion","relatedIdentifier":"10.60950/xx","resourceTypeGeneral":null,"relatedIdentifierType":"DOI","relatedMetadataScheme":null,"relationTypeInformation":null},{"schemeUri":null,"schemeType":null,"relationType":"IsVersionOf","relatedIdentifier":"10.60950/yy","resourceTypeGeneral":null,"relatedIdentifierType":"DOI","relatedMetadataScheme":null,"relationTypeInformation":null},{"schemeUri":null,"schemeType":null,"relationType":"IsNewVersionOf","relatedIdentifier":"10.60950/zz","resourceTypeGeneral":null,"relatedIdentifierType":"DOI","relatedMetadataScheme":null,"relationTypeInformation":null},{"schemeUri":null,"schemeType":null,"relationType":"IsPreviousVersionOf","relatedIdentifier":"10.60950/ww","resourceTypeGeneral":null,"relatedIdentifierType":"DOI","relatedMetadataScheme":null,"relationTypeInformation":null},{"schemeUri":null,"schemeType":null,"relationType":"Describes","relatedIdentifier":"10.60950/tt","resourceTypeGeneral":null,"relatedIdentifierType":"DOI","relatedMetadataScheme":null,"relationTypeInformation":null},{"schemeUri":null,"schemeType":null,"relationType":"IsPartOf","relatedIdentifier":"10.60950/ee","resourceTypeGeneral":null,"relatedIdentifierType":"DOI","relatedMetadataScheme":null,"relationTypeInformation":null}],"relatedItems":[],"sizes":[],"formats":[],"version":null,"rightsList":[{"lang":"en","rights":"Creative
+        Commons Attribution 4.0 International","rightsUri":"https://creativecommons.org/licenses/by/4.0/legalcode","schemeUri":"https://spdx.org/licenses/","rightsIdentifier":"cc-by-4.0","rightsIdentifierScheme":"SPDX"}],"descriptions":[{"lang":"en","description":"Spatial
+        distribution and succession of epiphytes on Coco nucifera in Moorea, French
+        Polynesia. Coconut trees are a conspicuous and characteristic part of the
+        South Pacific Landscape. In the past fifty years, a number of coconut tree
+        plantations have been abandoned. These provide for an excellent study of the
+        succession of the epiphytes that use coconut trees as phorophytes. Seven functional
+        epiphyte groups were studied: Bryophytes, Paint Crustose Lichens, Fat Crustose
+        Lichens, Alectorioid Lichens, Cyanobacterial Lichens, Algae and Ferns. Five
+        types of plots were studied, those that had been abandoned for fourty-five
+        years, thirty-five years, twenty-five years, fifteen years, and zero years.
+        Principle Component Analysis confirmed the grouping of the thirteen plots
+        studied within the aforementioned categories. Eight environmental variables
+        of the plots were examined to determine which one had the largest influence
+        on the change in epiphyte composition throughout time. Surrounding canopy
+        cover and canopy height were the two main influential factors determining
+        epiphyte distribution between the plot types as seen through regression and
+        multivariate analysis. Results also showed that Bryophytes are late-successional
+        species and Paint Crustose Lichens and Alectorioid Lichens are pioneer species
+        on Coco nucifera. Succession does occur and radically changes the distributions
+        of the epiphyte functional groups on the coconut trees over time. Epiphytes
+        were found on all plot types from the 20% coverage level and above. A two-tiered
+        model was created to explain succession of epiphytes on coconut trees.","descriptionType":"Abstract"}],"geoLocations":[{"geoLocationPlace":"terrestrial"},{"geoLocationPlace":"Moorea"},{"geoLocationPlace":"French
+        Polynesia"},{"geoLocationPlace":"PaoPao"},{"geoLocationPlace":"Afareaitu"},{"geoLocationPlace":"Vaianae
+        Bay"},{"geoLocationPlace":"Cook''s Bay"}],"fundingReferences":[],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuODI1OTcvWEZaSy1QRzI3PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5XYWxsYWNlLCBBYXJvbjwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+QWFyb248L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+V2FsbGFjZTwvZmFtaWx5TmFtZT4KICAgICAgPGFmZmlsaWF0aW9uIGFmZmlsaWF0aW9uSWRlbnRpZmllcj0iaHR0cHM6Ly9yb3Iub3JnLzAxYW43cTIzOCIgYWZmaWxpYXRpb25JZGVudGlmaWVyU2NoZW1lPSJST1IiIHNjaGVtZVVSST0iaHR0cHM6Ly9yb3Iub3JnLyI+VW5pdmVyc2l0eSBvZiBDYWxpZm9ybmlhLCBCZXJrZWxleTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlIHhtbDpsYW5nPSJlbiI+U3BhdGlhbCBkaXN0cmlidXRpb24gYW5kIHN1Y2Nlc3Npb24gb2YgZXBpcGh5dGVzIG9uIENvY28gbnVjaWZlcmEgaW4gTW9vcmVhLCBGcmVuY2ggUG9seW5lc2lhPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyIHB1Ymxpc2hlcklkZW50aWZpZXI9Imh0dHBzOi8vcm9yLm9yZy8wMWFuN3EyMzgiIHB1Ymxpc2hlcklkZW50aWZpZXJTY2hlbWU9IlJPUiIgc2NoZW1lVVJJPSJodHRwczovL3Jvci5vcmcvIiB4bWw6bGFuZz0iZW4iPlVuaXZlcnNpdHkgb2YgQ2FsaWZvcm5pYSwgQmVya2VsZXk8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMDA8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IlRleHQiPlN0dWRlbnQgcGFwZXIgZnJvbSBCaW9sb2d5IGFuZCBHZW9sb2d5IG9mIFRyb3BpY2FsIElzbGFuZHMgY2xhc3MgYXQgVW5pdmVyc2l0eSBvZiBDYWxpZm9ybmlhLCBCZXJrZWxleTwvcmVzb3VyY2VUeXBlPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0Pk1vb3JlYTwvc3ViamVjdD4KICAgIDxzdWJqZWN0PkZyZW5jaCBQb2x5bmVzaWE8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5lcGlwaHl0ZXM8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5Db2NvcyBudWNpZmVyYTwvc3ViamVjdD4KICAgIDxzdWJqZWN0PmNvY29udXQ8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5kaXN0cmlidXRpb248L3N1YmplY3Q+CiAgICA8c3ViamVjdD5mZXJuPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+Y3lhbm9iYWN0ZXJpYTwvc3ViamVjdD4KICAgIDxzdWJqZWN0PmFsZ2FlPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+bGljaGVuPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+YnJ5b3BoeXRlPC9zdWJqZWN0PgogICAgPHN1YmplY3Qgc3ViamVjdFNjaGVtZT0ib3JnYW5pc20iPnBsYW50PC9zdWJqZWN0PgogICAgPHN1YmplY3Qgc3ViamVjdFNjaGVtZT0ib3JnYW5pc20iPjp1bmtuPC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPGNvbnRyaWJ1dG9ycz4KICAgIDxjb250cmlidXRvciBjb250cmlidXRvclR5cGU9IlJpZ2h0c0hvbGRlciI+CiAgICAgIDxjb250cmlidXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5XYWxsYWNlLCBBYXJvbjwvY29udHJpYnV0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPkFhcm9uPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPldhbGxhY2U8L2ZhbWlseU5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiIHNjaGVtZVVSST0iaHR0cHM6Ly9vcmNpZC5vcmciLz4KICAgICAgPGFmZmlsaWF0aW9uIGFmZmlsaWF0aW9uSWRlbnRpZmllcj0iaHR0cHM6Ly9yb3Iub3JnLzAxYW43cTIzOCIgYWZmaWxpYXRpb25JZGVudGlmaWVyU2NoZW1lPSJST1IiIHNjaGVtZVVSST0iaHR0cHM6Ly9yb3Iub3JnLyI+VW5pdmVyc2l0eSBvZiBDYWxpZm9ybmlhLCBCZXJrZWxleTwvYWZmaWxpYXRpb24+CiAgICA8L2NvbnRyaWJ1dG9yPgogICAgPGNvbnRyaWJ1dG9yIGNvbnRyaWJ1dG9yVHlwZT0iU3BvbnNvciI+CiAgICAgIDxjb250cmlidXRvck5hbWUgbmFtZVR5cGU9Ik9yZ2FuaXphdGlvbmFsIj5HdW1wIFNvdXRoIFBhY2lmaWMgUmVzZWFyY2ggU3RhdGlvbjwvY29udHJpYnV0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9IlJPUiIgc2NoZW1lVVJJPSJodHRwczovL3Jvci5vcmciPmh0dHBzOi8vcm9yLm9yZy8wNHNrMGV0NTI8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24gYWZmaWxpYXRpb25JZGVudGlmaWVyPSJodHRwczovL3Jvci5vcmcvMDRzazBldDUyIiBhZmZpbGlhdGlvbklkZW50aWZpZXJTY2hlbWU9IlJPUiIgc2NoZW1lVVJJPSJodHRwczovL3Jvci5vcmcvIj5HdW1wIFNvdXRoIFBhY2lmaWMgUmVzZWFyY2ggU3RhdGlvbjwvYWZmaWxpYXRpb24+CiAgICA8L2NvbnRyaWJ1dG9yPgogIDwvY29udHJpYnV0b3JzPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJDb3B5cmlnaHRlZCI+MjAwMDwvZGF0ZT4KICAgIDxkYXRlIGRhdGVUeXBlPSJDb3ZlcmFnZSI+MjAwMC0wOC8yMDAwLTEyPC9kYXRlPgogICAgPGRhdGUgZGF0ZVR5cGU9Iklzc3VlZCI+MjAwMDwvZGF0ZT4KICA8L2RhdGVzPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iQ2l0ZXMiIHJlc291cmNlVHlwZUdlbmVyYWw9IlByb2plY3QiPjEwLjYwOTUwLzk1NmZhZDdiLTMxMWMtNDI1MC1iZWJjLTRlNDNmMGMyZmZkYzwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSXNQYXJ0T2YiIHJlc291cmNlVHlwZUdlbmVyYWw9IlByb2plY3QiPjEwLjYwOTUwLzljZDkxOTliLWNjMTUtNDVlZi1iMGRjLTRiNDA1ODZlZTAwMzwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSGFzVmVyc2lvbiI+MTAuNjA5NTAveHg8L3JlbGF0ZWRJZGVudGlmaWVyPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9IklzVmVyc2lvbk9mIj4xMC42MDk1MC95eTwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSXNOZXdWZXJzaW9uT2YiPjEwLjYwOTUwL3p6PC9yZWxhdGVkSWRlbnRpZmllcj4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJJc1ByZXZpb3VzVmVyc2lvbk9mIj4xMC42MDk1MC93dzwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iRGVzY3JpYmVzIj4xMC42MDk1MC90dDwvcmVsYXRlZElkZW50aWZpZXI+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiIHJlbGF0aW9uVHlwZT0iSXNQYXJ0T2YiPjEwLjYwOTUwL2VlPC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8c2l6ZXMvPgogIDxmb3JtYXRzLz4KICA8dmVyc2lvbi8+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzIHJpZ2h0c1VSST0iaHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LzQuMC9sZWdhbGNvZGUiIHhtbDpsYW5nPSJlbiI+Q3JlYXRpdmUgQ29tbW9ucyBBdHRyaWJ1dGlvbiA0LjAgSW50ZXJuYXRpb25hbDwvcmlnaHRzPgogIDwvcmlnaHRzTGlzdD4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIHhtbDpsYW5nPSJlbiIgZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+U3BhdGlhbCBkaXN0cmlidXRpb24gYW5kIHN1Y2Nlc3Npb24gb2YgZXBpcGh5dGVzIG9uIENvY28gbnVjaWZlcmEgaW4gTW9vcmVhLCBGcmVuY2ggUG9seW5lc2lhLiBDb2NvbnV0IHRyZWVzIGFyZSBhIGNvbnNwaWN1b3VzIGFuZCBjaGFyYWN0ZXJpc3RpYyBwYXJ0IG9mIHRoZSBTb3V0aCBQYWNpZmljIExhbmRzY2FwZS4gSW4gdGhlIHBhc3QgZmlmdHkgeWVhcnMsIGEgbnVtYmVyIG9mIGNvY29udXQgdHJlZSBwbGFudGF0aW9ucyBoYXZlIGJlZW4gYWJhbmRvbmVkLiBUaGVzZSBwcm92aWRlIGZvciBhbiBleGNlbGxlbnQgc3R1ZHkgb2YgdGhlIHN1Y2Nlc3Npb24gb2YgdGhlIGVwaXBoeXRlcyB0aGF0IHVzZSBjb2NvbnV0IHRyZWVzIGFzIHBob3JvcGh5dGVzLiBTZXZlbiBmdW5jdGlvbmFsIGVwaXBoeXRlIGdyb3VwcyB3ZXJlIHN0dWRpZWQ6IEJyeW9waHl0ZXMsIFBhaW50IENydXN0b3NlIExpY2hlbnMsIEZhdCBDcnVzdG9zZSBMaWNoZW5zLCBBbGVjdG9yaW9pZCBMaWNoZW5zLCBDeWFub2JhY3RlcmlhbCBMaWNoZW5zLCBBbGdhZSBhbmQgRmVybnMuIEZpdmUgdHlwZXMgb2YgcGxvdHMgd2VyZSBzdHVkaWVkLCB0aG9zZSB0aGF0IGhhZCBiZWVuIGFiYW5kb25lZCBmb3IgZm91cnR5LWZpdmUgeWVhcnMsIHRoaXJ0eS1maXZlIHllYXJzLCB0d2VudHktZml2ZSB5ZWFycywgZmlmdGVlbiB5ZWFycywgYW5kIHplcm8geWVhcnMuIFByaW5jaXBsZSBDb21wb25lbnQgQW5hbHlzaXMgY29uZmlybWVkIHRoZSBncm91cGluZyBvZiB0aGUgdGhpcnRlZW4gcGxvdHMgc3R1ZGllZCB3aXRoaW4gdGhlIGFmb3JlbWVudGlvbmVkIGNhdGVnb3JpZXMuIEVpZ2h0IGVudmlyb25tZW50YWwgdmFyaWFibGVzIG9mIHRoZSBwbG90cyB3ZXJlIGV4YW1pbmVkIHRvIGRldGVybWluZSB3aGljaCBvbmUgaGFkIHRoZSBsYXJnZXN0IGluZmx1ZW5jZSBvbiB0aGUgY2hhbmdlIGluIGVwaXBoeXRlIGNvbXBvc2l0aW9uIHRocm91Z2hvdXQgdGltZS4gU3Vycm91bmRpbmcgY2Fub3B5IGNvdmVyIGFuZCBjYW5vcHkgaGVpZ2h0IHdlcmUgdGhlIHR3byBtYWluIGluZmx1ZW50aWFsIGZhY3RvcnMgZGV0ZXJtaW5pbmcgZXBpcGh5dGUgZGlzdHJpYnV0aW9uIGJldHdlZW4gdGhlIHBsb3QgdHlwZXMgYXMgc2VlbiB0aHJvdWdoIHJlZ3Jlc3Npb24gYW5kIG11bHRpdmFyaWF0ZSBhbmFseXNpcy4gUmVzdWx0cyBhbHNvIHNob3dlZCB0aGF0IEJyeW9waHl0ZXMgYXJlIGxhdGUtc3VjY2Vzc2lvbmFsIHNwZWNpZXMgYW5kIFBhaW50IENydXN0b3NlIExpY2hlbnMgYW5kIEFsZWN0b3Jpb2lkIExpY2hlbnMgYXJlIHBpb25lZXIgc3BlY2llcyBvbiBDb2NvIG51Y2lmZXJhLiBTdWNjZXNzaW9uIGRvZXMgb2NjdXIgYW5kIHJhZGljYWxseSBjaGFuZ2VzIHRoZSBkaXN0cmlidXRpb25zIG9mIHRoZSBlcGlwaHl0ZSBmdW5jdGlvbmFsIGdyb3VwcyBvbiB0aGUgY29jb251dCB0cmVlcyBvdmVyIHRpbWUuIEVwaXBoeXRlcyB3ZXJlIGZvdW5kIG9uIGFsbCBwbG90IHR5cGVzIGZyb20gdGhlIDIwJSBjb3ZlcmFnZSBsZXZlbCBhbmQgYWJvdmUuIEEgdHdvLXRpZXJlZCBtb2RlbCB3YXMgY3JlYXRlZCB0byBleHBsYWluIHN1Y2Nlc3Npb24gb2YgZXBpcGh5dGVzIG9uIGNvY29udXQgdHJlZXMuPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KICA8Z2VvTG9jYXRpb25zPgogICAgPGdlb0xvY2F0aW9uPgogICAgICA8Z2VvTG9jYXRpb25QbGFjZT50ZXJyZXN0cmlhbDwvZ2VvTG9jYXRpb25QbGFjZT4KICAgIDwvZ2VvTG9jYXRpb24+CiAgICA8Z2VvTG9jYXRpb24+CiAgICAgIDxnZW9Mb2NhdGlvblBsYWNlPk1vb3JlYTwvZ2VvTG9jYXRpb25QbGFjZT4KICAgIDwvZ2VvTG9jYXRpb24+CiAgICA8Z2VvTG9jYXRpb24+CiAgICAgIDxnZW9Mb2NhdGlvblBsYWNlPkZyZW5jaCBQb2x5bmVzaWE8L2dlb0xvY2F0aW9uUGxhY2U+CiAgICA8L2dlb0xvY2F0aW9uPgogICAgPGdlb0xvY2F0aW9uPgogICAgICA8Z2VvTG9jYXRpb25QbGFjZT5QYW9QYW88L2dlb0xvY2F0aW9uUGxhY2U+CiAgICA8L2dlb0xvY2F0aW9uPgogICAgPGdlb0xvY2F0aW9uPgogICAgICA8Z2VvTG9jYXRpb25QbGFjZT5BZmFyZWFpdHU8L2dlb0xvY2F0aW9uUGxhY2U+CiAgICA8L2dlb0xvY2F0aW9uPgogICAgPGdlb0xvY2F0aW9uPgogICAgICA8Z2VvTG9jYXRpb25QbGFjZT5WYWlhbmFlIEJheTwvZ2VvTG9jYXRpb25QbGFjZT4KICAgIDwvZ2VvTG9jYXRpb24+CiAgICA8Z2VvTG9jYXRpb24+CiAgICAgIDxnZW9Mb2NhdGlvblBsYWNlPkNvb2sncyBCYXk8L2dlb0xvY2F0aW9uUGxhY2U+CiAgICA8L2dlb0xvY2F0aW9uPgogIDwvZ2VvTG9jYXRpb25zPgo8L3Jlc291cmNlPgo=","url":"https://google.com","contentUrl":null,"metadataVersion":2,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"fabricaForm","isActive":true,"state":"findable","reason":null,"viewCount":0,"viewsOverTime":[],"downloadCount":0,"downloadsOverTime":[],"referenceCount":1,"citationCount":0,"citationsOverTime":[],"partCount":0,"partOfCount":1,"versionCount":1,"versionOfCount":1,"created":"2026-03-23T15:00:39.000Z","registered":"2026-03-23T15:00:39.000Z","published":"2000","updated":"2026-06-02T13:39:42.000Z"},"relationships":{"client":{"data":{"id":"hnaj.mmkibn","type":"clients"}},"provider":{"data":{"id":"hnaj","type":"providers"}},"media":{"data":{"id":"10.82597/xfzk-pg27","type":"media"}},"references":{"data":[{"id":"10.60950/956fad7b-311c-4250-bebc-4e43f0c2ffdc","type":"dois"}]},"citations":{"data":[]},"parts":{"data":[]},"partOf":{"data":[{"id":"10.60950/9cd9199b-cc15-45ef-b0dc-4b40586ee003","type":"dois"}]},"versions":{"data":[{"id":"10.60950/xx","type":"dois"}]},"versionOf":{"data":[{"id":"10.60950/yy","type":"dois"}]}}},"included":[{"id":"hnaj.mmkibn","type":"clients","attributes":{"name":"1000
+        Genomes","symbol":"HNAJ.MMKIBN","year":2024,"alternateName":"Thousand Genomes","description":"The
+        1000 Genomes Project is an international collaboration to produce an extensive
+        public catalog of human genetic variation, including SNPs and structural variants,
+        and their haplotype contexts. This resource will support genome-wide association
+        studies and other medical research studies.\r\nThe genomes of about 2500 unidentified
+        people from about 25 populations around the world will be sequenced using
+        next-generation sequencing technologies. The results of the study will be
+        freely and publicly accessible to researchers worldwide.\r\nThe International
+        Genome Sample Resource (IGSR) has been established at EMBL-EBI to continue
+        supporting data generated by the 1000 Genomes Project, supplemented with new
+        data and new analysis.","language":["en"],"clientType":"repository","domains":"*","re3data":"https://doi.org/10.17616/R3CP4M","opendoar":null,"issn":{},"url":"https://www.internationalgenome.org/","created":"2024-04-10T20:12:54.000Z","updated":"2026-06-02T13:25:36.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"hnaj","type":"providers"}},"prefixes":{"data":[{"id":"10.82597","type":"prefixes"}]}}}]}'
+  recorded_at: Tue, 02 Jun 2026 13:40:53 GMT
+recorded_with: VCR 6.4.0
