@@ -64,8 +64,11 @@ describe OrcidClient::Work, vcr: true do
 
   it 'version_of_dois' do
     subject = OrcidClient::Work.new(doi: "10.82597/xfzk-pg27", orcid: orcid, orcid_token: orcid_token)
-    expect(subject.version_of_dois).to eq(["10.60950/xx", "10.60950/yy", "10.60950/zz", "10.60950/ww"])
-    expect(subject.data).to include("10.60950/xx")
+    version_of_dois = ["10.60950/xx", "10.60950/yy", "10.60950/zz", "10.60950/ww", "10.60950/gg"]
+    expect(subject.version_of_dois).to eq(version_of_dois)
+    version_of_dois.each do |doi|
+      expect(subject.data).to include(doi)
+    end
     expect(subject.validation_errors).to be_empty
   end
 

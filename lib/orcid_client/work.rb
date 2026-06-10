@@ -33,7 +33,7 @@ module OrcidClient
 
     SCHEMA = File.expand_path("../../../resources/record_#{API_VERSION}/work-#{API_VERSION}.xsd", __FILE__)
 
-    VERSION_OF_RELATION_TYPES = ["IsVersionOf", "HasVersion", "IsNewVersionOf", "IsPreviousVersionOf"]
+    VERSION_OF_RELATION_TYPES = ["IsVersionOf", "HasVersion", "IsNewVersionOf", "IsPreviousVersionOf", "IsIdenticalTo"].freeze
 
     # recognize given name. Can be loaded once as ::NameDetector, e.g. in a Rails initializer
     def name_detector
