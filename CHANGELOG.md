@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/datacite/orcid_client/tree/HEAD)
+
+[Full Changelog](https://github.com/datacite/orcid_client/compare/0.18.1...HEAD)
+
+**Merged pull requests:**
+
+- Adds version-of external ID relationships in work records based on DOI metadata [\#53](https://github.com/datacite/orcid_client/pull/53) ([codycooperross](https://github.com/codycooperross))
+
 ## [0.18.1](https://github.com/datacite/orcid_client/tree/0.18.1) (2026-05-28)
 
 [Full Changelog](https://github.com/datacite/orcid_client/compare/0.18.0...0.18.1)
@@ -107,7 +115,6 @@
 **Merged pull requests:**
 
 - Version update [\#27](https://github.com/datacite/orcid_client/pull/27) ([codycooperross](https://github.com/codycooperross))
-- Work type mapping updates [\#26](https://github.com/datacite/orcid_client/pull/26) ([codycooperross](https://github.com/codycooperross))
 - Update Dependencies [\#20](https://github.com/datacite/orcid_client/pull/20) ([jrhoads](https://github.com/jrhoads))
 - Update Github Actions [\#19](https://github.com/datacite/orcid_client/pull/19) ([jrhoads](https://github.com/jrhoads))
 
@@ -205,6 +212,7 @@
 
 **Merged pull requests:**
 
+- Work type mapping updates [\#26](https://github.com/datacite/orcid_client/pull/26) ([codycooperross](https://github.com/codycooperross))
 - Chore update Bolognese [\#3](https://github.com/datacite/orcid_client/pull/3) ([kjgarza](https://github.com/kjgarza))
 
 ## [v.0.4.1](https://github.com/datacite/orcid_client/tree/v.0.4.1) (2018-04-11)
