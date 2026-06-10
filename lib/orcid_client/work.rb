@@ -78,20 +78,18 @@ module OrcidClient
       orcid_work_type(metadata.types["resourceTypeGeneral"], metadata.types["resourceType"])
     end
 
-    def part_of_dois
-      Array.wrap(metadata.related_identifiers).filter_map do |related_identifier|
-        if related_identifier["relatedIdentifierType"] == "DOI" && related_identifier["relationType"] == "IsPartOf"
-          related_identifier["relatedIdentifier"]
-        end
-      end.uniq
-    end
-
     def version_of_dois
       Array.wrap(metadata.related_identifiers).filter_map do |related_identifier|
         if related_identifier["relatedIdentifierType"] == "DOI" && VERSION_OF_RELATION_TYPES.include?(related_identifier["relationType"])
-          related_identifier["relatedIdentifier"]
+          validate_doi(related_identifier["relatedIdentifier"])
         end
-      end.uniq
+      end.compact.uniq
+    end
+
+    def validate_doi(doi)
+      doi = Array(/\A(?:(http|https):\/(\/)?(dx\.)?(doi.org|handle.stage.datacite.org|handle.test.datacite.org)\/)?(doi:)?(10\.\d{4,5}\/.+)\z/.match(doi)).last
+      # remove non-printing whitespace and downcase
+      doi.delete("\u200B").downcase if doi.present?
     end
 
     def has_required_elements?
@@ -150,9 +148,6 @@ module OrcidClient
     def insert_ids(xml)
       xml.send(:'common:external-ids') do
         insert_id(xml, 'doi', doi, 'self')
-        part_of_dois.each do |part_of_doi|
-          insert_id(xml, 'doi', part_of_doi, 'part-of')
-        end
         version_of_dois.each do |version_of_doi|
           insert_id(xml, 'doi', version_of_doi, 'version-of')
         end

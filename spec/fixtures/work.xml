@@ -17,11 +17,6 @@
       <common:external-id-value>10.5438/h5xp-x178</common:external-id-value>
       <common:external-id-relationship>self</common:external-id-relationship>
     </common:external-id>
-    <common:external-id>
-      <common:external-id-type>doi</common:external-id-type>
-      <common:external-id-value>10.5438/0000-00ss</common:external-id-value>
-      <common:external-id-relationship>part-of</common:external-id-relationship>
-    </common:external-id>
   </common:external-ids>
   <work:contributors>
     <work:contributor>
