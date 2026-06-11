@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    orcid_client (0.18.1)
+    orcid_client (0.19.0)
       activesupport (~> 8.1, >= 8.1.2)
       bolognese (~> 2.7)
       builder (~> 3.3)
@@ -362,7 +362,7 @@ CHECKSUMS
   oj_mimic_json (1.0.1) sha256=b669b7c581420b0463e8f5d28e447795a87414462241d4a49fe6c8d1f515f36d
   open-uri (0.5.0) sha256=7b4f06fdac39e6946aed15a8da82531580882fbbec80438adcb7c30d388887ca
   optimist (3.2.1) sha256=8cf8a0fd69f3aa24ab48885d3a666717c27bc3d9edd6e976e18b9d771e72e34e
-  orcid_client (0.18.1)
+  orcid_client (0.19.0)
   ostruct (0.6.3) sha256=95a2ed4a4bd1d190784e666b47b2d3f078e4a9efda2fccf18f84ddc6538ed912
   prism (1.9.0) sha256=7b530c6a9f92c24300014919c9dcbc055bf4cdf51ec30aed099b06cd6674ef85
   public_suffix (7.0.5) sha256=1a8bb08f1bbea19228d3bed6e5ed908d1cb4f7c2726d18bd9cadf60bc676f623
