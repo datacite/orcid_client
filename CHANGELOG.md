@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Update to 0.19.1 [\#55](https://github.com/datacite/orcid_client/pull/55) ([codycooperross](https://github.com/codycooperross))
 - Change to version 0.19.0 [\#54](https://github.com/datacite/orcid_client/pull/54) ([codycooperross](https://github.com/codycooperross))
 - Adds version-of external ID relationships in work records based on DOI metadata [\#53](https://github.com/datacite/orcid_client/pull/53) ([codycooperross](https://github.com/codycooperross))
 
